@@ -1,0 +1,1482 @@
+'use client';
+
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Navigation from '@/components/Navigation';
+import AnimateOnScroll from '@/components/AnimateOnScroll';
+import StatCounter from '@/components/StatCounter';
+import PhotoPlaceholder from '@/components/PhotoPlaceholder';
+
+// ─── Program Accordion Row ────────────────────────────────────────────────────
+interface ProgramRowProps {
+  num: string;
+  name: string;
+  descriptor: string;
+  accent: string;
+  hoverText: string;
+  href: string;
+}
+
+function ProgramRow({ num, name, descriptor, accent, hoverText, href }: ProgramRowProps) {
+  const [hovered, setHovered] = useState(false);
+
+  return (
+    <Link
+      href={href}
+      style={{ textDecoration: 'none' }}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
+      <div
+        style={{
+          position: 'relative',
+          borderBottom: '1px solid #1A1A1A',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '24px',
+          padding: hovered ? '28px 24px' : '20px 24px',
+          transition: 'padding 0.3s ease, background-color 0.3s ease',
+          backgroundColor: hovered ? '#111111' : 'transparent',
+          overflow: 'hidden',
+        }}
+      >
+        {/* Accent bar */}
+        <div
+          style={{
+            position: 'absolute',
+            left: 0,
+            top: 0,
+            bottom: 0,
+            width: '6px',
+            backgroundColor: accent,
+          }}
+        />
+
+        {/* Oversized numeral */}
+        <div
+          aria-hidden="true"
+          style={{
+            fontFamily: 'Bebas Neue, sans-serif',
+            fontSize: '80px',
+            color: accent,
+            opacity: 0.06,
+            lineHeight: 1,
+            flexShrink: 0,
+            width: '64px',
+            textAlign: 'right',
+            userSelect: 'none',
+          }}
+        >
+          {num}
+        </div>
+
+        {/* Content */}
+        <div style={{ flex: 1 }}>
+          <div
+            style={{
+              fontFamily: 'Bebas Neue, sans-serif',
+              fontSize: '40px',
+              color: '#F0EDE8',
+              letterSpacing: '0.03em',
+              lineHeight: 1,
+            }}
+          >
+            {name}
+          </div>
+          {hovered && (
+            <div
+              style={{
+                fontFamily: 'IBM Plex Sans, sans-serif',
+                fontSize: '14px',
+                color: '#888888',
+                marginTop: '8px',
+                maxWidth: '560px',
+                lineHeight: 1.5,
+              }}
+            >
+              {hoverText}
+            </div>
+          )}
+        </div>
+
+        {/* Right side */}
+        <div style={{ textAlign: 'right', flexShrink: 0 }}>
+          <div
+            style={{
+              fontFamily: 'IBM Plex Sans, sans-serif',
+              fontSize: '13px',
+              color: '#555555',
+              marginBottom: hovered ? '8px' : '0',
+            }}
+          >
+            {descriptor}
+          </div>
+          {hovered && (
+            <div
+              style={{
+                fontFamily: 'Barlow Condensed, sans-serif',
+                fontWeight: 900,
+                fontSize: '10px',
+                letterSpacing: '0.15em',
+                textTransform: 'uppercase',
+                color: accent,
+              }}
+            >
+              Explore →
+            </div>
+          )}
+        </div>
+      </div>
+    </Link>
+  );
+}
+
+// ─── Module Card ──────────────────────────────────────────────────────────────
+interface ModuleCardProps {
+  num: string;
+  title: string;
+  body: string;
+  accent: string;
+}
+
+function ModuleCard({ num, title, body, accent }: ModuleCardProps) {
+  return (
+    <div
+      style={{
+        backgroundColor: '#1A1A1A',
+        borderTop: `4px solid ${accent}`,
+        padding: '28px 24px',
+      }}
+    >
+      <div
+        style={{
+          fontFamily: 'Barlow Condensed, sans-serif',
+          fontWeight: 900,
+          fontSize: '10px',
+          letterSpacing: '0.2em',
+          textTransform: 'uppercase',
+          color: accent,
+          marginBottom: '12px',
+        }}
+      >
+        {num}
+      </div>
+      <div
+        style={{
+          fontFamily: 'Bebas Neue, sans-serif',
+          fontSize: '28px',
+          color: '#F0EDE8',
+          letterSpacing: '0.03em',
+          marginBottom: '12px',
+        }}
+      >
+        {title}
+      </div>
+      <p
+        style={{
+          fontFamily: 'IBM Plex Sans, sans-serif',
+          fontSize: '14px',
+          color: '#888888',
+          lineHeight: 1.6,
+        }}
+      >
+        {body}
+      </p>
+    </div>
+  );
+}
+
+// ─── Eyebrow ──────────────────────────────────────────────────────────────────
+function Eyebrow({ text, color = '#FF4B1F' }: { text: string; color?: string }) {
+  return (
+    <div
+      style={{
+        fontFamily: 'Barlow Condensed, sans-serif',
+        fontWeight: 900,
+        fontSize: '10px',
+        letterSpacing: '0.25em',
+        textTransform: 'uppercase',
+        color,
+        marginBottom: '16px',
+      }}
+    >
+      {text}
+    </div>
+  );
+}
+
+// ─── Main Page ────────────────────────────────────────────────────────────────
+export default function HomePage() {
+  const [emailSparent, setEmailSparent] = useState('');
+  const [sparentSubmitted, setSparentSubmitted] = useState(false);
+
+  return (
+    <>
+      <Navigation />
+      <main>
+        {/* ── Section 00: Hero ─────────────────────────────────────────── */}
+        <section
+          id="hero"
+          style={{
+            position: 'relative',
+            height: '100svh',
+            backgroundColor: '#0A0A0A',
+            display: 'flex',
+            alignItems: 'center',
+            overflow: 'hidden',
+          }}
+        >
+          <div className="signal-slash" />
+          <div className="signal-slash-companion" />
+
+          <div
+            aria-hidden="true"
+            style={{
+              position: 'absolute',
+              right: '-2vw',
+              top: '10vh',
+              fontFamily: 'Bebas Neue, sans-serif',
+              fontSize: '28vw',
+              color: 'rgba(255,75,31,0.04)',
+              lineHeight: 1,
+              pointerEvents: 'none',
+              userSelect: 'none',
+              letterSpacing: '-0.02em',
+            }}
+          >
+            US²
+          </div>
+
+          <div
+            style={{
+              maxWidth: '1400px',
+              margin: '0 auto',
+              padding: '0 24px',
+              width: '100%',
+            }}
+          >
+            <motion.h1
+              initial={{ opacity: 0, x: -40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
+              style={{
+                fontFamily: 'Bebas Neue, sans-serif',
+                fontSize: 'clamp(64px, 8vw, 112px)',
+                color: '#F0EDE8',
+                lineHeight: 0.9,
+                letterSpacing: '0.02em',
+                whiteSpace: 'pre-line',
+                marginBottom: '20px',
+              }}
+            >
+              {`PROTECTING\nADOLESCENT\nBRILLIANCE.`}
+            </motion.h1>
+
+            <motion.div
+              initial={{ width: '0%' }}
+              animate={{ width: '100%' }}
+              transition={{ duration: 1.2, delay: 0.4, ease: 'easeOut' }}
+              style={{
+                height: '3px',
+                backgroundColor: '#FF4B1F',
+                maxWidth: '580px',
+                marginBottom: '24px',
+              }}
+            />
+
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              style={{
+                fontFamily: 'IBM Plex Sans, sans-serif',
+                fontWeight: 300,
+                fontSize: '18px',
+                color: '#888888',
+                maxWidth: '580px',
+                lineHeight: 1.6,
+              }}
+            >
+              Justice-centered programs and systems for youth, families, and the communities that hold them. A
+              US-Squared Research Institute initiative. EIN 92-3221304.
+            </motion.p>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 1.2 }}
+            style={{
+              position: 'absolute',
+              bottom: '32px',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              fontFamily: 'Barlow Condensed, sans-serif',
+              fontWeight: 600,
+              fontSize: '9px',
+              letterSpacing: '0.2em',
+              textTransform: 'uppercase',
+              color: '#555555',
+            }}
+          >
+            Explore our work ↓
+          </motion.div>
+        </section>
+
+        {/* ── Section 01: Mission ──────────────────────────────────────── */}
+        <section
+          id="mission"
+          style={{
+            backgroundColor: '#F0EDE8',
+            color: '#0A0A0A',
+            padding: '80px 0',
+          }}
+        >
+          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: '5fr 3px 7fr',
+                gap: '48px',
+                alignItems: 'start',
+                marginBottom: '64px',
+              }}
+            >
+              <AnimateOnScroll>
+                <h2
+                  style={{
+                    fontFamily: 'Bebas Neue, sans-serif',
+                    fontSize: '72px',
+                    color: '#0A0A0A',
+                    lineHeight: 0.95,
+                    letterSpacing: '0.02em',
+                    whiteSpace: 'pre-line',
+                  }}
+                >
+                  {`THE SIGNAL.\nTHE FIRE.`}
+                </h2>
+              </AnimateOnScroll>
+
+              <div style={{ width: '3px', backgroundColor: '#FF4B1F', alignSelf: 'stretch' }} />
+
+              <AnimateOnScroll delay={0.1}>
+                <h3
+                  style={{
+                    fontFamily: 'Bebas Neue, sans-serif',
+                    fontSize: '48px',
+                    color: '#0A0A0A',
+                    lineHeight: 1,
+                    letterSpacing: '0.02em',
+                    marginBottom: '24px',
+                  }}
+                >
+                  WE BUILD SYSTEMS THAT HOLD YOUNG PEOPLE.
+                </h3>
+                <p
+                  style={{
+                    fontFamily: 'IBM Plex Sans, sans-serif',
+                    fontWeight: 400,
+                    fontSize: '16px',
+                    color: '#444444',
+                    lineHeight: 1.7,
+                    maxWidth: '640px',
+                  }}
+                >
+                  What does it mean to protect brilliance? It means building the infrastructure that ensures young people
+                  don&apos;t have to choose between being themselves and being safe. US-Squared designs justice-centered
+                  programs, tools, and systems for youth and the adults who love them.
+                </p>
+              </AnimateOnScroll>
+            </div>
+
+            <AnimateOnScroll delay={0.2}>
+              <div
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(3, 1fr)',
+                  gap: '32px',
+                  paddingTop: '48px',
+                  borderTop: '1px solid rgba(10,10,10,0.1)',
+                }}
+              >
+                <StatCounter value="7,000+" label="Youth Served" />
+                <StatCounter value="4+" label="Program Domains" />
+                <StatCounter value="20+" label="Years in Education" />
+              </div>
+            </AnimateOnScroll>
+          </div>
+        </section>
+
+        {/* ── Section 02: Program Hub ──────────────────────────────────── */}
+        <section id="programs" style={{ backgroundColor: '#0A0A0A', padding: '80px 0' }}>
+          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
+            <AnimateOnScroll>
+              <Eyebrow text="Our Programs" />
+              <h2
+                style={{
+                  fontFamily: 'Bebas Neue, sans-serif',
+                  fontSize: '72px',
+                  color: '#F0EDE8',
+                  lineHeight: 0.95,
+                  letterSpacing: '0.02em',
+                  whiteSpace: 'pre-line',
+                  marginBottom: '16px',
+                }}
+              >
+                {`4 SYSTEMS.\nONE SIGNAL.`}
+              </h2>
+              <p
+                style={{
+                  fontFamily: 'IBM Plex Sans, sans-serif',
+                  fontWeight: 300,
+                  fontSize: '16px',
+                  color: '#888888',
+                  maxWidth: '520px',
+                  marginBottom: '48px',
+                  lineHeight: 1.6,
+                }}
+              >
+                Each program is built around justice-centered design — rooted in research, tested with real communities,
+                and built to last.
+              </p>
+            </AnimateOnScroll>
+
+            <AnimateOnScroll delay={0.1}>
+              <div style={{ borderTop: '1px solid #1A1A1A' }}>
+                <ProgramRow
+                  num="01"
+                  name="BASEops"
+                  descriptor="Operations + Infrastructure"
+                  accent="#C5E620"
+                  hoverText="The scaffold beneath every program. BASEops provides community organizations with free toolkits for operations, grant management, and impact measurement."
+                  href="/baseops"
+                />
+                <ProgramRow
+                  num="02"
+                  name="ATLAS ACADEMY"
+                  descriptor="Youth Learning Pathway"
+                  accent="#FF4B1F"
+                  hoverText="A 10-week cohort for youth 14–21. Build your map, find your voice, and design your future — on your terms. Free to apply. Cohort-based. In-person & virtual."
+                  href="/atlas"
+                />
+                <ProgramRow
+                  num="03"
+                  name="ALTERED.EARTH"
+                  descriptor="Land-Based Retreat"
+                  accent="#6B3A1F"
+                  hoverText="5 days. Land, belonging, restorative practice. A retreat designed for young people who need to exhale, reconnect, and be held by something real."
+                  href="/earth"
+                />
+                <ProgramRow
+                  num="04"
+                  name="SPARENT SCIENCE"
+                  descriptor="Newsletter for Trusted Adults"
+                  accent="#4A7FA5"
+                  hoverText="Research-backed tools for the adults around young people. Monthly newsletter + podcast with Dr. Erica L. Tartt, PhD."
+                  href="/sparent"
+                />
+              </div>
+            </AnimateOnScroll>
+          </div>
+        </section>
+
+        {/* ── Section 03: BASEops Deep Dive ───────────────────────────── */}
+        <section
+          id="baseops"
+          style={{
+            backgroundColor: '#0A0A0A',
+            borderTop: '4px solid #C5E620',
+            padding: '80px 0',
+            minHeight: '100svh',
+            display: 'flex',
+            alignItems: 'center',
+          }}
+        >
+          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px', width: '100%' }}>
+            <AnimateOnScroll>
+              <Eyebrow text="A US-Squared System · 01" color="#C5E620" />
+              <h2
+                style={{
+                  fontFamily: 'Bebas Neue, sans-serif',
+                  fontSize: '96px',
+                  color: '#C5E620',
+                  lineHeight: 0.9,
+                  letterSpacing: '0.02em',
+                  marginBottom: '16px',
+                }}
+              >
+                BASEOPS
+              </h2>
+              <p
+                style={{
+                  fontFamily: 'IBM Plex Sans, sans-serif',
+                  fontWeight: 300,
+                  fontSize: '20px',
+                  color: '#F0EDE8',
+                  marginBottom: '16px',
+                }}
+              >
+                The scaffold beneath every mission.
+              </p>
+              <p
+                style={{
+                  fontFamily: 'IBM Plex Sans, sans-serif',
+                  fontSize: '16px',
+                  color: '#888888',
+                  maxWidth: '600px',
+                  lineHeight: 1.7,
+                  marginBottom: '48px',
+                }}
+              >
+                BASEops is US-Squared&apos;s free operational infrastructure program. We hand community organizations the
+                same systems we use — because lean nonprofits deserve enterprise-grade infrastructure.
+              </p>
+            </AnimateOnScroll>
+
+            <AnimateOnScroll delay={0.1}>
+              <div
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+                  gap: '2px',
+                  marginBottom: '48px',
+                }}
+              >
+                <ModuleCard
+                  num="Module 01"
+                  title="Org Infrastructure"
+                  body="HR, onboarding, compliance, and internal systems built for community-based organizations operating under resource constraints."
+                  accent="#C5E620"
+                />
+                <ModuleCard
+                  num="Module 02"
+                  title="Grant Systems"
+                  body="Grant tracking, reporting templates, funder relationship management, and compliance workflows for small-to-mid-size nonprofits."
+                  accent="#C5E620"
+                />
+                <ModuleCard
+                  num="Module 03"
+                  title="Impact Measurement"
+                  body="Logic models, data collection tools, and dashboards for communicating your work to funders, boards, and the communities you serve."
+                  accent="#C5E620"
+                />
+              </div>
+            </AnimateOnScroll>
+
+            <AnimateOnScroll delay={0.15}>
+              <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+                <Link
+                  href="/baseops"
+                  style={{
+                    fontFamily: 'Barlow Condensed, sans-serif',
+                    fontWeight: 900,
+                    fontSize: '12px',
+                    letterSpacing: '0.15em',
+                    textTransform: 'uppercase',
+                    backgroundColor: '#C5E620',
+                    color: '#0A0A0A',
+                    padding: '14px 28px',
+                    textDecoration: 'none',
+                    display: 'inline-block',
+                  }}
+                >
+                  Download Free Playbook
+                </Link>
+                <Link
+                  href="/baseops"
+                  style={{
+                    fontFamily: 'Barlow Condensed, sans-serif',
+                    fontWeight: 900,
+                    fontSize: '12px',
+                    letterSpacing: '0.15em',
+                    textTransform: 'uppercase',
+                    border: '2px solid #C5E620',
+                    color: '#C5E620',
+                    padding: '14px 28px',
+                    textDecoration: 'none',
+                    display: 'inline-block',
+                    backgroundColor: 'transparent',
+                  }}
+                >
+                  Learn More →
+                </Link>
+              </div>
+            </AnimateOnScroll>
+          </div>
+        </section>
+
+        {/* ── Section 04: Atlas Academy ────────────────────────────────── */}
+        <section id="atlas" style={{ backgroundColor: '#F0EDE8', padding: '80px 0' }}>
+          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
+            <AnimateOnScroll>
+              <Eyebrow text="A US-Squared Program · 02" color="#FF4B1F" />
+            </AnimateOnScroll>
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: '5fr 7fr',
+                gap: '64px',
+                alignItems: 'start',
+              }}
+            >
+              <div>
+                <AnimateOnScroll>
+                  <h2
+                    style={{
+                      fontFamily: 'Bebas Neue, sans-serif',
+                      fontSize: '88px',
+                      color: '#0A0A0A',
+                      lineHeight: 0.9,
+                      letterSpacing: '0.02em',
+                      whiteSpace: 'pre-line',
+                      marginBottom: '20px',
+                    }}
+                  >
+                    {`ATLAS\nACADEMY`}
+                  </h2>
+                  <p
+                    style={{
+                      fontFamily: 'IBM Plex Sans, sans-serif',
+                      fontWeight: 300,
+                      fontSize: '20px',
+                      color: '#444444',
+                      marginBottom: '28px',
+                    }}
+                  >
+                    Your map. Your future. On your terms.
+                  </p>
+
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '40px' }}>
+                    {['Ages 14–21', 'Free to Apply', 'Cohort-Based', '10 Weeks', 'In-Person & Virtual'].map((chip) => (
+                      <span
+                        key={chip}
+                        style={{
+                          fontFamily: 'Barlow Condensed, sans-serif',
+                          fontWeight: 600,
+                          fontSize: '10px',
+                          letterSpacing: '0.15em',
+                          textTransform: 'uppercase',
+                          border: '2px solid #FF4B1F',
+                          color: '#FF4B1F',
+                          padding: '4px 10px',
+                        }}
+                      >
+                        {chip}
+                      </span>
+                    ))}
+                  </div>
+                </AnimateOnScroll>
+
+                <AnimateOnScroll delay={0.1}>
+                  <h3
+                    style={{
+                      fontFamily: 'Bebas Neue, sans-serif',
+                      fontSize: '24px',
+                      color: '#0A0A0A',
+                      letterSpacing: '0.05em',
+                      marginBottom: '20px',
+                    }}
+                  >
+                    What You Build
+                  </h3>
+                  <div
+                    style={{
+                      display: 'grid',
+                      gridTemplateColumns: 'repeat(3, 1fr)',
+                      gap: '2px',
+                      marginBottom: '32px',
+                    }}
+                  >
+                    {[
+                      { num: '01', title: 'Identity Map' },
+                      { num: '02', title: 'Future Plan' },
+                      { num: '03', title: 'Portfolio' },
+                      { num: '04', title: 'Community Network' },
+                      { num: '05', title: 'Advocacy Voice' },
+                      { num: '06', title: 'Leadership Skills' },
+                    ].map((m) => (
+                      <div
+                        key={m.num}
+                        style={{
+                          backgroundColor: '#0A0A0A',
+                          borderTop: '4px solid #FF4B1F',
+                          padding: '16px 14px',
+                        }}
+                      >
+                        <div
+                          style={{
+                            fontFamily: 'Barlow Condensed, sans-serif',
+                            fontWeight: 900,
+                            fontSize: '9px',
+                            letterSpacing: '0.2em',
+                            color: '#FF4B1F',
+                            marginBottom: '6px',
+                          }}
+                        >
+                          {m.num}
+                        </div>
+                        <div
+                          style={{
+                            fontFamily: 'Bebas Neue, sans-serif',
+                            fontSize: '16px',
+                            color: '#F0EDE8',
+                          }}
+                        >
+                          {m.title}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <Link
+                    href="/atlas"
+                    style={{
+                      fontFamily: 'Barlow Condensed, sans-serif',
+                      fontWeight: 900,
+                      fontSize: '12px',
+                      letterSpacing: '0.15em',
+                      textTransform: 'uppercase',
+                      backgroundColor: '#FF4B1F',
+                      color: '#F0EDE8',
+                      padding: '14px 28px',
+                      textDecoration: 'none',
+                      display: 'inline-block',
+                    }}
+                  >
+                    Apply for Cohort 4 →
+                  </Link>
+                </AnimateOnScroll>
+              </div>
+
+              {/* Right: Photo */}
+              <AnimateOnScroll delay={0.15}>
+                <div style={{ borderTop: '4px solid #FF4B1F' }}>
+                  <PhotoPlaceholder label="Atlas Academy Youth Session" aspectRatio="4/3" />
+                </div>
+              </AnimateOnScroll>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Section 05: Altered.Earth ────────────────────────────────── */}
+        <section
+          id="earth"
+          style={{ backgroundColor: '#0A0A0A', padding: '80px 0', minHeight: '80svh' }}
+        >
+          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
+            <AnimateOnScroll>
+              <Eyebrow text="A US-Squared Retreat · 03" color="#6B3A1F" />
+              <h2
+                style={{
+                  fontFamily: 'Bebas Neue, sans-serif',
+                  fontSize: '96px',
+                  color: '#6B3A1F',
+                  lineHeight: 0.9,
+                  letterSpacing: '0.02em',
+                  whiteSpace: 'pre-line',
+                  marginBottom: '16px',
+                }}
+              >
+                {`ALTERED\n.EARTH`}
+              </h2>
+              <p
+                style={{
+                  fontFamily: 'IBM Plex Sans, sans-serif',
+                  fontWeight: 300,
+                  fontSize: '20px',
+                  color: '#F0EDE8',
+                  marginBottom: '16px',
+                }}
+              >
+                Return to ground. Return to yourself.
+              </p>
+              <p
+                style={{
+                  fontFamily: 'IBM Plex Sans, sans-serif',
+                  fontSize: '16px',
+                  color: '#888888',
+                  maxWidth: '600px',
+                  lineHeight: 1.7,
+                  marginBottom: '32px',
+                }}
+              >
+                Five days in nature. Circle practice, creative expression, rest, and ceremony. Altered.Earth is
+                a retreat for young people who need to exhale, reconnect, and be held by something larger than a screen.
+              </p>
+            </AnimateOnScroll>
+
+            <AnimateOnScroll delay={0.1}>
+              <div
+                style={{
+                  backgroundColor: '#6B3A1F',
+                  padding: '14px 24px',
+                  display: 'inline-block',
+                  marginBottom: '40px',
+                  fontFamily: 'Barlow Condensed, sans-serif',
+                  fontWeight: 900,
+                  fontSize: '14px',
+                  letterSpacing: '0.2em',
+                  textTransform: 'uppercase',
+                  color: '#F0EDE8',
+                }}
+              >
+                Summer 2026 · Applications Open
+              </div>
+            </AnimateOnScroll>
+
+            <AnimateOnScroll delay={0.15}>
+              <div
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+                  gap: '24px',
+                  marginBottom: '40px',
+                }}
+              >
+                {[
+                  { title: 'Duration', body: '5 days / 4 nights in an outdoor setting' },
+                  { title: 'Ages', body: 'Youth 14–22 and adult allies (separate tracks)' },
+                  { title: 'Cost', body: 'Sliding scale. No one turned away for lack of funds.' },
+                ].map((card) => (
+                  <div key={card.title} style={{ borderLeft: '3px solid #6B3A1F', paddingLeft: '20px' }}>
+                    <div
+                      style={{
+                        fontFamily: 'Bebas Neue, sans-serif',
+                        fontSize: '20px',
+                        color: '#F0EDE8',
+                        letterSpacing: '0.05em',
+                        marginBottom: '8px',
+                      }}
+                    >
+                      {card.title}
+                    </div>
+                    <p
+                      style={{
+                        fontFamily: 'IBM Plex Sans, sans-serif',
+                        fontSize: '14px',
+                        color: '#888888',
+                        lineHeight: 1.6,
+                      }}
+                    >
+                      {card.body}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              <Link
+                href="/earth"
+                style={{
+                  fontFamily: 'Barlow Condensed, sans-serif',
+                  fontWeight: 900,
+                  fontSize: '12px',
+                  letterSpacing: '0.15em',
+                  textTransform: 'uppercase',
+                  border: '2px solid #6B3A1F',
+                  color: '#6B3A1F',
+                  padding: '14px 28px',
+                  textDecoration: 'none',
+                  display: 'inline-block',
+                  backgroundColor: 'transparent',
+                }}
+              >
+                Register Interest →
+              </Link>
+            </AnimateOnScroll>
+          </div>
+        </section>
+
+        {/* ── Section 06: Sparent Science ──────────────────────────────── */}
+        <section id="sparent" style={{ backgroundColor: '#F0EDE8', padding: '80px 0' }}>
+          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
+            <AnimateOnScroll>
+              <Eyebrow text="A US-Squared Newsletter · 04" color="#4A7FA5" />
+            </AnimateOnScroll>
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: '5fr 7fr',
+                gap: '64px',
+                alignItems: 'start',
+              }}
+            >
+              <div>
+                <AnimateOnScroll>
+                  <h2
+                    style={{
+                      fontFamily: 'Bebas Neue, sans-serif',
+                      fontSize: '72px',
+                      color: '#0A0A0A',
+                      lineHeight: 0.9,
+                      letterSpacing: '0.02em',
+                      whiteSpace: 'pre-line',
+                      marginBottom: '20px',
+                    }}
+                  >
+                    {`SPARENT\nSCIENCE`}
+                  </h2>
+                  <p
+                    style={{
+                      fontFamily: 'IBM Plex Sans, sans-serif',
+                      fontWeight: 300,
+                      fontSize: '16px',
+                      color: '#444444',
+                      lineHeight: 1.7,
+                      marginBottom: '28px',
+                      maxWidth: '440px',
+                    }}
+                  >
+                    Monthly research-backed tools for the educators, mentors, caregivers, and coaches who surround young
+                    people.
+                  </p>
+
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '28px' }}>
+                    {['Identity', 'Mental Health', 'Race & Culture', 'Relationships', 'Grief', 'Boundaries'].map(
+                      (topic) => (
+                        <span
+                          key={topic}
+                          style={{
+                            fontFamily: 'Barlow Condensed, sans-serif',
+                            fontWeight: 600,
+                            fontSize: '10px',
+                            letterSpacing: '0.12em',
+                            textTransform: 'uppercase',
+                            backgroundColor: 'rgba(74,127,165,0.12)',
+                            color: '#4A7FA5',
+                            padding: '4px 10px',
+                          }}
+                        >
+                          {topic}
+                        </span>
+                      )
+                    )}
+                  </div>
+
+                  {sparentSubmitted ? (
+                    <div
+                      style={{
+                        fontFamily: 'IBM Plex Sans, sans-serif',
+                        fontSize: '14px',
+                        color: '#4A7FA5',
+                        padding: '16px',
+                        border: '1px solid #4A7FA5',
+                      }}
+                    >
+                      Thank you! You&apos;re on the list.
+                    </div>
+                  ) : (
+                    <form
+                      onSubmit={(e) => {
+                        e.preventDefault();
+                        setSparentSubmitted(true);
+                      }}
+                      style={{ display: 'flex', gap: '0' }}
+                    >
+                      <input
+                        type="email"
+                        placeholder="your@email.com"
+                        value={emailSparent}
+                        onChange={(e) => setEmailSparent(e.target.value)}
+                        required
+                        style={{
+                          flex: 1,
+                          padding: '12px 16px',
+                          border: '2px solid #0A0A0A',
+                          borderRight: 'none',
+                          fontFamily: 'IBM Plex Sans, sans-serif',
+                          fontSize: '14px',
+                          backgroundColor: 'transparent',
+                          color: '#0A0A0A',
+                          outline: 'none',
+                        }}
+                      />
+                      <button
+                        type="submit"
+                        style={{
+                          fontFamily: 'Barlow Condensed, sans-serif',
+                          fontWeight: 900,
+                          fontSize: '11px',
+                          letterSpacing: '0.15em',
+                          textTransform: 'uppercase',
+                          backgroundColor: '#4A7FA5',
+                          color: '#F0EDE8',
+                          padding: '12px 20px',
+                          border: 'none',
+                          cursor: 'pointer',
+                          flexShrink: 0,
+                        }}
+                      >
+                        Subscribe
+                      </button>
+                    </form>
+                  )}
+                </AnimateOnScroll>
+              </div>
+
+              <AnimateOnScroll delay={0.1}>
+                <div
+                  style={{
+                    backgroundColor: '#0A0A0A',
+                    borderTop: '4px solid #4A7FA5',
+                    padding: '32px',
+                  }}
+                >
+                  <div
+                    style={{
+                      fontFamily: 'Barlow Condensed, sans-serif',
+                      fontWeight: 600,
+                      fontSize: '10px',
+                      letterSpacing: '0.2em',
+                      textTransform: 'uppercase',
+                      color: '#4A7FA5',
+                      marginBottom: '20px',
+                    }}
+                  >
+                    Vol. 03 · Issue 12
+                  </div>
+                  <h3
+                    style={{
+                      fontFamily: 'Bebas Neue, sans-serif',
+                      fontSize: '36px',
+                      color: '#F0EDE8',
+                      letterSpacing: '0.03em',
+                      marginBottom: '16px',
+                      lineHeight: 1.1,
+                    }}
+                  >
+                    When Your Teenager Won&apos;t Talk
+                  </h3>
+                  <p
+                    style={{
+                      fontFamily: 'IBM Plex Sans, sans-serif',
+                      fontSize: '14px',
+                      color: '#888888',
+                      lineHeight: 1.6,
+                      marginBottom: '24px',
+                    }}
+                  >
+                    Adolescent silence is data, not rejection. This issue breaks down the science of teen withdrawal and
+                    gives you three evidence-based approaches for reconnecting without pressure.
+                  </p>
+                  <div
+                    style={{
+                      backgroundColor: 'rgba(74,127,165,0.15)',
+                      borderLeft: '3px solid #4A7FA5',
+                      padding: '16px 20px',
+                    }}
+                  >
+                    <div
+                      style={{
+                        fontFamily: 'Barlow Condensed, sans-serif',
+                        fontWeight: 900,
+                        fontSize: '10px',
+                        letterSpacing: '0.2em',
+                        textTransform: 'uppercase',
+                        color: '#4A7FA5',
+                        marginBottom: '8px',
+                      }}
+                    >
+                      Try This
+                    </div>
+                    <p
+                      style={{
+                        fontFamily: 'IBM Plex Sans, sans-serif',
+                        fontSize: '14px',
+                        color: '#888888',
+                        lineHeight: 1.5,
+                      }}
+                    >
+                      Ask one open question today — not &ldquo;How was school?&rdquo; but &ldquo;What&apos;s something
+                      you&apos;re thinking about?&rdquo; Then wait.
+                    </p>
+                  </div>
+                  <Link
+                    href="/sparent"
+                    style={{
+                      fontFamily: 'Barlow Condensed, sans-serif',
+                      fontWeight: 900,
+                      fontSize: '10px',
+                      letterSpacing: '0.15em',
+                      textTransform: 'uppercase',
+                      color: '#4A7FA5',
+                      textDecoration: 'none',
+                      display: 'inline-block',
+                      marginTop: '20px',
+                    }}
+                  >
+                    Read Full Issue →
+                  </Link>
+                </div>
+              </AnimateOnScroll>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Section 07: Research ─────────────────────────────────────── */}
+        <section id="research" style={{ backgroundColor: '#0A0A0A', padding: '80px 0' }}>
+          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
+            <AnimateOnScroll>
+              <Eyebrow text="Research & Impact" />
+              <h2
+                style={{
+                  fontFamily: 'Bebas Neue, sans-serif',
+                  fontSize: '72px',
+                  color: '#F0EDE8',
+                  lineHeight: 0.95,
+                  letterSpacing: '0.02em',
+                  whiteSpace: 'pre-line',
+                  marginBottom: '16px',
+                }}
+              >
+                {`THE DATA BEHIND\nTHE WORK.`}
+              </h2>
+              <p
+                style={{
+                  fontFamily: 'IBM Plex Sans, sans-serif',
+                  fontWeight: 300,
+                  fontSize: '16px',
+                  color: '#888888',
+                  maxWidth: '560px',
+                  lineHeight: 1.6,
+                  marginBottom: '48px',
+                }}
+              >
+                Our programs aren&apos;t built on assumptions. They&apos;re built on peer-reviewed research, longitudinal
+                data, and the lived experiences of the 7,000+ young people whose stories we&apos;ve had the honor of
+                studying.
+              </p>
+            </AnimateOnScroll>
+
+            <AnimateOnScroll delay={0.1}>
+              <div
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                  gap: '2px',
+                  marginBottom: '48px',
+                }}
+              >
+                <ModuleCard
+                  num="Peer-Reviewed"
+                  title="Latent Transition Analysis"
+                  body="Tartt, E. L., Nylund-Gibson, K., et al. (in press). Latent Transition Analysis of adolescent racial discrimination and mental health outcomes. Psychological Methods."
+                  accent="#FF4B1F"
+                />
+                <ModuleCard
+                  num="Dissertation"
+                  title="Unraveling Hopelessness"
+                  body="Tartt, E. L. (2023). Unraveling Hopelessness: A latent class analysis of mental health profiles among Black adolescents. UCSB. GPA 3.98."
+                  accent="#FF4B1F"
+                />
+                <ModuleCard
+                  num="BASE Framework"
+                  title="Brilliance · Authenticity · Self-Expression · Empowerment"
+                  body="A justice-centered developmental framework for programs serving Black and Brown youth, derived from dissertation research and community practice."
+                  accent="#FF4B1F"
+                />
+              </div>
+            </AnimateOnScroll>
+
+            <AnimateOnScroll delay={0.15}>
+              <blockquote
+                style={{
+                  borderLeft: '3px solid #FF4B1F',
+                  paddingLeft: '24px',
+                  marginBottom: '40px',
+                  maxWidth: '640px',
+                }}
+              >
+                <p
+                  style={{
+                    fontFamily: 'IBM Plex Sans, sans-serif',
+                    fontStyle: 'italic',
+                    fontSize: '20px',
+                    color: '#888888',
+                    lineHeight: 1.6,
+                  }}
+                >
+                  &ldquo;These young people weren&apos;t hopeless. They were under-resourced, over-surveilled, and
+                  under-believed. The data just confirmed what they already knew.&rdquo;
+                </p>
+                <cite
+                  style={{
+                    display: 'block',
+                    marginTop: '12px',
+                    fontFamily: 'Barlow Condensed, sans-serif',
+                    fontStyle: 'normal',
+                    fontWeight: 600,
+                    fontSize: '11px',
+                    letterSpacing: '0.15em',
+                    textTransform: 'uppercase',
+                    color: '#555555',
+                  }}
+                >
+                  — Dr. Erica L. Tartt, PhD, Founder
+                </cite>
+              </blockquote>
+
+              <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+                <Link
+                  href="/research"
+                  style={{
+                    fontFamily: 'Barlow Condensed, sans-serif',
+                    fontWeight: 900,
+                    fontSize: '12px',
+                    letterSpacing: '0.15em',
+                    textTransform: 'uppercase',
+                    backgroundColor: '#FF4B1F',
+                    color: '#F0EDE8',
+                    padding: '14px 28px',
+                    textDecoration: 'none',
+                    display: 'inline-block',
+                  }}
+                >
+                  View All Research
+                </Link>
+                <Link
+                  href="/research"
+                  style={{
+                    fontFamily: 'Barlow Condensed, sans-serif',
+                    fontWeight: 900,
+                    fontSize: '12px',
+                    letterSpacing: '0.15em',
+                    textTransform: 'uppercase',
+                    border: '2px solid #FF4B1F',
+                    color: '#FF4B1F',
+                    padding: '14px 28px',
+                    textDecoration: 'none',
+                    display: 'inline-block',
+                    backgroundColor: 'transparent',
+                  }}
+                >
+                  Download Impact Brief
+                </Link>
+              </div>
+            </AnimateOnScroll>
+          </div>
+        </section>
+
+        {/* ── Section 08: Connect CTA ──────────────────────────────────── */}
+        <section id="connect-cta" style={{ backgroundColor: '#F0EDE8', padding: '80px 0' }}>
+          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
+            <AnimateOnScroll>
+              <h2
+                style={{
+                  fontFamily: 'Bebas Neue, sans-serif',
+                  fontSize: '80px',
+                  color: '#0A0A0A',
+                  lineHeight: 0.9,
+                  letterSpacing: '0.02em',
+                  whiteSpace: 'pre-line',
+                  marginBottom: '20px',
+                }}
+              >
+                {`READY TO BUILD\nSOMETHING REAL?`}
+              </h2>
+              <div style={{ height: '3px', backgroundColor: '#FF4B1F', marginBottom: '48px' }} />
+            </AnimateOnScroll>
+
+            <AnimateOnScroll delay={0.1}>
+              <div
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(2, 1fr)',
+                  gap: '2px',
+                  maxWidth: '800px',
+                }}
+              >
+                <Link
+                  href="/connect"
+                  style={{
+                    fontFamily: 'Barlow Condensed, sans-serif',
+                    fontWeight: 900,
+                    fontSize: '14px',
+                    letterSpacing: '0.15em',
+                    textTransform: 'uppercase',
+                    backgroundColor: '#0A0A0A',
+                    color: '#F0EDE8',
+                    padding: '24px 28px',
+                    textDecoration: 'none',
+                    display: 'block',
+                    textAlign: 'center',
+                  }}
+                >
+                  Partner With Us
+                </Link>
+                <Link
+                  href="/atlas"
+                  style={{
+                    fontFamily: 'Barlow Condensed, sans-serif',
+                    fontWeight: 900,
+                    fontSize: '14px',
+                    letterSpacing: '0.15em',
+                    textTransform: 'uppercase',
+                    backgroundColor: '#FF4B1F',
+                    color: '#F0EDE8',
+                    padding: '24px 28px',
+                    textDecoration: 'none',
+                    display: 'block',
+                    textAlign: 'center',
+                  }}
+                >
+                  Apply to a Program
+                </Link>
+                <Link
+                  href="/connect"
+                  style={{
+                    fontFamily: 'Barlow Condensed, sans-serif',
+                    fontWeight: 900,
+                    fontSize: '14px',
+                    letterSpacing: '0.15em',
+                    textTransform: 'uppercase',
+                    border: '2px solid #FF4B1F',
+                    color: '#FF4B1F',
+                    padding: '24px 28px',
+                    textDecoration: 'none',
+                    display: 'block',
+                    textAlign: 'center',
+                    backgroundColor: 'transparent',
+                  }}
+                >
+                  Support Our Work
+                </Link>
+                <Link
+                  href="/connect"
+                  style={{
+                    fontFamily: 'Barlow Condensed, sans-serif',
+                    fontWeight: 900,
+                    fontSize: '14px',
+                    letterSpacing: '0.15em',
+                    textTransform: 'uppercase',
+                    border: '2px solid #0A0A0A',
+                    color: '#0A0A0A',
+                    padding: '24px 28px',
+                    textDecoration: 'none',
+                    display: 'block',
+                    textAlign: 'center',
+                    backgroundColor: 'transparent',
+                  }}
+                >
+                  Contact Us
+                </Link>
+              </div>
+            </AnimateOnScroll>
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer style={{ backgroundColor: '#0A0A0A', borderTop: '3px solid #FF4B1F' }}>
+          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '48px 24px 32px' }}>
+            <div
+              style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                gap: '32px',
+                justifyContent: 'space-between',
+                alignItems: 'flex-start',
+                marginBottom: '40px',
+              }}
+            >
+              <Link
+                href="/"
+                style={{
+                  fontFamily: 'Bebas Neue, sans-serif',
+                  fontSize: '22px',
+                  color: '#F0EDE8',
+                  textDecoration: 'none',
+                  letterSpacing: '0.05em',
+                }}
+              >
+                US SQUARED
+              </Link>
+              <nav style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', alignItems: 'center' }}>
+                {[
+                  { label: 'Programs', href: '/#programs' },
+                  { label: 'Research', href: '/research' },
+                  { label: 'About', href: '/about' },
+                  { label: 'BASEops', href: '/baseops' },
+                  { label: 'Atlas Academy', href: '/atlas' },
+                  { label: 'Altered.Earth', href: '/earth' },
+                  { label: 'Sparent Science', href: '/sparent' },
+                ].map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    style={{
+                      fontFamily: 'Barlow Condensed, sans-serif',
+                      fontWeight: 600,
+                      fontSize: '11px',
+                      letterSpacing: '0.15em',
+                      textTransform: 'uppercase',
+                      color: '#555555',
+                      textDecoration: 'none',
+                    }}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </nav>
+              <div style={{ display: 'flex', gap: '16px' }}>
+                {['Instagram', 'LinkedIn'].map((s) => (
+                  <a
+                    key={s}
+                    href="#"
+                    style={{
+                      fontFamily: 'Barlow Condensed, sans-serif',
+                      fontWeight: 600,
+                      fontSize: '11px',
+                      letterSpacing: '0.15em',
+                      textTransform: 'uppercase',
+                      color: '#555555',
+                      textDecoration: 'none',
+                    }}
+                  >
+                    {s}
+                  </a>
+                ))}
+              </div>
+            </div>
+            <div style={{ height: '1px', backgroundColor: '#1A1A1A', marginBottom: '24px' }} />
+            <div
+              style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                gap: '16px',
+                justifyContent: 'space-between',
+                alignItems: 'flex-start',
+              }}
+            >
+              <p
+                style={{
+                  fontFamily: 'IBM Plex Sans, sans-serif',
+                  fontSize: '12px',
+                  color: '#555555',
+                  lineHeight: 1.6,
+                  maxWidth: '560px',
+                }}
+              >
+                US-Squared Research Institute is a 501(c)(3) nonprofit. EIN 92-3221304. All contributions are
+                tax-deductible to the extent allowed by law.
+              </p>
+              <p
+                style={{
+                  fontFamily: 'Barlow Condensed, sans-serif',
+                  fontWeight: 600,
+                  fontSize: '11px',
+                  letterSpacing: '0.1em',
+                  color: '#555555',
+                  textAlign: 'right',
+                }}
+              >
+                51 E Hocking St · Canal Winchester, OH 43110
+                <br />
+                info@us-squared.org
+              </p>
+            </div>
+          </div>
+        </footer>
+      </main>
+    </>
+  );
+}

@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;900&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-sub: 'Barlow Condensed', sans-serif;
+  --font-body: 'IBM Plex Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  --color-black: #0A0A0A;
+  --color-white: #F0EDE8;
+  --color-orange: #FF4B1F;
+  --color-lime: #C5E620;
+  --color-blue: #4A7FA5;
+  --color-blue-deep: #2D5F80;
+  --color-rust: #6B3A1F;
+  --color-rust-deep: #3A1F0A;
+  --color-n1: #1A1A1A;
+  --color-n2: #2A2A2A;
+  --color-n3: #555555;
+  --color-n4: #888888;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-black);
+  color: var(--color-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*:focus-visible {
+  outline: 3px solid var(--color-orange);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.signal-slash {
+  position: absolute;
+  top: -50%;
+  left: 55%;
+  width: 2px;
+  height: 200%;
+  background: rgba(255, 75, 31, 0.2);
+  transform: rotate(-20deg);
+  transform-origin: center;
+  pointer-events: none;
+}
+
+.signal-slash-companion {
+  position: absolute;
+  top: -50%;
+  left: calc(55% + 16px);
+  width: 1px;
+  height: 200%;
+  background: rgba(255, 75, 31, 0.08);
+  transform: rotate(-20deg);
+  transform-origin: center;
+  pointer-events: none;
+}
+
+.photo-placeholder {
+  background: var(--color-n1);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+
+.photo-placeholder-label {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  font-family: var(--font-sub);
+  font-weight: 600;
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--color-n4);
+}
