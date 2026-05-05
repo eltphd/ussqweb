@@ -242,11 +242,36 @@ export default function AboutPage() {
                       fontSize: '16px',
                       color: '#888888',
                       lineHeight: 1.7,
+                      marginBottom: '16px',
                     }}
                   >
                     Dr. Tartt founded US-Squared Research Institute to translate research into programs that actually
                     reach young people — and to build the organizational infrastructure that community-based leaders
                     deserve.
+                  </p>
+                  <p
+                    style={{
+                      fontFamily: 'IBM Plex Sans, sans-serif',
+                      fontSize: '16px',
+                      color: '#888888',
+                      lineHeight: 1.7,
+                      marginBottom: '16px',
+                    }}
+                  >
+                    Dr. Tartt&apos;s current focus is on building Atlas ERA — The Education Research Association — a
+                    global field-building network that connects education practitioners, funds their work, and
+                    credentials the brilliance happening in communities the traditional system cannot see.
+                  </p>
+                  <p
+                    style={{
+                      fontFamily: 'IBM Plex Sans, sans-serif',
+                      fontSize: '16px',
+                      color: '#888888',
+                      lineHeight: 1.7,
+                    }}
+                  >
+                    Her embodied methodology: discover, visit, connect, credential, invest. The field is the work.
+                    The world is the classroom.
                   </p>
 
                   <div

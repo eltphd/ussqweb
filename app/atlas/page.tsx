@@ -87,6 +87,35 @@ export default function AtlasPage() {
     <>
       <Navigation />
       <main>
+        {/* Atlas ERA Repositioning Banner */}
+        <div
+          style={{
+            backgroundColor: '#1A1A1A',
+            borderBottom: '1px solid #2A2A2A',
+            padding: '14px 24px',
+            paddingTop: '78px',
+          }}
+        >
+          <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
+            <p
+              style={{
+                fontFamily: 'IBM Plex Sans, sans-serif',
+                fontSize: '13px',
+                color: '#888888',
+                lineHeight: 1.6,
+              }}
+            >
+              Atlas Academy is a curriculum artifact and legacy program of{' '}
+              <strong style={{ color: '#F0EDE8' }}>Atlas ERA — The Education Research Association</strong>. The
+              broader Atlas ERA network is now the organizational home for our field-building, credentialing, and
+              community connection work.{' '}
+              <a href="/about" style={{ color: '#FF4B1F', textDecoration: 'none' }}>
+                Learn more about Atlas ERA →
+              </a>
+            </p>
+          </div>
+        </div>
+
         {/* Hero — Split Screen */}
         <section
           style={{

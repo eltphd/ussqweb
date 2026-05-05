@@ -5,7 +5,7 @@ import { useScroll } from 'framer-motion';
 import Link from 'next/link';
 
 const navLinks = [
-  { label: 'Programs', href: '/#programs' },
+  { label: 'Network', href: '/#programs' },
   { label: 'Research', href: '/research' },
   { label: 'About', href: '/about' },
   { label: 'Sparent Science', href: '/sparent' },
@@ -67,7 +67,7 @@ export default function Navigation() {
               flexShrink: 0,
             }}
           >
-            US SQUARED
+            US² | Atlas ERA
           </Link>
 
           {/* Desktop Nav */}
@@ -96,7 +96,7 @@ export default function Navigation() {
               </Link>
             ))}
             <Link
-              href="/atlas"
+              href="/connect"
               style={{
                 fontFamily: 'Barlow Condensed, sans-serif',
                 fontWeight: 900,
@@ -114,7 +114,7 @@ export default function Navigation() {
               onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = '#e03000'; }}
               onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = '#FF4B1F'; }}
             >
-              Apply Now
+              Join the Network
             </Link>
           </div>
 
@@ -205,7 +205,7 @@ export default function Navigation() {
               </Link>
             ))}
             <Link
-              href="/atlas"
+              href="/connect"
               onClick={() => setMenuOpen(false)}
               style={{
                 fontFamily: 'Bebas Neue, sans-serif',
@@ -219,7 +219,7 @@ export default function Navigation() {
                 letterSpacing: '0.05em',
               }}
             >
-              Apply Now
+              Join the Network
             </Link>
           </nav>
           <div

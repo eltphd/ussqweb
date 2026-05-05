@@ -32,7 +32,7 @@ export default function Footer() {
               letterSpacing: '0.05em',
             }}
           >
-            US SQUARED
+            US² | Atlas ERA
           </Link>
 
           {/* Nav links */}
@@ -95,6 +95,23 @@ export default function Footer() {
 
         {/* Divider */}
         <div style={{ height: '1px', backgroundColor: '#1A1A1A', marginBottom: '24px' }} />
+
+        {/* Atlas ERA tagline */}
+        <div
+          style={{
+            fontFamily: 'Barlow Condensed, sans-serif',
+            fontWeight: 600,
+            fontSize: '11px',
+            letterSpacing: '0.12em',
+            textTransform: 'uppercase',
+            color: '#555555',
+            marginBottom: '16px',
+          }}
+        >
+          Atlas ERA — The Education Research Association
+          <br />
+          A US-Squared Research Institute Initiative
+        </div>
 
         {/* Legal */}
         <div

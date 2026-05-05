@@ -256,6 +256,23 @@ export default function HomePage() {
               width: '100%',
             }}
           >
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              style={{
+                fontFamily: 'Barlow Condensed, sans-serif',
+                fontWeight: 900,
+                fontSize: '10px',
+                letterSpacing: '0.25em',
+                textTransform: 'uppercase',
+                color: '#FF4B1F',
+                marginBottom: '16px',
+              }}
+            >
+              THE SIGNAL. THE FIRE.
+            </motion.div>
+
             <motion.h1
               initial={{ opacity: 0, x: -40 }}
               animate={{ opacity: 1, x: 0 }}
@@ -298,8 +315,12 @@ export default function HomePage() {
                 lineHeight: 1.6,
               }}
             >
-              Justice-centered programs and systems for youth, families, and the communities that hold them. A
-              US-Squared Research Institute initiative. EIN 92-3221304.
+              Atlas ERA — The Education Research Association is the field-building network of the US-Squared Research
+              Institute. We connect education researchers, practitioners, and community leaders across global contexts
+              — finding the people already doing the work, funding and affirming them, and credentialing the brilliance
+              happening everywhere schools are not.
+              <br /><br />
+              This is not a program. This is an era.
             </motion.p>
           </div>
 
@@ -320,7 +341,7 @@ export default function HomePage() {
               color: '#555555',
             }}
           >
-            Explore our work ↓
+            Enter the Network ↓
           </motion.div>
         </section>
 
@@ -371,8 +392,23 @@ export default function HomePage() {
                     marginBottom: '24px',
                   }}
                 >
-                  WE BUILD SYSTEMS THAT HOLD YOUNG PEOPLE.
+                  WE FIND THE PEOPLE ALREADY DOING THE WORK.
                 </h3>
+                <p
+                  style={{
+                    fontFamily: 'IBM Plex Sans, sans-serif',
+                    fontWeight: 400,
+                    fontSize: '16px',
+                    color: '#444444',
+                    lineHeight: 1.7,
+                    maxWidth: '640px',
+                    marginBottom: '20px',
+                  }}
+                >
+                  The embargo on brilliance is structural. Young people are not failing — they are being failed by
+                  institutions that were never designed to see them. Atlas ERA doesn&apos;t build another institution.
+                  We build the network that connects the ones already fighting back.
+                </p>
                 <p
                   style={{
                     fontFamily: 'IBM Plex Sans, sans-serif',
@@ -383,9 +419,8 @@ export default function HomePage() {
                     maxWidth: '640px',
                   }}
                 >
-                  What does it mean to protect brilliance? It means building the infrastructure that ensures young people
-                  don&apos;t have to choose between being themselves and being safe. US-Squared designs justice-centered
-                  programs, tools, and systems for youth and the adults who love them.
+                  We fund practitioners. We affirm communities. We credential learning wherever it actually
+                  happens — not just in the buildings we control.
                 </p>
               </AnimateOnScroll>
             </div>
@@ -400,9 +435,9 @@ export default function HomePage() {
                   borderTop: '1px solid rgba(10,10,10,0.1)',
                 }}
               >
-                <StatCounter value="7,000+" label="Youth Served" />
-                <StatCounter value="4+" label="Program Domains" />
-                <StatCounter value="20+" label="Years in Education" />
+                <StatCounter value="22,000+" label="Lives touched through network partnerships" />
+                <StatCounter value="7,000+" label="Adolescents studied in peer-reviewed research" />
+                <StatCounter value="20+" label="Years in education research and practice" />
               </div>
             </AnimateOnScroll>
           </div>
@@ -412,7 +447,7 @@ export default function HomePage() {
         <section id="programs" style={{ backgroundColor: '#0A0A0A', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
-              <Eyebrow text="Our Programs" />
+              <Eyebrow text="The Network" />
               <h2
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
@@ -424,7 +459,7 @@ export default function HomePage() {
                   marginBottom: '16px',
                 }}
               >
-                {`4 SYSTEMS.\nONE SIGNAL.`}
+                {`4 DOMAINS.\nONE NETWORK.`}
               </h2>
               <p
                 style={{
@@ -437,8 +472,8 @@ export default function HomePage() {
                   lineHeight: 1.6,
                 }}
               >
-                Each program is built around justice-centered design — rooted in research, tested with real communities,
-                and built to last.
+                Each domain connects practitioners, funds their work, and credentials the brilliance already
+                happening in communities the traditional system cannot see.
               </p>
             </AnimateOnScroll>
 
@@ -446,34 +481,34 @@ export default function HomePage() {
               <div style={{ borderTop: '1px solid #1A1A1A' }}>
                 <ProgramRow
                   num="01"
-                  name="BASEops"
-                  descriptor="Operations + Infrastructure"
+                  name="Research & Evidence"
+                  descriptor="Proving what communities already know"
                   accent="#C5E620"
-                  hoverText="The scaffold beneath every program. BASEops provides community organizations with free toolkits for operations, grant management, and impact measurement."
-                  href="/baseops"
+                  hoverText="Peer-reviewed research, longitudinal data, and the BASE Framework — the pedagogical counter-architecture to every institution that told a young person their brilliance was a problem."
+                  href="/research"
                 />
                 <ProgramRow
                   num="02"
-                  name="ATLAS ACADEMY"
-                  descriptor="Youth Learning Pathway"
+                  name="Atlas ERA Network"
+                  descriptor="Connecting practitioners across the world"
                   accent="#FF4B1F"
-                  hoverText="A 10-week cohort for youth 14–21. Build your map, find your voice, and design your future — on your terms. Free to apply. Cohort-based. In-person & virtual."
+                  hoverText="The field-building core of Atlas ERA. We find the educators, mentors, and community leaders already doing the work — and connect, fund, and credential them."
                   href="/atlas"
                 />
                 <ProgramRow
                   num="03"
-                  name="ALTERED.EARTH"
-                  descriptor="Land-Based Retreat"
+                  name="Community Presence"
+                  descriptor="Showing up. Witnessing. Investing."
                   accent="#6B3A1F"
-                  hoverText="5 days. Land, belonging, restorative practice. A retreat designed for young people who need to exhale, reconnect, and be held by something real."
+                  hoverText="Embodied methodology: discover, visit, connect, credential, invest. The field is the work. The world is the classroom."
                   href="/earth"
                 />
                 <ProgramRow
                   num="04"
-                  name="SPARENT SCIENCE"
-                  descriptor="Newsletter for Trusted Adults"
+                  name="Sparent Science"
+                  descriptor="Tools for the adults who hold young people"
                   accent="#4A7FA5"
-                  hoverText="Research-backed tools for the adults around young people. Monthly newsletter + podcast with Dr. Erica L. Tartt, PhD."
+                  hoverText="Research-backed tools for the educators, mentors, caregivers, and coaches who surround young people. Monthly newsletter + podcast with Dr. Erica L. Tartt, PhD."
                   href="/sparent"
                 />
               </div>
@@ -1172,7 +1207,7 @@ export default function HomePage() {
                 <ModuleCard
                   num="BASE Framework"
                   title="Brilliance · Authenticity · Self-Expression · Empowerment"
-                  body="A justice-centered developmental framework for programs serving Black and Brown youth, derived from dissertation research and community practice."
+                  body="A justice-centered developmental framework for programs serving Black and Brown youth, derived from dissertation research and community practice. The BASE Framework is the pedagogical spine of the Atlas ERA network — the counter-architecture to every institution that told a young person their brilliance was a problem."
                   accent="#FF4B1F"
                 />
               </div>
@@ -1212,7 +1247,8 @@ export default function HomePage() {
                     color: '#555555',
                   }}
                 >
-                  — Dr. Erica L. Tartt, PhD, Founder
+                  — Dr. Erica L. Tartt, PhD
+                  <br />Founder &amp; Research Director, Atlas ERA / US-Squared Research Institute
                 </cite>
               </blockquote>
 
@@ -1294,24 +1330,6 @@ export default function HomePage() {
                     fontSize: '14px',
                     letterSpacing: '0.15em',
                     textTransform: 'uppercase',
-                    backgroundColor: '#0A0A0A',
-                    color: '#F0EDE8',
-                    padding: '24px 28px',
-                    textDecoration: 'none',
-                    display: 'block',
-                    textAlign: 'center',
-                  }}
-                >
-                  Partner With Us
-                </Link>
-                <Link
-                  href="/atlas"
-                  style={{
-                    fontFamily: 'Barlow Condensed, sans-serif',
-                    fontWeight: 900,
-                    fontSize: '14px',
-                    letterSpacing: '0.15em',
-                    textTransform: 'uppercase',
                     backgroundColor: '#FF4B1F',
                     color: '#F0EDE8',
                     padding: '24px 28px',
@@ -1320,7 +1338,7 @@ export default function HomePage() {
                     textAlign: 'center',
                   }}
                 >
-                  Apply to a Program
+                  Join the Network
                 </Link>
                 <Link
                   href="/connect"
@@ -1330,16 +1348,15 @@ export default function HomePage() {
                     fontSize: '14px',
                     letterSpacing: '0.15em',
                     textTransform: 'uppercase',
-                    border: '2px solid #FF4B1F',
-                    color: '#FF4B1F',
+                    backgroundColor: '#0A0A0A',
+                    color: '#F0EDE8',
                     padding: '24px 28px',
                     textDecoration: 'none',
                     display: 'block',
                     textAlign: 'center',
-                    backgroundColor: 'transparent',
                   }}
                 >
-                  Support Our Work
+                  Support the Work
                 </Link>
                 <Link
                   href="/connect"
@@ -1358,7 +1375,26 @@ export default function HomePage() {
                     backgroundColor: 'transparent',
                   }}
                 >
-                  Contact Us
+                  Partner With Us
+                </Link>
+                <Link
+                  href="/connect"
+                  style={{
+                    fontFamily: 'Barlow Condensed, sans-serif',
+                    fontWeight: 900,
+                    fontSize: '14px',
+                    letterSpacing: '0.15em',
+                    textTransform: 'uppercase',
+                    border: '2px solid #FF4B1F',
+                    color: '#FF4B1F',
+                    padding: '24px 28px',
+                    textDecoration: 'none',
+                    display: 'block',
+                    textAlign: 'center',
+                    backgroundColor: 'transparent',
+                  }}
+                >
+                  Contact
                 </Link>
               </div>
             </AnimateOnScroll>
@@ -1388,11 +1424,11 @@ export default function HomePage() {
                   letterSpacing: '0.05em',
                 }}
               >
-                US SQUARED
+                US² | Atlas ERA
               </Link>
               <nav style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', alignItems: 'center' }}>
                 {[
-                  { label: 'Programs', href: '/#programs' },
+                  { label: 'Network', href: '/#programs' },
                   { label: 'Research', href: '/research' },
                   { label: 'About', href: '/about' },
                   { label: 'BASEops', href: '/baseops' },
@@ -1438,6 +1474,21 @@ export default function HomePage() {
               </div>
             </div>
             <div style={{ height: '1px', backgroundColor: '#1A1A1A', marginBottom: '24px' }} />
+            <div
+              style={{
+                fontFamily: 'Barlow Condensed, sans-serif',
+                fontWeight: 600,
+                fontSize: '11px',
+                letterSpacing: '0.12em',
+                textTransform: 'uppercase',
+                color: '#555555',
+                marginBottom: '16px',
+              }}
+            >
+              Atlas ERA — The Education Research Association
+              <br />
+              A US-Squared Research Institute Initiative
+            </div>
             <div
               style={{
                 display: 'flex',
