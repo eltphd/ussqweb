@@ -5,7 +5,7 @@ import AnimateOnScroll from '@/components/AnimateOnScroll';
 import PhotoPlaceholder from '@/components/PhotoPlaceholder';
 import Footer from '@/components/Footer';
 
-function Eyebrow({ text, color = '#FF4B1F' }: { text: string; color?: string }) {
+function Eyebrow({ text, color = '#D4A017' }: { text: string; color?: string }) {
   return (
     <div
       style={{
@@ -31,7 +31,7 @@ export default function AboutPage() {
         {/* Hero */}
         <section
           style={{
-            backgroundColor: '#0A0A0A',
+            backgroundColor: '#0E0E0E',
             minHeight: '60svh',
             display: 'flex',
             alignItems: 'center',
@@ -49,7 +49,7 @@ export default function AboutPage() {
               transform: 'translateY(-50%)',
               fontFamily: 'Bebas Neue, sans-serif',
               fontSize: '28vw',
-              color: 'rgba(255,75,31,0.03)',
+              color: 'rgba(212,160,23,0.03)',
               lineHeight: 1,
               pointerEvents: 'none',
               userSelect: 'none',
@@ -65,7 +65,7 @@ export default function AboutPage() {
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: 'clamp(56px, 8vw, 96px)',
-                  color: '#F0EDE8',
+                  color: '#F4F1EC',
                   lineHeight: 0.9,
                   letterSpacing: '0.02em',
                   marginBottom: '24px',
@@ -75,7 +75,7 @@ export default function AboutPage() {
               </h1>
               <p
                 style={{
-                  fontFamily: 'IBM Plex Sans, sans-serif',
+                  fontFamily: 'Barlow, sans-serif',
                   fontWeight: 300,
                   fontSize: '20px',
                   color: '#888888',
@@ -91,15 +91,15 @@ export default function AboutPage() {
         </section>
 
         {/* Mission Statement */}
-        <section style={{ backgroundColor: '#F0EDE8', padding: '80px 0' }}>
+        <section style={{ backgroundColor: '#F4F1EC', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
-              <Eyebrow text="Our Mission" color="#FF4B1F" />
+              <Eyebrow text="Our Mission" color="#D4A017" />
               <h2
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: '56px',
-                  color: '#0A0A0A',
+                  color: '#0E0E0E',
                   letterSpacing: '0.02em',
                   marginBottom: '32px',
                   lineHeight: 0.95,
@@ -110,12 +110,12 @@ export default function AboutPage() {
             </AnimateOnScroll>
             <AnimateOnScroll delay={0.1}>
               <div style={{ maxWidth: '800px' }}>
-                <div style={{ height: '3px', backgroundColor: '#FF4B1F', marginBottom: '32px', maxWidth: '200px' }} />
+                <div style={{ height: '3px', backgroundColor: '#D4A017', marginBottom: '32px', maxWidth: '200px' }} />
                 <p
                   style={{
-                    fontFamily: 'IBM Plex Sans, sans-serif',
+                    fontFamily: 'Barlow, sans-serif',
                     fontSize: '18px',
-                    color: '#0A0A0A',
+                    color: '#0E0E0E',
                     lineHeight: 1.8,
                     marginBottom: '20px',
                   }}
@@ -126,9 +126,9 @@ export default function AboutPage() {
                 </p>
                 <p
                   style={{
-                    fontFamily: 'IBM Plex Sans, sans-serif',
+                    fontFamily: 'Barlow, sans-serif',
                     fontSize: '18px',
-                    color: '#0A0A0A',
+                    color: '#0E0E0E',
                     lineHeight: 1.8,
                     marginBottom: '20px',
                   }}
@@ -139,9 +139,9 @@ export default function AboutPage() {
                 </p>
                 <p
                   style={{
-                    fontFamily: 'IBM Plex Sans, sans-serif',
+                    fontFamily: 'Barlow, sans-serif',
                     fontSize: '18px',
-                    color: '#0A0A0A',
+                    color: '#0E0E0E',
                     lineHeight: 1.8,
                   }}
                 >
@@ -154,7 +154,7 @@ export default function AboutPage() {
         </section>
 
         {/* Leadership */}
-        <section style={{ backgroundColor: '#0A0A0A', padding: '80px 0' }}>
+        <section style={{ backgroundColor: '#0E0E0E', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
               <Eyebrow text="Leadership" />
@@ -162,7 +162,7 @@ export default function AboutPage() {
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: '56px',
-                  color: '#F0EDE8',
+                  color: '#F4F1EC',
                   letterSpacing: '0.02em',
                   marginBottom: '40px',
                 }}
@@ -180,7 +180,7 @@ export default function AboutPage() {
               }}
             >
               <AnimateOnScroll delay={0.05}>
-                <div style={{ borderTop: '4px solid #FF4B1F' }}>
+                <div style={{ borderTop: '4px solid #D4A017' }}>
                   <PhotoPlaceholder label="Dr. Erica L. Tartt, PhD" aspectRatio="3/4" />
                 </div>
               </AnimateOnScroll>
@@ -191,7 +191,7 @@ export default function AboutPage() {
                     style={{
                       fontFamily: 'Bebas Neue, sans-serif',
                       fontSize: '48px',
-                      color: '#F0EDE8',
+                      color: '#F4F1EC',
                       letterSpacing: '0.03em',
                       marginBottom: '4px',
                     }}
@@ -205,7 +205,7 @@ export default function AboutPage() {
                       fontSize: '12px',
                       letterSpacing: '0.15em',
                       textTransform: 'uppercase',
-                      color: '#FF4B1F',
+                      color: '#D4A017',
                       marginBottom: '24px',
                     }}
                   >
@@ -213,7 +213,7 @@ export default function AboutPage() {
                   </div>
                   <p
                     style={{
-                      fontFamily: 'IBM Plex Sans, sans-serif',
+                      fontFamily: 'Barlow, sans-serif',
                       fontSize: '16px',
                       color: '#888888',
                       lineHeight: 1.7,
@@ -226,7 +226,7 @@ export default function AboutPage() {
                   </p>
                   <p
                     style={{
-                      fontFamily: 'IBM Plex Sans, sans-serif',
+                      fontFamily: 'Barlow, sans-serif',
                       fontSize: '16px',
                       color: '#888888',
                       lineHeight: 1.7,
@@ -238,7 +238,7 @@ export default function AboutPage() {
                   </p>
                   <p
                     style={{
-                      fontFamily: 'IBM Plex Sans, sans-serif',
+                      fontFamily: 'Barlow, sans-serif',
                       fontSize: '16px',
                       color: '#888888',
                       lineHeight: 1.7,
@@ -251,7 +251,7 @@ export default function AboutPage() {
                   </p>
                   <p
                     style={{
-                      fontFamily: 'IBM Plex Sans, sans-serif',
+                      fontFamily: 'Barlow, sans-serif',
                       fontSize: '16px',
                       color: '#888888',
                       lineHeight: 1.7,
@@ -264,7 +264,7 @@ export default function AboutPage() {
                   </p>
                   <p
                     style={{
-                      fontFamily: 'IBM Plex Sans, sans-serif',
+                      fontFamily: 'Barlow, sans-serif',
                       fontSize: '16px',
                       color: '#888888',
                       lineHeight: 1.7,
@@ -307,15 +307,15 @@ export default function AboutPage() {
         </section>
 
         {/* Org Facts */}
-        <section style={{ backgroundColor: '#F0EDE8', padding: '80px 0' }}>
+        <section style={{ backgroundColor: '#F4F1EC', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
-              <Eyebrow text="Organization" color="#FF4B1F" />
+              <Eyebrow text="Organization" color="#D4A017" />
               <h2
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: '56px',
-                  color: '#0A0A0A',
+                  color: '#0E0E0E',
                   letterSpacing: '0.02em',
                   marginBottom: '40px',
                 }}
@@ -341,8 +341,8 @@ export default function AboutPage() {
                   <div
                     key={fact.label}
                     style={{
-                      backgroundColor: '#0A0A0A',
-                      borderTop: '4px solid #FF4B1F',
+                      backgroundColor: '#0E0E0E',
+                      borderTop: '4px solid #D4A017',
                       padding: '24px 20px',
                     }}
                   >
@@ -353,7 +353,7 @@ export default function AboutPage() {
                         fontSize: '10px',
                         letterSpacing: '0.2em',
                         textTransform: 'uppercase',
-                        color: '#FF4B1F',
+                        color: '#D4A017',
                         marginBottom: '8px',
                       }}
                     >
@@ -363,7 +363,7 @@ export default function AboutPage() {
                       style={{
                         fontFamily: 'Bebas Neue, sans-serif',
                         fontSize: '28px',
-                        color: '#F0EDE8',
+                        color: '#F4F1EC',
                         letterSpacing: '0.02em',
                       }}
                     >
@@ -376,14 +376,14 @@ export default function AboutPage() {
               <div
                 style={{
                   marginTop: '24px',
-                  backgroundColor: '#0A0A0A',
-                  borderLeft: '4px solid #FF4B1F',
+                  backgroundColor: '#0E0E0E',
+                  borderLeft: '4px solid #D4A017',
                   padding: '20px 24px',
                 }}
               >
                 <p
                   style={{
-                    fontFamily: 'IBM Plex Sans, sans-serif',
+                    fontFamily: 'Barlow, sans-serif',
                     fontSize: '14px',
                     color: '#555555',
                     lineHeight: 1.5,
@@ -397,7 +397,7 @@ export default function AboutPage() {
         </section>
 
         {/* Partners Placeholder */}
-        <section style={{ backgroundColor: '#0A0A0A', padding: '80px 0' }}>
+        <section style={{ backgroundColor: '#0E0E0E', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
               <Eyebrow text="Support" />
@@ -405,7 +405,7 @@ export default function AboutPage() {
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: '56px',
-                  color: '#F0EDE8',
+                  color: '#F4F1EC',
                   letterSpacing: '0.02em',
                   marginBottom: '16px',
                 }}
@@ -434,7 +434,7 @@ export default function AboutPage() {
                 </div>
                 <p
                   style={{
-                    fontFamily: 'IBM Plex Sans, sans-serif',
+                    fontFamily: 'Barlow, sans-serif',
                     fontSize: '14px',
                     color: '#555555',
                     lineHeight: 1.6,
@@ -443,7 +443,7 @@ export default function AboutPage() {
                   Partner and funder logos will appear here. Interested in supporting our work?{' '}
                   <a
                     href="/connect"
-                    style={{ color: '#FF4B1F', textDecoration: 'none' }}
+                    style={{ color: '#D4A017', textDecoration: 'none' }}
                   >
                     Get in touch.
                   </a>

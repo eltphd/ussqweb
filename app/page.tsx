@@ -77,7 +77,7 @@ function ProgramRow({ num, name, descriptor, accent, hoverText, href }: ProgramR
             style={{
               fontFamily: 'Bebas Neue, sans-serif',
               fontSize: '40px',
-              color: '#F0EDE8',
+              color: '#F4F1EC',
               letterSpacing: '0.03em',
               lineHeight: 1,
             }}
@@ -87,7 +87,7 @@ function ProgramRow({ num, name, descriptor, accent, hoverText, href }: ProgramR
           {hovered && (
             <div
               style={{
-                fontFamily: 'IBM Plex Sans, sans-serif',
+                fontFamily: 'Barlow, sans-serif',
                 fontSize: '14px',
                 color: '#888888',
                 marginTop: '8px',
@@ -104,7 +104,7 @@ function ProgramRow({ num, name, descriptor, accent, hoverText, href }: ProgramR
         <div style={{ textAlign: 'right', flexShrink: 0 }}>
           <div
             style={{
-              fontFamily: 'IBM Plex Sans, sans-serif',
+              fontFamily: 'Barlow, sans-serif',
               fontSize: '13px',
               color: '#555555',
               marginBottom: hovered ? '8px' : '0',
@@ -166,7 +166,7 @@ function ModuleCard({ num, title, body, accent }: ModuleCardProps) {
         style={{
           fontFamily: 'Bebas Neue, sans-serif',
           fontSize: '28px',
-          color: '#F0EDE8',
+          color: '#F4F1EC',
           letterSpacing: '0.03em',
           marginBottom: '12px',
         }}
@@ -175,7 +175,7 @@ function ModuleCard({ num, title, body, accent }: ModuleCardProps) {
       </div>
       <p
         style={{
-          fontFamily: 'IBM Plex Sans, sans-serif',
+          fontFamily: 'Barlow, sans-serif',
           fontSize: '14px',
           color: '#888888',
           lineHeight: 1.6,
@@ -188,7 +188,7 @@ function ModuleCard({ num, title, body, accent }: ModuleCardProps) {
 }
 
 // ─── Eyebrow ──────────────────────────────────────────────────────────────────
-function Eyebrow({ text, color = '#FF4B1F' }: { text: string; color?: string }) {
+function Eyebrow({ text, color = '#D4A017' }: { text: string; color?: string }) {
   return (
     <div
       style={{
@@ -221,7 +221,7 @@ export default function HomePage() {
           style={{
             position: 'relative',
             height: '100svh',
-            backgroundColor: '#0A0A0A',
+            backgroundColor: '#0E0E0E',
             display: 'flex',
             alignItems: 'center',
             overflow: 'hidden',
@@ -238,7 +238,7 @@ export default function HomePage() {
               top: '10vh',
               fontFamily: 'Bebas Neue, sans-serif',
               fontSize: '28vw',
-              color: 'rgba(255,75,31,0.04)',
+              color: 'rgba(212,160,23,0.04)',
               lineHeight: 1,
               pointerEvents: 'none',
               userSelect: 'none',
@@ -266,7 +266,7 @@ export default function HomePage() {
                 fontSize: '10px',
                 letterSpacing: '0.25em',
                 textTransform: 'uppercase',
-                color: '#FF4B1F',
+                color: '#D4A017',
                 marginBottom: '16px',
               }}
             >
@@ -280,7 +280,7 @@ export default function HomePage() {
               style={{
                 fontFamily: 'Bebas Neue, sans-serif',
                 fontSize: 'clamp(64px, 8vw, 112px)',
-                color: '#F0EDE8',
+                color: '#F4F1EC',
                 lineHeight: 0.9,
                 letterSpacing: '0.02em',
                 whiteSpace: 'pre-line',
@@ -296,7 +296,7 @@ export default function HomePage() {
               transition={{ duration: 1.2, delay: 0.4, ease: 'easeOut' }}
               style={{
                 height: '3px',
-                backgroundColor: '#FF4B1F',
+                backgroundColor: '#D4A017',
                 maxWidth: '580px',
                 marginBottom: '24px',
               }}
@@ -307,7 +307,7 @@ export default function HomePage() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.8 }}
               style={{
-                fontFamily: 'IBM Plex Sans, sans-serif',
+                fontFamily: 'Barlow, sans-serif',
                 fontWeight: 300,
                 fontSize: '18px',
                 color: '#888888',
@@ -349,8 +349,8 @@ export default function HomePage() {
         <section
           id="mission"
           style={{
-            backgroundColor: '#F0EDE8',
-            color: '#0A0A0A',
+            backgroundColor: '#F4F1EC',
+            color: '#0E0E0E',
             padding: '80px 0',
           }}
         >
@@ -369,7 +369,7 @@ export default function HomePage() {
                   style={{
                     fontFamily: 'Bebas Neue, sans-serif',
                     fontSize: '72px',
-                    color: '#0A0A0A',
+                    color: '#0E0E0E',
                     lineHeight: 0.95,
                     letterSpacing: '0.02em',
                     whiteSpace: 'pre-line',
@@ -379,14 +379,14 @@ export default function HomePage() {
                 </h2>
               </AnimateOnScroll>
 
-              <div style={{ width: '3px', backgroundColor: '#FF4B1F', alignSelf: 'stretch' }} />
+              <div style={{ width: '3px', backgroundColor: '#D4A017', alignSelf: 'stretch' }} />
 
               <AnimateOnScroll delay={0.1}>
                 <h3
                   style={{
                     fontFamily: 'Bebas Neue, sans-serif',
                     fontSize: '48px',
-                    color: '#0A0A0A',
+                    color: '#0E0E0E',
                     lineHeight: 1,
                     letterSpacing: '0.02em',
                     marginBottom: '24px',
@@ -396,7 +396,7 @@ export default function HomePage() {
                 </h3>
                 <p
                   style={{
-                    fontFamily: 'IBM Plex Sans, sans-serif',
+                    fontFamily: 'Barlow, sans-serif',
                     fontWeight: 400,
                     fontSize: '16px',
                     color: '#444444',
@@ -411,7 +411,7 @@ export default function HomePage() {
                 </p>
                 <p
                   style={{
-                    fontFamily: 'IBM Plex Sans, sans-serif',
+                    fontFamily: 'Barlow, sans-serif',
                     fontWeight: 400,
                     fontSize: '16px',
                     color: '#444444',
@@ -444,7 +444,7 @@ export default function HomePage() {
         </section>
 
         {/* ── Section 02: Program Hub ──────────────────────────────────── */}
-        <section id="programs" style={{ backgroundColor: '#0A0A0A', padding: '80px 0' }}>
+        <section id="programs" style={{ backgroundColor: '#0E0E0E', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
               <Eyebrow text="The Network" />
@@ -452,7 +452,7 @@ export default function HomePage() {
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: '72px',
-                  color: '#F0EDE8',
+                  color: '#F4F1EC',
                   lineHeight: 0.95,
                   letterSpacing: '0.02em',
                   whiteSpace: 'pre-line',
@@ -463,7 +463,7 @@ export default function HomePage() {
               </h2>
               <p
                 style={{
-                  fontFamily: 'IBM Plex Sans, sans-serif',
+                  fontFamily: 'Barlow, sans-serif',
                   fontWeight: 300,
                   fontSize: '16px',
                   color: '#888888',
@@ -483,7 +483,7 @@ export default function HomePage() {
                   num="01"
                   name="Research & Evidence"
                   descriptor="Proving what communities already know"
-                  accent="#C5E620"
+                  accent="#9B82C4"
                   hoverText="Peer-reviewed research, longitudinal data, and the BASE Framework — the pedagogical counter-architecture to every institution that told a young person their brilliance was a problem."
                   href="/research"
                 />
@@ -491,7 +491,7 @@ export default function HomePage() {
                   num="02"
                   name="Atlas ERA Network"
                   descriptor="Connecting practitioners across the world"
-                  accent="#FF4B1F"
+                  accent="#B5142A"
                   hoverText="The field-building core of Atlas ERA. We find the educators, mentors, and community leaders already doing the work — and connect, fund, and credential them."
                   href="/atlas"
                 />
@@ -499,7 +499,7 @@ export default function HomePage() {
                   num="03"
                   name="Community Presence"
                   descriptor="Showing up. Witnessing. Investing."
-                  accent="#6B3A1F"
+                  accent="#2D8A4E"
                   hoverText="Embodied methodology: discover, visit, connect, credential, invest. The field is the work. The world is the classroom."
                   href="/earth"
                 />
@@ -507,7 +507,7 @@ export default function HomePage() {
                   num="04"
                   name="Sparent Science"
                   descriptor="Tools for the adults who hold young people"
-                  accent="#4A7FA5"
+                  accent="#3AB8F0"
                   hoverText="Research-backed tools for the educators, mentors, caregivers, and coaches who surround young people. Monthly newsletter + podcast with Dr. Erica L. Tartt, PhD."
                   href="/sparent"
                 />
@@ -520,8 +520,8 @@ export default function HomePage() {
         <section
           id="baseops"
           style={{
-            backgroundColor: '#0A0A0A',
-            borderTop: '4px solid #C5E620',
+            backgroundColor: '#0E0E0E',
+            borderTop: '4px solid #9B82C4',
             padding: '80px 0',
             minHeight: '100svh',
             display: 'flex',
@@ -530,12 +530,12 @@ export default function HomePage() {
         >
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px', width: '100%' }}>
             <AnimateOnScroll>
-              <Eyebrow text="A US-Squared System · 01" color="#C5E620" />
+              <Eyebrow text="A US-Squared System · 01" color="#9B82C4" />
               <h2
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: '96px',
-                  color: '#C5E620',
+                  color: '#9B82C4',
                   lineHeight: 0.9,
                   letterSpacing: '0.02em',
                   marginBottom: '16px',
@@ -545,10 +545,10 @@ export default function HomePage() {
               </h2>
               <p
                 style={{
-                  fontFamily: 'IBM Plex Sans, sans-serif',
+                  fontFamily: 'Barlow, sans-serif',
                   fontWeight: 300,
                   fontSize: '20px',
-                  color: '#F0EDE8',
+                  color: '#F4F1EC',
                   marginBottom: '16px',
                 }}
               >
@@ -556,7 +556,7 @@ export default function HomePage() {
               </p>
               <p
                 style={{
-                  fontFamily: 'IBM Plex Sans, sans-serif',
+                  fontFamily: 'Barlow, sans-serif',
                   fontSize: '16px',
                   color: '#888888',
                   maxWidth: '600px',
@@ -582,19 +582,19 @@ export default function HomePage() {
                   num="Module 01"
                   title="Org Infrastructure"
                   body="HR, onboarding, compliance, and internal systems built for community-based organizations operating under resource constraints."
-                  accent="#C5E620"
+                  accent="#9B82C4"
                 />
                 <ModuleCard
                   num="Module 02"
                   title="Grant Systems"
                   body="Grant tracking, reporting templates, funder relationship management, and compliance workflows for small-to-mid-size nonprofits."
-                  accent="#C5E620"
+                  accent="#9B82C4"
                 />
                 <ModuleCard
                   num="Module 03"
                   title="Impact Measurement"
                   body="Logic models, data collection tools, and dashboards for communicating your work to funders, boards, and the communities you serve."
-                  accent="#C5E620"
+                  accent="#9B82C4"
                 />
               </div>
             </AnimateOnScroll>
@@ -609,8 +609,8 @@ export default function HomePage() {
                     fontSize: '12px',
                     letterSpacing: '0.15em',
                     textTransform: 'uppercase',
-                    backgroundColor: '#C5E620',
-                    color: '#0A0A0A',
+                    backgroundColor: '#9B82C4',
+                    color: '#0E0E0E',
                     padding: '14px 28px',
                     textDecoration: 'none',
                     display: 'inline-block',
@@ -626,8 +626,8 @@ export default function HomePage() {
                     fontSize: '12px',
                     letterSpacing: '0.15em',
                     textTransform: 'uppercase',
-                    border: '2px solid #C5E620',
-                    color: '#C5E620',
+                    border: '2px solid #9B82C4',
+                    color: '#9B82C4',
                     padding: '14px 28px',
                     textDecoration: 'none',
                     display: 'inline-block',
@@ -642,10 +642,10 @@ export default function HomePage() {
         </section>
 
         {/* ── Section 04: Atlas Academy ────────────────────────────────── */}
-        <section id="atlas" style={{ backgroundColor: '#F0EDE8', padding: '80px 0' }}>
+        <section id="atlas" style={{ backgroundColor: '#F4F1EC', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
-              <Eyebrow text="A US-Squared Program · 02" color="#FF4B1F" />
+              <Eyebrow text="A US-Squared Program · 02" color="#B5142A" />
             </AnimateOnScroll>
             <div
               style={{
@@ -661,7 +661,7 @@ export default function HomePage() {
                     style={{
                       fontFamily: 'Bebas Neue, sans-serif',
                       fontSize: '88px',
-                      color: '#0A0A0A',
+                      color: '#0E0E0E',
                       lineHeight: 0.9,
                       letterSpacing: '0.02em',
                       whiteSpace: 'pre-line',
@@ -672,7 +672,7 @@ export default function HomePage() {
                   </h2>
                   <p
                     style={{
-                      fontFamily: 'IBM Plex Sans, sans-serif',
+                      fontFamily: 'Barlow, sans-serif',
                       fontWeight: 300,
                       fontSize: '20px',
                       color: '#444444',
@@ -692,8 +692,8 @@ export default function HomePage() {
                           fontSize: '10px',
                           letterSpacing: '0.15em',
                           textTransform: 'uppercase',
-                          border: '2px solid #FF4B1F',
-                          color: '#FF4B1F',
+                          border: '2px solid #B5142A',
+                          color: '#B5142A',
                           padding: '4px 10px',
                         }}
                       >
@@ -708,7 +708,7 @@ export default function HomePage() {
                     style={{
                       fontFamily: 'Bebas Neue, sans-serif',
                       fontSize: '24px',
-                      color: '#0A0A0A',
+                      color: '#0E0E0E',
                       letterSpacing: '0.05em',
                       marginBottom: '20px',
                     }}
@@ -734,8 +734,8 @@ export default function HomePage() {
                       <div
                         key={m.num}
                         style={{
-                          backgroundColor: '#0A0A0A',
-                          borderTop: '4px solid #FF4B1F',
+                          backgroundColor: '#0E0E0E',
+                          borderTop: '4px solid #B5142A',
                           padding: '16px 14px',
                         }}
                       >
@@ -745,7 +745,7 @@ export default function HomePage() {
                             fontWeight: 900,
                             fontSize: '9px',
                             letterSpacing: '0.2em',
-                            color: '#FF4B1F',
+                            color: '#B5142A',
                             marginBottom: '6px',
                           }}
                         >
@@ -755,7 +755,7 @@ export default function HomePage() {
                           style={{
                             fontFamily: 'Bebas Neue, sans-serif',
                             fontSize: '16px',
-                            color: '#F0EDE8',
+                            color: '#F4F1EC',
                           }}
                         >
                           {m.title}
@@ -772,8 +772,8 @@ export default function HomePage() {
                       fontSize: '12px',
                       letterSpacing: '0.15em',
                       textTransform: 'uppercase',
-                      backgroundColor: '#FF4B1F',
-                      color: '#F0EDE8',
+                      backgroundColor: '#B5142A',
+                      color: '#F4F1EC',
                       padding: '14px 28px',
                       textDecoration: 'none',
                       display: 'inline-block',
@@ -786,7 +786,7 @@ export default function HomePage() {
 
               {/* Right: Photo */}
               <AnimateOnScroll delay={0.15}>
-                <div style={{ borderTop: '4px solid #FF4B1F' }}>
+                <div style={{ borderTop: '4px solid #B5142A' }}>
                   <PhotoPlaceholder label="Atlas Academy Youth Session" aspectRatio="4/3" />
                 </div>
               </AnimateOnScroll>
@@ -797,16 +797,16 @@ export default function HomePage() {
         {/* ── Section 05: Altered.Earth ────────────────────────────────── */}
         <section
           id="earth"
-          style={{ backgroundColor: '#0A0A0A', padding: '80px 0', minHeight: '80svh' }}
+          style={{ backgroundColor: '#0E0E0E', padding: '80px 0', minHeight: '80svh' }}
         >
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
-              <Eyebrow text="A US-Squared Retreat · 03" color="#6B3A1F" />
+              <Eyebrow text="A US-Squared Retreat · 03" color="#2D8A4E" />
               <h2
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: '96px',
-                  color: '#6B3A1F',
+                  color: '#2D8A4E',
                   lineHeight: 0.9,
                   letterSpacing: '0.02em',
                   whiteSpace: 'pre-line',
@@ -817,10 +817,10 @@ export default function HomePage() {
               </h2>
               <p
                 style={{
-                  fontFamily: 'IBM Plex Sans, sans-serif',
+                  fontFamily: 'Barlow, sans-serif',
                   fontWeight: 300,
                   fontSize: '20px',
-                  color: '#F0EDE8',
+                  color: '#F4F1EC',
                   marginBottom: '16px',
                 }}
               >
@@ -828,7 +828,7 @@ export default function HomePage() {
               </p>
               <p
                 style={{
-                  fontFamily: 'IBM Plex Sans, sans-serif',
+                  fontFamily: 'Barlow, sans-serif',
                   fontSize: '16px',
                   color: '#888888',
                   maxWidth: '600px',
@@ -844,7 +844,7 @@ export default function HomePage() {
             <AnimateOnScroll delay={0.1}>
               <div
                 style={{
-                  backgroundColor: '#6B3A1F',
+                  backgroundColor: '#2D8A4E',
                   padding: '14px 24px',
                   display: 'inline-block',
                   marginBottom: '40px',
@@ -853,7 +853,7 @@ export default function HomePage() {
                   fontSize: '14px',
                   letterSpacing: '0.2em',
                   textTransform: 'uppercase',
-                  color: '#F0EDE8',
+                  color: '#F4F1EC',
                 }}
               >
                 Summer 2026 · Applications Open
@@ -874,12 +874,12 @@ export default function HomePage() {
                   { title: 'Ages', body: 'Youth 14–22 and adult allies (separate tracks)' },
                   { title: 'Cost', body: 'Sliding scale. No one turned away for lack of funds.' },
                 ].map((card) => (
-                  <div key={card.title} style={{ borderLeft: '3px solid #6B3A1F', paddingLeft: '20px' }}>
+                  <div key={card.title} style={{ borderLeft: '3px solid #2D8A4E', paddingLeft: '20px' }}>
                     <div
                       style={{
                         fontFamily: 'Bebas Neue, sans-serif',
                         fontSize: '20px',
-                        color: '#F0EDE8',
+                        color: '#F4F1EC',
                         letterSpacing: '0.05em',
                         marginBottom: '8px',
                       }}
@@ -888,7 +888,7 @@ export default function HomePage() {
                     </div>
                     <p
                       style={{
-                        fontFamily: 'IBM Plex Sans, sans-serif',
+                        fontFamily: 'Barlow, sans-serif',
                         fontSize: '14px',
                         color: '#888888',
                         lineHeight: 1.6,
@@ -908,8 +908,8 @@ export default function HomePage() {
                   fontSize: '12px',
                   letterSpacing: '0.15em',
                   textTransform: 'uppercase',
-                  border: '2px solid #6B3A1F',
-                  color: '#6B3A1F',
+                  border: '2px solid #2D8A4E',
+                  color: '#2D8A4E',
                   padding: '14px 28px',
                   textDecoration: 'none',
                   display: 'inline-block',
@@ -923,10 +923,10 @@ export default function HomePage() {
         </section>
 
         {/* ── Section 06: Sparent Science ──────────────────────────────── */}
-        <section id="sparent" style={{ backgroundColor: '#F0EDE8', padding: '80px 0' }}>
+        <section id="sparent" style={{ backgroundColor: '#F4F1EC', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
-              <Eyebrow text="A US-Squared Newsletter · 04" color="#4A7FA5" />
+              <Eyebrow text="A US-Squared Newsletter · 04" color="#3AB8F0" />
             </AnimateOnScroll>
             <div
               style={{
@@ -942,7 +942,7 @@ export default function HomePage() {
                     style={{
                       fontFamily: 'Bebas Neue, sans-serif',
                       fontSize: '72px',
-                      color: '#0A0A0A',
+                      color: '#0E0E0E',
                       lineHeight: 0.9,
                       letterSpacing: '0.02em',
                       whiteSpace: 'pre-line',
@@ -953,7 +953,7 @@ export default function HomePage() {
                   </h2>
                   <p
                     style={{
-                      fontFamily: 'IBM Plex Sans, sans-serif',
+                      fontFamily: 'Barlow, sans-serif',
                       fontWeight: 300,
                       fontSize: '16px',
                       color: '#444444',
@@ -977,8 +977,8 @@ export default function HomePage() {
                             fontSize: '10px',
                             letterSpacing: '0.12em',
                             textTransform: 'uppercase',
-                            backgroundColor: 'rgba(74,127,165,0.12)',
-                            color: '#4A7FA5',
+                            backgroundColor: 'rgba(58,184,240,0.12)',
+                            color: '#3AB8F0',
                             padding: '4px 10px',
                           }}
                         >
@@ -991,11 +991,11 @@ export default function HomePage() {
                   {sparentSubmitted ? (
                     <div
                       style={{
-                        fontFamily: 'IBM Plex Sans, sans-serif',
+                        fontFamily: 'Barlow, sans-serif',
                         fontSize: '14px',
-                        color: '#4A7FA5',
+                        color: '#3AB8F0',
                         padding: '16px',
-                        border: '1px solid #4A7FA5',
+                        border: '1px solid #3AB8F0',
                       }}
                     >
                       Thank you! You&apos;re on the list.
@@ -1019,10 +1019,10 @@ export default function HomePage() {
                           padding: '12px 16px',
                           border: '2px solid #0A0A0A',
                           borderRight: 'none',
-                          fontFamily: 'IBM Plex Sans, sans-serif',
+                          fontFamily: 'Barlow, sans-serif',
                           fontSize: '14px',
                           backgroundColor: 'transparent',
-                          color: '#0A0A0A',
+                          color: '#0E0E0E',
                           outline: 'none',
                         }}
                       />
@@ -1034,8 +1034,8 @@ export default function HomePage() {
                           fontSize: '11px',
                           letterSpacing: '0.15em',
                           textTransform: 'uppercase',
-                          backgroundColor: '#4A7FA5',
-                          color: '#F0EDE8',
+                          backgroundColor: '#3AB8F0',
+                          color: '#F4F1EC',
                           padding: '12px 20px',
                           border: 'none',
                           cursor: 'pointer',
@@ -1052,8 +1052,8 @@ export default function HomePage() {
               <AnimateOnScroll delay={0.1}>
                 <div
                   style={{
-                    backgroundColor: '#0A0A0A',
-                    borderTop: '4px solid #4A7FA5',
+                    backgroundColor: '#0E0E0E',
+                    borderTop: '4px solid #3AB8F0',
                     padding: '32px',
                   }}
                 >
@@ -1064,7 +1064,7 @@ export default function HomePage() {
                       fontSize: '10px',
                       letterSpacing: '0.2em',
                       textTransform: 'uppercase',
-                      color: '#4A7FA5',
+                      color: '#3AB8F0',
                       marginBottom: '20px',
                     }}
                   >
@@ -1074,7 +1074,7 @@ export default function HomePage() {
                     style={{
                       fontFamily: 'Bebas Neue, sans-serif',
                       fontSize: '36px',
-                      color: '#F0EDE8',
+                      color: '#F4F1EC',
                       letterSpacing: '0.03em',
                       marginBottom: '16px',
                       lineHeight: 1.1,
@@ -1084,7 +1084,7 @@ export default function HomePage() {
                   </h3>
                   <p
                     style={{
-                      fontFamily: 'IBM Plex Sans, sans-serif',
+                      fontFamily: 'Barlow, sans-serif',
                       fontSize: '14px',
                       color: '#888888',
                       lineHeight: 1.6,
@@ -1096,8 +1096,8 @@ export default function HomePage() {
                   </p>
                   <div
                     style={{
-                      backgroundColor: 'rgba(74,127,165,0.15)',
-                      borderLeft: '3px solid #4A7FA5',
+                      backgroundColor: 'rgba(58,184,240,0.15)',
+                      borderLeft: '3px solid #3AB8F0',
                       padding: '16px 20px',
                     }}
                   >
@@ -1108,7 +1108,7 @@ export default function HomePage() {
                         fontSize: '10px',
                         letterSpacing: '0.2em',
                         textTransform: 'uppercase',
-                        color: '#4A7FA5',
+                        color: '#3AB8F0',
                         marginBottom: '8px',
                       }}
                     >
@@ -1116,7 +1116,7 @@ export default function HomePage() {
                     </div>
                     <p
                       style={{
-                        fontFamily: 'IBM Plex Sans, sans-serif',
+                        fontFamily: 'Barlow, sans-serif',
                         fontSize: '14px',
                         color: '#888888',
                         lineHeight: 1.5,
@@ -1134,7 +1134,7 @@ export default function HomePage() {
                       fontSize: '10px',
                       letterSpacing: '0.15em',
                       textTransform: 'uppercase',
-                      color: '#4A7FA5',
+                      color: '#3AB8F0',
                       textDecoration: 'none',
                       display: 'inline-block',
                       marginTop: '20px',
@@ -1149,7 +1149,7 @@ export default function HomePage() {
         </section>
 
         {/* ── Section 07: Research ─────────────────────────────────────── */}
-        <section id="research" style={{ backgroundColor: '#0A0A0A', padding: '80px 0' }}>
+        <section id="research" style={{ backgroundColor: '#0E0E0E', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
               <Eyebrow text="Research & Impact" />
@@ -1157,7 +1157,7 @@ export default function HomePage() {
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: '72px',
-                  color: '#F0EDE8',
+                  color: '#F4F1EC',
                   lineHeight: 0.95,
                   letterSpacing: '0.02em',
                   whiteSpace: 'pre-line',
@@ -1168,7 +1168,7 @@ export default function HomePage() {
               </h2>
               <p
                 style={{
-                  fontFamily: 'IBM Plex Sans, sans-serif',
+                  fontFamily: 'Barlow, sans-serif',
                   fontWeight: 300,
                   fontSize: '16px',
                   color: '#888888',
@@ -1196,19 +1196,19 @@ export default function HomePage() {
                   num="Peer-Reviewed"
                   title="Latent Transition Analysis"
                   body="Tartt, E. L., Nylund-Gibson, K., et al. (in press). Latent Transition Analysis of adolescent racial discrimination and mental health outcomes. Psychological Methods."
-                  accent="#FF4B1F"
+                  accent="#D4A017"
                 />
                 <ModuleCard
                   num="Dissertation"
                   title="Unraveling Hopelessness"
                   body="Tartt, E. L. (2023). Unraveling Hopelessness: A latent class analysis of mental health profiles among Black adolescents. UCSB. GPA 3.98."
-                  accent="#FF4B1F"
+                  accent="#D4A017"
                 />
                 <ModuleCard
                   num="BASE Framework"
                   title="Brilliance · Authenticity · Self-Expression · Empowerment"
                   body="A justice-centered developmental framework for programs serving Black and Brown youth, derived from dissertation research and community practice. The BASE Framework is the pedagogical spine of the Atlas ERA network — the counter-architecture to every institution that told a young person their brilliance was a problem."
-                  accent="#FF4B1F"
+                  accent="#D4A017"
                 />
               </div>
             </AnimateOnScroll>
@@ -1216,7 +1216,7 @@ export default function HomePage() {
             <AnimateOnScroll delay={0.15}>
               <blockquote
                 style={{
-                  borderLeft: '3px solid #FF4B1F',
+                  borderLeft: '3px solid #D4A017',
                   paddingLeft: '24px',
                   marginBottom: '40px',
                   maxWidth: '640px',
@@ -1224,7 +1224,7 @@ export default function HomePage() {
               >
                 <p
                   style={{
-                    fontFamily: 'IBM Plex Sans, sans-serif',
+                    fontFamily: 'Barlow, sans-serif',
                     fontStyle: 'italic',
                     fontSize: '20px',
                     color: '#888888',
@@ -1261,8 +1261,8 @@ export default function HomePage() {
                     fontSize: '12px',
                     letterSpacing: '0.15em',
                     textTransform: 'uppercase',
-                    backgroundColor: '#FF4B1F',
-                    color: '#F0EDE8',
+                    backgroundColor: '#D4A017',
+                    color: '#F4F1EC',
                     padding: '14px 28px',
                     textDecoration: 'none',
                     display: 'inline-block',
@@ -1278,8 +1278,8 @@ export default function HomePage() {
                     fontSize: '12px',
                     letterSpacing: '0.15em',
                     textTransform: 'uppercase',
-                    border: '2px solid #FF4B1F',
-                    color: '#FF4B1F',
+                    border: '2px solid #D4A017',
+                    color: '#D4A017',
                     padding: '14px 28px',
                     textDecoration: 'none',
                     display: 'inline-block',
@@ -1294,14 +1294,14 @@ export default function HomePage() {
         </section>
 
         {/* ── Section 08: Connect CTA ──────────────────────────────────── */}
-        <section id="connect-cta" style={{ backgroundColor: '#F0EDE8', padding: '80px 0' }}>
+        <section id="connect-cta" style={{ backgroundColor: '#F4F1EC', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
               <h2
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: '80px',
-                  color: '#0A0A0A',
+                  color: '#0E0E0E',
                   lineHeight: 0.9,
                   letterSpacing: '0.02em',
                   whiteSpace: 'pre-line',
@@ -1310,7 +1310,7 @@ export default function HomePage() {
               >
                 {`READY TO BUILD\nSOMETHING REAL?`}
               </h2>
-              <div style={{ height: '3px', backgroundColor: '#FF4B1F', marginBottom: '48px' }} />
+              <div style={{ height: '3px', backgroundColor: '#D4A017', marginBottom: '48px' }} />
             </AnimateOnScroll>
 
             <AnimateOnScroll delay={0.1}>
@@ -1330,8 +1330,8 @@ export default function HomePage() {
                     fontSize: '14px',
                     letterSpacing: '0.15em',
                     textTransform: 'uppercase',
-                    backgroundColor: '#FF4B1F',
-                    color: '#F0EDE8',
+                    backgroundColor: '#D4A017',
+                    color: '#F4F1EC',
                     padding: '24px 28px',
                     textDecoration: 'none',
                     display: 'block',
@@ -1348,8 +1348,8 @@ export default function HomePage() {
                     fontSize: '14px',
                     letterSpacing: '0.15em',
                     textTransform: 'uppercase',
-                    backgroundColor: '#0A0A0A',
-                    color: '#F0EDE8',
+                    backgroundColor: '#0E0E0E',
+                    color: '#F4F1EC',
                     padding: '24px 28px',
                     textDecoration: 'none',
                     display: 'block',
@@ -1367,7 +1367,7 @@ export default function HomePage() {
                     letterSpacing: '0.15em',
                     textTransform: 'uppercase',
                     border: '2px solid #0A0A0A',
-                    color: '#0A0A0A',
+                    color: '#0E0E0E',
                     padding: '24px 28px',
                     textDecoration: 'none',
                     display: 'block',
@@ -1385,8 +1385,8 @@ export default function HomePage() {
                     fontSize: '14px',
                     letterSpacing: '0.15em',
                     textTransform: 'uppercase',
-                    border: '2px solid #FF4B1F',
-                    color: '#FF4B1F',
+                    border: '2px solid #D4A017',
+                    color: '#D4A017',
                     padding: '24px 28px',
                     textDecoration: 'none',
                     display: 'block',
@@ -1402,7 +1402,7 @@ export default function HomePage() {
         </section>
 
         {/* Footer */}
-        <footer style={{ backgroundColor: '#0A0A0A', borderTop: '3px solid #FF4B1F' }}>
+        <footer style={{ backgroundColor: '#0E0E0E', borderTop: '3px solid #D4A017' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '48px 24px 32px' }}>
             <div
               style={{
@@ -1419,7 +1419,7 @@ export default function HomePage() {
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: '22px',
-                  color: '#F0EDE8',
+                  color: '#F4F1EC',
                   textDecoration: 'none',
                   letterSpacing: '0.05em',
                 }}
@@ -1500,7 +1500,7 @@ export default function HomePage() {
             >
               <p
                 style={{
-                  fontFamily: 'IBM Plex Sans, sans-serif',
+                  fontFamily: 'Barlow, sans-serif',
                   fontSize: '12px',
                   color: '#555555',
                   lineHeight: 1.6,

@@ -39,8 +39,8 @@ export default function Navigation() {
           left: 0,
           right: 0,
           zIndex: 100,
-          backgroundColor: scrolled ? '#0A0A0A' : 'transparent',
-          borderBottom: scrolled ? '3px solid #FF4B1F' : '3px solid transparent',
+          backgroundColor: scrolled ? '#0E0E0E' : 'transparent',
+          borderBottom: scrolled ? '3px solid #D4A017' : '3px solid transparent',
           transition: 'background-color 0.3s ease, border-color 0.3s ease',
         }}
       >
@@ -61,7 +61,7 @@ export default function Navigation() {
             style={{
               fontFamily: 'Bebas Neue, sans-serif',
               fontSize: '22px',
-              color: '#F0EDE8',
+              color: '#F4F1EC',
               textDecoration: 'none',
               letterSpacing: '0.05em',
               flexShrink: 0,
@@ -85,12 +85,12 @@ export default function Navigation() {
                   fontSize: '11px',
                   letterSpacing: '0.15em',
                   textTransform: 'uppercase',
-                  color: '#888888',
+                  color: '#A8A8A8',
                   textDecoration: 'none',
                   transition: 'color 0.2s ease',
                 }}
-                onMouseEnter={(e) => { (e.target as HTMLElement).style.color = '#F0EDE8'; }}
-                onMouseLeave={(e) => { (e.target as HTMLElement).style.color = '#888888'; }}
+                onMouseEnter={(e) => { (e.target as HTMLElement).style.color = '#F4F1EC'; }}
+                onMouseLeave={(e) => { (e.target as HTMLElement).style.color = '#A8A8A8'; }}
               >
                 {link.label}
               </Link>
@@ -103,8 +103,8 @@ export default function Navigation() {
                 fontSize: '11px',
                 letterSpacing: '0.15em',
                 textTransform: 'uppercase',
-                color: '#F0EDE8',
-                backgroundColor: '#FF4B1F',
+                color: '#F4F1EC',
+                backgroundColor: '#D4A017',
                 textDecoration: 'none',
                 padding: '8px 16px',
                 borderRadius: 0,
@@ -112,7 +112,7 @@ export default function Navigation() {
                 transition: 'background-color 0.2s ease',
               }}
               onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = '#e03000'; }}
-              onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = '#FF4B1F'; }}
+              onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = '#D4A017'; }}
             >
               Join the Network
             </Link>
@@ -138,7 +138,7 @@ export default function Navigation() {
                 display: 'block',
                 width: '24px',
                 height: '2px',
-                backgroundColor: '#F0EDE8',
+                backgroundColor: '#F4F1EC',
                 transition: 'transform 0.2s ease, opacity 0.2s ease',
                 transform: menuOpen ? 'translateY(7px) rotate(45deg)' : 'none',
               }}
@@ -148,7 +148,7 @@ export default function Navigation() {
                 display: 'block',
                 width: '24px',
                 height: '2px',
-                backgroundColor: '#F0EDE8',
+                backgroundColor: '#F4F1EC',
                 transition: 'opacity 0.2s ease',
                 opacity: menuOpen ? 0 : 1,
               }}
@@ -158,7 +158,7 @@ export default function Navigation() {
                 display: 'block',
                 width: '24px',
                 height: '2px',
-                backgroundColor: '#F0EDE8',
+                backgroundColor: '#F4F1EC',
                 transition: 'transform 0.2s ease, opacity 0.2s ease',
                 transform: menuOpen ? 'translateY(-7px) rotate(-45deg)' : 'none',
               }}
@@ -176,7 +176,7 @@ export default function Navigation() {
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundColor: '#0A0A0A',
+            backgroundColor: '#0E0E0E',
             zIndex: 99,
             display: 'flex',
             flexDirection: 'column',
@@ -194,7 +194,7 @@ export default function Navigation() {
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: '32px',
-                  color: '#F0EDE8',
+                  color: '#F4F1EC',
                   textDecoration: 'none',
                   letterSpacing: '0.05em',
                   borderBottom: '1px solid #1A1A1A',
@@ -210,8 +210,8 @@ export default function Navigation() {
               style={{
                 fontFamily: 'Bebas Neue, sans-serif',
                 fontSize: '32px',
-                color: '#F0EDE8',
-                backgroundColor: '#FF4B1F',
+                color: '#F4F1EC',
+                backgroundColor: '#D4A017',
                 textDecoration: 'none',
                 padding: '12px 24px',
                 display: 'inline-block',

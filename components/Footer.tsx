@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer style={{ backgroundColor: '#0A0A0A', borderTop: '3px solid #FF4B1F' }}>
+    <footer style={{ backgroundColor: '#0E0E0E', borderTop: '3px solid #D4A017' }}>
       <div
         style={{
           maxWidth: '1400px',
@@ -27,7 +27,7 @@ export default function Footer() {
             style={{
               fontFamily: 'Bebas Neue, sans-serif',
               fontSize: '22px',
-              color: '#F0EDE8',
+              color: '#F4F1EC',
               textDecoration: 'none',
               letterSpacing: '0.05em',
             }}
@@ -125,7 +125,7 @@ export default function Footer() {
         >
           <p
             style={{
-              fontFamily: 'IBM Plex Sans, sans-serif',
+              fontFamily: 'Barlow, sans-serif',
               fontSize: '12px',
               color: '#555555',
               lineHeight: 1.6,

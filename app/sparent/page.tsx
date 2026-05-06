@@ -6,7 +6,7 @@ import Navigation from '@/components/Navigation';
 import AnimateOnScroll from '@/components/AnimateOnScroll';
 import Footer from '@/components/Footer';
 
-function Eyebrow({ text, color = '#4A7FA5' }: { text: string; color?: string }) {
+function Eyebrow({ text, color = '#3AB8F0' }: { text: string; color?: string }) {
   return (
     <div
       style={{
@@ -55,22 +55,22 @@ export default function SparentPage() {
         {/* Hero */}
         <section
           style={{
-            backgroundColor: '#F0EDE8',
+            backgroundColor: '#F4F1EC',
             minHeight: '60svh',
             display: 'flex',
             alignItems: 'center',
             padding: '100px 0 64px',
-            borderBottom: '4px solid #4A7FA5',
+            borderBottom: '4px solid #3AB8F0',
           }}
         >
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px', width: '100%' }}>
             <AnimateOnScroll>
-              <Eyebrow text="A US-Squared Newsletter · 04" color="#4A7FA5" />
+              <Eyebrow text="A US-Squared Newsletter · 04" color="#3AB8F0" />
               <h1
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: 'clamp(56px, 8vw, 96px)',
-                  color: '#0A0A0A',
+                  color: '#0E0E0E',
                   lineHeight: 0.9,
                   letterSpacing: '0.02em',
                   marginBottom: '20px',
@@ -80,7 +80,7 @@ export default function SparentPage() {
               </h1>
               <p
                 style={{
-                  fontFamily: 'IBM Plex Sans, sans-serif',
+                  fontFamily: 'Barlow, sans-serif',
                   fontWeight: 300,
                   fontSize: '20px',
                   color: '#444444',
@@ -97,11 +97,11 @@ export default function SparentPage() {
               {submitted ? (
                 <div
                   style={{
-                    fontFamily: 'IBM Plex Sans, sans-serif',
+                    fontFamily: 'Barlow, sans-serif',
                     fontSize: '14px',
-                    color: '#4A7FA5',
+                    color: '#3AB8F0',
                     padding: '16px 20px',
-                    border: '1px solid #4A7FA5',
+                    border: '1px solid #3AB8F0',
                     display: 'inline-block',
                   }}
                 >
@@ -124,12 +124,12 @@ export default function SparentPage() {
                     style={{
                       flex: 1,
                       padding: '14px 16px',
-                      border: '2px solid #0A0A0A',
+                      border: '2px solid #0E0E0E',
                       borderRight: 'none',
-                      fontFamily: 'IBM Plex Sans, sans-serif',
+                      fontFamily: 'Barlow, sans-serif',
                       fontSize: '14px',
                       backgroundColor: 'transparent',
-                      color: '#0A0A0A',
+                      color: '#0E0E0E',
                       outline: 'none',
                     }}
                   />
@@ -141,8 +141,8 @@ export default function SparentPage() {
                       fontSize: '11px',
                       letterSpacing: '0.15em',
                       textTransform: 'uppercase',
-                      backgroundColor: '#4A7FA5',
-                      color: '#F0EDE8',
+                      backgroundColor: '#3AB8F0',
+                      color: '#F4F1EC',
                       padding: '14px 22px',
                       border: 'none',
                       cursor: 'pointer',
@@ -158,7 +158,7 @@ export default function SparentPage() {
         </section>
 
         {/* Section 2: Issue Archive */}
-        <section style={{ backgroundColor: '#0A0A0A', padding: '80px 0' }}>
+        <section style={{ backgroundColor: '#0E0E0E', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
               <Eyebrow text="Issue Archive" />
@@ -166,7 +166,7 @@ export default function SparentPage() {
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: '56px',
-                  color: '#F0EDE8',
+                  color: '#F4F1EC',
                   letterSpacing: '0.02em',
                   marginBottom: '40px',
                 }}
@@ -187,7 +187,7 @@ export default function SparentPage() {
                   <div
                     style={{
                       backgroundColor: '#1A1A1A',
-                      borderTop: '4px solid #4A7FA5',
+                      borderTop: '4px solid #3AB8F0',
                       padding: '28px 24px',
                     }}
                   >
@@ -198,7 +198,7 @@ export default function SparentPage() {
                         fontSize: '10px',
                         letterSpacing: '0.2em',
                         textTransform: 'uppercase',
-                        color: '#4A7FA5',
+                        color: '#3AB8F0',
                         marginBottom: '12px',
                       }}
                     >
@@ -208,7 +208,7 @@ export default function SparentPage() {
                       style={{
                         fontFamily: 'Bebas Neue, sans-serif',
                         fontSize: '26px',
-                        color: '#F0EDE8',
+                        color: '#F4F1EC',
                         letterSpacing: '0.03em',
                         marginBottom: '12px',
                         lineHeight: 1.1,
@@ -230,8 +230,8 @@ export default function SparentPage() {
                           fontSize: '10px',
                           letterSpacing: '0.12em',
                           textTransform: 'uppercase',
-                          backgroundColor: 'rgba(74,127,165,0.15)',
-                          color: '#4A7FA5',
+                          backgroundColor: 'rgba(58,184,240,0.15)',
+                          color: '#3AB8F0',
                           padding: '3px 8px',
                         }}
                       >
@@ -245,7 +245,7 @@ export default function SparentPage() {
                           fontSize: '10px',
                           letterSpacing: '0.15em',
                           textTransform: 'uppercase',
-                          color: '#4A7FA5',
+                          color: '#3AB8F0',
                           textDecoration: 'none',
                         }}
                       >
@@ -260,15 +260,15 @@ export default function SparentPage() {
         </section>
 
         {/* Section 3: Who Reads Sparent Science */}
-        <section style={{ backgroundColor: '#F0EDE8', padding: '80px 0' }}>
+        <section style={{ backgroundColor: '#F4F1EC', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
-              <Eyebrow text="Who Reads It" color="#4A7FA5" />
+              <Eyebrow text="Who Reads It" color="#3AB8F0" />
               <h2
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: '56px',
-                  color: '#0A0A0A',
+                  color: '#0E0E0E',
                   letterSpacing: '0.02em',
                   marginBottom: '40px',
                 }}
@@ -288,8 +288,8 @@ export default function SparentPage() {
                 <AnimateOnScroll key={r.role} delay={i * 0.04}>
                   <div
                     style={{
-                      backgroundColor: '#0A0A0A',
-                      borderTop: '4px solid #4A7FA5',
+                      backgroundColor: '#0E0E0E',
+                      borderTop: '4px solid #3AB8F0',
                       padding: '28px 24px',
                     }}
                   >
@@ -297,7 +297,7 @@ export default function SparentPage() {
                       style={{
                         fontFamily: 'Bebas Neue, sans-serif',
                         fontSize: '24px',
-                        color: '#4A7FA5',
+                        color: '#3AB8F0',
                         letterSpacing: '0.05em',
                         marginBottom: '12px',
                       }}
@@ -306,7 +306,7 @@ export default function SparentPage() {
                     </div>
                     <p
                       style={{
-                        fontFamily: 'IBM Plex Sans, sans-serif',
+                        fontFamily: 'Barlow, sans-serif',
                         fontStyle: 'italic',
                         fontSize: '14px',
                         color: '#888888',
@@ -336,7 +336,7 @@ export default function SparentPage() {
         </section>
 
         {/* Section 4: Podcast */}
-        <section style={{ backgroundColor: '#0A0A0A', padding: '80px 0', borderTop: '4px solid #4A7FA5' }}>
+        <section style={{ backgroundColor: '#0E0E0E', padding: '80px 0', borderTop: '4px solid #3AB8F0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
               <Eyebrow text="Also Available As" />
@@ -344,7 +344,7 @@ export default function SparentPage() {
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: '56px',
-                  color: '#F0EDE8',
+                  color: '#F4F1EC',
                   letterSpacing: '0.02em',
                   marginBottom: '16px',
                   lineHeight: 0.95,
@@ -354,7 +354,7 @@ export default function SparentPage() {
               </h2>
               <p
                 style={{
-                  fontFamily: 'IBM Plex Sans, sans-serif',
+                  fontFamily: 'Barlow, sans-serif',
                   fontWeight: 300,
                   fontSize: '18px',
                   color: '#888888',
@@ -395,14 +395,14 @@ export default function SparentPage() {
         </section>
 
         {/* Section 5: Subscribe CTA again */}
-        <section style={{ backgroundColor: '#4A7FA5', padding: '80px 0' }}>
+        <section style={{ backgroundColor: '#3AB8F0', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
               <h2
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: '64px',
-                  color: '#F0EDE8',
+                  color: '#F4F1EC',
                   letterSpacing: '0.02em',
                   marginBottom: '12px',
                   lineHeight: 0.95,
@@ -412,7 +412,7 @@ export default function SparentPage() {
               </h2>
               <p
                 style={{
-                  fontFamily: 'IBM Plex Sans, sans-serif',
+                  fontFamily: 'Barlow, sans-serif',
                   fontWeight: 300,
                   fontSize: '18px',
                   color: 'rgba(240,237,232,0.7)',
@@ -427,9 +427,9 @@ export default function SparentPage() {
               {submitted2 ? (
                 <div
                   style={{
-                    fontFamily: 'IBM Plex Sans, sans-serif',
+                    fontFamily: 'Barlow, sans-serif',
                     fontSize: '16px',
-                    color: '#F0EDE8',
+                    color: '#F4F1EC',
                     padding: '16px 20px',
                     border: '1px solid rgba(240,237,232,0.4)',
                     display: 'inline-block',
@@ -456,10 +456,10 @@ export default function SparentPage() {
                       padding: '14px 16px',
                       border: '2px solid rgba(240,237,232,0.4)',
                       borderRight: 'none',
-                      fontFamily: 'IBM Plex Sans, sans-serif',
+                      fontFamily: 'Barlow, sans-serif',
                       fontSize: '14px',
                       backgroundColor: 'transparent',
-                      color: '#F0EDE8',
+                      color: '#F4F1EC',
                       outline: 'none',
                     }}
                   />
@@ -471,8 +471,8 @@ export default function SparentPage() {
                       fontSize: '11px',
                       letterSpacing: '0.15em',
                       textTransform: 'uppercase',
-                      backgroundColor: '#0A0A0A',
-                      color: '#F0EDE8',
+                      backgroundColor: '#0E0E0E',
+                      color: '#F4F1EC',
                       padding: '14px 22px',
                       border: 'none',
                       cursor: 'pointer',

@@ -6,7 +6,7 @@ import AnimateOnScroll from '@/components/AnimateOnScroll';
 import StatCounter from '@/components/StatCounter';
 import Footer from '@/components/Footer';
 
-function Eyebrow({ text, color = '#FF4B1F' }: { text: string; color?: string }) {
+function Eyebrow({ text, color = '#D4A017' }: { text: string; color?: string }) {
   return (
     <div
       style={{
@@ -59,7 +59,7 @@ export default function ResearchPage() {
         {/* Hero */}
         <section
           style={{
-            backgroundColor: '#0A0A0A',
+            backgroundColor: '#0E0E0E',
             minHeight: '80svh',
             display: 'flex',
             alignItems: 'center',
@@ -77,7 +77,7 @@ export default function ResearchPage() {
               transform: 'translateY(-50%)',
               fontFamily: 'Bebas Neue, sans-serif',
               fontSize: '32vw',
-              color: 'rgba(255,75,31,0.04)',
+              color: 'rgba(212,160,23,0.04)',
               lineHeight: 1,
               pointerEvents: 'none',
               userSelect: 'none',
@@ -94,7 +94,7 @@ export default function ResearchPage() {
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: 'clamp(56px, 8vw, 96px)',
-                  color: '#F0EDE8',
+                  color: '#F4F1EC',
                   lineHeight: 0.9,
                   letterSpacing: '0.02em',
                   whiteSpace: 'pre-line',
@@ -105,7 +105,7 @@ export default function ResearchPage() {
               </h1>
               <p
                 style={{
-                  fontFamily: 'IBM Plex Sans, sans-serif',
+                  fontFamily: 'Barlow, sans-serif',
                   fontWeight: 300,
                   fontSize: '18px',
                   color: '#888888',
@@ -121,7 +121,7 @@ export default function ResearchPage() {
         </section>
 
         {/* Section 2: Publications */}
-        <section style={{ backgroundColor: '#0A0A0A', padding: '80px 0', borderTop: '1px solid #1A1A1A' }}>
+        <section style={{ backgroundColor: '#0E0E0E', padding: '80px 0', borderTop: '1px solid #1A1A1A' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
               <Eyebrow text="Publications" />
@@ -129,7 +129,7 @@ export default function ResearchPage() {
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: '48px',
-                  color: '#F0EDE8',
+                  color: '#F4F1EC',
                   letterSpacing: '0.02em',
                   marginBottom: '40px',
                 }}
@@ -161,7 +161,7 @@ export default function ResearchPage() {
                   <div
                     style={{
                       backgroundColor: '#1A1A1A',
-                      borderTop: '4px solid #FF4B1F',
+                      borderTop: '4px solid #D4A017',
                       padding: '32px 28px',
                     }}
                   >
@@ -172,7 +172,7 @@ export default function ResearchPage() {
                         fontSize: '10px',
                         letterSpacing: '0.2em',
                         textTransform: 'uppercase',
-                        color: '#FF4B1F',
+                        color: '#D4A017',
                         marginBottom: '12px',
                       }}
                     >
@@ -182,7 +182,7 @@ export default function ResearchPage() {
                       style={{
                         fontFamily: 'Bebas Neue, sans-serif',
                         fontSize: '28px',
-                        color: '#F0EDE8',
+                        color: '#F4F1EC',
                         letterSpacing: '0.03em',
                         marginBottom: '12px',
                         lineHeight: 1.1,
@@ -192,7 +192,7 @@ export default function ResearchPage() {
                     </h3>
                     <p
                       style={{
-                        fontFamily: 'IBM Plex Sans, sans-serif',
+                        fontFamily: 'Barlow, sans-serif',
                         fontStyle: 'italic',
                         fontSize: '13px',
                         color: '#555555',
@@ -204,7 +204,7 @@ export default function ResearchPage() {
                     </p>
                     <p
                       style={{
-                        fontFamily: 'IBM Plex Sans, sans-serif',
+                        fontFamily: 'Barlow, sans-serif',
                         fontSize: '14px',
                         color: '#888888',
                         lineHeight: 1.6,
@@ -220,15 +220,15 @@ export default function ResearchPage() {
         </section>
 
         {/* Section 3: BASE Framework */}
-        <section style={{ backgroundColor: '#F0EDE8', padding: '80px 0' }}>
+        <section style={{ backgroundColor: '#F4F1EC', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
-              <Eyebrow text="The Framework" color="#FF4B1F" />
+              <Eyebrow text="The Framework" color="#D4A017" />
               <h2
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: '64px',
-                  color: '#0A0A0A',
+                  color: '#0E0E0E',
                   letterSpacing: '0.02em',
                   marginBottom: '12px',
                   lineHeight: 0.95,
@@ -238,7 +238,7 @@ export default function ResearchPage() {
               </h2>
               <p
                 style={{
-                  fontFamily: 'IBM Plex Sans, sans-serif',
+                  fontFamily: 'Barlow, sans-serif',
                   fontWeight: 300,
                   fontSize: '16px',
                   color: '#444444',
@@ -258,8 +258,8 @@ export default function ResearchPage() {
                   <div
                     style={{
                       position: 'relative',
-                      backgroundColor: '#0A0A0A',
-                      borderLeft: '6px solid #FF4B1F',
+                      backgroundColor: '#0E0E0E',
+                      borderLeft: '6px solid #D4A017',
                       padding: '32px 28px 32px 40px',
                       overflow: 'hidden',
                       display: 'flex',
@@ -272,7 +272,7 @@ export default function ResearchPage() {
                       style={{
                         fontFamily: 'Bebas Neue, sans-serif',
                         fontSize: '120px',
-                        color: '#FF4B1F',
+                        color: '#D4A017',
                         opacity: 0.08,
                         lineHeight: 1,
                         flexShrink: 0,
@@ -288,7 +288,7 @@ export default function ResearchPage() {
                         style={{
                           fontFamily: 'Bebas Neue, sans-serif',
                           fontSize: '36px',
-                          color: '#F0EDE8',
+                          color: '#F4F1EC',
                           letterSpacing: '0.05em',
                           marginBottom: '10px',
                         }}
@@ -297,7 +297,7 @@ export default function ResearchPage() {
                       </div>
                       <p
                         style={{
-                          fontFamily: 'IBM Plex Sans, sans-serif',
+                          fontFamily: 'Barlow, sans-serif',
                           fontSize: '15px',
                           color: '#888888',
                           lineHeight: 1.7,
@@ -315,7 +315,7 @@ export default function ResearchPage() {
         </section>
 
         {/* Section 4: Impact Stats */}
-        <section style={{ backgroundColor: '#0A0A0A', padding: '80px 0' }}>
+        <section style={{ backgroundColor: '#0E0E0E', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
               <Eyebrow text="By The Numbers" />
@@ -323,7 +323,7 @@ export default function ResearchPage() {
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: '56px',
-                  color: '#F0EDE8',
+                  color: '#F4F1EC',
                   letterSpacing: '0.02em',
                   marginBottom: '48px',
                 }}
@@ -352,15 +352,15 @@ export default function ResearchPage() {
         </section>
 
         {/* Section 5: Download CTA */}
-        <section style={{ backgroundColor: '#F0EDE8', padding: '80px 0' }}>
+        <section style={{ backgroundColor: '#F4F1EC', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
-              <Eyebrow text="Impact Brief" color="#FF4B1F" />
+              <Eyebrow text="Impact Brief" color="#D4A017" />
               <h2
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: '64px',
-                  color: '#0A0A0A',
+                  color: '#0E0E0E',
                   letterSpacing: '0.02em',
                   marginBottom: '16px',
                   lineHeight: 0.95,
@@ -370,7 +370,7 @@ export default function ResearchPage() {
               </h2>
               <p
                 style={{
-                  fontFamily: 'IBM Plex Sans, sans-serif',
+                  fontFamily: 'Barlow, sans-serif',
                   fontWeight: 300,
                   fontSize: '18px',
                   color: '#444444',
@@ -391,8 +391,8 @@ export default function ResearchPage() {
                     fontSize: '12px',
                     letterSpacing: '0.15em',
                     textTransform: 'uppercase',
-                    backgroundColor: '#FF4B1F',
-                    color: '#F0EDE8',
+                    backgroundColor: '#D4A017',
+                    color: '#F4F1EC',
                     padding: '14px 28px',
                     textDecoration: 'none',
                     display: 'inline-block',
@@ -408,8 +408,8 @@ export default function ResearchPage() {
                     fontSize: '12px',
                     letterSpacing: '0.15em',
                     textTransform: 'uppercase',
-                    border: '2px solid #0A0A0A',
-                    color: '#0A0A0A',
+                    border: '2px solid #0E0E0E',
+                    color: '#0E0E0E',
                     padding: '14px 28px',
                     textDecoration: 'none',
                     display: 'inline-block',

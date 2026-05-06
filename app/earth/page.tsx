@@ -7,7 +7,7 @@ import AnimateOnScroll from '@/components/AnimateOnScroll';
 import PhotoPlaceholder from '@/components/PhotoPlaceholder';
 import Footer from '@/components/Footer';
 
-function Eyebrow({ text, color = '#6B3A1F' }: { text: string; color?: string }) {
+function Eyebrow({ text, color = '#2D8A4E' }: { text: string; color?: string }) {
   return (
     <div
       style={{
@@ -74,7 +74,7 @@ export default function EarthPage() {
         {/* Hero */}
         <section
           style={{
-            backgroundColor: '#0A0A0A',
+            backgroundColor: '#0E0E0E',
             minHeight: '100svh',
             display: 'flex',
             alignItems: 'center',
@@ -107,7 +107,7 @@ export default function EarthPage() {
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: 'clamp(72px, 10vw, 120px)',
-                  color: '#6B3A1F',
+                  color: '#2D8A4E',
                   lineHeight: 0.9,
                   letterSpacing: '0.02em',
                   whiteSpace: 'pre-line',
@@ -120,7 +120,7 @@ export default function EarthPage() {
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: 'clamp(32px, 4vw, 56px)',
-                  color: '#F0EDE8',
+                  color: '#F4F1EC',
                   letterSpacing: '0.05em',
                   marginBottom: '24px',
                 }}
@@ -129,7 +129,7 @@ export default function EarthPage() {
               </h2>
               <p
                 style={{
-                  fontFamily: 'IBM Plex Sans, sans-serif',
+                  fontFamily: 'Barlow, sans-serif',
                   fontWeight: 300,
                   fontSize: '18px',
                   color: '#888888',
@@ -143,7 +143,7 @@ export default function EarthPage() {
               </p>
               <div
                 style={{
-                  backgroundColor: '#6B3A1F',
+                  backgroundColor: '#2D8A4E',
                   padding: '14px 24px',
                   display: 'inline-block',
                   fontFamily: 'Barlow Condensed, sans-serif',
@@ -151,7 +151,7 @@ export default function EarthPage() {
                   fontSize: '14px',
                   letterSpacing: '0.2em',
                   textTransform: 'uppercase',
-                  color: '#F0EDE8',
+                  color: '#F4F1EC',
                 }}
               >
                 Summer 2026 · Applications Open
@@ -161,7 +161,7 @@ export default function EarthPage() {
         </section>
 
         {/* Section 2: 5-Day Timeline */}
-        <section style={{ backgroundColor: '#0A0A0A', padding: '80px 0' }}>
+        <section style={{ backgroundColor: '#0E0E0E', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
               <Eyebrow text="The Experience" />
@@ -169,7 +169,7 @@ export default function EarthPage() {
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: '64px',
-                  color: '#F0EDE8',
+                  color: '#F4F1EC',
                   letterSpacing: '0.02em',
                   marginBottom: '48px',
                   lineHeight: 0.95,
@@ -193,7 +193,7 @@ export default function EarthPage() {
                   key={d.day}
                   style={{
                     backgroundColor: '#1A1A1A',
-                    borderTop: '4px solid #6B3A1F',
+                    borderTop: '4px solid #2D8A4E',
                     padding: '28px 24px',
                     minWidth: '240px',
                     flex: '1 0 240px',
@@ -203,7 +203,7 @@ export default function EarthPage() {
                     style={{
                       fontFamily: 'Bebas Neue, sans-serif',
                       fontSize: '48px',
-                      color: '#6B3A1F',
+                      color: '#2D8A4E',
                       opacity: 0.3,
                       lineHeight: 1,
                       marginBottom: '12px',
@@ -215,7 +215,7 @@ export default function EarthPage() {
                     style={{
                       fontFamily: 'Bebas Neue, sans-serif',
                       fontSize: '22px',
-                      color: '#F0EDE8',
+                      color: '#F4F1EC',
                       letterSpacing: '0.03em',
                       marginBottom: '10px',
                     }}
@@ -224,7 +224,7 @@ export default function EarthPage() {
                   </div>
                   <p
                     style={{
-                      fontFamily: 'IBM Plex Sans, sans-serif',
+                      fontFamily: 'Barlow, sans-serif',
                       fontSize: '13px',
                       color: '#888888',
                       lineHeight: 1.6,
@@ -239,15 +239,15 @@ export default function EarthPage() {
         </section>
 
         {/* Section 3: Who It's For */}
-        <section style={{ backgroundColor: '#F0EDE8', padding: '80px 0' }}>
+        <section style={{ backgroundColor: '#F4F1EC', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
-              <Eyebrow text="Who This Is For" color="#6B3A1F" />
+              <Eyebrow text="Who This Is For" color="#2D8A4E" />
               <h2
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: '64px',
-                  color: '#0A0A0A',
+                  color: '#0E0E0E',
                   letterSpacing: '0.02em',
                   marginBottom: '40px',
                   lineHeight: 0.95,
@@ -267,8 +267,8 @@ export default function EarthPage() {
               <AnimateOnScroll delay={0.05}>
                 <div
                   style={{
-                    backgroundColor: '#0A0A0A',
-                    borderTop: '4px solid #6B3A1F',
+                    backgroundColor: '#0E0E0E',
+                    borderTop: '4px solid #2D8A4E',
                     padding: '36px 32px',
                   }}
                 >
@@ -276,7 +276,7 @@ export default function EarthPage() {
                     style={{
                       fontFamily: 'Bebas Neue, sans-serif',
                       fontSize: '36px',
-                      color: '#F0EDE8',
+                      color: '#F4F1EC',
                       letterSpacing: '0.03em',
                       marginBottom: '16px',
                     }}
@@ -285,7 +285,7 @@ export default function EarthPage() {
                   </div>
                   <p
                     style={{
-                      fontFamily: 'IBM Plex Sans, sans-serif',
+                      fontFamily: 'Barlow, sans-serif',
                       fontSize: '15px',
                       color: '#888888',
                       lineHeight: 1.7,
@@ -307,9 +307,9 @@ export default function EarthPage() {
                           fontSize: '11px',
                           letterSpacing: '0.12em',
                           textTransform: 'uppercase',
-                          color: '#6B3A1F',
+                          color: '#2D8A4E',
                           paddingLeft: '12px',
-                          borderLeft: '2px solid #6B3A1F',
+                          borderLeft: '2px solid #2D8A4E',
                         }}
                       >
                         {i}
@@ -331,7 +331,7 @@ export default function EarthPage() {
                     style={{
                       fontFamily: 'Bebas Neue, sans-serif',
                       fontSize: '36px',
-                      color: '#F0EDE8',
+                      color: '#F4F1EC',
                       letterSpacing: '0.03em',
                       marginBottom: '16px',
                     }}
@@ -340,7 +340,7 @@ export default function EarthPage() {
                   </div>
                   <p
                     style={{
-                      fontFamily: 'IBM Plex Sans, sans-serif',
+                      fontFamily: 'Barlow, sans-serif',
                       fontSize: '15px',
                       color: '#888888',
                       lineHeight: 1.7,
@@ -378,7 +378,7 @@ export default function EarthPage() {
         </section>
 
         {/* Section 4: Logistics */}
-        <section style={{ backgroundColor: '#0A0A0A', padding: '80px 0' }}>
+        <section style={{ backgroundColor: '#0E0E0E', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
               <Eyebrow text="Logistics" />
@@ -386,7 +386,7 @@ export default function EarthPage() {
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: '56px',
-                  color: '#F0EDE8',
+                  color: '#F4F1EC',
                   letterSpacing: '0.02em',
                   marginBottom: '40px',
                 }}
@@ -409,12 +409,12 @@ export default function EarthPage() {
                 { label: 'What to Bring', value: 'Comfortable clothes, journal, open mind. Full packing list sent post-registration.' },
               ].map((item) => (
                 <AnimateOnScroll key={item.label} delay={0.05}>
-                  <div style={{ borderLeft: '3px solid #6B3A1F', paddingLeft: '20px' }}>
+                  <div style={{ borderLeft: '3px solid #2D8A4E', paddingLeft: '20px' }}>
                     <div
                       style={{
                         fontFamily: 'Bebas Neue, sans-serif',
                         fontSize: '18px',
-                        color: '#6B3A1F',
+                        color: '#2D8A4E',
                         letterSpacing: '0.05em',
                         marginBottom: '8px',
                       }}
@@ -423,7 +423,7 @@ export default function EarthPage() {
                     </div>
                     <p
                       style={{
-                        fontFamily: 'IBM Plex Sans, sans-serif',
+                        fontFamily: 'Barlow, sans-serif',
                         fontSize: '14px',
                         color: '#888888',
                         lineHeight: 1.6,
@@ -438,7 +438,7 @@ export default function EarthPage() {
 
             {/* Photo placeholder */}
             <AnimateOnScroll delay={0.1}>
-              <div style={{ marginTop: '48px', borderLeft: '3px solid #6B3A1F' }}>
+              <div style={{ marginTop: '48px', borderLeft: '3px solid #2D8A4E' }}>
                 <PhotoPlaceholder label="Retreat Site Placeholder" aspectRatio="16/5" />
               </div>
             </AnimateOnScroll>
@@ -446,15 +446,15 @@ export default function EarthPage() {
         </section>
 
         {/* Section 5: Register Interest Form */}
-        <section id="register" style={{ backgroundColor: '#F0EDE8', padding: '80px 0' }}>
+        <section id="register" style={{ backgroundColor: '#F4F1EC', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
-              <Eyebrow text="Register Interest" color="#6B3A1F" />
+              <Eyebrow text="Register Interest" color="#2D8A4E" />
               <h2
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: '64px',
-                  color: '#0A0A0A',
+                  color: '#0E0E0E',
                   letterSpacing: '0.02em',
                   marginBottom: '12px',
                   lineHeight: 0.95,
@@ -464,7 +464,7 @@ export default function EarthPage() {
               </h2>
               <p
                 style={{
-                  fontFamily: 'IBM Plex Sans, sans-serif',
+                  fontFamily: 'Barlow, sans-serif',
                   fontWeight: 300,
                   fontSize: '16px',
                   color: '#444444',
@@ -481,11 +481,11 @@ export default function EarthPage() {
               {submitted ? (
                 <div
                   style={{
-                    fontFamily: 'IBM Plex Sans, sans-serif',
+                    fontFamily: 'Barlow, sans-serif',
                     fontSize: '16px',
-                    color: '#6B3A1F',
+                    color: '#2D8A4E',
                     padding: '24px 28px',
-                    border: '2px solid #6B3A1F',
+                    border: '2px solid #2D8A4E',
                     display: 'inline-block',
                     maxWidth: '480px',
                   }}
@@ -532,11 +532,11 @@ export default function EarthPage() {
                         style={{
                           width: '100%',
                           padding: '12px 16px',
-                          border: '2px solid #0A0A0A',
-                          fontFamily: 'IBM Plex Sans, sans-serif',
+                          border: '2px solid #0E0E0E',
+                          fontFamily: 'Barlow, sans-serif',
                           fontSize: '14px',
                           backgroundColor: 'transparent',
-                          color: '#0A0A0A',
+                          color: '#0E0E0E',
                           outline: 'none',
                         }}
                       />
@@ -567,11 +567,11 @@ export default function EarthPage() {
                       style={{
                         width: '100%',
                         padding: '12px 16px',
-                        border: '2px solid #0A0A0A',
-                        fontFamily: 'IBM Plex Sans, sans-serif',
+                        border: '2px solid #0E0E0E',
+                        fontFamily: 'Barlow, sans-serif',
                         fontSize: '14px',
-                        backgroundColor: '#F0EDE8',
-                        color: '#0A0A0A',
+                        backgroundColor: '#F4F1EC',
+                        color: '#0E0E0E',
                         outline: 'none',
                         cursor: 'pointer',
                       }}
@@ -610,11 +610,11 @@ export default function EarthPage() {
                       style={{
                         width: '100%',
                         padding: '12px 16px',
-                        border: '2px solid #0A0A0A',
-                        fontFamily: 'IBM Plex Sans, sans-serif',
+                        border: '2px solid #0E0E0E',
+                        fontFamily: 'Barlow, sans-serif',
                         fontSize: '14px',
                         backgroundColor: 'transparent',
-                        color: '#0A0A0A',
+                        color: '#0E0E0E',
                         outline: 'none',
                         resize: 'vertical',
                       }}
@@ -629,8 +629,8 @@ export default function EarthPage() {
                       fontSize: '12px',
                       letterSpacing: '0.15em',
                       textTransform: 'uppercase',
-                      border: '2px solid #6B3A1F',
-                      color: '#6B3A1F',
+                      border: '2px solid #2D8A4E',
+                      color: '#2D8A4E',
                       padding: '14px 28px',
                       cursor: 'pointer',
                       backgroundColor: 'transparent',

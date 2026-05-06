@@ -6,7 +6,7 @@ import Navigation from '@/components/Navigation';
 import AnimateOnScroll from '@/components/AnimateOnScroll';
 import Footer from '@/components/Footer';
 
-function Eyebrow({ text, color = '#C5E620' }: { text: string; color?: string }) {
+function Eyebrow({ text, color = '#9B82C4' }: { text: string; color?: string }) {
   return (
     <div
       style={{
@@ -35,8 +35,8 @@ export default function BASEopsPage() {
         {/* Hero */}
         <section
           style={{
-            backgroundColor: '#0A0A0A',
-            borderTop: '4px solid #C5E620',
+            backgroundColor: '#0E0E0E',
+            borderTop: '4px solid #9B82C4',
             minHeight: '100svh',
             display: 'flex',
             alignItems: 'center',
@@ -53,7 +53,7 @@ export default function BASEopsPage() {
               top: '8vh',
               fontFamily: 'Bebas Neue, sans-serif',
               fontSize: '32vw',
-              color: 'rgba(197,230,32,0.03)',
+              color: 'rgba(155,130,196,0.03)',
               lineHeight: 1,
               pointerEvents: 'none',
               userSelect: 'none',
@@ -68,7 +68,7 @@ export default function BASEopsPage() {
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: 'clamp(72px, 10vw, 120px)',
-                  color: '#C5E620',
+                  color: '#9B82C4',
                   lineHeight: 0.9,
                   letterSpacing: '0.02em',
                   marginBottom: '20px',
@@ -78,10 +78,10 @@ export default function BASEopsPage() {
               </h1>
               <p
                 style={{
-                  fontFamily: 'IBM Plex Sans, sans-serif',
+                  fontFamily: 'Barlow, sans-serif',
                   fontWeight: 300,
                   fontSize: '24px',
-                  color: '#F0EDE8',
+                  color: '#F4F1EC',
                   marginBottom: '32px',
                   maxWidth: '640px',
                 }}
@@ -90,7 +90,7 @@ export default function BASEopsPage() {
               </p>
               <p
                 style={{
-                  fontFamily: 'IBM Plex Sans, sans-serif',
+                  fontFamily: 'Barlow, sans-serif',
                   fontSize: '16px',
                   color: '#888888',
                   maxWidth: '600px',
@@ -104,7 +104,7 @@ export default function BASEopsPage() {
               <div
                 style={{
                   backgroundColor: '#1A1A1A',
-                  borderLeft: '4px solid #C5E620',
+                  borderLeft: '4px solid #9B82C4',
                   padding: '16px 24px',
                   display: 'inline-block',
                 }}
@@ -113,7 +113,7 @@ export default function BASEopsPage() {
                   style={{
                     fontFamily: 'Bebas Neue, sans-serif',
                     fontSize: '40px',
-                    color: '#C5E620',
+                    color: '#9B82C4',
                     marginRight: '12px',
                   }}
                 >
@@ -137,14 +137,14 @@ export default function BASEopsPage() {
         </section>
 
         {/* Section 2: Modules */}
-        <section style={{ backgroundColor: '#0A0A0A', padding: '80px 0' }}>
+        <section style={{ backgroundColor: '#0E0E0E', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
               <h2
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: '48px',
-                  color: '#F0EDE8',
+                  color: '#F4F1EC',
                   letterSpacing: '0.03em',
                   marginBottom: '40px',
                 }}
@@ -181,7 +181,7 @@ export default function BASEopsPage() {
                   <div
                     style={{
                       backgroundColor: '#1A1A1A',
-                      borderTop: '4px solid #C5E620',
+                      borderTop: '4px solid #9B82C4',
                       padding: '32px 28px',
                     }}
                   >
@@ -192,7 +192,7 @@ export default function BASEopsPage() {
                         fontSize: '10px',
                         letterSpacing: '0.2em',
                         textTransform: 'uppercase',
-                        color: '#C5E620',
+                        color: '#9B82C4',
                         marginBottom: '16px',
                       }}
                     >
@@ -202,7 +202,7 @@ export default function BASEopsPage() {
                       style={{
                         fontFamily: 'Bebas Neue, sans-serif',
                         fontSize: '32px',
-                        color: '#F0EDE8',
+                        color: '#F4F1EC',
                         letterSpacing: '0.03em',
                         marginBottom: '16px',
                       }}
@@ -211,7 +211,7 @@ export default function BASEopsPage() {
                     </h3>
                     <p
                       style={{
-                        fontFamily: 'IBM Plex Sans, sans-serif',
+                        fontFamily: 'Barlow, sans-serif',
                         fontSize: '14px',
                         color: '#888888',
                         lineHeight: 1.7,
@@ -228,7 +228,7 @@ export default function BASEopsPage() {
                         fontSize: '10px',
                         letterSpacing: '0.15em',
                         textTransform: 'uppercase',
-                        color: '#C5E620',
+                        color: '#9B82C4',
                         textDecoration: 'none',
                       }}
                     >
@@ -242,15 +242,15 @@ export default function BASEopsPage() {
         </section>
 
         {/* Section 3: Who It's For */}
-        <section style={{ backgroundColor: '#F0EDE8', padding: '80px 0' }}>
+        <section style={{ backgroundColor: '#F4F1EC', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
-              <Eyebrow text="Built For" color="#0A0A0A" />
+              <Eyebrow text="Built For" color="#0E0E0E" />
               <h2
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: '64px',
-                  color: '#0A0A0A',
+                  color: '#0E0E0E',
                   letterSpacing: '0.02em',
                   marginBottom: '40px',
                   lineHeight: 0.95,
@@ -278,12 +278,12 @@ export default function BASEopsPage() {
                   <div
                     key={org}
                     style={{
-                      backgroundColor: '#0A0A0A',
-                      borderTop: '4px solid #C5E620',
+                      backgroundColor: '#0E0E0E',
+                      borderTop: '4px solid #9B82C4',
                       padding: '20px 18px',
                       fontFamily: 'Bebas Neue, sans-serif',
                       fontSize: '20px',
-                      color: '#F0EDE8',
+                      color: '#F4F1EC',
                       letterSpacing: '0.03em',
                     }}
                   >
@@ -297,17 +297,17 @@ export default function BASEopsPage() {
             <AnimateOnScroll delay={0.15}>
               <blockquote
                 style={{
-                  borderLeft: '3px solid #C5E620',
+                  borderLeft: '3px solid #9B82C4',
                   paddingLeft: '24px',
                   maxWidth: '640px',
                 }}
               >
                 <p
                   style={{
-                    fontFamily: 'IBM Plex Sans, sans-serif',
+                    fontFamily: 'Barlow, sans-serif',
                     fontStyle: 'italic',
                     fontSize: '20px',
-                    color: '#0A0A0A',
+                    color: '#0E0E0E',
                     lineHeight: 1.6,
                     marginBottom: '12px',
                   }}
@@ -334,7 +334,7 @@ export default function BASEopsPage() {
         </section>
 
         {/* Section 4: Get Access */}
-        <section id="get-access" style={{ backgroundColor: '#0A0A0A', padding: '80px 0' }}>
+        <section id="get-access" style={{ backgroundColor: '#0E0E0E', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
               <Eyebrow text="Free Access" />
@@ -342,7 +342,7 @@ export default function BASEopsPage() {
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: '64px',
-                  color: '#F0EDE8',
+                  color: '#F4F1EC',
                   letterSpacing: '0.02em',
                   marginBottom: '16px',
                   lineHeight: 0.95,
@@ -352,7 +352,7 @@ export default function BASEopsPage() {
               </h2>
               <p
                 style={{
-                  fontFamily: 'IBM Plex Sans, sans-serif',
+                  fontFamily: 'Barlow, sans-serif',
                   fontWeight: 300,
                   fontSize: '18px',
                   color: '#888888',
@@ -367,11 +367,11 @@ export default function BASEopsPage() {
               {submitted ? (
                 <div
                   style={{
-                    fontFamily: 'IBM Plex Sans, sans-serif',
+                    fontFamily: 'Barlow, sans-serif',
                     fontSize: '16px',
-                    color: '#C5E620',
+                    color: '#9B82C4',
                     padding: '20px 24px',
-                    border: '1px solid #C5E620',
+                    border: '1px solid #9B82C4',
                     display: 'inline-block',
                   }}
                 >
@@ -397,8 +397,8 @@ export default function BASEopsPage() {
                       border: '2px solid #2A2A2A',
                       borderRight: 'none',
                       backgroundColor: '#1A1A1A',
-                      color: '#F0EDE8',
-                      fontFamily: 'IBM Plex Sans, sans-serif',
+                      color: '#F4F1EC',
+                      fontFamily: 'Barlow, sans-serif',
                       fontSize: '14px',
                       outline: 'none',
                     }}
@@ -411,8 +411,8 @@ export default function BASEopsPage() {
                       fontSize: '11px',
                       letterSpacing: '0.15em',
                       textTransform: 'uppercase',
-                      backgroundColor: '#C5E620',
-                      color: '#0A0A0A',
+                      backgroundColor: '#9B82C4',
+                      color: '#0E0E0E',
                       padding: '14px 24px',
                       border: 'none',
                       cursor: 'pointer',
@@ -428,7 +428,7 @@ export default function BASEopsPage() {
         </section>
 
         {/* Back link */}
-        <section style={{ backgroundColor: '#0A0A0A', padding: '0 0 48px' }}>
+        <section style={{ backgroundColor: '#0E0E0E', padding: '0 0 48px' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <Link
               href="/"

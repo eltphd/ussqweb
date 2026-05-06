@@ -1,25 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;900&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 @import "tailwindcss";
 
 :root {
   --font-display: 'Bebas Neue', sans-serif;
   --font-sub: 'Barlow Condensed', sans-serif;
-  --font-body: 'IBM Plex Sans', sans-serif;
+  --font-body: 'Barlow', sans-serif;
   --font-mono: 'IBM Plex Mono', monospace;
 
-  --color-black: #0A0A0A;
-  --color-white: #F0EDE8;
-  --color-orange: #FF4B1F;
-  --color-lime: #C5E620;
-  --color-blue: #4A7FA5;
-  --color-blue-deep: #2D5F80;
-  --color-rust: #6B3A1F;
-  --color-rust-deep: #3A1F0A;
-  --color-n1: #1A1A1A;
-  --color-n2: #2A2A2A;
-  --color-n3: #555555;
-  --color-n4: #888888;
+  /* Master palette — Golden Vanguard */
+  --color-black: #0E0E0E;
+  --color-charcoal: #1A1A1A;
+  --color-ash: #242424;
+  --color-white: #F4F1EC;
+  --color-white-pure: #FFFFFF;
+  --color-gold: #D4A017;
+  --color-gold-light: #E8C060;
+  --color-gold-dark: #8B6A0C;
+  --color-gray-600: #A8A8A8;
+  --color-gray-400: #3A3A3A;
+
+  /* Sub-brand accents */
+  --color-baseops: #9B82C4;
+  --color-atlas: #B5142A;
+  --color-earth: #2D8A4E;
+  --color-sparent: #3AB8F0;
 }
 
 * {
@@ -41,7 +46,7 @@ body {
 }
 
 *:focus-visible {
-  outline: 3px solid var(--color-orange);
+  outline: 3px solid var(--color-gold);
   outline-offset: 2px;
 }
 
@@ -58,7 +63,7 @@ body {
   left: 55%;
   width: 2px;
   height: 200%;
-  background: rgba(255, 75, 31, 0.2);
+  background: rgba(212, 160, 23, 0.2);
   transform: rotate(-20deg);
   transform-origin: center;
   pointer-events: none;
@@ -70,14 +75,14 @@ body {
   left: calc(55% + 16px);
   width: 1px;
   height: 200%;
-  background: rgba(255, 75, 31, 0.08);
+  background: rgba(212, 160, 23, 0.08);
   transform: rotate(-20deg);
   transform-origin: center;
   pointer-events: none;
 }
 
 .photo-placeholder {
-  background: var(--color-n1);
+  background: var(--color-charcoal);
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
@@ -94,5 +99,5 @@ body {
   font-size: 9px;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: var(--color-n4);
+  color: var(--color-gray-600);
 }

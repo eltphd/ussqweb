@@ -7,7 +7,7 @@ import AnimateOnScroll from '@/components/AnimateOnScroll';
 import PhotoPlaceholder from '@/components/PhotoPlaceholder';
 import Footer from '@/components/Footer';
 
-function Eyebrow({ text, color = '#FF4B1F' }: { text: string; color?: string }) {
+function Eyebrow({ text, color = '#B5142A' }: { text: string; color?: string }) {
   return (
     <div
       style={{
@@ -99,17 +99,17 @@ export default function AtlasPage() {
           <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
             <p
               style={{
-                fontFamily: 'IBM Plex Sans, sans-serif',
+                fontFamily: 'Barlow, sans-serif',
                 fontSize: '13px',
                 color: '#888888',
                 lineHeight: 1.6,
               }}
             >
               Atlas Academy is a curriculum artifact and legacy program of{' '}
-              <strong style={{ color: '#F0EDE8' }}>Atlas ERA — The Education Research Association</strong>. The
+              <strong style={{ color: '#F4F1EC' }}>Atlas ERA — The Education Research Association</strong>. The
               broader Atlas ERA network is now the organizational home for our field-building, credentialing, and
               community connection work.{' '}
-              <a href="/about" style={{ color: '#FF4B1F', textDecoration: 'none' }}>
+              <a href="/about" style={{ color: '#B5142A', textDecoration: 'none' }}>
                 Learn more about Atlas ERA →
               </a>
             </p>
@@ -127,7 +127,7 @@ export default function AtlasPage() {
           {/* Left — Orange panel */}
           <div
             style={{
-              backgroundColor: '#FF4B1F',
+              backgroundColor: '#B5142A',
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
@@ -158,7 +158,7 @@ export default function AtlasPage() {
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: 'clamp(56px, 8vw, 96px)',
-                  color: '#F0EDE8',
+                  color: '#F4F1EC',
                   lineHeight: 0.9,
                   letterSpacing: '0.02em',
                   marginBottom: '20px',
@@ -169,7 +169,7 @@ export default function AtlasPage() {
               </h1>
               <p
                 style={{
-                  fontFamily: 'IBM Plex Sans, sans-serif',
+                  fontFamily: 'Barlow, sans-serif',
                   fontWeight: 300,
                   fontSize: '20px',
                   color: 'rgba(240,237,232,0.8)',
@@ -187,8 +187,8 @@ export default function AtlasPage() {
                   fontSize: '12px',
                   letterSpacing: '0.15em',
                   textTransform: 'uppercase',
-                  backgroundColor: '#0A0A0A',
-                  color: '#F0EDE8',
+                  backgroundColor: '#0E0E0E',
+                  color: '#F4F1EC',
                   padding: '14px 28px',
                   textDecoration: 'none',
                   display: 'inline-block',
@@ -206,7 +206,7 @@ export default function AtlasPage() {
         </section>
 
         {/* Section 2: 10-Week Program Overview */}
-        <section style={{ backgroundColor: '#0A0A0A', padding: '80px 0' }}>
+        <section style={{ backgroundColor: '#0E0E0E', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
               <Eyebrow text="Program Structure" />
@@ -214,7 +214,7 @@ export default function AtlasPage() {
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: '64px',
-                  color: '#F0EDE8',
+                  color: '#F4F1EC',
                   letterSpacing: '0.02em',
                   marginBottom: '16px',
                   lineHeight: 0.95,
@@ -224,7 +224,7 @@ export default function AtlasPage() {
               </h2>
               <p
                 style={{
-                  fontFamily: 'IBM Plex Sans, sans-serif',
+                  fontFamily: 'Barlow, sans-serif',
                   fontWeight: 300,
                   fontSize: '16px',
                   color: '#888888',
@@ -250,7 +250,7 @@ export default function AtlasPage() {
                   <div
                     style={{
                       backgroundColor: '#1A1A1A',
-                      borderTop: '4px solid #FF4B1F',
+                      borderTop: '4px solid #B5142A',
                       padding: '24px 20px',
                     }}
                   >
@@ -261,7 +261,7 @@ export default function AtlasPage() {
                         fontSize: '10px',
                         letterSpacing: '0.2em',
                         textTransform: 'uppercase',
-                        color: '#FF4B1F',
+                        color: '#B5142A',
                         marginBottom: '10px',
                       }}
                     >
@@ -271,7 +271,7 @@ export default function AtlasPage() {
                       style={{
                         fontFamily: 'Bebas Neue, sans-serif',
                         fontSize: '22px',
-                        color: '#F0EDE8',
+                        color: '#F4F1EC',
                         letterSpacing: '0.03em',
                         marginBottom: '8px',
                       }}
@@ -280,7 +280,7 @@ export default function AtlasPage() {
                     </div>
                     <p
                       style={{
-                        fontFamily: 'IBM Plex Sans, sans-serif',
+                        fontFamily: 'Barlow, sans-serif',
                         fontSize: '13px',
                         color: '#888888',
                         lineHeight: 1.5,
@@ -304,7 +304,7 @@ export default function AtlasPage() {
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: '48px',
-                  color: '#F0EDE8',
+                  color: '#F4F1EC',
                   letterSpacing: '0.02em',
                   marginBottom: '40px',
                 }}
@@ -317,17 +317,17 @@ export default function AtlasPage() {
               <div style={{ maxWidth: '720px' }}>
                 <blockquote
                   style={{
-                    borderLeft: '3px solid #FF4B1F',
+                    borderLeft: '3px solid #B5142A',
                     paddingLeft: '24px',
                     marginBottom: '32px',
                   }}
                 >
                   <p
                     style={{
-                      fontFamily: 'IBM Plex Sans, sans-serif',
+                      fontFamily: 'Barlow, sans-serif',
                       fontStyle: 'italic',
                       fontSize: '22px',
-                      color: '#F0EDE8',
+                      color: '#F4F1EC',
                       lineHeight: 1.5,
                       marginBottom: '16px',
                     }}
@@ -360,7 +360,7 @@ export default function AtlasPage() {
                         borderRadius: '50%',
                         border: 'none',
                         cursor: 'pointer',
-                        backgroundColor: i === activeTestimonial ? '#FF4B1F' : '#2A2A2A',
+                        backgroundColor: i === activeTestimonial ? '#B5142A' : '#2A2A2A',
                         padding: 0,
                         transition: 'background-color 0.2s',
                       }}
@@ -374,15 +374,15 @@ export default function AtlasPage() {
         </section>
 
         {/* Section 4: Application */}
-        <section id="apply" style={{ backgroundColor: '#F0EDE8', padding: '80px 0' }}>
+        <section id="apply" style={{ backgroundColor: '#F4F1EC', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
-              <Eyebrow text="Cohort 4 · Summer 2026" color="#FF4B1F" />
+              <Eyebrow text="Cohort 4 · Summer 2026" color="#B5142A" />
               <h2
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: '64px',
-                  color: '#0A0A0A',
+                  color: '#0E0E0E',
                   letterSpacing: '0.02em',
                   marginBottom: '32px',
                   lineHeight: 0.95,
@@ -406,7 +406,7 @@ export default function AtlasPage() {
                     style={{
                       fontFamily: 'Bebas Neue, sans-serif',
                       fontSize: '20px',
-                      color: '#0A0A0A',
+                      color: '#0E0E0E',
                       letterSpacing: '0.05em',
                       marginBottom: '12px',
                     }}
@@ -427,11 +427,11 @@ export default function AtlasPage() {
                         <li
                           key={item}
                           style={{
-                            fontFamily: 'IBM Plex Sans, sans-serif',
+                            fontFamily: 'Barlow, sans-serif',
                             fontSize: '14px',
                             color: '#444444',
                             paddingLeft: '16px',
-                            borderLeft: '2px solid #FF4B1F',
+                            borderLeft: '2px solid #B5142A',
                           }}
                         >
                           {item}
@@ -448,7 +448,7 @@ export default function AtlasPage() {
                     style={{
                       fontFamily: 'Bebas Neue, sans-serif',
                       fontSize: '20px',
-                      color: '#0A0A0A',
+                      color: '#0E0E0E',
                       letterSpacing: '0.05em',
                       marginBottom: '12px',
                     }}
@@ -472,11 +472,11 @@ export default function AtlasPage() {
                       <li
                         key={item}
                         style={{
-                          fontFamily: 'IBM Plex Sans, sans-serif',
+                          fontFamily: 'Barlow, sans-serif',
                           fontSize: '14px',
                           color: '#444444',
                           paddingLeft: '16px',
-                          borderLeft: '2px solid #FF4B1F',
+                          borderLeft: '2px solid #B5142A',
                         }}
                       >
                         {item}
@@ -496,8 +496,8 @@ export default function AtlasPage() {
                   fontSize: '14px',
                   letterSpacing: '0.15em',
                   textTransform: 'uppercase',
-                  backgroundColor: '#FF4B1F',
-                  color: '#F0EDE8',
+                  backgroundColor: '#B5142A',
+                  color: '#F4F1EC',
                   padding: '16px 36px',
                   textDecoration: 'none',
                   display: 'inline-block',
@@ -510,7 +510,7 @@ export default function AtlasPage() {
         </section>
 
         {/* Section 5: FAQ */}
-        <section style={{ backgroundColor: '#0A0A0A', padding: '80px 0' }}>
+        <section style={{ backgroundColor: '#0E0E0E', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
               <Eyebrow text="Frequently Asked" />
@@ -518,7 +518,7 @@ export default function AtlasPage() {
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: '64px',
-                  color: '#F0EDE8',
+                  color: '#F4F1EC',
                   letterSpacing: '0.02em',
                   marginBottom: '40px',
                   lineHeight: 0.95,
@@ -555,7 +555,7 @@ export default function AtlasPage() {
                         style={{
                           fontFamily: 'Bebas Neue, sans-serif',
                           fontSize: '24px',
-                          color: '#F0EDE8',
+                          color: '#F4F1EC',
                           letterSpacing: '0.03em',
                         }}
                       >
@@ -565,7 +565,7 @@ export default function AtlasPage() {
                         style={{
                           fontFamily: 'Bebas Neue, sans-serif',
                           fontSize: '24px',
-                          color: '#FF4B1F',
+                          color: '#B5142A',
                           flexShrink: 0,
                           marginLeft: '16px',
                           transform: openFaq === i ? 'rotate(45deg)' : 'rotate(0)',
@@ -579,7 +579,7 @@ export default function AtlasPage() {
                     {openFaq === i && (
                       <p
                         style={{
-                          fontFamily: 'IBM Plex Sans, sans-serif',
+                          fontFamily: 'Barlow, sans-serif',
                           fontSize: '15px',
                           color: '#888888',
                           lineHeight: 1.7,

@@ -6,7 +6,7 @@ import Navigation from '@/components/Navigation';
 import AnimateOnScroll from '@/components/AnimateOnScroll';
 import Footer from '@/components/Footer';
 
-function Eyebrow({ text, color = '#FF4B1F' }: { text: string; color?: string }) {
+function Eyebrow({ text, color = '#D4A017' }: { text: string; color?: string }) {
   return (
     <div
       style={{
@@ -45,7 +45,7 @@ export default function ConnectPage() {
         {/* Hero */}
         <section
           style={{
-            backgroundColor: '#0A0A0A',
+            backgroundColor: '#0E0E0E',
             minHeight: '60svh',
             display: 'flex',
             alignItems: 'center',
@@ -63,7 +63,7 @@ export default function ConnectPage() {
               transform: 'translateY(-50%)',
               fontFamily: 'Bebas Neue, sans-serif',
               fontSize: '24vw',
-              color: 'rgba(255,75,31,0.03)',
+              color: 'rgba(212,160,23,0.03)',
               lineHeight: 1,
               pointerEvents: 'none',
               userSelect: 'none',
@@ -78,7 +78,7 @@ export default function ConnectPage() {
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: 'clamp(56px, 8vw, 96px)',
-                  color: '#F0EDE8',
+                  color: '#F4F1EC',
                   lineHeight: 0.9,
                   letterSpacing: '0.02em',
                   whiteSpace: 'pre-line',
@@ -89,7 +89,7 @@ export default function ConnectPage() {
               </h1>
               <p
                 style={{
-                  fontFamily: 'IBM Plex Sans, sans-serif',
+                  fontFamily: 'Barlow, sans-serif',
                   fontWeight: 300,
                   fontSize: '18px',
                   color: '#888888',
@@ -105,14 +105,14 @@ export default function ConnectPage() {
         </section>
 
         {/* 4-card CTA grid */}
-        <section style={{ backgroundColor: '#F0EDE8', padding: '80px 0' }}>
+        <section style={{ backgroundColor: '#F4F1EC', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
               <h2
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: '48px',
-                  color: '#0A0A0A',
+                  color: '#0E0E0E',
                   letterSpacing: '0.02em',
                   marginBottom: '32px',
                 }}
@@ -137,8 +137,8 @@ export default function ConnectPage() {
                     fontSize: '16px',
                     letterSpacing: '0.15em',
                     textTransform: 'uppercase',
-                    backgroundColor: '#0A0A0A',
-                    color: '#F0EDE8',
+                    backgroundColor: '#0E0E0E',
+                    color: '#F4F1EC',
                     padding: '28px 24px',
                     textDecoration: 'none',
                     display: 'flex',
@@ -149,7 +149,7 @@ export default function ConnectPage() {
                   Partner With Us
                   <span
                     style={{
-                      fontFamily: 'IBM Plex Sans, sans-serif',
+                      fontFamily: 'Barlow, sans-serif',
                       fontWeight: 300,
                       fontSize: '12px',
                       letterSpacing: 0,
@@ -168,8 +168,8 @@ export default function ConnectPage() {
                     fontSize: '16px',
                     letterSpacing: '0.15em',
                     textTransform: 'uppercase',
-                    backgroundColor: '#FF4B1F',
-                    color: '#F0EDE8',
+                    backgroundColor: '#D4A017',
+                    color: '#F4F1EC',
                     padding: '28px 24px',
                     textDecoration: 'none',
                     display: 'flex',
@@ -180,7 +180,7 @@ export default function ConnectPage() {
                   Apply to a Program
                   <span
                     style={{
-                      fontFamily: 'IBM Plex Sans, sans-serif',
+                      fontFamily: 'Barlow, sans-serif',
                       fontWeight: 300,
                       fontSize: '12px',
                       letterSpacing: 0,
@@ -199,8 +199,8 @@ export default function ConnectPage() {
                     fontSize: '16px',
                     letterSpacing: '0.15em',
                     textTransform: 'uppercase',
-                    border: '2px solid #FF4B1F',
-                    color: '#FF4B1F',
+                    border: '2px solid #D4A017',
+                    color: '#D4A017',
                     padding: '28px 24px',
                     textDecoration: 'none',
                     display: 'flex',
@@ -212,7 +212,7 @@ export default function ConnectPage() {
                   Support Our Work
                   <span
                     style={{
-                      fontFamily: 'IBM Plex Sans, sans-serif',
+                      fontFamily: 'Barlow, sans-serif',
                       fontWeight: 300,
                       fontSize: '12px',
                       letterSpacing: 0,
@@ -231,8 +231,8 @@ export default function ConnectPage() {
                     fontSize: '16px',
                     letterSpacing: '0.15em',
                     textTransform: 'uppercase',
-                    border: '2px solid #0A0A0A',
-                    color: '#0A0A0A',
+                    border: '2px solid #0E0E0E',
+                    color: '#0E0E0E',
                     padding: '28px 24px',
                     textDecoration: 'none',
                     display: 'flex',
@@ -244,7 +244,7 @@ export default function ConnectPage() {
                   Contact Us
                   <span
                     style={{
-                      fontFamily: 'IBM Plex Sans, sans-serif',
+                      fontFamily: 'Barlow, sans-serif',
                       fontWeight: 300,
                       fontSize: '12px',
                       letterSpacing: 0,
@@ -261,7 +261,7 @@ export default function ConnectPage() {
         </section>
 
         {/* Contact Form */}
-        <section id="contact-form" style={{ backgroundColor: '#0A0A0A', padding: '80px 0' }}>
+        <section id="contact-form" style={{ backgroundColor: '#0E0E0E', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <div
               style={{
@@ -279,7 +279,7 @@ export default function ConnectPage() {
                     style={{
                       fontFamily: 'Bebas Neue, sans-serif',
                       fontSize: '48px',
-                      color: '#F0EDE8',
+                      color: '#F4F1EC',
                       letterSpacing: '0.02em',
                       marginBottom: '32px',
                     }}
@@ -292,11 +292,11 @@ export default function ConnectPage() {
                   {submitted ? (
                     <div
                       style={{
-                        fontFamily: 'IBM Plex Sans, sans-serif',
+                        fontFamily: 'Barlow, sans-serif',
                         fontSize: '16px',
-                        color: '#FF4B1F',
+                        color: '#D4A017',
                         padding: '24px 28px',
-                        border: '1px solid #FF4B1F',
+                        border: '1px solid #D4A017',
                       }}
                     >
                       Thank you for reaching out. We&apos;ll be in touch within 3–5 business days.
@@ -338,8 +338,8 @@ export default function ConnectPage() {
                               padding: '12px 16px',
                               border: '2px solid #2A2A2A',
                               backgroundColor: '#1A1A1A',
-                              color: '#F0EDE8',
-                              fontFamily: 'IBM Plex Sans, sans-serif',
+                              color: '#F4F1EC',
+                              fontFamily: 'Barlow, sans-serif',
                               fontSize: '14px',
                               outline: 'none',
                             }}
@@ -373,8 +373,8 @@ export default function ConnectPage() {
                             padding: '12px 16px',
                             border: '2px solid #2A2A2A',
                             backgroundColor: '#1A1A1A',
-                            color: '#F0EDE8',
-                            fontFamily: 'IBM Plex Sans, sans-serif',
+                            color: '#F4F1EC',
+                            fontFamily: 'Barlow, sans-serif',
                             fontSize: '14px',
                             outline: 'none',
                             cursor: 'pointer',
@@ -416,8 +416,8 @@ export default function ConnectPage() {
                             padding: '12px 16px',
                             border: '2px solid #2A2A2A',
                             backgroundColor: '#1A1A1A',
-                            color: '#F0EDE8',
-                            fontFamily: 'IBM Plex Sans, sans-serif',
+                            color: '#F4F1EC',
+                            fontFamily: 'Barlow, sans-serif',
                             fontSize: '14px',
                             outline: 'none',
                             resize: 'vertical',
@@ -433,8 +433,8 @@ export default function ConnectPage() {
                           fontSize: '12px',
                           letterSpacing: '0.15em',
                           textTransform: 'uppercase',
-                          backgroundColor: '#FF4B1F',
-                          color: '#F0EDE8',
+                          backgroundColor: '#D4A017',
+                          color: '#F4F1EC',
                           padding: '14px 28px',
                           border: 'none',
                           cursor: 'pointer',
@@ -455,7 +455,7 @@ export default function ConnectPage() {
                     style={{
                       fontFamily: 'Bebas Neue, sans-serif',
                       fontSize: '24px',
-                      color: '#F0EDE8',
+                      color: '#F4F1EC',
                       letterSpacing: '0.05em',
                       marginBottom: '24px',
                     }}
@@ -470,7 +470,7 @@ export default function ConnectPage() {
                       { label: 'EIN', value: '92-3221304' },
                       { label: 'Status', value: '501(c)(3) Nonprofit' },
                     ].map((item) => (
-                      <div key={item.label} style={{ borderLeft: '3px solid #FF4B1F', paddingLeft: '16px' }}>
+                      <div key={item.label} style={{ borderLeft: '3px solid #D4A017', paddingLeft: '16px' }}>
                         <div
                           style={{
                             fontFamily: 'Barlow Condensed, sans-serif',
@@ -478,7 +478,7 @@ export default function ConnectPage() {
                             fontSize: '10px',
                             letterSpacing: '0.15em',
                             textTransform: 'uppercase',
-                            color: '#FF4B1F',
+                            color: '#D4A017',
                             marginBottom: '4px',
                           }}
                         >
@@ -486,7 +486,7 @@ export default function ConnectPage() {
                         </div>
                         <div
                           style={{
-                            fontFamily: 'IBM Plex Sans, sans-serif',
+                            fontFamily: 'Barlow, sans-serif',
                             fontSize: '15px',
                             color: '#888888',
                             lineHeight: 1.5,
@@ -504,12 +504,12 @@ export default function ConnectPage() {
                       marginTop: '40px',
                       padding: '24px',
                       backgroundColor: '#1A1A1A',
-                      borderTop: '3px solid #FF4B1F',
+                      borderTop: '3px solid #D4A017',
                     }}
                   >
                     <p
                       style={{
-                        fontFamily: 'IBM Plex Sans, sans-serif',
+                        fontFamily: 'Barlow, sans-serif',
                         fontSize: '13px',
                         color: '#555555',
                         lineHeight: 1.6,

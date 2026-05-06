@@ -51,7 +51,7 @@ export default function StatCounter({ value, label }: StatCounterProps) {
         style={{
           fontFamily: 'Bebas Neue, sans-serif',
           fontSize: 'clamp(40px, 6vw, 72px)',
-          color: '#FF4B1F',
+          color: '#D4A017',
           lineHeight: 1,
           letterSpacing: '0.02em',
         }}
