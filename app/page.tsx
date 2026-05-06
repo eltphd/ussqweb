@@ -1520,7 +1520,7 @@ export default function HomePage() {
                   textAlign: 'right',
                 }}
               >
-                51 E Hocking St · Canal Winchester, OH 43110
+                Columbus, Ohio
                 <br />
                 info@us-squared.org
               </p>
