@@ -336,7 +336,7 @@ export default function AboutPage() {
                   { label: 'EIN', value: '92-3221304' },
                   { label: 'Status', value: '501(c)(3) Nonprofit' },
                   { label: 'Founded', value: '2020' },
-                  { label: 'Location', value: 'Canal Winchester, OH' },
+                  { label: 'Location', value: 'Columbus, Ohio' },
                 ].map((fact) => (
                   <div
                     key={fact.label}
@@ -389,7 +389,7 @@ export default function AboutPage() {
                     lineHeight: 1.5,
                   }}
                 >
-                  51 E Hocking St · Canal Winchester, OH 43110 · executive@us-squared.org
+                  Columbus, Ohio · executive@us-squared.org
                 </p>
               </div>
             </AnimateOnScroll>
