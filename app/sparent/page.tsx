@@ -487,6 +487,32 @@ export default function SparentPage() {
           </div>
         </section>
 
+        {/* Feelings Unplugged Cross-Promo */}
+        <section style={{ backgroundColor: '#F4F1EC', padding: '40px 0', borderTop: '1px solid rgba(10,10,10,0.1)' }}>
+          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
+            <AnimateOnScroll>
+              <p
+                style={{
+                  fontFamily: 'Barlow, sans-serif',
+                  fontSize: '16px',
+                  color: '#444444',
+                  lineHeight: 1.6,
+                  maxWidth: '640px',
+                }}
+              >
+                Looking for a hands-on tool to pair with this month&apos;s issue?{' '}
+                <Link
+                  href="/feelings-unplugged"
+                  style={{ color: '#3AB8F0', textDecoration: 'none', fontWeight: 600 }}
+                >
+                  Feelings Unplugged
+                </Link>{' '}
+                is a BASE Framework companion guide for the young people in your care.
+              </p>
+            </AnimateOnScroll>
+          </div>
+        </section>
+
         <Footer />
       </main>
     </>

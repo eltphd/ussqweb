@@ -147,6 +147,7 @@ export default function ResearchPage() {
                     'Tartt, E. L., Nylund-Gibson, K., et al. (in press). Latent Transition Analysis of adolescent racial discrimination and mental health outcomes. Psychological Methods.',
                   notes:
                     'Examines mental health trajectory shifts across 7,000+ Black adolescents using nationally representative CDC data.',
+                  link: null,
                 },
                 {
                   type: 'Doctoral Dissertation · 2023',
@@ -155,6 +156,16 @@ export default function ResearchPage() {
                     'Tartt, E. L. (2023). Unraveling Hopelessness: A latent class analysis of mental health profiles among Black adolescents. University of California, Santa Barbara. GPA: 3.98.',
                   notes:
                     'Identified four distinct mental health profiles among Black youth, challenging deficit-based narratives and informing the BASE framework.',
+                  link: null,
+                },
+                {
+                  type: 'Book / Practice Publication · 2026',
+                  title: 'Feelings Unplugged: A Guided Journal for Understanding Your Emotions',
+                  citation:
+                    'Tartt, E. L. (2026). Feelings Unplugged. US-Squared Research Institute. Available via IngramSpark and direct from the author.',
+                  notes:
+                    'A BASE Framework companion publication translating peer-reviewed research on adolescent emotional suppression into an accessible guide for youth and the adults who support them.',
+                  link: '/feelings-unplugged',
                 },
               ].map((pub, i) => (
                 <AnimateOnScroll key={i} delay={i * 0.05}>
@@ -208,10 +219,27 @@ export default function ResearchPage() {
                         fontSize: '14px',
                         color: '#888888',
                         lineHeight: 1.6,
+                        marginBottom: pub.link ? '16px' : '0',
                       }}
                     >
                       {pub.notes}
                     </p>
+                    {pub.link && (
+                      <Link
+                        href={pub.link}
+                        style={{
+                          fontFamily: 'Barlow Condensed, sans-serif',
+                          fontWeight: 900,
+                          fontSize: '10px',
+                          letterSpacing: '0.15em',
+                          textTransform: 'uppercase',
+                          color: '#D4A017',
+                          textDecoration: 'none',
+                        }}
+                      >
+                        Learn More →
+                      </Link>
+                    )}
                   </div>
                 </AnimateOnScroll>
               ))}

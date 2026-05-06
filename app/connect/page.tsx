@@ -192,7 +192,7 @@ export default function ConnectPage() {
                   </span>
                 </Link>
                 <Link
-                  href="#contact-form"
+                  href="#access-fund"
                   style={{
                     fontFamily: 'Barlow Condensed, sans-serif',
                     fontWeight: 900,
@@ -254,6 +254,92 @@ export default function ConnectPage() {
                   >
                     General inquiries, media, speaking
                   </span>
+                </Link>
+              </div>
+            </AnimateOnScroll>
+          </div>
+        </section>
+
+        {/* Brilliance Forward Access Fund */}
+        <section id="access-fund" style={{ backgroundColor: '#0E0E0E', padding: '80px 0', borderTop: '4px solid #D4A017' }}>
+          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
+            <AnimateOnScroll>
+              <Eyebrow text="Giving Category" />
+              <h2
+                style={{
+                  fontFamily: 'Bebas Neue, sans-serif',
+                  fontSize: '72px',
+                  color: '#D4A017',
+                  lineHeight: 0.9,
+                  letterSpacing: '0.02em',
+                  whiteSpace: 'pre-line',
+                  marginBottom: '24px',
+                }}
+              >
+                {`BRILLIANCE FORWARD\nACCESS FUND`}
+              </h2>
+              <p
+                style={{
+                  fontFamily: 'Barlow, sans-serif',
+                  fontWeight: 300,
+                  fontSize: '18px',
+                  color: '#F4F1EC',
+                  maxWidth: '560px',
+                  lineHeight: 1.7,
+                  marginBottom: '16px',
+                }}
+              >
+                Your gift places a copy of Feelings Unplugged in the hands of a young person who cannot afford one.
+              </p>
+              <p
+                style={{
+                  fontFamily: 'Barlow, sans-serif',
+                  fontSize: '16px',
+                  color: '#888888',
+                  maxWidth: '560px',
+                  lineHeight: 1.7,
+                  marginBottom: '32px',
+                }}
+              >
+                Every dollar goes directly to subsidized copies and distribution. No overhead, no middleman.
+                This is a named giving category of US-Squared Research Institute — a 501(c)(3) nonprofit.
+                All contributions are tax-deductible to the extent allowed by law.
+              </p>
+              <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+                <a
+                  href="mailto:executive@us-squared.org?subject=Brilliance Forward Access Fund — Donation"
+                  style={{
+                    fontFamily: 'Barlow Condensed, sans-serif',
+                    fontWeight: 900,
+                    fontSize: '12px',
+                    letterSpacing: '0.15em',
+                    textTransform: 'uppercase',
+                    backgroundColor: '#D4A017',
+                    color: '#0E0E0E',
+                    padding: '14px 28px',
+                    textDecoration: 'none',
+                    display: 'inline-block',
+                  }}
+                >
+                  Give to the Access Fund →
+                </a>
+                <Link
+                  href="/feelings-unplugged"
+                  style={{
+                    fontFamily: 'Barlow Condensed, sans-serif',
+                    fontWeight: 900,
+                    fontSize: '12px',
+                    letterSpacing: '0.15em',
+                    textTransform: 'uppercase',
+                    border: '2px solid #D4A017',
+                    color: '#D4A017',
+                    padding: '14px 28px',
+                    textDecoration: 'none',
+                    display: 'inline-block',
+                    backgroundColor: 'transparent',
+                  }}
+                >
+                  Learn About Feelings Unplugged →
                 </Link>
               </div>
             </AnimateOnScroll>

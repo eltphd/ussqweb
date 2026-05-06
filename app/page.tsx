@@ -1145,6 +1145,30 @@ export default function HomePage() {
                 </div>
               </AnimateOnScroll>
             </div>
+
+            <AnimateOnScroll delay={0.2}>
+              <p
+                style={{
+                  fontFamily: 'Barlow, sans-serif',
+                  fontSize: '14px',
+                  color: '#444444',
+                  lineHeight: 1.6,
+                  marginTop: '40px',
+                  borderTop: '1px solid rgba(10,10,10,0.1)',
+                  paddingTop: '24px',
+                  maxWidth: '640px',
+                }}
+              >
+                Looking for a hands-on tool to pair with this month&apos;s issue?{' '}
+                <Link
+                  href="/feelings-unplugged"
+                  style={{ color: '#3AB8F0', textDecoration: 'none', fontWeight: 600 }}
+                >
+                  Feelings Unplugged
+                </Link>{' '}
+                is a BASE Framework companion guide for the young people in your care.
+              </p>
+            </AnimateOnScroll>
           </div>
         </section>
 
@@ -1293,6 +1317,101 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* ── Section 07: Feelings Unplugged ──────────────────────────── */}
+        <section
+          id="feelings-unplugged"
+          style={{
+            backgroundColor: '#0E0E0E',
+            borderTop: '4px solid #D4A017',
+            padding: '80px 0',
+          }}
+        >
+          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
+            <AnimateOnScroll>
+              <Eyebrow text="A US-Squared Publication · 05" color="#D4A017" />
+              <h2
+                style={{
+                  fontFamily: 'Bebas Neue, sans-serif',
+                  fontSize: '96px',
+                  color: '#D4A017',
+                  lineHeight: 0.9,
+                  letterSpacing: '0.02em',
+                  marginBottom: '12px',
+                }}
+              >
+                FEELINGS UNPLUGGED
+              </h2>
+              <p
+                style={{
+                  fontFamily: 'Barlow, sans-serif',
+                  fontWeight: 300,
+                  fontSize: '20px',
+                  color: '#F4F1EC',
+                  marginBottom: '16px',
+                }}
+              >
+                Named. Held. Understood.
+              </p>
+              <p
+                style={{
+                  fontFamily: 'Barlow, sans-serif',
+                  fontSize: '16px',
+                  color: '#888888',
+                  maxWidth: '600px',
+                  lineHeight: 1.7,
+                  marginBottom: '40px',
+                }}
+              >
+                Feelings Unplugged is a compact emotional intelligence guide grounded in the BASE Framework —
+                designed for young people learning to name what they feel, and the adults who hold them. Built
+                from peer-reviewed research on Black adolescent emotional suppression. Available now in print.
+              </p>
+            </AnimateOnScroll>
+
+            <AnimateOnScroll delay={0.1}>
+              <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+                <a
+                  href="https://www.feelingsunplugged.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    fontFamily: 'Barlow Condensed, sans-serif',
+                    fontWeight: 900,
+                    fontSize: '12px',
+                    letterSpacing: '0.15em',
+                    textTransform: 'uppercase',
+                    backgroundColor: '#D4A017',
+                    color: '#0E0E0E',
+                    padding: '14px 28px',
+                    textDecoration: 'none',
+                    display: 'inline-block',
+                  }}
+                >
+                  Get Your Copy →
+                </a>
+                <Link
+                  href="/feelings-unplugged#bulk"
+                  style={{
+                    fontFamily: 'Barlow Condensed, sans-serif',
+                    fontWeight: 900,
+                    fontSize: '12px',
+                    letterSpacing: '0.15em',
+                    textTransform: 'uppercase',
+                    border: '2px solid #D4A017',
+                    color: '#D4A017',
+                    padding: '14px 28px',
+                    textDecoration: 'none',
+                    display: 'inline-block',
+                    backgroundColor: 'transparent',
+                  }}
+                >
+                  Bulk &amp; Institutional Pricing →
+                </Link>
+              </div>
+            </AnimateOnScroll>
+          </div>
+        </section>
+
         {/* ── Section 08: Connect CTA ──────────────────────────────────── */}
         <section id="connect-cta" style={{ backgroundColor: '#F4F1EC', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
@@ -1435,6 +1554,8 @@ export default function HomePage() {
                   { label: 'Atlas Academy', href: '/atlas' },
                   { label: 'Altered.Earth', href: '/earth' },
                   { label: 'Sparent Science', href: '/sparent' },
+                  { label: 'Feelings Unplugged', href: '/feelings-unplugged' },
+                  { label: 'Brilliance Forward Fund', href: '/feelings-unplugged#access-fund' },
                 ].map((link) => (
                   <Link
                     key={link.href}

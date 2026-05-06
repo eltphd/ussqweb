@@ -7,6 +7,7 @@ import Link from 'next/link';
 const navLinks = [
   { label: 'Network', href: '/#programs' },
   { label: 'Research', href: '/research' },
+  { label: 'Feelings Unplugged', href: '/feelings-unplugged' },
   { label: 'About', href: '/about' },
   { label: 'Sparent Science', href: '/sparent' },
   { label: 'Connect', href: '/connect' },
