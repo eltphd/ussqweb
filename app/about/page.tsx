@@ -389,7 +389,7 @@ export default function AboutPage() {
                     lineHeight: 1.5,
                   }}
                 >
-                  51 E Hocking St · Canal Winchester, OH 43110 · info@us-squared.org
+                  51 E Hocking St · Canal Winchester, OH 43110 · executive@us-squared.org
                 </p>
               </div>
             </AnimateOnScroll>

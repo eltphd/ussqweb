@@ -1522,7 +1522,7 @@ export default function HomePage() {
               >
                 51 E Hocking St · Canal Winchester, OH 43110
                 <br />
-                info@us-squared.org
+                executive@us-squared.org
               </p>
             </div>
           </div>

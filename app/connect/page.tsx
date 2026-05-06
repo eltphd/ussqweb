@@ -465,7 +465,7 @@ export default function ConnectPage() {
 
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                     {[
-                      { label: 'Email', value: 'info@us-squared.org' },
+                      { label: 'Email', value: 'executive@us-squared.org' },
                       { label: 'Address', value: '51 E Hocking St\nCanal Winchester, OH 43110' },
                       { label: 'EIN', value: '92-3221304' },
                       { label: 'Status', value: '501(c)(3) Nonprofit' },
