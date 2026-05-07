@@ -157,6 +157,139 @@ export default function SparentPage() {
           </div>
         </section>
 
+        {/* Free Resource — Sparent Science */}
+        <section style={{ backgroundColor: '#FFFFFF', padding: '80px 0' }}>
+          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
+            <AnimateOnScroll>
+              <div
+                style={{
+                  borderTop: '4px solid #0D8F8F',
+                  paddingTop: '32px',
+                  maxWidth: '720px',
+                }}
+              >
+                {/* Label */}
+                <div
+                  style={{
+                    fontFamily: 'Barlow Condensed, sans-serif',
+                    fontWeight: 900,
+                    fontSize: '10px',
+                    letterSpacing: '0.25em',
+                    textTransform: 'uppercase',
+                    color: '#0D8F8F',
+                    marginBottom: '16px',
+                  }}
+                >
+                  FREE RESOURCE&nbsp;&nbsp;·&nbsp;&nbsp;SPARENT SCIENCE
+                </div>
+
+                {/* Heading */}
+                <h2
+                  style={{
+                    fontFamily: 'Bebas Neue, sans-serif',
+                    fontSize: 'clamp(36px, 5vw, 64px)',
+                    color: '#0E0E0E',
+                    letterSpacing: '0.02em',
+                    lineHeight: 0.95,
+                    marginBottom: '12px',
+                  }}
+                >
+                  The Job Math Conversation
+                </h2>
+
+                {/* Subheading */}
+                <p
+                  style={{
+                    fontFamily: 'Barlow Condensed, sans-serif',
+                    fontWeight: 600,
+                    fontSize: '18px',
+                    letterSpacing: '0.06em',
+                    textTransform: 'uppercase',
+                    color: '#444444',
+                    marginBottom: '20px',
+                  }}
+                >
+                  How to Help Your Teen Work Smarter This Summer
+                </p>
+
+                {/* Body */}
+                <p
+                  style={{
+                    fontFamily: 'Barlow, sans-serif',
+                    fontWeight: 300,
+                    fontSize: '16px',
+                    color: '#1A1A1A',
+                    lineHeight: 1.7,
+                    marginBottom: '32px',
+                    maxWidth: '600px',
+                  }}
+                >
+                  Research-backed guidance for trusted adults. This 9-slide deck gives you the data, the scripts, and
+                  the strategy to help a teen make a smarter first-job decision — without pressure or directive framing.
+                  Includes conversation starters, what to avoid, and how to find opportunities in your city.{' '}
+                  <strong style={{ fontWeight: 500 }}>Built for any caregiver. Works anywhere in the U.S.</strong>
+                </p>
+
+                {/* Download Button */}
+                <a
+                  href="/downloads/SparentScience_LifeguardDeck.pptx"
+                  download
+                  aria-label="Download the free Job Math Conversation guide for caregivers and educators — 9-slide PowerPoint"
+                  style={{
+                    fontFamily: 'Barlow Condensed, sans-serif',
+                    fontWeight: 900,
+                    fontSize: '14px',
+                    letterSpacing: '0.15em',
+                    textTransform: 'uppercase',
+                    backgroundColor: '#0D8F8F',
+                    color: '#FFFFFF',
+                    padding: '16px 36px',
+                    textDecoration: 'none',
+                    display: 'inline-block',
+                    marginBottom: '20px',
+                    transition: 'background-color 0.15s ease',
+                  }}
+                  onMouseEnter={(e) => {
+                    (e.currentTarget as HTMLAnchorElement).style.backgroundColor = '#096A6A';
+                  }}
+                  onMouseLeave={(e) => {
+                    (e.currentTarget as HTMLAnchorElement).style.backgroundColor = '#0D8F8F';
+                  }}
+                >
+                  Download the Free Guide&nbsp;&nbsp;→
+                </a>
+
+                {/* Tags */}
+                <div
+                  style={{
+                    fontFamily: 'Barlow Condensed, sans-serif',
+                    fontWeight: 600,
+                    fontSize: '10px',
+                    letterSpacing: '0.15em',
+                    textTransform: 'uppercase',
+                    color: '#888888',
+                    marginBottom: '10px',
+                  }}
+                >
+                  Financial Literacy&nbsp;&nbsp;·&nbsp;&nbsp;Parent &amp; Caregiver Tools&nbsp;&nbsp;·&nbsp;&nbsp;Research-Backed&nbsp;&nbsp;·&nbsp;&nbsp;Free Download
+                </div>
+
+                {/* Attribution */}
+                <div
+                  style={{
+                    fontFamily: 'Barlow, sans-serif',
+                    fontSize: '11px',
+                    color: '#AAAAAA',
+                    letterSpacing: '0.04em',
+                  }}
+                >
+                  A US-Squared Research Institute Resource&nbsp;&nbsp;·&nbsp;&nbsp;Sparent Science&nbsp;&nbsp;·&nbsp;&nbsp;us-squared.org/sparent
+                </div>
+              </div>
+            </AnimateOnScroll>
+          </div>
+        </section>
+
         {/* Section 2: Issue Archive */}
         <section style={{ backgroundColor: '#0E0E0E', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
