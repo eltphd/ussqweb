@@ -209,6 +209,8 @@ export default function ResearchPage() {
                         color: '#555555',
                         lineHeight: 1.5,
                         marginBottom: '12px',
+                        paddingLeft: '2px',
+                        overflow: 'visible',
                       }}
                     >
                       {pub.citation}
@@ -411,23 +413,25 @@ export default function ResearchPage() {
                 evaluators.
               </p>
               <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-                <Link
-                  href="/connect"
+                {/* TODO: Enable Download Impact Brief once PDF asset is ready — see Part 3 Asset list */}
+                <span
+                  aria-disabled="true"
                   style={{
                     fontFamily: 'Barlow Condensed, sans-serif',
                     fontWeight: 900,
                     fontSize: '12px',
                     letterSpacing: '0.15em',
                     textTransform: 'uppercase',
-                    backgroundColor: '#D4A017',
-                    color: '#F4F1EC',
+                    backgroundColor: '#555555',
+                    color: '#888888',
                     padding: '14px 28px',
-                    textDecoration: 'none',
                     display: 'inline-block',
+                    cursor: 'not-allowed',
+                    userSelect: 'none',
                   }}
                 >
-                  Download Impact Brief
-                </Link>
+                  Coming Soon
+                </span>
                 <Link
                   href="/connect"
                   style={{

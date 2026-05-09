@@ -95,11 +95,31 @@ export default function BASEopsPage() {
                   color: '#888888',
                   maxWidth: '600px',
                   lineHeight: 1.7,
+                  marginBottom: '16px',
+                }}
+              >
+                BASEops is the workforce development network of the worldskool ecosystem. We connect business owners,
+                community members, justice-involved individuals, and young people ages 14+ to skill-building pathways
+                and economic opportunity. BASEops is where brilliance meets livelihood — the bridge between who you
+                are and what you can build.
+              </p>
+              <p
+                style={{
+                  fontFamily: 'Barlow, sans-serif',
+                  fontSize: '16px',
+                  color: '#888888',
+                  maxWidth: '600px',
+                  lineHeight: 1.7,
                   marginBottom: '40px',
                 }}
               >
-                BASEops is US-Squared&apos;s free operational infrastructure toolkit. We hand community organizations
-                the same systems we use — because lean nonprofits deserve enterprise-grade infrastructure.
+                The Learn arm:{' '}
+                <a
+                  href="/atlas"
+                  style={{ color: '#9B82C4', textDecoration: 'none' }}
+                >
+                  Atlas Academy →
+                </a>
               </p>
               <div
                 style={{
@@ -149,7 +169,7 @@ export default function BASEopsPage() {
                   marginBottom: '40px',
                 }}
               >
-                The Three Modules
+                The Modules
               </h2>
             </AnimateOnScroll>
 
@@ -163,16 +183,11 @@ export default function BASEopsPage() {
               {[
                 {
                   num: '01',
-                  title: 'Org Infrastructure',
-                  body: 'HR templates, onboarding flows, compliance checklists, board governance docs, and internal systems built for community-based organizations operating under resource constraints.',
-                },
-                {
-                  num: '02',
                   title: 'Grant Systems',
                   body: 'Grant tracking spreadsheets, narrative templates, budget justification formats, reporting calendars, and funder relationship CRM built for small-to-mid-size nonprofits.',
                 },
                 {
-                  num: '03',
+                  num: '02',
                   title: 'Impact Measurement',
                   body: 'Logic model templates, pre/post survey tools, data collection workflows, and dashboard frameworks for communicating your work to funders, boards, and your community.',
                 },

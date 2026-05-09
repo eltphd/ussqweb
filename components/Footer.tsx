@@ -72,24 +72,36 @@ export default function Footer() {
           </nav>
 
           {/* Social */}
+          {/* TODO: Replace href="#" with real URLs once owner supplies them — see Part 3 Assets 3 (Instagram) and 4 (LinkedIn) */}
           <div style={{ display: 'flex', gap: '16px' }}>
-            {['Instagram', 'LinkedIn'].map((s) => (
-              <a
-                key={s}
-                href="#"
-                style={{
-                  fontFamily: 'Barlow Condensed, sans-serif',
-                  fontWeight: 600,
-                  fontSize: '11px',
-                  letterSpacing: '0.15em',
-                  textTransform: 'uppercase',
-                  color: '#555555',
-                  textDecoration: 'none',
-                }}
-              >
-                {s}
-              </a>
-            ))}
+            <a
+              href="#" /* TODO: Replace with Instagram profile URL — Asset 3 */
+              style={{
+                fontFamily: 'Barlow Condensed, sans-serif',
+                fontWeight: 600,
+                fontSize: '11px',
+                letterSpacing: '0.15em',
+                textTransform: 'uppercase',
+                color: '#555555',
+                textDecoration: 'none',
+              }}
+            >
+              Instagram
+            </a>
+            <a
+              href="#" /* TODO: Replace with LinkedIn profile URL — Asset 4 */
+              style={{
+                fontFamily: 'Barlow Condensed, sans-serif',
+                fontWeight: 600,
+                fontSize: '11px',
+                letterSpacing: '0.15em',
+                textTransform: 'uppercase',
+                color: '#555555',
+                textDecoration: 'none',
+              }}
+            >
+              LinkedIn
+            </a>
           </div>
         </div>
 

@@ -83,7 +83,7 @@ export default function AboutPage() {
                   lineHeight: 1.7,
                 }}
               >
-                A justice-centered research institute protecting the brilliance of young people through programs,
+                A justice-centered research institute protecting the brilliance of young people through worldskool,
                 research, and systems that hold them.
               </p>
             </AnimateOnScroll>
@@ -233,7 +233,7 @@ export default function AboutPage() {
                       marginBottom: '16px',
                     }}
                   >
-                    She earned her PhD from the University of California, Santa Barbara in 2023 with a 3.98 GPA. Her
+                    She earned her PhD from the University of California, Santa Barbara in 2023. Her
                     work sits at the intersection of quantitative methods, racial equity, and community-based practice.
                   </p>
                   <p
@@ -245,9 +245,10 @@ export default function AboutPage() {
                       marginBottom: '16px',
                     }}
                   >
-                    Dr. Tartt founded US-Squared Research Institute to translate research into programs that actually
-                    reach young people — and to build the organizational infrastructure that community-based leaders
-                    deserve.
+                    Dr. Tartt does not run programs — she designs the conditions that make them possible. Her work
+                    begins where the research ends: identifying the structural gaps between brilliance and economic
+                    power, then building the networks across education, publishing, and workforce that close them.
+                    She is the architect of ecosystems. The delivery belongs to the people inside them.
                   </p>
                   <p
                     style={{
@@ -282,7 +283,7 @@ export default function AboutPage() {
                       flexWrap: 'wrap',
                     }}
                   >
-                    {['UCSB · PhD 2023', 'GPA 3.98', '20+ Years in Education', 'Developmental Psychology'].map((tag) => (
+                    {['UCSB · PhD 2023', '20+ Years in Education', 'Developmental Psychology'].map((tag) => (
                       <span
                         key={tag}
                         style={{

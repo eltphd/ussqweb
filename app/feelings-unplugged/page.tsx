@@ -24,10 +24,9 @@ function Eyebrow({ text, color = '#D4A017' }: { text: string; color?: string }) 
 }
 
 const pricingTiers = [
-  { qty: '1–4 copies', price: '$25', per: 'per copy' },
-  { qty: '5–9 copies', price: '$20', per: 'per copy' },
-  { qty: '10–24 copies', price: '$16', per: 'per copy' },
-  { qty: '25+ copies', price: '$13', per: 'per copy' },
+  { qty: '1–9 copies', price: '$25', per: 'per copy' },
+  { qty: '10–24 copies', price: '$20', per: 'per copy' },
+  { qty: '25+ copies', price: '$15', per: 'per copy' },
 ];
 
 export default function FeelingsUnpluggedPage() {
@@ -699,6 +698,73 @@ export default function FeelingsUnpluggedPage() {
                 </a>
               </AnimateOnScroll>
             </div>
+          </div>
+        </section>
+
+        {/* ── Podcast — Coming Soon ─────────────────────────────────────── */}
+        {/* TODO: Enable podcast section once platform is live */}
+        <section style={{ backgroundColor: '#1A1A1A', padding: '60px 0', borderTop: '1px solid #2A2A2A' }}>
+          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
+            <AnimateOnScroll>
+              <div
+                style={{
+                  fontFamily: 'Barlow Condensed, sans-serif',
+                  fontWeight: 900,
+                  fontSize: '10px',
+                  letterSpacing: '0.25em',
+                  textTransform: 'uppercase',
+                  color: '#444444',
+                  marginBottom: '12px',
+                }}
+              >
+                Also Available As
+              </div>
+              <h2
+                style={{
+                  fontFamily: 'Bebas Neue, sans-serif',
+                  fontSize: '48px',
+                  color: '#444444',
+                  letterSpacing: '0.02em',
+                  marginBottom: '12px',
+                  lineHeight: 0.95,
+                }}
+              >
+                THE PODCAST
+              </h2>
+              <p
+                style={{
+                  fontFamily: 'Barlow, sans-serif',
+                  fontWeight: 300,
+                  fontSize: '16px',
+                  color: '#3A3A3A',
+                  maxWidth: '480px',
+                  lineHeight: 1.6,
+                  marginBottom: '24px',
+                }}
+              >
+                A companion podcast to the book — conversations on emotional intelligence, the BASE Framework,
+                and what it means to feel fully.
+              </p>
+              <span
+                aria-disabled="true"
+                style={{
+                  fontFamily: 'Barlow Condensed, sans-serif',
+                  fontWeight: 900,
+                  fontSize: '12px',
+                  letterSpacing: '0.15em',
+                  textTransform: 'uppercase',
+                  backgroundColor: '#2A2A2A',
+                  color: '#555555',
+                  padding: '14px 28px',
+                  display: 'inline-block',
+                  cursor: 'not-allowed',
+                  userSelect: 'none',
+                  border: '1px solid #333333',
+                }}
+              >
+                Coming Soon
+              </span>
+            </AnimateOnScroll>
           </div>
         </section>
 

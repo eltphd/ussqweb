@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir=false --import-alias=\"@/*\" --no-git)",
+      "Bash(npm install:*)",
+      "Bash(npx tsc:*)",
+      "Bash(node node_modules/.bin/tsc --noEmit)",
+      "Bash(node_modules/.bin/tsc --noEmit)",
+      "Bash(/Users/drtarttphd/Documents/GitHub/ussqweb/node_modules/.bin/tsc --noEmit)",
+      "Bash(/Users/drtarttphd/Documents/GitHub/ussqweb/node_modules/.bin/tsc --noEmit --project /Users/drtarttphd/Documents/GitHub/ussqweb/tsconfig.json)",
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(/Users/drtarttphd/Documents/GitHub/ussqweb/node_modules/.bin/next build:*)",
+      "Bash(npm run:*)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(npx vercel@latest)",
+      "Bash(npx plugins:*)",
+      "Bash(perl -i -pe 's/info\\\\@us-squared\\\\.org/executive\\\\@us-squared.org/g;' app/page.tsx app/about/page.tsx app/connect/page.tsx components/Footer.tsx)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(git pull *)",
+      "Bash(perl -i *)",
+      "Bash(python3)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(git rebase *)"
+    ]
+  }
+}

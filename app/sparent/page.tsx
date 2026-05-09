@@ -393,6 +393,7 @@ export default function SparentPage() {
         </section>
 
         {/* Section 3: Who Reads Sparent Science */}
+        {/* TODO: Replace placeholder names with real testimonials — see Part 3 Asset 7 */}
         <section style={{ backgroundColor: '#F4F1EC', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
@@ -500,29 +501,25 @@ export default function SparentPage() {
                 unpacks one issue in 20–30 minutes.
               </p>
 
-              {/* Platform placeholders */}
-              <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-                {['Spotify', 'Apple Podcasts', 'Google Podcasts', 'RSS Feed'].map((p) => (
-                  <a
-                    key={p}
-                    href="#"
-                    style={{
-                      fontFamily: 'Barlow Condensed, sans-serif',
-                      fontWeight: 600,
-                      fontSize: '11px',
-                      letterSpacing: '0.12em',
-                      textTransform: 'uppercase',
-                      border: '1px solid #2A2A2A',
-                      color: '#888888',
-                      padding: '8px 16px',
-                      textDecoration: 'none',
-                      transition: 'border-color 0.2s, color 0.2s',
-                    }}
-                  >
-                    {p}
-                  </a>
-                ))}
-              </div>
+              {/* Platform placeholders — TODO: Replace with real podcast links once platform is live (Part 3 Asset list) */}
+              <span
+                aria-disabled="true"
+                style={{
+                  fontFamily: 'Barlow Condensed, sans-serif',
+                  fontWeight: 600,
+                  fontSize: '11px',
+                  letterSpacing: '0.12em',
+                  textTransform: 'uppercase',
+                  backgroundColor: '#2A2A2A',
+                  color: '#555555',
+                  padding: '8px 16px',
+                  display: 'inline-block',
+                  cursor: 'not-allowed',
+                  userSelect: 'none',
+                }}
+              >
+                Coming Soon
+              </span>
             </AnimateOnScroll>
           </div>
         </section>

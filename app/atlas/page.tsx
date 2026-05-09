@@ -56,31 +56,8 @@ const testimonials = [
   },
 ];
 
-const faqs = [
-  {
-    q: 'Do I need experience?',
-    a: 'No experience required. Atlas Academy is designed for youth who are curious, not credentialed. We meet you exactly where you are.',
-  },
-  {
-    q: 'Is it really free?',
-    a: 'Yes. Atlas Academy is completely free to apply and participate in. There is no cost, no catch. We believe financial barriers should never prevent a young person from accessing quality programming.',
-  },
-  {
-    q: 'Is it in-person or virtual?',
-    a: 'Both. We offer in-person cohorts in the Columbus, OH metro area and virtual cohorts open to youth nationwide. Check the application for current offerings.',
-  },
-  {
-    q: 'What happens after Atlas Academy?',
-    a: 'Graduates join the Atlas Alumni Network — ongoing mentorship, job referrals, leadership opportunities, and access to USSQ\'s full program ecosystem.',
-  },
-  {
-    q: 'How do I apply?',
-    a: 'Click "Apply for Cohort 4" below and complete the short application form. We review applications on a rolling basis and notify applicants within two weeks.',
-  },
-];
 
 export default function AtlasPage() {
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
 
   return (
@@ -109,7 +86,7 @@ export default function AtlasPage() {
               <strong style={{ color: '#F4F1EC' }}>Atlas ERA — The Education Research Association</strong>. The
               broader Atlas ERA network is now the organizational home for our field-building, credentialing, and
               community connection work.{' '}
-              <a href="/about" style={{ color: '#B5142A', textDecoration: 'none' }}>
+              <a href="/atlas-era" style={{ color: '#B5142A', textDecoration: 'none' }}>
                 Learn more about Atlas ERA →
               </a>
             </p>
@@ -555,7 +532,7 @@ export default function AtlasPage() {
                       gap: '8px',
                     }}
                   >
-                    {['Ages 14–21', 'Free to apply — no cost ever', 'No prerequisites or experience required'].map(
+                    {['Ages 14–21', 'Free to Apply', 'No prerequisites or experience required'].map(
                       (item) => (
                         <li
                           key={item}
@@ -642,91 +619,43 @@ export default function AtlasPage() {
           </div>
         </section>
 
-        {/* Section 5: FAQ */}
+        {/* Section 5: Questions CTA */}
         <section style={{ backgroundColor: '#0E0E0E', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
-              <Eyebrow text="Frequently Asked" />
+              <Eyebrow text="Questions" />
               <h2
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
                   fontSize: '64px',
                   color: '#F4F1EC',
                   letterSpacing: '0.02em',
-                  marginBottom: '40px',
+                  marginBottom: '20px',
                   lineHeight: 0.95,
                 }}
               >
-                YOUR QUESTIONS
+                HAVE A QUESTION?
               </h2>
+              <p
+                style={{
+                  fontFamily: 'Barlow, sans-serif',
+                  fontWeight: 300,
+                  fontSize: '18px',
+                  color: '#888888',
+                  maxWidth: '520px',
+                  lineHeight: 1.7,
+                  marginBottom: '32px',
+                }}
+              >
+                Send it our way —{' '}
+                <a
+                  href="mailto:executive@us-squared.org"
+                  style={{ color: '#B5142A', textDecoration: 'none' }}
+                >
+                  executive@us-squared.org
+                </a>
+              </p>
             </AnimateOnScroll>
-
-            <div style={{ maxWidth: '800px' }}>
-              {faqs.map((faq, i) => (
-                <AnimateOnScroll key={i} delay={i * 0.04}>
-                  <div
-                    style={{
-                      borderBottom: '1px solid #1A1A1A',
-                      overflow: 'hidden',
-                    }}
-                  >
-                    <button
-                      onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                      style={{
-                        width: '100%',
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                        alignItems: 'center',
-                        padding: '20px 0',
-                        background: 'none',
-                        border: 'none',
-                        cursor: 'pointer',
-                        textAlign: 'left',
-                      }}
-                    >
-                      <span
-                        style={{
-                          fontFamily: 'Bebas Neue, sans-serif',
-                          fontSize: '24px',
-                          color: '#F4F1EC',
-                          letterSpacing: '0.03em',
-                        }}
-                      >
-                        {faq.q}
-                      </span>
-                      <span
-                        style={{
-                          fontFamily: 'Bebas Neue, sans-serif',
-                          fontSize: '24px',
-                          color: '#B5142A',
-                          flexShrink: 0,
-                          marginLeft: '16px',
-                          transform: openFaq === i ? 'rotate(45deg)' : 'rotate(0)',
-                          transition: 'transform 0.2s ease',
-                          display: 'inline-block',
-                        }}
-                      >
-                        +
-                      </span>
-                    </button>
-                    {openFaq === i && (
-                      <p
-                        style={{
-                          fontFamily: 'Barlow, sans-serif',
-                          fontSize: '15px',
-                          color: '#888888',
-                          lineHeight: 1.7,
-                          paddingBottom: '20px',
-                          maxWidth: '640px',
-                        }}
-                      >
-                        {faq.a}
-                      </p>
-                    )}
-                  </div>
-                </AnimateOnScroll>
-              ))}
-            </div>
           </div>
         </section>
 
