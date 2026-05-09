@@ -6,7 +6,6 @@ import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import AnimateOnScroll from '@/components/AnimateOnScroll';
 import StatCounter from '@/components/StatCounter';
-import PhotoPlaceholder from '@/components/PhotoPlaceholder';
 
 // ─── Program Accordion Row ────────────────────────────────────────────────────
 interface ProgramRowProps {
@@ -447,7 +446,7 @@ export default function HomePage() {
         <section id="programs" style={{ backgroundColor: '#0E0E0E', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
-              <Eyebrow text="The Network" />
+              <Eyebrow text="The Network" color="#888888" />
               <h2
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
@@ -492,8 +491,8 @@ export default function HomePage() {
                   name="Atlas ERA Network"
                   descriptor="Connecting practitioners across the world"
                   accent="#B5142A"
-                  hoverText="The field-building core of Atlas ERA. We find the educators, mentors, and community leaders already doing the work — and connect, fund, and credential them."
-                  href="/atlas"
+                  hoverText="The field-building network connecting education researchers, practitioners, and community leaders across global contexts — credentialing brilliance wherever schools are not."
+                  href="/atlas-era"
                 />
                 <ProgramRow
                   num="03"
@@ -516,56 +515,36 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── Section 03: BASEops Deep Dive ───────────────────────────── */}
-        <section
-          id="baseops"
-          style={{
-            backgroundColor: '#0E0E0E',
-            borderTop: '4px solid #9B82C4',
-            padding: '80px 0',
-            minHeight: '100svh',
-            display: 'flex',
-            alignItems: 'center',
-          }}
-        >
-          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px', width: '100%' }}>
+        {/* ── Pipeline: LEARN · CREATE · WORK ──────────────────────────── */}
+        <section style={{ backgroundColor: '#111111', padding: '80px 0' }}>
+          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
-              <Eyebrow text="A US-Squared System · 01" color="#9B82C4" />
+              <Eyebrow text="The Worldskool Pipeline" color="#888888" />
               <h2
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
-                  fontSize: '96px',
-                  color: '#9B82C4',
-                  lineHeight: 0.9,
+                  fontSize: '72px',
+                  color: '#F4F1EC',
+                  lineHeight: 0.95,
                   letterSpacing: '0.02em',
+                  whiteSpace: 'pre-line',
                   marginBottom: '16px',
                 }}
               >
-                BASEOPS
+                {`LEARN.\nCREATE.\nWORK.`}
               </h2>
               <p
                 style={{
                   fontFamily: 'Barlow, sans-serif',
                   fontWeight: 300,
-                  fontSize: '20px',
-                  color: '#F4F1EC',
-                  marginBottom: '16px',
-                }}
-              >
-                The scaffold beneath every mission.
-              </p>
-              <p
-                style={{
-                  fontFamily: 'Barlow, sans-serif',
                   fontSize: '16px',
-                  color: '#888888',
-                  maxWidth: '600px',
-                  lineHeight: 1.7,
+                  color: '#555555',
+                  maxWidth: '480px',
+                  lineHeight: 1.6,
                   marginBottom: '48px',
                 }}
               >
-                BASEops is US-Squared&apos;s free operational infrastructure program. We hand community organizations the
-                same systems we use — because lean nonprofits deserve enterprise-grade infrastructure.
+                Three arms. One arc. From identity to creation to economic power — the Atlas ERA pipeline connects every stage of the journey.
               </p>
             </AnimateOnScroll>
 
@@ -575,348 +554,184 @@ export default function HomePage() {
                   display: 'grid',
                   gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
                   gap: '2px',
-                  marginBottom: '48px',
+                  marginBottom: '40px',
                 }}
               >
-                <ModuleCard
-                  num="Module 01"
-                  title="Org Infrastructure"
-                  body="HR, onboarding, compliance, and internal systems built for community-based organizations operating under resource constraints."
-                  accent="#9B82C4"
-                />
-                <ModuleCard
-                  num="Module 02"
-                  title="Grant Systems"
-                  body="Grant tracking, reporting templates, funder relationship management, and compliance workflows for small-to-mid-size nonprofits."
-                  accent="#9B82C4"
-                />
-                <ModuleCard
-                  num="Module 03"
-                  title="Impact Measurement"
-                  body="Logic models, data collection tools, and dashboards for communicating your work to funders, boards, and the communities you serve."
-                  accent="#9B82C4"
-                />
-              </div>
-            </AnimateOnScroll>
-
-            <AnimateOnScroll delay={0.15}>
-              <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-                <Link
-                  href="/baseops"
-                  style={{
-                    fontFamily: 'Barlow Condensed, sans-serif',
-                    fontWeight: 900,
-                    fontSize: '12px',
-                    letterSpacing: '0.15em',
-                    textTransform: 'uppercase',
-                    backgroundColor: '#9B82C4',
-                    color: '#0E0E0E',
-                    padding: '14px 28px',
-                    textDecoration: 'none',
-                    display: 'inline-block',
-                  }}
-                >
-                  Download Free Playbook
-                </Link>
-                <Link
-                  href="/baseops"
-                  style={{
-                    fontFamily: 'Barlow Condensed, sans-serif',
-                    fontWeight: 900,
-                    fontSize: '12px',
-                    letterSpacing: '0.15em',
-                    textTransform: 'uppercase',
-                    border: '2px solid #9B82C4',
-                    color: '#9B82C4',
-                    padding: '14px 28px',
-                    textDecoration: 'none',
-                    display: 'inline-block',
-                    backgroundColor: 'transparent',
-                  }}
-                >
-                  Learn More →
-                </Link>
-              </div>
-            </AnimateOnScroll>
-          </div>
-        </section>
-
-        {/* ── Section 04: Atlas Academy ────────────────────────────────── */}
-        <section id="atlas" style={{ backgroundColor: '#F4F1EC', padding: '80px 0' }}>
-          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
-            <AnimateOnScroll>
-              <Eyebrow text="A US-Squared Program · 02" color="#B5142A" />
-            </AnimateOnScroll>
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: '5fr 7fr',
-                gap: '64px',
-                alignItems: 'start',
-              }}
-            >
-              <div>
-                <AnimateOnScroll>
-                  <h2
+                <div style={{ backgroundColor: '#1A1A1A', borderTop: '4px solid #B5142A', padding: '32px 28px' }}>
+                  <div
                     style={{
-                      fontFamily: 'Bebas Neue, sans-serif',
-                      fontSize: '88px',
-                      color: '#0E0E0E',
-                      lineHeight: 0.9,
-                      letterSpacing: '0.02em',
-                      whiteSpace: 'pre-line',
-                      marginBottom: '20px',
+                      fontFamily: 'Barlow Condensed, sans-serif',
+                      fontWeight: 900,
+                      fontSize: '10px',
+                      letterSpacing: '0.2em',
+                      textTransform: 'uppercase',
+                      color: '#B5142A',
+                      marginBottom: '12px',
                     }}
                   >
-                    {`ATLAS\nACADEMY`}
-                  </h2>
-                  <p
-                    style={{
-                      fontFamily: 'Barlow, sans-serif',
-                      fontWeight: 300,
-                      fontSize: '20px',
-                      color: '#444444',
-                      marginBottom: '28px',
-                    }}
-                  >
-                    Your map. Your future. On your terms.
-                  </p>
-
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '40px' }}>
-                    {['Ages 14–21', 'Free to Apply', 'Cohort-Based', '10 Weeks', 'In-Person & Virtual'].map((chip) => (
-                      <span
-                        key={chip}
-                        style={{
-                          fontFamily: 'Barlow Condensed, sans-serif',
-                          fontWeight: 600,
-                          fontSize: '10px',
-                          letterSpacing: '0.15em',
-                          textTransform: 'uppercase',
-                          border: '2px solid #B5142A',
-                          color: '#B5142A',
-                          padding: '4px 10px',
-                        }}
-                      >
-                        {chip}
-                      </span>
-                    ))}
+                    Learn
                   </div>
-                </AnimateOnScroll>
-
-                <AnimateOnScroll delay={0.1}>
                   <h3
                     style={{
                       fontFamily: 'Bebas Neue, sans-serif',
-                      fontSize: '24px',
-                      color: '#0E0E0E',
-                      letterSpacing: '0.05em',
+                      fontSize: '36px',
+                      color: '#F4F1EC',
+                      letterSpacing: '0.03em',
+                      marginBottom: '12px',
+                    }}
+                  >
+                    Atlas Academy
+                  </h3>
+                  <p
+                    style={{
+                      fontFamily: 'Barlow, sans-serif',
+                      fontSize: '14px',
+                      color: '#888888',
+                      lineHeight: 1.7,
                       marginBottom: '20px',
                     }}
                   >
-                    What You Build
-                  </h3>
-                  <div
-                    style={{
-                      display: 'grid',
-                      gridTemplateColumns: 'repeat(3, 1fr)',
-                      gap: '2px',
-                      marginBottom: '32px',
-                    }}
-                  >
-                    {[
-                      { num: '01', title: 'Identity Map' },
-                      { num: '02', title: 'Future Plan' },
-                      { num: '03', title: 'Portfolio' },
-                      { num: '04', title: 'Community Network' },
-                      { num: '05', title: 'Advocacy Voice' },
-                      { num: '06', title: 'Leadership Skills' },
-                    ].map((m) => (
-                      <div
-                        key={m.num}
-                        style={{
-                          backgroundColor: '#0E0E0E',
-                          borderTop: '4px solid #B5142A',
-                          padding: '16px 14px',
-                        }}
-                      >
-                        <div
-                          style={{
-                            fontFamily: 'Barlow Condensed, sans-serif',
-                            fontWeight: 900,
-                            fontSize: '9px',
-                            letterSpacing: '0.2em',
-                            color: '#B5142A',
-                            marginBottom: '6px',
-                          }}
-                        >
-                          {m.num}
-                        </div>
-                        <div
-                          style={{
-                            fontFamily: 'Bebas Neue, sans-serif',
-                            fontSize: '16px',
-                            color: '#F4F1EC',
-                          }}
-                        >
-                          {m.title}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-
+                    10-week BASE Framework curriculum for learners 14&ndash;21. Free to apply. In-person and virtual cohorts.
+                  </p>
                   <Link
                     href="/atlas"
                     style={{
                       fontFamily: 'Barlow Condensed, sans-serif',
                       fontWeight: 900,
-                      fontSize: '12px',
+                      fontSize: '10px',
                       letterSpacing: '0.15em',
                       textTransform: 'uppercase',
-                      backgroundColor: '#B5142A',
-                      color: '#F4F1EC',
-                      padding: '14px 28px',
+                      color: '#B5142A',
                       textDecoration: 'none',
-                      display: 'inline-block',
                     }}
                   >
-                    Apply for Cohort 4 →
+                    Apply for Cohort 4 &rarr;
                   </Link>
-                </AnimateOnScroll>
-              </div>
-
-              {/* Right: Photo */}
-              <AnimateOnScroll delay={0.15}>
-                <div style={{ borderTop: '4px solid #B5142A' }}>
-                  <PhotoPlaceholder label="Atlas Academy Youth Session" aspectRatio="4/3" />
                 </div>
-              </AnimateOnScroll>
-            </div>
-          </div>
-        </section>
 
-        {/* ── Section 05: Altered.Earth ────────────────────────────────── */}
-        <section
-          id="earth"
-          style={{ backgroundColor: '#0E0E0E', padding: '80px 0', minHeight: '80svh' }}
-        >
-          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
-            <AnimateOnScroll>
-              <Eyebrow text="A US-Squared Retreat · 03" color="#2D8A4E" />
-              <h2
-                style={{
-                  fontFamily: 'Bebas Neue, sans-serif',
-                  fontSize: '96px',
-                  color: '#2D8A4E',
-                  lineHeight: 0.9,
-                  letterSpacing: '0.02em',
-                  whiteSpace: 'pre-line',
-                  marginBottom: '16px',
-                }}
-              >
-                {`ALTERED\n.EARTH`}
-              </h2>
-              <p
-                style={{
-                  fontFamily: 'Barlow, sans-serif',
-                  fontWeight: 300,
-                  fontSize: '20px',
-                  color: '#F4F1EC',
-                  marginBottom: '16px',
-                }}
-              >
-                Return to ground. Return to yourself.
-              </p>
-              <p
-                style={{
-                  fontFamily: 'Barlow, sans-serif',
-                  fontSize: '16px',
-                  color: '#888888',
-                  maxWidth: '600px',
-                  lineHeight: 1.7,
-                  marginBottom: '32px',
-                }}
-              >
-                Five days in nature. Circle practice, creative expression, rest, and ceremony. Altered.Earth is
-                a retreat for young people who need to exhale, reconnect, and be held by something larger than a screen.
-              </p>
-            </AnimateOnScroll>
-
-            <AnimateOnScroll delay={0.1}>
-              <div
-                style={{
-                  backgroundColor: '#2D8A4E',
-                  padding: '14px 24px',
-                  display: 'inline-block',
-                  marginBottom: '40px',
-                  fontFamily: 'Barlow Condensed, sans-serif',
-                  fontWeight: 900,
-                  fontSize: '14px',
-                  letterSpacing: '0.2em',
-                  textTransform: 'uppercase',
-                  color: '#F4F1EC',
-                }}
-              >
-                Summer 2026 · Applications Open
-              </div>
-            </AnimateOnScroll>
-
-            <AnimateOnScroll delay={0.15}>
-              <div
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-                  gap: '24px',
-                  marginBottom: '40px',
-                }}
-              >
-                {[
-                  { title: 'Duration', body: '5 days / 4 nights in an outdoor setting' },
-                  { title: 'Ages', body: 'Youth 14–22 and adult allies (separate tracks)' },
-                  { title: 'Cost', body: 'Sliding scale. No one turned away for lack of funds.' },
-                ].map((card) => (
-                  <div key={card.title} style={{ borderLeft: '3px solid #2D8A4E', paddingLeft: '20px' }}>
-                    <div
-                      style={{
-                        fontFamily: 'Bebas Neue, sans-serif',
-                        fontSize: '20px',
-                        color: '#F4F1EC',
-                        letterSpacing: '0.05em',
-                        marginBottom: '8px',
-                      }}
-                    >
-                      {card.title}
-                    </div>
-                    <p
-                      style={{
-                        fontFamily: 'Barlow, sans-serif',
-                        fontSize: '14px',
-                        color: '#888888',
-                        lineHeight: 1.6,
-                      }}
-                    >
-                      {card.body}
-                    </p>
+                <div style={{ backgroundColor: '#1A1A1A', borderTop: '4px solid #2D8A4E', padding: '32px 28px' }}>
+                  <div
+                    style={{
+                      fontFamily: 'Barlow Condensed, sans-serif',
+                      fontWeight: 900,
+                      fontSize: '10px',
+                      letterSpacing: '0.2em',
+                      textTransform: 'uppercase',
+                      color: '#2D8A4E',
+                      marginBottom: '12px',
+                    }}
+                  >
+                    Create
                   </div>
-                ))}
-              </div>
+                  <h3
+                    style={{
+                      fontFamily: 'Bebas Neue, sans-serif',
+                      fontSize: '36px',
+                      color: '#F4F1EC',
+                      letterSpacing: '0.03em',
+                      marginBottom: '12px',
+                    }}
+                  >
+                    Altered.Earth
+                  </h3>
+                  <p
+                    style={{
+                      fontFamily: 'Barlow, sans-serif',
+                      fontSize: '14px',
+                      color: '#888888',
+                      lineHeight: 1.7,
+                      marginBottom: '20px',
+                    }}
+                  >
+                    Five days in nature. Circle practice, creative expression, and ceremony for youth ages 14&ndash;22.
+                  </p>
+                  <Link
+                    href="/earth"
+                    style={{
+                      fontFamily: 'Barlow Condensed, sans-serif',
+                      fontWeight: 900,
+                      fontSize: '10px',
+                      letterSpacing: '0.15em',
+                      textTransform: 'uppercase',
+                      color: '#2D8A4E',
+                      textDecoration: 'none',
+                    }}
+                  >
+                    Register Interest &rarr;
+                  </Link>
+                </div>
 
+                <div style={{ backgroundColor: '#1A1A1A', borderTop: '4px solid #9B82C4', padding: '32px 28px' }}>
+                  <div
+                    style={{
+                      fontFamily: 'Barlow Condensed, sans-serif',
+                      fontWeight: 900,
+                      fontSize: '10px',
+                      letterSpacing: '0.2em',
+                      textTransform: 'uppercase',
+                      color: '#9B82C4',
+                      marginBottom: '12px',
+                    }}
+                  >
+                    Work
+                  </div>
+                  <h3
+                    style={{
+                      fontFamily: 'Bebas Neue, sans-serif',
+                      fontSize: '36px',
+                      color: '#F4F1EC',
+                      letterSpacing: '0.03em',
+                      marginBottom: '12px',
+                    }}
+                  >
+                    BASEops
+                  </h3>
+                  <p
+                    style={{
+                      fontFamily: 'Barlow, sans-serif',
+                      fontSize: '14px',
+                      color: '#888888',
+                      lineHeight: 1.7,
+                      marginBottom: '20px',
+                    }}
+                  >
+                    Workforce development network connecting community members, justice-involved individuals, and youth 14+ to economic opportunity.
+                  </p>
+                  <Link
+                    href="/baseops"
+                    style={{
+                      fontFamily: 'Barlow Condensed, sans-serif',
+                      fontWeight: 900,
+                      fontSize: '10px',
+                      letterSpacing: '0.15em',
+                      textTransform: 'uppercase',
+                      color: '#9B82C4',
+                      textDecoration: 'none',
+                    }}
+                  >
+                    Explore BASEops &rarr;
+                  </Link>
+                </div>
+              </div>
+            </AnimateOnScroll>
+
+            <AnimateOnScroll delay={0.2}>
               <Link
-                href="/earth"
+                href="/atlas-era"
                 style={{
                   fontFamily: 'Barlow Condensed, sans-serif',
                   fontWeight: 900,
                   fontSize: '12px',
                   letterSpacing: '0.15em',
                   textTransform: 'uppercase',
-                  border: '2px solid #2D8A4E',
-                  color: '#2D8A4E',
+                  backgroundColor: '#D4A017',
+                  color: '#0E0E0E',
                   padding: '14px 28px',
                   textDecoration: 'none',
                   display: 'inline-block',
-                  backgroundColor: 'transparent',
                 }}
               >
-                Register Interest →
+                See the Full Network &rarr;
               </Link>
             </AnimateOnScroll>
           </div>
@@ -1321,7 +1136,7 @@ export default function HomePage() {
         <section
           id="feelings-unplugged"
           style={{
-            backgroundColor: '#0E0E0E',
+            backgroundColor: '#1A1A1A',
             borderTop: '4px solid #D4A017',
             padding: '80px 0',
           }}
