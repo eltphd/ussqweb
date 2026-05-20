@@ -101,3 +101,112 @@ body {
   text-transform: uppercase;
   color: var(--color-gray-600);
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   RESPONSIVE LAYOUT
+   Grid / flex containers that need to collapse or reflow on mobile.
+   All visual properties (color, padding, border, font) stay in inline styles.
+   Only layout properties (display, grid-template-columns, gap, align-items,
+   flex-direction) live here so media queries can override them.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Mission section: heading | gold divider | copy */
+.grid-mission {
+  display: grid;
+  grid-template-columns: 5fr 3px 7fr;
+  gap: 48px;
+  align-items: start;
+  margin-bottom: 64px;
+}
+
+/* 3-up stat counters */
+.grid-stats-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* Sparent newsletter: sign-up col | preview card col */
+.grid-sparent {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 64px;
+  align-items: start;
+}
+
+/* 2 × 2 CTA tile grids (homepage + connect page) */
+.grid-cta-2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+}
+
+/* Contact form + direct-contact info */
+.grid-contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* About page: photo column | bio column */
+.grid-leadership {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* FU page Access Fund: title column | body column */
+.grid-fu-fund {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 64px;
+  align-items: start;
+}
+
+/* Research page BASE Framework rows: large letter | text */
+.base-item-layout {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+/* Email subscribe forms: input | button side-by-side */
+.form-subscribe {
+  display: flex;
+  gap: 0;
+}
+
+/* ── Mobile breakpoint (≤ 768 px) ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* Collapse all multi-column grids to a single column */
+  .grid-mission {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: 40px;
+  }
+  /* Hide the decorative gold vertical divider when stacked */
+  .grid-mission-divider { display: none; }
+
+  .grid-stats-3    { grid-template-columns: 1fr; gap: 20px; }
+  .grid-sparent    { grid-template-columns: 1fr; gap: 40px; }
+  .grid-cta-2x2   { grid-template-columns: 1fr; }
+  .grid-contact    { grid-template-columns: 1fr; gap: 40px; }
+  .grid-leadership { grid-template-columns: 1fr; gap: 32px; }
+  .grid-fu-fund    { grid-template-columns: 1fr; gap: 32px; }
+
+  /* BASE Framework letter: top-align and tighten gap when stacked */
+  .base-item-layout { align-items: flex-start; gap: 16px; }
+
+  /* Program row: hide the right-side descriptor on mobile so name has room */
+  .program-row-desc { display: none; }
+
+  /* Subscribe forms: stack input above button */
+  .form-subscribe { flex-direction: column; }
+  /* Restore right border when input is no longer flush against the button */
+  .form-subscribe input[type="email"] {
+    border-right: 2px solid currentColor !important;
+  }
+}

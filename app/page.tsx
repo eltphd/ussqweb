@@ -57,12 +57,12 @@ function ProgramRow({ num, name, descriptor, accent, hoverText, href }: ProgramR
           aria-hidden="true"
           style={{
             fontFamily: 'Bebas Neue, sans-serif',
-            fontSize: '80px',
+            fontSize: 'clamp(48px, 10vw, 80px)',
             color: accent,
             opacity: 0.06,
             lineHeight: 1,
             flexShrink: 0,
-            width: '64px',
+            width: '52px',
             textAlign: 'right',
             userSelect: 'none',
           }}
@@ -71,11 +71,11 @@ function ProgramRow({ num, name, descriptor, accent, hoverText, href }: ProgramR
         </div>
 
         {/* Content */}
-        <div style={{ flex: 1 }}>
+        <div style={{ flex: 1, minWidth: 0 }}>
           <div
             style={{
               fontFamily: 'Bebas Neue, sans-serif',
-              fontSize: '40px',
+              fontSize: 'clamp(24px, 5.5vw, 40px)',
               color: '#F4F1EC',
               letterSpacing: '0.03em',
               lineHeight: 1,
@@ -99,8 +99,8 @@ function ProgramRow({ num, name, descriptor, accent, hoverText, href }: ProgramR
           )}
         </div>
 
-        {/* Right side */}
-        <div style={{ textAlign: 'right', flexShrink: 0 }}>
+        {/* Right side — hidden on mobile via .program-row-desc */}
+        <div className="program-row-desc" style={{ textAlign: 'right', flexShrink: 0 }}>
           <div
             style={{
               fontFamily: 'Barlow, sans-serif',
@@ -354,20 +354,12 @@ export default function HomePage() {
           }}
         >
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: '5fr 3px 7fr',
-                gap: '48px',
-                alignItems: 'start',
-                marginBottom: '64px',
-              }}
-            >
+            <div className="grid-mission">
               <AnimateOnScroll>
                 <h2
                   style={{
                     fontFamily: 'Bebas Neue, sans-serif',
-                    fontSize: '72px',
+                    fontSize: 'clamp(38px, 9vw, 72px)',
                     color: '#0E0E0E',
                     lineHeight: 0.95,
                     letterSpacing: '0.02em',
@@ -378,7 +370,7 @@ export default function HomePage() {
                 </h2>
               </AnimateOnScroll>
 
-              <div style={{ width: '3px', backgroundColor: '#D4A017', alignSelf: 'stretch' }} />
+              <div className="grid-mission-divider" style={{ width: '3px', backgroundColor: '#D4A017', alignSelf: 'stretch' }} />
 
               <AnimateOnScroll delay={0.1}>
                 <h3
@@ -426,10 +418,8 @@ export default function HomePage() {
 
             <AnimateOnScroll delay={0.2}>
               <div
+                className="grid-stats-3"
                 style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(3, 1fr)',
-                  gap: '32px',
                   paddingTop: '48px',
                   borderTop: '1px solid rgba(10,10,10,0.1)',
                 }}
@@ -450,7 +440,7 @@ export default function HomePage() {
               <h2
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
-                  fontSize: '72px',
+                  fontSize: 'clamp(38px, 9vw, 72px)',
                   color: '#F4F1EC',
                   lineHeight: 0.95,
                   letterSpacing: '0.02em',
@@ -523,7 +513,7 @@ export default function HomePage() {
               <h2
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
-                  fontSize: '72px',
+                  fontSize: 'clamp(38px, 9vw, 72px)',
                   color: '#F4F1EC',
                   lineHeight: 0.95,
                   letterSpacing: '0.02em',
@@ -743,20 +733,13 @@ export default function HomePage() {
             <AnimateOnScroll>
               <Eyebrow text="A US-Squared Newsletter · 04" color="#3AB8F0" />
             </AnimateOnScroll>
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: '5fr 7fr',
-                gap: '64px',
-                alignItems: 'start',
-              }}
-            >
+            <div className="grid-sparent">
               <div>
                 <AnimateOnScroll>
                   <h2
                     style={{
                       fontFamily: 'Bebas Neue, sans-serif',
-                      fontSize: '72px',
+                      fontSize: 'clamp(38px, 9vw, 72px)',
                       color: '#0E0E0E',
                       lineHeight: 0.9,
                       letterSpacing: '0.02em',
@@ -821,7 +804,7 @@ export default function HomePage() {
                         e.preventDefault();
                         setSparentSubmitted(true);
                       }}
-                      style={{ display: 'flex', gap: '0' }}
+                      className="form-subscribe"
                     >
                       <input
                         type="email"
@@ -995,7 +978,7 @@ export default function HomePage() {
               <h2
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
-                  fontSize: '72px',
+                  fontSize: 'clamp(38px, 9vw, 72px)',
                   color: '#F4F1EC',
                   lineHeight: 0.95,
                   letterSpacing: '0.02em',
@@ -1147,7 +1130,7 @@ export default function HomePage() {
               <h2
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
-                  fontSize: '96px',
+                  fontSize: 'clamp(38px, 10vw, 96px)',
                   color: '#D4A017',
                   lineHeight: 0.9,
                   letterSpacing: '0.02em',
@@ -1234,7 +1217,7 @@ export default function HomePage() {
               <h2
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
-                  fontSize: '80px',
+                  fontSize: 'clamp(38px, 10vw, 80px)',
                   color: '#0E0E0E',
                   lineHeight: 0.9,
                   letterSpacing: '0.02em',
@@ -1249,12 +1232,8 @@ export default function HomePage() {
 
             <AnimateOnScroll delay={0.1}>
               <div
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(2, 1fr)',
-                  gap: '2px',
-                  maxWidth: '800px',
-                }}
+                className="grid-cta-2x2"
+                style={{ maxWidth: '800px' }}
               >
                 <Link
                   href="/connect"

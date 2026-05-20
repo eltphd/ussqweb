@@ -113,7 +113,8 @@ export default function SparentPage() {
                     e.preventDefault();
                     setSubmitted(true);
                   }}
-                  style={{ display: 'flex', gap: '0', maxWidth: '480px' }}
+                  className="form-subscribe"
+                  style={{ maxWidth: '480px' }}
                 >
                   <input
                     type="email"
@@ -573,7 +574,8 @@ export default function SparentPage() {
                     e.preventDefault();
                     setSubmitted2(true);
                   }}
-                  style={{ display: 'flex', gap: '0', maxWidth: '480px' }}
+                  className="form-subscribe"
+                  style={{ maxWidth: '480px' }}
                 >
                   <input
                     type="email"

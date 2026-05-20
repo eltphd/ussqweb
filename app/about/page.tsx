@@ -171,14 +171,7 @@ export default function AboutPage() {
               </h2>
             </AnimateOnScroll>
 
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: '1fr 2fr',
-                gap: '48px',
-                alignItems: 'start',
-              }}
-            >
+            <div className="grid-leadership">
               <AnimateOnScroll delay={0.05}>
                 <div style={{ borderTop: '4px solid #D4A017' }}>
                   <PhotoPlaceholder label="Dr. Erica L. Tartt, PhD" aspectRatio="3/4" />

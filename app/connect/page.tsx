@@ -122,12 +122,8 @@ export default function ConnectPage() {
             </AnimateOnScroll>
             <AnimateOnScroll delay={0.1}>
               <div
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(2, 1fr)',
-                  gap: '2px',
-                  maxWidth: '800px',
-                }}
+                className="grid-cta-2x2"
+                style={{ maxWidth: '800px' }}
               >
                 <Link
                   href="#contact-form"
@@ -268,7 +264,7 @@ export default function ConnectPage() {
               <h2
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
-                  fontSize: '72px',
+                  fontSize: 'clamp(38px, 9vw, 72px)',
                   color: '#D4A017',
                   lineHeight: 0.9,
                   letterSpacing: '0.02em',
@@ -349,14 +345,7 @@ export default function ConnectPage() {
         {/* Contact Form */}
         <section id="contact-form" style={{ backgroundColor: '#0E0E0E', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: '1fr 1fr',
-                gap: '80px',
-                alignItems: 'start',
-              }}
-            >
+            <div className="grid-contact">
               {/* Left: Form */}
               <div>
                 <AnimateOnScroll>

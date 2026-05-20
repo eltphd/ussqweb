@@ -158,11 +158,11 @@ export default function FeelingsUnpluggedPage() {
               <h2
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
-                  fontSize: '64px',
+                  fontSize: 'clamp(32px, 8vw, 64px)',
                   color: '#0E0E0E',
                   letterSpacing: '0.02em',
                   marginBottom: '40px',
-                  lineHeight: 0.95,
+                  lineHeight: 1,
                 }}
               >
                 BUILT FOR YOUNG PEOPLE.<br />DESIGNED FOR THE ADULTS WHO HOLD THEM.
@@ -335,7 +335,7 @@ export default function FeelingsUnpluggedPage() {
               <h2
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
-                  fontSize: '64px',
+                  fontSize: 'clamp(32px, 8vw, 64px)',
                   color: '#F4F1EC',
                   letterSpacing: '0.02em',
                   marginBottom: '16px',
@@ -466,7 +466,7 @@ export default function FeelingsUnpluggedPage() {
               <h2
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
-                  fontSize: '64px',
+                  fontSize: 'clamp(32px, 8vw, 64px)',
                   color: '#0E0E0E',
                   letterSpacing: '0.02em',
                   marginBottom: '16px',
@@ -627,19 +627,14 @@ export default function FeelingsUnpluggedPage() {
         <section id="access-fund" style={{ backgroundColor: '#0E0E0E', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: '5fr 7fr',
-                gap: '64px',
-                alignItems: 'start',
-              }}
+              className="grid-fu-fund"
             >
               <AnimateOnScroll>
                 <Eyebrow text="A US-Squared Program" />
                 <h2
                   style={{
                     fontFamily: 'Bebas Neue, sans-serif',
-                    fontSize: '72px',
+                    fontSize: 'clamp(38px, 9vw, 72px)',
                     color: '#D4A017',
                     lineHeight: 0.9,
                     letterSpacing: '0.02em',

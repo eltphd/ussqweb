@@ -286,15 +286,13 @@ export default function ResearchPage() {
               {baseFramework.map((item, i) => (
                 <AnimateOnScroll key={item.letter} delay={i * 0.06}>
                   <div
+                    className="base-item-layout"
                     style={{
                       position: 'relative',
                       backgroundColor: '#0E0E0E',
                       borderLeft: '6px solid #D4A017',
                       padding: '32px 28px 32px 40px',
                       overflow: 'hidden',
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '32px',
                     }}
                   >
                     <div
