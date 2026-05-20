@@ -52,6 +52,8 @@ export default function Footer() {
               { label: 'Atlas Academy', href: '/atlas' },
               { label: 'Altered.Earth', href: '/earth' },
               { label: 'Sparent Science', href: '/sparent' },
+              { label: 'Feelings Unplugged', href: '/feelings-unplugged' },
+              { label: 'Brilliance Forward Fund', href: '/feelings-unplugged#access-fund' },
             ].map((link) => (
               <Link
                 key={link.href}
