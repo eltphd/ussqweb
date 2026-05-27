@@ -344,6 +344,101 @@ export default function HomePage() {
           </motion.div>
         </section>
 
+        {/* ── Feelings Unplugged Banner ────────────────────────────────── */}
+        <section
+          id="feelings-unplugged"
+          style={{
+            backgroundColor: '#1A1A1A',
+            borderTop: '4px solid #D4A017',
+            padding: '80px 0',
+          }}
+        >
+          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
+            <AnimateOnScroll>
+              <Eyebrow text="A US-Squared Publication · 05" color="#D4A017" />
+              <h2
+                style={{
+                  fontFamily: 'Bebas Neue, sans-serif',
+                  fontSize: 'clamp(38px, 10vw, 96px)',
+                  color: '#D4A017',
+                  lineHeight: 0.9,
+                  letterSpacing: '0.02em',
+                  marginBottom: '12px',
+                }}
+              >
+                FEELINGS UNPLUGGED
+              </h2>
+              <p
+                style={{
+                  fontFamily: 'Barlow, sans-serif',
+                  fontWeight: 300,
+                  fontSize: '20px',
+                  color: '#F4F1EC',
+                  marginBottom: '16px',
+                }}
+              >
+                Named. Held. Understood.
+              </p>
+              <p
+                style={{
+                  fontFamily: 'Barlow, sans-serif',
+                  fontSize: '16px',
+                  color: '#888888',
+                  maxWidth: '600px',
+                  lineHeight: 1.7,
+                  marginBottom: '40px',
+                }}
+              >
+                Feelings Unplugged is a compact emotional intelligence guide grounded in the BASE Framework —
+                designed for young people learning to name what they feel, and the adults who hold them. Built
+                from peer-reviewed research on Black adolescent emotional suppression. Available now in print.
+              </p>
+            </AnimateOnScroll>
+
+            <AnimateOnScroll delay={0.1}>
+              <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+                <a
+                  href="https://www.feelingsunplugged.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    fontFamily: 'Barlow Condensed, sans-serif',
+                    fontWeight: 900,
+                    fontSize: '12px',
+                    letterSpacing: '0.15em',
+                    textTransform: 'uppercase',
+                    backgroundColor: '#D4A017',
+                    color: '#0E0E0E',
+                    padding: '14px 28px',
+                    textDecoration: 'none',
+                    display: 'inline-block',
+                  }}
+                >
+                  Get Your Copy →
+                </a>
+                <Link
+                  href="/feelings-unplugged#bulk"
+                  style={{
+                    fontFamily: 'Barlow Condensed, sans-serif',
+                    fontWeight: 900,
+                    fontSize: '12px',
+                    letterSpacing: '0.15em',
+                    textTransform: 'uppercase',
+                    border: '2px solid #D4A017',
+                    color: '#D4A017',
+                    padding: '14px 28px',
+                    textDecoration: 'none',
+                    display: 'inline-block',
+                    backgroundColor: 'transparent',
+                  }}
+                >
+                  Bulk &amp; Institutional Pricing →
+                </Link>
+              </div>
+            </AnimateOnScroll>
+          </div>
+        </section>
+
         {/* ── Section 01: Mission ──────────────────────────────────────── */}
         <section
           id="mission"
@@ -501,228 +596,6 @@ export default function HomePage() {
                   href="/sparent"
                 />
               </div>
-            </AnimateOnScroll>
-          </div>
-        </section>
-
-        {/* ── Pipeline: LEARN · CREATE · WORK ──────────────────────────── */}
-        <section style={{ backgroundColor: '#111111', padding: '80px 0' }}>
-          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
-            <AnimateOnScroll>
-              <Eyebrow text="The Worldskool Pipeline" color="#888888" />
-              <h2
-                style={{
-                  fontFamily: 'Bebas Neue, sans-serif',
-                  fontSize: 'clamp(38px, 9vw, 72px)',
-                  color: '#F4F1EC',
-                  lineHeight: 0.95,
-                  letterSpacing: '0.02em',
-                  whiteSpace: 'pre-line',
-                  marginBottom: '16px',
-                }}
-              >
-                {`LEARN.\nCREATE.\nWORK.`}
-              </h2>
-              <p
-                style={{
-                  fontFamily: 'Barlow, sans-serif',
-                  fontWeight: 300,
-                  fontSize: '16px',
-                  color: '#555555',
-                  maxWidth: '480px',
-                  lineHeight: 1.6,
-                  marginBottom: '48px',
-                }}
-              >
-                Three arms. One arc. From identity to creation to economic power — the Atlas ERA pipeline connects every stage of the journey.
-              </p>
-            </AnimateOnScroll>
-
-            <AnimateOnScroll delay={0.1}>
-              <div
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-                  gap: '2px',
-                  marginBottom: '40px',
-                }}
-              >
-                <div style={{ backgroundColor: '#1A1A1A', borderTop: '4px solid #B5142A', padding: '32px 28px' }}>
-                  <div
-                    style={{
-                      fontFamily: 'Barlow Condensed, sans-serif',
-                      fontWeight: 900,
-                      fontSize: '10px',
-                      letterSpacing: '0.2em',
-                      textTransform: 'uppercase',
-                      color: '#B5142A',
-                      marginBottom: '12px',
-                    }}
-                  >
-                    Learn
-                  </div>
-                  <h3
-                    style={{
-                      fontFamily: 'Bebas Neue, sans-serif',
-                      fontSize: '36px',
-                      color: '#F4F1EC',
-                      letterSpacing: '0.03em',
-                      marginBottom: '12px',
-                    }}
-                  >
-                    Atlas Academy
-                  </h3>
-                  <p
-                    style={{
-                      fontFamily: 'Barlow, sans-serif',
-                      fontSize: '14px',
-                      color: '#888888',
-                      lineHeight: 1.7,
-                      marginBottom: '20px',
-                    }}
-                  >
-                    10-week BASE Framework curriculum for learners 14&ndash;21. Free to apply. In-person and virtual cohorts.
-                  </p>
-                  <Link
-                    href="/atlas"
-                    style={{
-                      fontFamily: 'Barlow Condensed, sans-serif',
-                      fontWeight: 900,
-                      fontSize: '10px',
-                      letterSpacing: '0.15em',
-                      textTransform: 'uppercase',
-                      color: '#B5142A',
-                      textDecoration: 'none',
-                    }}
-                  >
-                    Apply for Cohort 4 &rarr;
-                  </Link>
-                </div>
-
-                <div style={{ backgroundColor: '#1A1A1A', borderTop: '4px solid #2D8A4E', padding: '32px 28px' }}>
-                  <div
-                    style={{
-                      fontFamily: 'Barlow Condensed, sans-serif',
-                      fontWeight: 900,
-                      fontSize: '10px',
-                      letterSpacing: '0.2em',
-                      textTransform: 'uppercase',
-                      color: '#2D8A4E',
-                      marginBottom: '12px',
-                    }}
-                  >
-                    Create
-                  </div>
-                  <h3
-                    style={{
-                      fontFamily: 'Bebas Neue, sans-serif',
-                      fontSize: '36px',
-                      color: '#F4F1EC',
-                      letterSpacing: '0.03em',
-                      marginBottom: '12px',
-                    }}
-                  >
-                    Altered.Earth
-                  </h3>
-                  <p
-                    style={{
-                      fontFamily: 'Barlow, sans-serif',
-                      fontSize: '14px',
-                      color: '#888888',
-                      lineHeight: 1.7,
-                      marginBottom: '20px',
-                    }}
-                  >
-                    Five days in nature. Circle practice, creative expression, and ceremony for youth ages 14&ndash;22.
-                  </p>
-                  <Link
-                    href="/earth"
-                    style={{
-                      fontFamily: 'Barlow Condensed, sans-serif',
-                      fontWeight: 900,
-                      fontSize: '10px',
-                      letterSpacing: '0.15em',
-                      textTransform: 'uppercase',
-                      color: '#2D8A4E',
-                      textDecoration: 'none',
-                    }}
-                  >
-                    Register Interest &rarr;
-                  </Link>
-                </div>
-
-                <div style={{ backgroundColor: '#1A1A1A', borderTop: '4px solid #9B82C4', padding: '32px 28px' }}>
-                  <div
-                    style={{
-                      fontFamily: 'Barlow Condensed, sans-serif',
-                      fontWeight: 900,
-                      fontSize: '10px',
-                      letterSpacing: '0.2em',
-                      textTransform: 'uppercase',
-                      color: '#9B82C4',
-                      marginBottom: '12px',
-                    }}
-                  >
-                    Work
-                  </div>
-                  <h3
-                    style={{
-                      fontFamily: 'Bebas Neue, sans-serif',
-                      fontSize: '36px',
-                      color: '#F4F1EC',
-                      letterSpacing: '0.03em',
-                      marginBottom: '12px',
-                    }}
-                  >
-                    BASEops
-                  </h3>
-                  <p
-                    style={{
-                      fontFamily: 'Barlow, sans-serif',
-                      fontSize: '14px',
-                      color: '#888888',
-                      lineHeight: 1.7,
-                      marginBottom: '20px',
-                    }}
-                  >
-                    Workforce development network connecting community members, justice-involved individuals, and youth 14+ to economic opportunity.
-                  </p>
-                  <Link
-                    href="/baseops"
-                    style={{
-                      fontFamily: 'Barlow Condensed, sans-serif',
-                      fontWeight: 900,
-                      fontSize: '10px',
-                      letterSpacing: '0.15em',
-                      textTransform: 'uppercase',
-                      color: '#9B82C4',
-                      textDecoration: 'none',
-                    }}
-                  >
-                    Explore BASEops &rarr;
-                  </Link>
-                </div>
-              </div>
-            </AnimateOnScroll>
-
-            <AnimateOnScroll delay={0.2}>
-              <Link
-                href="/atlas-era"
-                style={{
-                  fontFamily: 'Barlow Condensed, sans-serif',
-                  fontWeight: 900,
-                  fontSize: '12px',
-                  letterSpacing: '0.15em',
-                  textTransform: 'uppercase',
-                  backgroundColor: '#D4A017',
-                  color: '#0E0E0E',
-                  padding: '14px 28px',
-                  textDecoration: 'none',
-                  display: 'inline-block',
-                }}
-              >
-                See the Full Network &rarr;
-              </Link>
             </AnimateOnScroll>
           </div>
         </section>
@@ -1016,8 +889,8 @@ export default function HomePage() {
               >
                 <ModuleCard
                   num="Peer-Reviewed"
-                  title="Latent Transition Analysis"
-                  body="Tartt, E. L., Nylund-Gibson, K., et al. (in press). Latent Transition Analysis of adolescent racial discrimination and mental health outcomes. Psychological Methods."
+                  title="Ten FAQs About Latent Transition Analysis"
+                  body="Nylund-Gibson, K., Garber, A. C., Carter, D. B., Chan, M., Arch, D. A., Simon, O., ... & Lawrie, S. I. (2023). Ten frequently asked questions about latent transition analysis. Psychological Methods, 28(2), 284."
                   accent="#D4A017"
                 />
                 <ModuleCard
@@ -1109,101 +982,6 @@ export default function HomePage() {
                   }}
                 >
                   Download Impact Brief
-                </Link>
-              </div>
-            </AnimateOnScroll>
-          </div>
-        </section>
-
-        {/* ── Section 07: Feelings Unplugged ──────────────────────────── */}
-        <section
-          id="feelings-unplugged"
-          style={{
-            backgroundColor: '#1A1A1A',
-            borderTop: '4px solid #D4A017',
-            padding: '80px 0',
-          }}
-        >
-          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
-            <AnimateOnScroll>
-              <Eyebrow text="A US-Squared Publication · 05" color="#D4A017" />
-              <h2
-                style={{
-                  fontFamily: 'Bebas Neue, sans-serif',
-                  fontSize: 'clamp(38px, 10vw, 96px)',
-                  color: '#D4A017',
-                  lineHeight: 0.9,
-                  letterSpacing: '0.02em',
-                  marginBottom: '12px',
-                }}
-              >
-                FEELINGS UNPLUGGED
-              </h2>
-              <p
-                style={{
-                  fontFamily: 'Barlow, sans-serif',
-                  fontWeight: 300,
-                  fontSize: '20px',
-                  color: '#F4F1EC',
-                  marginBottom: '16px',
-                }}
-              >
-                Named. Held. Understood.
-              </p>
-              <p
-                style={{
-                  fontFamily: 'Barlow, sans-serif',
-                  fontSize: '16px',
-                  color: '#888888',
-                  maxWidth: '600px',
-                  lineHeight: 1.7,
-                  marginBottom: '40px',
-                }}
-              >
-                Feelings Unplugged is a compact emotional intelligence guide grounded in the BASE Framework —
-                designed for young people learning to name what they feel, and the adults who hold them. Built
-                from peer-reviewed research on Black adolescent emotional suppression. Available now in print.
-              </p>
-            </AnimateOnScroll>
-
-            <AnimateOnScroll delay={0.1}>
-              <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-                <a
-                  href="https://www.feelingsunplugged.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    fontFamily: 'Barlow Condensed, sans-serif',
-                    fontWeight: 900,
-                    fontSize: '12px',
-                    letterSpacing: '0.15em',
-                    textTransform: 'uppercase',
-                    backgroundColor: '#D4A017',
-                    color: '#0E0E0E',
-                    padding: '14px 28px',
-                    textDecoration: 'none',
-                    display: 'inline-block',
-                  }}
-                >
-                  Get Your Copy →
-                </a>
-                <Link
-                  href="/feelings-unplugged#bulk"
-                  style={{
-                    fontFamily: 'Barlow Condensed, sans-serif',
-                    fontWeight: 900,
-                    fontSize: '12px',
-                    letterSpacing: '0.15em',
-                    textTransform: 'uppercase',
-                    border: '2px solid #D4A017',
-                    color: '#D4A017',
-                    padding: '14px 28px',
-                    textDecoration: 'none',
-                    display: 'inline-block',
-                    backgroundColor: 'transparent',
-                  }}
-                >
-                  Bulk &amp; Institutional Pricing →
                 </Link>
               </div>
             </AnimateOnScroll>

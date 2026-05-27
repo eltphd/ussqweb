@@ -22,7 +22,9 @@
       "Bash(perl -i *)",
       "Bash(python3)",
       "Bash(echo \"exit: $?\")",
-      "Bash(git rebase *)"
+      "Bash(git rebase *)",
+      "Bash(npx next *)",
+      "Bash(git commit -m 'fix\\(home\\): remove pipeline section, move Feelings Unplugged to top, correct citation *)"
     ]
   }
 }
