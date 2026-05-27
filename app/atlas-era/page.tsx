@@ -5,7 +5,7 @@ import Navigation from '@/components/Navigation';
 import AnimateOnScroll from '@/components/AnimateOnScroll';
 import Footer from '@/components/Footer';
 
-function Eyebrow({ text, color = '#D4A017' }: { text: string; color?: string }) {
+function Eyebrow({ text, color = '#B5142A' }: { text: string; color?: string }) {
   return (
     <div
       style={{
@@ -77,7 +77,7 @@ export default function AtlasERAPage() {
             padding: '100px 0 80px',
             position: 'relative',
             overflow: 'hidden',
-            borderTop: '4px solid #D4A017',
+            borderTop: '4px solid #B5142A',
           }}
         >
           <div
@@ -89,7 +89,7 @@ export default function AtlasERAPage() {
               transform: 'translateY(-50%)',
               fontFamily: 'Bebas Neue, sans-serif',
               fontSize: '28vw',
-              color: 'rgba(212,160,23,0.03)',
+              color: 'rgba(181,20,42,0.03)',
               lineHeight: 1,
               pointerEvents: 'none',
               userSelect: 'none',
@@ -115,7 +115,7 @@ export default function AtlasERAPage() {
               >
                 The network already exists.
                 <br />
-                <span style={{ color: '#D4A017' }}>It just hasn&apos;t been connected yet.</span>
+                <span style={{ color: '#B5142A' }}>It just hasn&apos;t been connected yet.</span>
               </h1>
               <p
                 style={{
@@ -142,7 +142,7 @@ export default function AtlasERAPage() {
                     fontSize: '12px',
                     letterSpacing: '0.15em',
                     textTransform: 'uppercase',
-                    backgroundColor: '#D4A017',
+                    backgroundColor: '#B5142A',
                     color: '#0E0E0E',
                     padding: '14px 28px',
                     textDecoration: 'none',
@@ -177,7 +177,7 @@ export default function AtlasERAPage() {
         <section style={{ backgroundColor: '#F4F1EC', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
-              <Eyebrow text="The Problem" color="#D4A017" />
+              <Eyebrow text="The Problem" color="#B5142A" />
               <h2
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
@@ -192,7 +192,7 @@ export default function AtlasERAPage() {
               </h2>
             </AnimateOnScroll>
             <AnimateOnScroll delay={0.1}>
-              <div style={{ height: '3px', backgroundColor: '#D4A017', marginBottom: '32px', maxWidth: '200px' }} />
+              <div style={{ height: '3px', backgroundColor: '#B5142A', marginBottom: '32px', maxWidth: '200px' }} />
               <p
                 style={{
                   fontFamily: 'Barlow, sans-serif',
@@ -242,7 +242,7 @@ export default function AtlasERAPage() {
                   fontSize: '13px',
                   letterSpacing: '0.12em',
                   textTransform: 'uppercase',
-                  color: '#D4A017',
+                  color: '#B5142A',
                   marginBottom: '24px',
                 }}
               >
@@ -266,7 +266,7 @@ export default function AtlasERAPage() {
                   <div
                     key={i}
                     style={{
-                      borderLeft: '3px solid #D4A017',
+                      borderLeft: '3px solid #B5142A',
                       paddingLeft: '20px',
                       paddingTop: '12px',
                       paddingBottom: '12px',
@@ -344,7 +344,7 @@ export default function AtlasERAPage() {
                       key={step.label}
                       style={{
                         backgroundColor: '#1A1A1A',
-                        borderTop: '4px solid #D4A017',
+                        borderTop: '4px solid #B5142A',
                         padding: '32px 28px',
                         position: 'relative',
                       }}
@@ -356,7 +356,7 @@ export default function AtlasERAPage() {
                           fontSize: '10px',
                           letterSpacing: '0.2em',
                           textTransform: 'uppercase',
-                          color: '#D4A017',
+                          color: '#B5142A',
                           marginBottom: '8px',
                         }}
                       >
@@ -392,7 +392,7 @@ export default function AtlasERAPage() {
                           fontSize: '10px',
                           letterSpacing: '0.15em',
                           textTransform: 'uppercase',
-                          color: '#D4A017',
+                          color: '#B5142A',
                           textDecoration: 'none',
                         }}
                       >
@@ -410,7 +410,7 @@ export default function AtlasERAPage() {
         <section style={{ backgroundColor: '#F4F1EC', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
-              <Eyebrow text="The Long Arc" color="#D4A017" />
+              <Eyebrow text="The Long Arc" color="#B5142A" />
               <h2
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
@@ -448,7 +448,7 @@ export default function AtlasERAPage() {
                   <div
                     style={{
                       backgroundColor: '#0E0E0E',
-                      borderLeft: '6px solid #D4A017',
+                      borderLeft: '6px solid #B5142A',
                       padding: '28px 32px',
                       display: 'grid',
                       gridTemplateColumns: '120px 1fr',
@@ -461,7 +461,7 @@ export default function AtlasERAPage() {
                         style={{
                           fontFamily: 'Bebas Neue, sans-serif',
                           fontSize: '28px',
-                          color: '#D4A017',
+                          color: '#B5142A',
                           letterSpacing: '0.05em',
                           lineHeight: 1,
                           marginBottom: '4px',
@@ -500,7 +500,7 @@ export default function AtlasERAPage() {
         </section>
 
         {/* ── Section 7: Join the Network CTA ───────────────────────────── */}
-        <section style={{ backgroundColor: '#0E0E0E', padding: '80px 0', borderTop: '4px solid #D4A017' }}>
+        <section style={{ backgroundColor: '#0E0E0E', padding: '80px 0', borderTop: '4px solid #B5142A' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
               <Eyebrow text="Join the Network" />
@@ -547,7 +547,7 @@ export default function AtlasERAPage() {
                   <div
                     style={{
                       backgroundColor: '#1A1A1A',
-                      borderTop: '4px solid #D4A017',
+                      borderTop: '4px solid #B5142A',
                       padding: '32px 28px',
                       display: 'flex',
                       flexDirection: 'column',
@@ -584,7 +584,7 @@ export default function AtlasERAPage() {
                         fontSize: '11px',
                         letterSpacing: '0.15em',
                         textTransform: 'uppercase',
-                        color: '#D4A017',
+                        color: '#B5142A',
                         textDecoration: 'none',
                         alignSelf: 'flex-start',
                       }}

@@ -120,7 +120,27 @@ export default function ResearchPage() {
           </div>
         </section>
 
-        {/* Section 2: Publications */}
+        {/* Section 2: Impact Stats */}
+        <section style={{ backgroundColor: '#0E0E0E', padding: '64px 0', borderTop: '1px solid #1A1A1A' }}>
+          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
+            <AnimateOnScroll>
+              <div
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+                  gap: '48px',
+                }}
+              >
+                <StatCounter value="7,000+" label="Youth Studied in Peer-Reviewed Research" />
+                <StatCounter value="4+" label="Program Domains" />
+                <StatCounter value="20+" label="Years in Education" />
+                <StatCounter value="3+" label="Peer-Reviewed Studies" />
+              </div>
+            </AnimateOnScroll>
+          </div>
+        </section>
+
+        {/* Section 3: Publications */}
         <section style={{ backgroundColor: '#0E0E0E', padding: '80px 0', borderTop: '1px solid #1A1A1A' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
@@ -141,12 +161,12 @@ export default function ResearchPage() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
               {[
                 {
-                  type: 'Journal Article · In Press',
-                  title: 'Latent Transition Analysis of Adolescent Racial Discrimination and Mental Health Outcomes',
+                  type: 'Journal Article · 2023',
+                  title: 'Ten Frequently Asked Questions About Latent Transition Analysis',
                   citation:
-                    'Tartt, E. L., Nylund-Gibson, K., et al. (in press). Latent Transition Analysis of adolescent racial discrimination and mental health outcomes. Psychological Methods.',
+                    'Nylund-Gibson, K., Garber, A. C., Carter, D. B., Chan, M., Arch, D. A., Simon, O., ... & Lawrie, S. I. (2023). Ten frequently asked questions about latent transition analysis. Psychological Methods, 28(2), 284.',
                   notes:
-                    'Examines mental health trajectory shifts across 7,000+ Black adolescents using nationally representative CDC data.',
+                    'Foundational methodological reference for latent transition analysis — the statistical approach underlying research on adolescent mental health profiles and trajectory shifts.',
                   link: null,
                 },
                 {
@@ -339,43 +359,6 @@ export default function ResearchPage() {
                 </AnimateOnScroll>
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* Section 4: Impact Stats */}
-        <section style={{ backgroundColor: '#0E0E0E', padding: '80px 0' }}>
-          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
-            <AnimateOnScroll>
-              <Eyebrow text="By The Numbers" />
-              <h2
-                style={{
-                  fontFamily: 'Bebas Neue, sans-serif',
-                  fontSize: '56px',
-                  color: '#F4F1EC',
-                  letterSpacing: '0.02em',
-                  marginBottom: '48px',
-                }}
-              >
-                OUR IMPACT
-              </h2>
-            </AnimateOnScroll>
-
-            <AnimateOnScroll delay={0.1}>
-              <div
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-                  gap: '48px',
-                  borderTop: '1px solid #1A1A1A',
-                  paddingTop: '48px',
-                }}
-              >
-                <StatCounter value="7,000+" label="Youth Served" />
-                <StatCounter value="4+" label="Program Domains" />
-                <StatCounter value="20+" label="Years in Education" />
-                <StatCounter value="3+" label="Peer-Reviewed Studies" />
-              </div>
-            </AnimateOnScroll>
           </div>
         </section>
 

@@ -168,165 +168,140 @@ export default function AlteredEarthPressPage() {
           </div>
         </section>
 
-        {/* ── Feelings Unplugged ─────────────────────────────────────── */}
-        <section
-          style={{
-            backgroundColor: '#1A1A1A',
-            borderTop: '4px solid #D4A017',
-            padding: '80px 0',
-          }}
-        >
-          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
-            <AnimateOnScroll>
-              <Eyebrow text="Now Available · Vol. 01" color="#D4A017" />
-              <h2
-                style={{
-                  fontFamily: 'Bebas Neue, sans-serif',
-                  fontSize: 'clamp(38px, 10vw, 96px)',
-                  color: '#D4A017',
-                  lineHeight: 0.9,
-                  letterSpacing: '0.02em',
-                  marginBottom: '12px',
-                }}
-              >
-                FEELINGS UNPLUGGED
-              </h2>
-              <p
-                style={{
-                  fontFamily: 'Barlow, sans-serif',
-                  fontWeight: 300,
-                  fontSize: '20px',
-                  color: '#F4F1EC',
-                  marginBottom: '16px',
-                }}
-              >
-                Named. Held. Understood.
-              </p>
-              <p
-                style={{
-                  fontFamily: 'Barlow, sans-serif',
-                  fontSize: '16px',
-                  color: '#888888',
-                  maxWidth: '600px',
-                  lineHeight: 1.7,
-                  marginBottom: '40px',
-                }}
-              >
-                A compact emotional intelligence guide grounded in the BASE Framework — designed
-                for young people learning to name what they feel, and the adults who hold them.
-                Built from peer-reviewed research on Black adolescent emotional suppression.
-                Available now in print.
-              </p>
-            </AnimateOnScroll>
-
-            <AnimateOnScroll delay={0.1}>
-              <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-                <a
-                  href="https://www.feelingsunplugged.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    fontFamily: 'Barlow Condensed, sans-serif',
-                    fontWeight: 900,
-                    fontSize: '12px',
-                    letterSpacing: '0.15em',
-                    textTransform: 'uppercase',
-                    backgroundColor: '#D4A017',
-                    color: '#0E0E0E',
-                    padding: '14px 28px',
-                    textDecoration: 'none',
-                    display: 'inline-block',
-                  }}
-                >
-                  Get Your Copy →
-                </a>
-                <Link
-                  href="/feelings-unplugged"
-                  style={{
-                    fontFamily: 'Barlow Condensed, sans-serif',
-                    fontWeight: 900,
-                    fontSize: '12px',
-                    letterSpacing: '0.15em',
-                    textTransform: 'uppercase',
-                    border: '2px solid #D4A017',
-                    color: '#D4A017',
-                    padding: '14px 28px',
-                    textDecoration: 'none',
-                    display: 'inline-block',
-                    backgroundColor: 'transparent',
-                  }}
-                >
-                  Learn More →
-                </Link>
-                <Link
-                  href="/feelings-unplugged#bulk"
-                  style={{
-                    fontFamily: 'Barlow Condensed, sans-serif',
-                    fontWeight: 900,
-                    fontSize: '12px',
-                    letterSpacing: '0.15em',
-                    textTransform: 'uppercase',
-                    border: '2px solid rgba(212,160,23,0.4)',
-                    color: 'rgba(212,160,23,0.6)',
-                    padding: '14px 28px',
-                    textDecoration: 'none',
-                    display: 'inline-block',
-                    backgroundColor: 'transparent',
-                  }}
-                >
-                  Bulk &amp; Institutional Pricing →
-                </Link>
-              </div>
-            </AnimateOnScroll>
-          </div>
-        </section>
-
-        {/* ── Coming Soon: Embargo ──────────────────────────────────── */}
+        {/* ── Our Titles ────────────────────────────────────────────── */}
         <section style={{ backgroundColor: '#0E0E0E', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
-              <Eyebrow text="Coming Soon · Vol. 02" color="#2D8A4E" />
+              <Eyebrow text="Our Titles" />
               <h2
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
-                  fontSize: 'clamp(38px, 10vw, 96px)',
+                  fontSize: 'clamp(38px, 7vw, 64px)',
                   color: '#F4F1EC',
-                  lineHeight: 0.9,
+                  lineHeight: 0.95,
                   letterSpacing: '0.02em',
-                  marginBottom: '12px',
+                  marginBottom: '48px',
                 }}
               >
-                EMBARGO
+                WHAT WE&apos;VE PUBLISHED
               </h2>
-              <p
-                style={{
-                  fontFamily: 'Barlow, sans-serif',
-                  fontWeight: 300,
-                  fontSize: '20px',
-                  color: '#888888',
-                  marginBottom: '24px',
-                  maxWidth: '600px',
-                  lineHeight: 1.6,
-                }}
-              >
-                The next title from Altered Earth Press. Details coming soon.
-              </p>
-              <div
-                style={{
-                  display: 'inline-block',
-                  fontFamily: 'Barlow Condensed, sans-serif',
-                  fontWeight: 900,
-                  fontSize: '11px',
-                  letterSpacing: '0.2em',
-                  textTransform: 'uppercase',
-                  color: '#2D8A4E',
-                  border: '1px solid #2D8A4E',
-                  padding: '10px 20px',
-                }}
-              >
-                Forthcoming
-              </div>
             </AnimateOnScroll>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+              {/* Vol. 01 — Feelings Unplugged */}
+              <AnimateOnScroll delay={0.05}>
+                <div
+                  style={{
+                    backgroundColor: '#1A1A1A',
+                    borderTop: '4px solid #D4A017',
+                    padding: '32px 28px',
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    gap: '24px',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                  }}
+                >
+                  <div>
+                    <div
+                      style={{
+                        fontFamily: 'Barlow Condensed, sans-serif',
+                        fontWeight: 900,
+                        fontSize: '10px',
+                        letterSpacing: '0.2em',
+                        textTransform: 'uppercase',
+                        color: '#D4A017',
+                        marginBottom: '8px',
+                      }}
+                    >
+                      Vol. 01 · Now Available
+                    </div>
+                    <div
+                      style={{
+                        fontFamily: 'Bebas Neue, sans-serif',
+                        fontSize: '32px',
+                        color: '#F4F1EC',
+                        letterSpacing: '0.03em',
+                        lineHeight: 1,
+                      }}
+                    >
+                      Feelings Unplugged
+                    </div>
+                  </div>
+                  <Link
+                    href="/feelings-unplugged"
+                    style={{
+                      fontFamily: 'Barlow Condensed, sans-serif',
+                      fontWeight: 900,
+                      fontSize: '11px',
+                      letterSpacing: '0.15em',
+                      textTransform: 'uppercase',
+                      color: '#D4A017',
+                      textDecoration: 'none',
+                      flexShrink: 0,
+                    }}
+                  >
+                    View Book →
+                  </Link>
+                </div>
+              </AnimateOnScroll>
+
+              {/* Vol. 02 — Embargo */}
+              <AnimateOnScroll delay={0.1}>
+                <div
+                  style={{
+                    backgroundColor: '#1A1A1A',
+                    borderTop: '4px solid #2D8A4E',
+                    padding: '32px 28px',
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    gap: '24px',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                  }}
+                >
+                  <div>
+                    <div
+                      style={{
+                        fontFamily: 'Barlow Condensed, sans-serif',
+                        fontWeight: 900,
+                        fontSize: '10px',
+                        letterSpacing: '0.2em',
+                        textTransform: 'uppercase',
+                        color: '#2D8A4E',
+                        marginBottom: '8px',
+                      }}
+                    >
+                      Vol. 02 · Forthcoming
+                    </div>
+                    <div
+                      style={{
+                        fontFamily: 'Bebas Neue, sans-serif',
+                        fontSize: '32px',
+                        color: '#F4F1EC',
+                        letterSpacing: '0.03em',
+                        lineHeight: 1,
+                      }}
+                    >
+                      Embargo
+                    </div>
+                  </div>
+                  <div
+                    style={{
+                      fontFamily: 'Barlow Condensed, sans-serif',
+                      fontWeight: 900,
+                      fontSize: '11px',
+                      letterSpacing: '0.15em',
+                      textTransform: 'uppercase',
+                      color: '#555555',
+                      flexShrink: 0,
+                    }}
+                  >
+                    Coming Soon
+                  </div>
+                </div>
+              </AnimateOnScroll>
+            </div>
           </div>
         </section>
 

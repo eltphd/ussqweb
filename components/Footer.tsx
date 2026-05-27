@@ -45,15 +45,13 @@ export default function Footer() {
             }}
           >
             {[
-              { label: 'Programs', href: '/#programs' },
               { label: 'Research', href: '/research' },
               { label: 'About', href: '/about' },
-              { label: 'BASEops', href: '/baseops' },
               { label: 'Atlas Academy', href: '/atlas' },
+              { label: 'Atlas ERA', href: '/atlas-era' },
               { label: 'Altered Earth Press', href: '/earth' },
               { label: 'Sparent Science', href: '/sparent' },
               { label: 'Feelings Unplugged', href: '/feelings-unplugged' },
-              { label: 'Brilliance Forward Fund', href: '/feelings-unplugged#access-fund' },
             ].map((link) => (
               <Link
                 key={link.href}
