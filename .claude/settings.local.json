@@ -24,7 +24,8 @@
       "Bash(echo \"exit: $?\")",
       "Bash(git rebase *)",
       "Bash(npx next *)",
-      "Bash(git commit -m 'fix\\(home\\): remove pipeline section, move Feelings Unplugged to top, correct citation *)"
+      "Bash(git commit -m 'fix\\(home\\): remove pipeline section, move Feelings Unplugged to top, correct citation *)",
+      "Bash(git commit -m 'feat\\(earth\\): rebrand Altered.Earth → Altered Earth Press publishing imprint *)"
     ]
   }
 }

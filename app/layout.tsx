@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "justice-centered",
     "BASEops",
     "Atlas Academy",
-    "Altered.Earth",
+    "Altered Earth Press",
     "Sparent Science",
   ],
   openGraph: {

@@ -184,7 +184,7 @@ export default function ConnectPage() {
                       color: 'rgba(240,237,232,0.7)',
                     }}
                   >
-                    Atlas Academy, Altered.Earth
+                    Atlas Academy, Altered Earth Press
                   </span>
                 </Link>
                 <Link

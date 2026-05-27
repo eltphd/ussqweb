@@ -344,101 +344,6 @@ export default function HomePage() {
           </motion.div>
         </section>
 
-        {/* ── Feelings Unplugged Banner ────────────────────────────────── */}
-        <section
-          id="feelings-unplugged"
-          style={{
-            backgroundColor: '#1A1A1A',
-            borderTop: '4px solid #D4A017',
-            padding: '80px 0',
-          }}
-        >
-          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
-            <AnimateOnScroll>
-              <Eyebrow text="A US-Squared Publication · 05" color="#D4A017" />
-              <h2
-                style={{
-                  fontFamily: 'Bebas Neue, sans-serif',
-                  fontSize: 'clamp(38px, 10vw, 96px)',
-                  color: '#D4A017',
-                  lineHeight: 0.9,
-                  letterSpacing: '0.02em',
-                  marginBottom: '12px',
-                }}
-              >
-                FEELINGS UNPLUGGED
-              </h2>
-              <p
-                style={{
-                  fontFamily: 'Barlow, sans-serif',
-                  fontWeight: 300,
-                  fontSize: '20px',
-                  color: '#F4F1EC',
-                  marginBottom: '16px',
-                }}
-              >
-                Named. Held. Understood.
-              </p>
-              <p
-                style={{
-                  fontFamily: 'Barlow, sans-serif',
-                  fontSize: '16px',
-                  color: '#888888',
-                  maxWidth: '600px',
-                  lineHeight: 1.7,
-                  marginBottom: '40px',
-                }}
-              >
-                Feelings Unplugged is a compact emotional intelligence guide grounded in the BASE Framework —
-                designed for young people learning to name what they feel, and the adults who hold them. Built
-                from peer-reviewed research on Black adolescent emotional suppression. Available now in print.
-              </p>
-            </AnimateOnScroll>
-
-            <AnimateOnScroll delay={0.1}>
-              <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-                <a
-                  href="https://www.feelingsunplugged.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    fontFamily: 'Barlow Condensed, sans-serif',
-                    fontWeight: 900,
-                    fontSize: '12px',
-                    letterSpacing: '0.15em',
-                    textTransform: 'uppercase',
-                    backgroundColor: '#D4A017',
-                    color: '#0E0E0E',
-                    padding: '14px 28px',
-                    textDecoration: 'none',
-                    display: 'inline-block',
-                  }}
-                >
-                  Get Your Copy →
-                </a>
-                <Link
-                  href="/feelings-unplugged#bulk"
-                  style={{
-                    fontFamily: 'Barlow Condensed, sans-serif',
-                    fontWeight: 900,
-                    fontSize: '12px',
-                    letterSpacing: '0.15em',
-                    textTransform: 'uppercase',
-                    border: '2px solid #D4A017',
-                    color: '#D4A017',
-                    padding: '14px 28px',
-                    textDecoration: 'none',
-                    display: 'inline-block',
-                    backgroundColor: 'transparent',
-                  }}
-                >
-                  Bulk &amp; Institutional Pricing →
-                </Link>
-              </div>
-            </AnimateOnScroll>
-          </div>
-        </section>
-
         {/* ── Section 01: Mission ──────────────────────────────────────── */}
         <section
           id="mission"
@@ -581,10 +486,10 @@ export default function HomePage() {
                 />
                 <ProgramRow
                   num="03"
-                  name="Community Presence"
-                  descriptor="Showing up. Witnessing. Investing."
+                  name="Altered Earth Press"
+                  descriptor="Publishing community-centered stories"
                   accent="#2D8A4E"
-                  hoverText="Embodied methodology: discover, visit, connect, credential, invest. The field is the work. The world is the classroom."
+                  hoverText="The publishing imprint of US-Squared. Real stories from adolescents and the adults who hold them — grounded in the BASE Framework and rooted in lived experience."
                   href="/earth"
                 />
                 <ProgramRow
@@ -1124,7 +1029,7 @@ export default function HomePage() {
                   { label: 'About', href: '/about' },
                   { label: 'BASEops', href: '/baseops' },
                   { label: 'Atlas Academy', href: '/atlas' },
-                  { label: 'Altered.Earth', href: '/earth' },
+                  { label: 'Altered Earth Press', href: '/earth' },
                   { label: 'Sparent Science', href: '/sparent' },
                   { label: 'Feelings Unplugged', href: '/feelings-unplugged' },
                   { label: 'Brilliance Forward Fund', href: '/feelings-unplugged#access-fund' },

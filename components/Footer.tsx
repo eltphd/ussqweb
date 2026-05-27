@@ -50,7 +50,7 @@ export default function Footer() {
               { label: 'About', href: '/about' },
               { label: 'BASEops', href: '/baseops' },
               { label: 'Atlas Academy', href: '/atlas' },
-              { label: 'Altered.Earth', href: '/earth' },
+              { label: 'Altered Earth Press', href: '/earth' },
               { label: 'Sparent Science', href: '/sparent' },
               { label: 'Feelings Unplugged', href: '/feelings-unplugged' },
               { label: 'Brilliance Forward Fund', href: '/feelings-unplugged#access-fund' },
