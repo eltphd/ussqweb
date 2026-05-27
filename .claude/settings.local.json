@@ -26,7 +26,8 @@
       "Bash(npx next *)",
       "Bash(git commit -m 'fix\\(home\\): remove pipeline section, move Feelings Unplugged to top, correct citation *)",
       "Bash(git commit -m 'feat\\(earth\\): rebrand Altered.Earth → Altered Earth Press publishing imprint *)",
-      "Bash(vercel --prod)"
+      "Bash(vercel --prod)",
+      "Bash(git commit -m 'fix\\(home\\): replace inline footer with shared Footer component *)"
     ]
   }
 }

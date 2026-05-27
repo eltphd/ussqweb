@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import AnimateOnScroll from '@/components/AnimateOnScroll';
 import StatCounter from '@/components/StatCounter';
+import Footer from '@/components/Footer';
 
 // ─── Program Accordion Row ────────────────────────────────────────────────────
 interface ProgramRowProps {
@@ -997,134 +998,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Footer */}
-        <footer style={{ backgroundColor: '#0E0E0E', borderTop: '3px solid #D4A017' }}>
-          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '48px 24px 32px' }}>
-            <div
-              style={{
-                display: 'flex',
-                flexWrap: 'wrap',
-                gap: '32px',
-                justifyContent: 'space-between',
-                alignItems: 'flex-start',
-                marginBottom: '40px',
-              }}
-            >
-              <Link
-                href="/"
-                style={{
-                  fontFamily: 'Bebas Neue, sans-serif',
-                  fontSize: '22px',
-                  color: '#F4F1EC',
-                  textDecoration: 'none',
-                  letterSpacing: '0.05em',
-                }}
-              >
-                US² | Atlas ERA
-              </Link>
-              <nav style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', alignItems: 'center' }}>
-                {[
-                  { label: 'Network', href: '/#programs' },
-                  { label: 'Research', href: '/research' },
-                  { label: 'About', href: '/about' },
-                  { label: 'BASEops', href: '/baseops' },
-                  { label: 'Atlas Academy', href: '/atlas' },
-                  { label: 'Altered Earth Press', href: '/earth' },
-                  { label: 'Sparent Science', href: '/sparent' },
-                  { label: 'Feelings Unplugged', href: '/feelings-unplugged' },
-                  { label: 'Brilliance Forward Fund', href: '/feelings-unplugged#access-fund' },
-                ].map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    style={{
-                      fontFamily: 'Barlow Condensed, sans-serif',
-                      fontWeight: 600,
-                      fontSize: '11px',
-                      letterSpacing: '0.15em',
-                      textTransform: 'uppercase',
-                      color: '#555555',
-                      textDecoration: 'none',
-                    }}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </nav>
-              <div style={{ display: 'flex', gap: '16px' }}>
-                {['Instagram', 'LinkedIn'].map((s) => (
-                  <a
-                    key={s}
-                    href="#"
-                    style={{
-                      fontFamily: 'Barlow Condensed, sans-serif',
-                      fontWeight: 600,
-                      fontSize: '11px',
-                      letterSpacing: '0.15em',
-                      textTransform: 'uppercase',
-                      color: '#555555',
-                      textDecoration: 'none',
-                    }}
-                  >
-                    {s}
-                  </a>
-                ))}
-              </div>
-            </div>
-            <div style={{ height: '1px', backgroundColor: '#1A1A1A', marginBottom: '24px' }} />
-            <div
-              style={{
-                fontFamily: 'Barlow Condensed, sans-serif',
-                fontWeight: 600,
-                fontSize: '11px',
-                letterSpacing: '0.12em',
-                textTransform: 'uppercase',
-                color: '#555555',
-                marginBottom: '16px',
-              }}
-            >
-              Atlas ERA — The Education Research Association
-              <br />
-              A US-Squared Research Institute Initiative
-            </div>
-            <div
-              style={{
-                display: 'flex',
-                flexWrap: 'wrap',
-                gap: '16px',
-                justifyContent: 'space-between',
-                alignItems: 'flex-start',
-              }}
-            >
-              <p
-                style={{
-                  fontFamily: 'Barlow, sans-serif',
-                  fontSize: '12px',
-                  color: '#555555',
-                  lineHeight: 1.6,
-                  maxWidth: '560px',
-                }}
-              >
-                US-Squared Research Institute is a 501(c)(3) nonprofit. EIN 92-3221304. All contributions are
-                tax-deductible to the extent allowed by law.
-              </p>
-              <p
-                style={{
-                  fontFamily: 'Barlow Condensed, sans-serif',
-                  fontWeight: 600,
-                  fontSize: '11px',
-                  letterSpacing: '0.1em',
-                  color: '#555555',
-                  textAlign: 'right',
-                }}
-              >
-                Columbus, Ohio
-                <br />
-                executive@us-squared.org
-              </p>
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </main>
     </>
   );
