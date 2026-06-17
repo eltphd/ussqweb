@@ -12,7 +12,7 @@ function Eyebrow({ text, color = '#D4A017' }: { text: string; color?: string }) 
       style={{
         fontFamily: 'Barlow Condensed, sans-serif',
         fontWeight: 900,
-        fontSize: '10px',
+        fontSize: '13px',
         letterSpacing: '0.25em',
         textTransform: 'uppercase',
         color,
@@ -108,7 +108,7 @@ export default function ResearchPage() {
                   fontFamily: 'Barlow, sans-serif',
                   fontWeight: 300,
                   fontSize: '18px',
-                  color: '#888888',
+                  color: '#C0C0C0',
                   maxWidth: '580px',
                   lineHeight: 1.7,
                 }}
@@ -200,7 +200,7 @@ export default function ResearchPage() {
                       style={{
                         fontFamily: 'Barlow Condensed, sans-serif',
                         fontWeight: 900,
-                        fontSize: '10px',
+                        fontSize: '13px',
                         letterSpacing: '0.2em',
                         textTransform: 'uppercase',
                         color: '#D4A017',
@@ -239,7 +239,7 @@ export default function ResearchPage() {
                       style={{
                         fontFamily: 'Barlow, sans-serif',
                         fontSize: '14px',
-                        color: '#888888',
+                        color: '#C0C0C0',
                         lineHeight: 1.6,
                         marginBottom: pub.link ? '16px' : '0',
                       }}
@@ -252,7 +252,7 @@ export default function ResearchPage() {
                         style={{
                           fontFamily: 'Barlow Condensed, sans-serif',
                           fontWeight: 900,
-                          fontSize: '10px',
+                          fontSize: '13px',
                           letterSpacing: '0.15em',
                           textTransform: 'uppercase',
                           color: '#D4A017',
@@ -347,7 +347,7 @@ export default function ResearchPage() {
                         style={{
                           fontFamily: 'Barlow, sans-serif',
                           fontSize: '15px',
-                          color: '#888888',
+                          color: '#C0C0C0',
                           lineHeight: 1.7,
                           maxWidth: '600px',
                         }}
@@ -404,7 +404,7 @@ export default function ResearchPage() {
                     letterSpacing: '0.15em',
                     textTransform: 'uppercase',
                     backgroundColor: '#555555',
-                    color: '#888888',
+                    color: '#C0C0C0',
                     padding: '14px 28px',
                     display: 'inline-block',
                     cursor: 'not-allowed',

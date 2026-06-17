@@ -12,7 +12,7 @@ function Eyebrow({ text, color = '#9B82C4' }: { text: string; color?: string }) 
       style={{
         fontFamily: 'Barlow Condensed, sans-serif',
         fontWeight: 900,
-        fontSize: '10px',
+        fontSize: '13px',
         letterSpacing: '0.25em',
         textTransform: 'uppercase',
         color,
@@ -92,7 +92,7 @@ export default function BASEopsPage() {
                 style={{
                   fontFamily: 'Barlow, sans-serif',
                   fontSize: '16px',
-                  color: '#888888',
+                  color: '#C0C0C0',
                   maxWidth: '600px',
                   lineHeight: 1.7,
                   marginBottom: '16px',
@@ -107,7 +107,7 @@ export default function BASEopsPage() {
                 style={{
                   fontFamily: 'Barlow, sans-serif',
                   fontSize: '16px',
-                  color: '#888888',
+                  color: '#C0C0C0',
                   maxWidth: '600px',
                   lineHeight: 1.7,
                   marginBottom: '40px',
@@ -146,7 +146,7 @@ export default function BASEopsPage() {
                     fontSize: '11px',
                     letterSpacing: '0.15em',
                     textTransform: 'uppercase',
-                    color: '#888888',
+                    color: '#C0C0C0',
                   }}
                 >
                   Orgs using BASEops toolkits
@@ -204,7 +204,7 @@ export default function BASEopsPage() {
                       style={{
                         fontFamily: 'Barlow Condensed, sans-serif',
                         fontWeight: 900,
-                        fontSize: '10px',
+                        fontSize: '13px',
                         letterSpacing: '0.2em',
                         textTransform: 'uppercase',
                         color: '#9B82C4',
@@ -228,7 +228,7 @@ export default function BASEopsPage() {
                       style={{
                         fontFamily: 'Barlow, sans-serif',
                         fontSize: '14px',
-                        color: '#888888',
+                        color: '#C0C0C0',
                         lineHeight: 1.7,
                         marginBottom: '20px',
                       }}
@@ -240,7 +240,7 @@ export default function BASEopsPage() {
                       style={{
                         fontFamily: 'Barlow Condensed, sans-serif',
                         fontWeight: 900,
-                        fontSize: '10px',
+                        fontSize: '13px',
                         letterSpacing: '0.15em',
                         textTransform: 'uppercase',
                         color: '#9B82C4',
@@ -338,7 +338,7 @@ export default function BASEopsPage() {
                     fontSize: '11px',
                     letterSpacing: '0.15em',
                     textTransform: 'uppercase',
-                    color: '#888888',
+                    color: '#C0C0C0',
                   }}
                 >
                   — [Placeholder Name, Org]
@@ -370,7 +370,7 @@ export default function BASEopsPage() {
                   fontFamily: 'Barlow, sans-serif',
                   fontWeight: 300,
                   fontSize: '18px',
-                  color: '#888888',
+                  color: '#C0C0C0',
                   maxWidth: '520px',
                   lineHeight: 1.6,
                   marginBottom: '36px',
@@ -453,7 +453,7 @@ export default function BASEopsPage() {
                 fontSize: '11px',
                 letterSpacing: '0.15em',
                 textTransform: 'uppercase',
-                color: '#555555',
+                color: '#AAAAAA',
                 textDecoration: 'none',
               }}
             >

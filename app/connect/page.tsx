@@ -12,7 +12,7 @@ function Eyebrow({ text, color = '#D4A017' }: { text: string; color?: string }) 
       style={{
         fontFamily: 'Barlow Condensed, sans-serif',
         fontWeight: 900,
-        fontSize: '10px',
+        fontSize: '13px',
         letterSpacing: '0.25em',
         textTransform: 'uppercase',
         color,
@@ -92,7 +92,7 @@ export default function ConnectPage() {
                   fontFamily: 'Barlow, sans-serif',
                   fontWeight: 300,
                   fontSize: '18px',
-                  color: '#888888',
+                  color: '#C0C0C0',
                   maxWidth: '540px',
                   lineHeight: 1.6,
                 }}
@@ -150,7 +150,7 @@ export default function ConnectPage() {
                       fontSize: '12px',
                       letterSpacing: 0,
                       textTransform: 'none',
-                      color: '#555555',
+                      color: '#AAAAAA',
                     }}
                   >
                     Funders, fiscal sponsors, program partners
@@ -213,7 +213,7 @@ export default function ConnectPage() {
                       fontSize: '12px',
                       letterSpacing: 0,
                       textTransform: 'none',
-                      color: '#888888',
+                      color: '#C0C0C0',
                     }}
                   >
                     Donations, grants, in-kind
@@ -245,7 +245,7 @@ export default function ConnectPage() {
                       fontSize: '12px',
                       letterSpacing: 0,
                       textTransform: 'none',
-                      color: '#888888',
+                      color: '#C0C0C0',
                     }}
                   >
                     General inquiries, media, speaking
@@ -291,7 +291,7 @@ export default function ConnectPage() {
                 style={{
                   fontFamily: 'Barlow, sans-serif',
                   fontSize: '16px',
-                  color: '#888888',
+                  color: '#C0C0C0',
                   maxWidth: '560px',
                   lineHeight: 1.7,
                   marginBottom: '32px',
@@ -392,10 +392,10 @@ export default function ConnectPage() {
                               display: 'block',
                               fontFamily: 'Barlow Condensed, sans-serif',
                               fontWeight: 600,
-                              fontSize: '10px',
+                              fontSize: '13px',
                               letterSpacing: '0.15em',
                               textTransform: 'uppercase',
-                              color: '#888888',
+                              color: '#C0C0C0',
                               marginBottom: '6px',
                             }}
                           >
@@ -429,10 +429,10 @@ export default function ConnectPage() {
                             display: 'block',
                             fontFamily: 'Barlow Condensed, sans-serif',
                             fontWeight: 600,
-                            fontSize: '10px',
+                            fontSize: '13px',
                             letterSpacing: '0.15em',
                             textTransform: 'uppercase',
-                            color: '#888888',
+                            color: '#C0C0C0',
                             marginBottom: '6px',
                           }}
                         >
@@ -470,10 +470,10 @@ export default function ConnectPage() {
                             display: 'block',
                             fontFamily: 'Barlow Condensed, sans-serif',
                             fontWeight: 600,
-                            fontSize: '10px',
+                            fontSize: '13px',
                             letterSpacing: '0.15em',
                             textTransform: 'uppercase',
-                            color: '#888888',
+                            color: '#C0C0C0',
                             marginBottom: '6px',
                           }}
                         >
@@ -550,7 +550,7 @@ export default function ConnectPage() {
                           style={{
                             fontFamily: 'Barlow Condensed, sans-serif',
                             fontWeight: 600,
-                            fontSize: '10px',
+                            fontSize: '13px',
                             letterSpacing: '0.15em',
                             textTransform: 'uppercase',
                             color: '#D4A017',
@@ -563,7 +563,7 @@ export default function ConnectPage() {
                           style={{
                             fontFamily: 'Barlow, sans-serif',
                             fontSize: '15px',
-                            color: '#888888',
+                            color: '#C0C0C0',
                             lineHeight: 1.5,
                             whiteSpace: 'pre-line',
                           }}
@@ -586,7 +586,7 @@ export default function ConnectPage() {
                       style={{
                         fontFamily: 'Barlow, sans-serif',
                         fontSize: '13px',
-                        color: '#555555',
+                        color: '#AAAAAA',
                         lineHeight: 1.6,
                       }}
                     >

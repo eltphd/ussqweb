@@ -89,7 +89,7 @@ function ProgramRow({ num, name, descriptor, accent, hoverText, href }: ProgramR
               style={{
                 fontFamily: 'Barlow, sans-serif',
                 fontSize: '14px',
-                color: '#888888',
+                color: '#C0C0C0',
                 marginTop: '8px',
                 maxWidth: '560px',
                 lineHeight: 1.5,
@@ -106,7 +106,7 @@ function ProgramRow({ num, name, descriptor, accent, hoverText, href }: ProgramR
             style={{
               fontFamily: 'Barlow, sans-serif',
               fontSize: '13px',
-              color: '#555555',
+              color: '#888888',
               marginBottom: hovered ? '8px' : '0',
             }}
           >
@@ -153,7 +153,7 @@ function ModuleCard({ num, title, body, accent }: ModuleCardProps) {
         style={{
           fontFamily: 'Barlow Condensed, sans-serif',
           fontWeight: 900,
-          fontSize: '10px',
+          fontSize: '12px',
           letterSpacing: '0.2em',
           textTransform: 'uppercase',
           color: accent,
@@ -176,8 +176,8 @@ function ModuleCard({ num, title, body, accent }: ModuleCardProps) {
       <p
         style={{
           fontFamily: 'Barlow, sans-serif',
-          fontSize: '14px',
-          color: '#888888',
+          fontSize: '15px',
+          color: '#C0C0C0',
           lineHeight: 1.6,
         }}
       >
@@ -194,8 +194,8 @@ function Eyebrow({ text, color = '#D4A017' }: { text: string; color?: string }) 
       style={{
         fontFamily: 'Barlow Condensed, sans-serif',
         fontWeight: 900,
-        fontSize: '10px',
-        letterSpacing: '0.25em',
+        fontSize: '13px',
+        letterSpacing: '0.22em',
         textTransform: 'uppercase',
         color,
         marginBottom: '16px',
@@ -310,7 +310,7 @@ export default function HomePage() {
                 fontFamily: 'Barlow, sans-serif',
                 fontWeight: 300,
                 fontSize: '18px',
-                color: '#888888',
+                color: '#C0C0C0',
                 maxWidth: '580px',
                 lineHeight: 1.6,
               }}
@@ -338,7 +338,7 @@ export default function HomePage() {
               fontSize: '9px',
               letterSpacing: '0.2em',
               textTransform: 'uppercase',
-              color: '#555555',
+              color: '#888888',
             }}
           >
             Enter the Network ↓
@@ -437,7 +437,7 @@ export default function HomePage() {
         <section id="programs" style={{ backgroundColor: '#0E0E0E', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
-              <Eyebrow text="The Network" color="#888888" />
+              <Eyebrow text="The Network" color="#AAAAAA" />
               <h2
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
@@ -456,7 +456,7 @@ export default function HomePage() {
                   fontFamily: 'Barlow, sans-serif',
                   fontWeight: 300,
                   fontSize: '16px',
-                  color: '#888888',
+                  color: '#C0C0C0',
                   maxWidth: '520px',
                   marginBottom: '48px',
                   lineHeight: 1.6,
@@ -663,7 +663,7 @@ export default function HomePage() {
                     style={{
                       fontFamily: 'Barlow, sans-serif',
                       fontSize: '14px',
-                      color: '#888888',
+                      color: '#C0C0C0',
                       lineHeight: 1.6,
                       marginBottom: '24px',
                     }}
@@ -695,7 +695,7 @@ export default function HomePage() {
                       style={{
                         fontFamily: 'Barlow, sans-serif',
                         fontSize: '14px',
-                        color: '#888888',
+                        color: '#C0C0C0',
                         lineHeight: 1.5,
                       }}
                     >
@@ -772,7 +772,7 @@ export default function HomePage() {
                   fontFamily: 'Barlow, sans-serif',
                   fontWeight: 300,
                   fontSize: '16px',
-                  color: '#888888',
+                  color: '#C0C0C0',
                   maxWidth: '560px',
                   lineHeight: 1.6,
                   marginBottom: '48px',
@@ -828,7 +828,7 @@ export default function HomePage() {
                     fontFamily: 'Barlow, sans-serif',
                     fontStyle: 'italic',
                     fontSize: '20px',
-                    color: '#888888',
+                    color: '#D0D0D0',
                     lineHeight: 1.6,
                   }}
                 >
@@ -845,7 +845,7 @@ export default function HomePage() {
                     fontSize: '11px',
                     letterSpacing: '0.15em',
                     textTransform: 'uppercase',
-                    color: '#555555',
+                    color: '#AAAAAA',
                   }}
                 >
                   — Dr. Erica L. Tartt, PhD

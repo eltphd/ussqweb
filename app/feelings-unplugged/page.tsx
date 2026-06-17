@@ -11,7 +11,7 @@ function Eyebrow({ text, color = '#D4A017' }: { text: string; color?: string }) 
       style={{
         fontFamily: 'Barlow Condensed, sans-serif',
         fontWeight: 900,
-        fontSize: '10px',
+        fontSize: '13px',
         letterSpacing: '0.25em',
         textTransform: 'uppercase',
         color,
@@ -97,7 +97,7 @@ export default function FeelingsUnpluggedPage() {
                   fontFamily: 'Barlow, sans-serif',
                   fontWeight: 300,
                   fontSize: '18px',
-                  color: '#888888',
+                  color: '#C0C0C0',
                   maxWidth: '560px',
                   lineHeight: 1.7,
                   marginBottom: '32px',
@@ -189,7 +189,7 @@ export default function FeelingsUnpluggedPage() {
                     style={{
                       fontFamily: 'Barlow Condensed, sans-serif',
                       fontWeight: 900,
-                      fontSize: '10px',
+                      fontSize: '13px',
                       letterSpacing: '0.2em',
                       textTransform: 'uppercase',
                       color: '#D4A017',
@@ -239,7 +239,7 @@ export default function FeelingsUnpluggedPage() {
                           style={{
                             fontFamily: 'Barlow, sans-serif',
                             fontSize: '14px',
-                            color: '#888888',
+                            color: '#C0C0C0',
                             lineHeight: 1.5,
                           }}
                         >
@@ -262,7 +262,7 @@ export default function FeelingsUnpluggedPage() {
                     style={{
                       fontFamily: 'Barlow Condensed, sans-serif',
                       fontWeight: 900,
-                      fontSize: '10px',
+                      fontSize: '13px',
                       letterSpacing: '0.2em',
                       textTransform: 'uppercase',
                       color: '#D4A017',
@@ -312,7 +312,7 @@ export default function FeelingsUnpluggedPage() {
                           style={{
                             fontFamily: 'Barlow, sans-serif',
                             fontSize: '14px',
-                            color: '#888888',
+                            color: '#C0C0C0',
                             lineHeight: 1.5,
                           }}
                         >
@@ -444,7 +444,7 @@ export default function FeelingsUnpluggedPage() {
                       style={{
                         fontFamily: 'Barlow Condensed, sans-serif',
                         fontWeight: 900,
-                        fontSize: '10px',
+                        fontSize: '13px',
                         letterSpacing: '0.2em',
                         textTransform: 'uppercase',
                         color: '#D4A017',
@@ -494,7 +494,7 @@ export default function FeelingsUnpluggedPage() {
                       style={{
                         fontFamily: 'Barlow, sans-serif',
                         fontSize: '13px',
-                        color: '#888888',
+                        color: '#C0C0C0',
                         alignSelf: 'center',
                       }}
                     >
@@ -589,7 +589,7 @@ export default function FeelingsUnpluggedPage() {
                   style={{
                     fontFamily: 'Barlow, sans-serif',
                     fontSize: '16px',
-                    color: '#888888',
+                    color: '#C0C0C0',
                     maxWidth: '540px',
                     lineHeight: 1.7,
                     marginBottom: '32px',
@@ -631,7 +631,7 @@ export default function FeelingsUnpluggedPage() {
                 style={{
                   fontFamily: 'Barlow Condensed, sans-serif',
                   fontWeight: 900,
-                  fontSize: '10px',
+                  fontSize: '13px',
                   letterSpacing: '0.25em',
                   textTransform: 'uppercase',
                   color: '#444444',
@@ -707,7 +707,7 @@ export default function FeelingsUnpluggedPage() {
                     style={{
                       fontFamily: 'Barlow Condensed, sans-serif',
                       fontWeight: 900,
-                      fontSize: '10px',
+                      fontSize: '13px',
                       letterSpacing: '0.25em',
                       textTransform: 'uppercase',
                       color: '#555555',
@@ -720,7 +720,7 @@ export default function FeelingsUnpluggedPage() {
                     style={{
                       fontFamily: 'Barlow, sans-serif',
                       fontSize: '16px',
-                      color: '#888888',
+                      color: '#C0C0C0',
                       lineHeight: 1.5,
                     }}
                   >

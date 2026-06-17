@@ -28,7 +28,11 @@
       "Bash(git commit -m 'feat\\(earth\\): rebrand Altered.Earth → Altered Earth Press publishing imprint *)",
       "Bash(vercel --prod)",
       "Bash(git commit -m 'fix\\(home\\): replace inline footer with shared Footer component *)",
-      "Bash(vercel alias *)"
+      "Bash(vercel alias *)",
+      "Bash(./node_modules/.bin/next build *)",
+      "Bash(xargs ls -t)",
+      "Bash(find /Users/drtarttphd -name \"*.jpg\" -newer /Users/drtarttphd/Documents/GitHub/ussqweb/package.json 2>/dev/null | grep -v \"Library/Caches\\\\|node_modules\" | head -10)",
+      "Bash(ls -t /private/tmp/claude-502/ 2>/dev/null | head -5; find /private/tmp -name \"*.jpg\" -o -name \"*.jpeg\" -o -name \"*.png\" 2>/dev/null | head -10)"
     ]
   }
 }

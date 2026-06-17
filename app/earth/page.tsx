@@ -11,7 +11,7 @@ function Eyebrow({ text, color = '#2D8A4E' }: { text: string; color?: string }) 
       style={{
         fontFamily: 'Barlow Condensed, sans-serif',
         fontWeight: 900,
-        fontSize: '10px',
+        fontSize: '13px',
         letterSpacing: '0.25em',
         textTransform: 'uppercase',
         color,
@@ -91,7 +91,7 @@ export default function AlteredEarthPressPage() {
                   fontFamily: 'Barlow, sans-serif',
                   fontWeight: 300,
                   fontSize: '18px',
-                  color: '#888888',
+                  color: '#C0C0C0',
                   maxWidth: '580px',
                   lineHeight: 1.7,
                   marginBottom: '40px',
@@ -207,7 +207,7 @@ export default function AlteredEarthPressPage() {
                       style={{
                         fontFamily: 'Barlow Condensed, sans-serif',
                         fontWeight: 900,
-                        fontSize: '10px',
+                        fontSize: '13px',
                         letterSpacing: '0.2em',
                         textTransform: 'uppercase',
                         color: '#D4A017',
@@ -265,7 +265,7 @@ export default function AlteredEarthPressPage() {
                       style={{
                         fontFamily: 'Barlow Condensed, sans-serif',
                         fontWeight: 900,
-                        fontSize: '10px',
+                        fontSize: '13px',
                         letterSpacing: '0.2em',
                         textTransform: 'uppercase',
                         color: '#2D8A4E',

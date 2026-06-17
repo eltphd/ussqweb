@@ -13,7 +13,7 @@ function Eyebrow({ text, color = ERA_BLUE }: { text: string; color?: string }) {
       style={{
         fontFamily: 'Barlow Condensed, sans-serif',
         fontWeight: 900,
-        fontSize: '10px',
+        fontSize: '13px',
         letterSpacing: '0.25em',
         textTransform: 'uppercase',
         color,
@@ -277,7 +277,7 @@ export default function AtlasERAPage() {
                         style={{
                           fontFamily: 'Barlow Condensed, sans-serif',
                           fontWeight: 900,
-                          fontSize: '10px',
+                          fontSize: '13px',
                           letterSpacing: '0.2em',
                           textTransform: 'uppercase',
                           color: ERA_BLUE,
@@ -313,7 +313,7 @@ export default function AtlasERAPage() {
                         style={{
                           fontFamily: 'Barlow Condensed, sans-serif',
                           fontWeight: 900,
-                          fontSize: '10px',
+                          fontSize: '13px',
                           letterSpacing: '0.15em',
                           textTransform: 'uppercase',
                           color: ERA_BLUE,
@@ -513,7 +513,7 @@ export default function AtlasERAPage() {
                   style={{
                     fontFamily: 'Barlow Condensed, sans-serif',
                     fontWeight: 900,
-                    fontSize: '10px',
+                    fontSize: '13px',
                     letterSpacing: '0.25em',
                     textTransform: 'uppercase',
                     color: ERA_BLUE,
@@ -592,7 +592,7 @@ export default function AtlasERAPage() {
                   style={{
                     fontFamily: 'Barlow Condensed, sans-serif',
                     fontWeight: 600,
-                    fontSize: '10px',
+                    fontSize: '13px',
                     letterSpacing: '0.15em',
                     textTransform: 'uppercase',
                     color: '#888888',

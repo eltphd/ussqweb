@@ -13,7 +13,7 @@ function Eyebrow({ text, color = '#B5142A' }: { text: string; color?: string }) 
       style={{
         fontFamily: 'Barlow Condensed, sans-serif',
         fontWeight: 900,
-        fontSize: '10px',
+        fontSize: '13px',
         letterSpacing: '0.25em',
         textTransform: 'uppercase',
         color,
@@ -78,7 +78,7 @@ export default function AtlasPage() {
               style={{
                 fontFamily: 'Barlow, sans-serif',
                 fontSize: '13px',
-                color: '#888888',
+                color: '#C0C0C0',
                 lineHeight: 1.6,
               }}
             >
@@ -204,7 +204,7 @@ export default function AtlasPage() {
                   fontFamily: 'Barlow, sans-serif',
                   fontWeight: 300,
                   fontSize: '16px',
-                  color: '#888888',
+                  color: '#C0C0C0',
                   maxWidth: '560px',
                   lineHeight: 1.6,
                   marginBottom: '48px',
@@ -235,7 +235,7 @@ export default function AtlasPage() {
                       style={{
                         fontFamily: 'Barlow Condensed, sans-serif',
                         fontWeight: 900,
-                        fontSize: '10px',
+                        fontSize: '13px',
                         letterSpacing: '0.2em',
                         textTransform: 'uppercase',
                         color: '#B5142A',
@@ -259,7 +259,7 @@ export default function AtlasPage() {
                       style={{
                         fontFamily: 'Barlow, sans-serif',
                         fontSize: '13px',
-                        color: '#888888',
+                        color: '#C0C0C0',
                         lineHeight: 1.5,
                       }}
                     >
@@ -366,7 +366,7 @@ export default function AtlasPage() {
                   style={{
                     fontFamily: 'Barlow Condensed, sans-serif',
                     fontWeight: 900,
-                    fontSize: '10px',
+                    fontSize: '13px',
                     letterSpacing: '0.25em',
                     textTransform: 'uppercase',
                     color: '#FF4B1F',
@@ -457,10 +457,10 @@ export default function AtlasPage() {
                   style={{
                     fontFamily: 'Barlow Condensed, sans-serif',
                     fontWeight: 600,
-                    fontSize: '10px',
+                    fontSize: '13px',
                     letterSpacing: '0.15em',
                     textTransform: 'uppercase',
-                    color: '#888888',
+                    color: '#C0C0C0',
                     marginBottom: '10px',
                   }}
                 >
@@ -641,7 +641,7 @@ export default function AtlasPage() {
                   fontFamily: 'Barlow, sans-serif',
                   fontWeight: 300,
                   fontSize: '18px',
-                  color: '#888888',
+                  color: '#C0C0C0',
                   maxWidth: '520px',
                   lineHeight: 1.7,
                   marginBottom: '32px',

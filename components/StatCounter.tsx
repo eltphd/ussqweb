@@ -62,11 +62,11 @@ export default function StatCounter({ value, label }: StatCounterProps) {
         style={{
           fontFamily: 'Barlow Condensed, sans-serif',
           fontWeight: 600,
-          fontSize: '11px',
+          fontSize: '13px',
           letterSpacing: '0.15em',
           textTransform: 'uppercase',
-          color: '#888888',
-          marginTop: '6px',
+          color: '#555555',
+          marginTop: '8px',
         }}
       >
         {label}

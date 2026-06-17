@@ -1,8 +1,8 @@
 'use client';
 
+import Image from 'next/image';
 import Navigation from '@/components/Navigation';
 import AnimateOnScroll from '@/components/AnimateOnScroll';
-import PhotoPlaceholder from '@/components/PhotoPlaceholder';
 import Footer from '@/components/Footer';
 
 function Eyebrow({ text, color = '#D4A017' }: { text: string; color?: string }) {
@@ -11,8 +11,8 @@ function Eyebrow({ text, color = '#D4A017' }: { text: string; color?: string }) 
       style={{
         fontFamily: 'Barlow Condensed, sans-serif',
         fontWeight: 900,
-        fontSize: '10px',
-        letterSpacing: '0.25em',
+        fontSize: '13px',
+        letterSpacing: '0.22em',
         textTransform: 'uppercase',
         color,
         marginBottom: '16px',
@@ -78,7 +78,7 @@ export default function AboutPage() {
                   fontFamily: 'Barlow, sans-serif',
                   fontWeight: 300,
                   fontSize: '20px',
-                  color: '#888888',
+                  color: '#C0C0C0',
                   maxWidth: '640px',
                   lineHeight: 1.7,
                 }}
@@ -111,40 +111,17 @@ export default function AboutPage() {
             <AnimateOnScroll delay={0.1}>
               <div style={{ maxWidth: '800px' }}>
                 <div style={{ height: '3px', backgroundColor: '#D4A017', marginBottom: '32px', maxWidth: '200px' }} />
-                <p
-                  style={{
-                    fontFamily: 'Barlow, sans-serif',
-                    fontSize: '18px',
-                    color: '#0E0E0E',
-                    lineHeight: 1.8,
-                    marginBottom: '20px',
-                  }}
-                >
+                <p style={{ fontFamily: 'Barlow, sans-serif', fontSize: '18px', color: '#0E0E0E', lineHeight: 1.8, marginBottom: '20px' }}>
                   US-Squared Research Institute exists to protect the brilliance of adolescents — especially Black and
                   Brown young people — by building the justice-centered programs, tools, and systems that ensure they
                   don&apos;t have to choose between being themselves and being safe.
                 </p>
-                <p
-                  style={{
-                    fontFamily: 'Barlow, sans-serif',
-                    fontSize: '18px',
-                    color: '#0E0E0E',
-                    lineHeight: 1.8,
-                    marginBottom: '20px',
-                  }}
-                >
+                <p style={{ fontFamily: 'Barlow, sans-serif', fontSize: '18px', color: '#0E0E0E', lineHeight: 1.8, marginBottom: '20px' }}>
                   We believe that brilliance is not earned through suffering — it is inherent. And we believe that
                   organizations, educators, and communities have a responsibility to build the infrastructure that allows
                   that brilliance to flourish.
                 </p>
-                <p
-                  style={{
-                    fontFamily: 'Barlow, sans-serif',
-                    fontSize: '18px',
-                    color: '#0E0E0E',
-                    lineHeight: 1.8,
-                  }}
-                >
+                <p style={{ fontFamily: 'Barlow, sans-serif', fontSize: '18px', color: '#0E0E0E', lineHeight: 1.8 }}>
                   Our work is grounded in peer-reviewed research, community accountability, and a relentless commitment
                   to the young people who deserve better than what they&apos;ve been given.
                 </p>
@@ -173,8 +150,15 @@ export default function AboutPage() {
 
             <div className="grid-leadership">
               <AnimateOnScroll delay={0.05}>
-                <div style={{ borderTop: '4px solid #D4A017' }}>
-                  <PhotoPlaceholder label="Dr. Erica L. Tartt, PhD" aspectRatio="3/4" />
+                <div style={{ borderTop: '4px solid #D4A017', position: 'relative', overflow: 'hidden', aspectRatio: '3/4', width: '100%', backgroundColor: '#1A1A1A' }}>
+                  <Image
+                    src="/downloads/erica image.webp"
+                    alt="Dr. Erica L. Tartt, PhD — Founder & Research Director, US-Squared Research Institute"
+                    fill
+                    style={{ objectFit: 'cover', objectPosition: 'center top' }}
+                    sizes="(max-width: 768px) 100vw, 40vw"
+                    priority
+                  />
                 </div>
               </AnimateOnScroll>
 
@@ -195,99 +179,59 @@ export default function AboutPage() {
                     style={{
                       fontFamily: 'Barlow Condensed, sans-serif',
                       fontWeight: 600,
-                      fontSize: '12px',
+                      fontSize: '13px',
                       letterSpacing: '0.15em',
                       textTransform: 'uppercase',
                       color: '#D4A017',
-                      marginBottom: '24px',
+                      marginBottom: '28px',
                     }}
                   >
                     Founder & Research Director
                   </div>
-                  <p
-                    style={{
-                      fontFamily: 'Barlow, sans-serif',
-                      fontSize: '16px',
-                      color: '#888888',
-                      lineHeight: 1.7,
-                      marginBottom: '16px',
-                    }}
-                  >
-                    Dr. Tartt is a developmental psychologist and equity researcher whose dissertation —{' '}
-                    <em>Unraveling Hopelessness</em> — analyzed CDC data from 7,000+ Black adolescents to identify
-                    distinct mental health profiles and challenge deficit-based frameworks in youth research.
+
+                  <p style={{ fontFamily: 'Barlow, sans-serif', fontSize: '16px', color: '#CCCCCC', lineHeight: 1.8, marginBottom: '16px' }}>
+                    Dr. Tartt holds a PhD in Education from the University of California, Santa Barbara (2023),
+                    where her research focused on culture, development, and quantitative methods. Her dissertation
+                    applied Latent Class Analysis to CDC data from 7,000+ Black adolescents, identifying distinct
+                    mental health profiles and directly challenging deficit-based frameworks in youth research.
                   </p>
-                  <p
-                    style={{
-                      fontFamily: 'Barlow, sans-serif',
-                      fontSize: '16px',
-                      color: '#888888',
-                      lineHeight: 1.7,
-                      marginBottom: '16px',
-                    }}
-                  >
-                    She earned her PhD from the University of California, Santa Barbara in 2023. Her
-                    work sits at the intersection of quantitative methods, racial equity, and community-based practice.
+                  <p style={{ fontFamily: 'Barlow, sans-serif', fontSize: '16px', color: '#CCCCCC', lineHeight: 1.8, marginBottom: '16px' }}>
+                    She is an education researcher, instructional technologist, and AI-in-education strategist with
+                    nearly two decades spanning K–12 classrooms, higher education faculty development, and nonprofit
+                    innovation. Her specializations include Latent Class Analysis, mixture modeling, and
+                    mixed-methods research design — tools she uses to prove what communities already know.
                   </p>
-                  <p
-                    style={{
-                      fontFamily: 'Barlow, sans-serif',
-                      fontSize: '16px',
-                      color: '#888888',
-                      lineHeight: 1.7,
-                      marginBottom: '16px',
-                    }}
-                  >
+                  <p style={{ fontFamily: 'Barlow, sans-serif', fontSize: '16px', color: '#CCCCCC', lineHeight: 1.8, marginBottom: '16px' }}>
                     Dr. Tartt does not run programs — she designs the conditions that make them possible. Her work
                     begins where the research ends: identifying the structural gaps between brilliance and economic
                     power, then building the networks across education, publishing, and workforce that close them.
                     She is the architect of ecosystems. The delivery belongs to the people inside them.
                   </p>
-                  <p
-                    style={{
-                      fontFamily: 'Barlow, sans-serif',
-                      fontSize: '16px',
-                      color: '#888888',
-                      lineHeight: 1.7,
-                      marginBottom: '16px',
-                    }}
-                  >
-                    Dr. Tartt&apos;s current focus is on building Atlas ERA — The Education Research Association — a
-                    global field-building network that connects education practitioners, funds their work, and
-                    credentials the brilliance happening in communities the traditional system cannot see.
-                  </p>
-                  <p
-                    style={{
-                      fontFamily: 'Barlow, sans-serif',
-                      fontSize: '16px',
-                      color: '#888888',
-                      lineHeight: 1.7,
-                    }}
-                  >
-                    Her embodied methodology: discover, visit, connect, credential, invest. The field is the work.
-                    The world is the classroom.
+                  <p style={{ fontFamily: 'Barlow, sans-serif', fontSize: '16px', color: '#CCCCCC', lineHeight: 1.8 }}>
+                    She is currently building Atlas ERA — The Education Research Association — a global
+                    field-building network that connects education practitioners, funds their work, and credentials
+                    the brilliance happening in communities the traditional system cannot see.
                   </p>
 
-                  <div
-                    style={{
-                      marginTop: '28px',
-                      display: 'flex',
-                      gap: '16px',
-                      flexWrap: 'wrap',
-                    }}
-                  >
-                    {['UCSB · PhD 2023', '20+ Years in Education', 'Developmental Psychology'].map((tag) => (
+                  <div style={{ marginTop: '28px', display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+                    {[
+                      'UCSB · PhD in Education 2023',
+                      'GWU · MA Educational Technology',
+                      '20+ Years in Education',
+                      'Quantitative Methods · LCA',
+                      'AI in Education',
+                    ].map((tag) => (
                       <span
                         key={tag}
                         style={{
                           fontFamily: 'Barlow Condensed, sans-serif',
                           fontWeight: 600,
-                          fontSize: '10px',
+                          fontSize: '11px',
                           letterSpacing: '0.12em',
                           textTransform: 'uppercase',
-                          border: '1px solid #2A2A2A',
-                          color: '#555555',
-                          padding: '4px 10px',
+                          border: '1px solid #3A3A3A',
+                          color: '#AAAAAA',
+                          padding: '5px 12px',
                         }}
                       >
                         {tag}
@@ -319,13 +263,7 @@ export default function AboutPage() {
             </AnimateOnScroll>
 
             <AnimateOnScroll delay={0.1}>
-              <div
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-                  gap: '2px',
-                }}
-              >
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '2px' }}>
                 {[
                   { label: 'EIN', value: '92-3221304' },
                   { label: 'Status', value: '501(c)(3) Nonprofit' },
@@ -337,18 +275,18 @@ export default function AboutPage() {
                     style={{
                       backgroundColor: '#0E0E0E',
                       borderTop: '4px solid #D4A017',
-                      padding: '24px 20px',
+                      padding: '28px 24px',
                     }}
                   >
                     <div
                       style={{
                         fontFamily: 'Barlow Condensed, sans-serif',
-                        fontWeight: 600,
-                        fontSize: '10px',
+                        fontWeight: 700,
+                        fontSize: '12px',
                         letterSpacing: '0.2em',
                         textTransform: 'uppercase',
                         color: '#D4A017',
-                        marginBottom: '8px',
+                        marginBottom: '10px',
                       }}
                     >
                       {fact.label}
@@ -356,7 +294,7 @@ export default function AboutPage() {
                     <div
                       style={{
                         fontFamily: 'Bebas Neue, sans-serif',
-                        fontSize: '28px',
+                        fontSize: '30px',
                         color: '#F4F1EC',
                         letterSpacing: '0.02em',
                       }}
@@ -375,14 +313,7 @@ export default function AboutPage() {
                   padding: '20px 24px',
                 }}
               >
-                <p
-                  style={{
-                    fontFamily: 'Barlow, sans-serif',
-                    fontSize: '14px',
-                    color: '#555555',
-                    lineHeight: 1.5,
-                  }}
-                >
+                <p style={{ fontFamily: 'Barlow, sans-serif', fontSize: '15px', color: '#AAAAAA', lineHeight: 1.5 }}>
                   Columbus, Ohio · executive@us-squared.org
                 </p>
               </div>
@@ -406,39 +337,23 @@ export default function AboutPage() {
               >
                 OUR PARTNERS & FUNDERS
               </h2>
-              <div
-                style={{
-                  border: '1px dashed #2A2A2A',
-                  padding: '48px',
-                  textAlign: 'center',
-                }}
-              >
+              <div style={{ border: '1px dashed #3A3A3A', padding: '48px', textAlign: 'center' }}>
                 <div
                   style={{
                     fontFamily: 'Barlow Condensed, sans-serif',
                     fontWeight: 600,
-                    fontSize: '12px',
+                    fontSize: '13px',
                     letterSpacing: '0.2em',
                     textTransform: 'uppercase',
-                    color: '#555555',
+                    color: '#888888',
                     marginBottom: '12px',
                   }}
                 >
                   Coming Soon
                 </div>
-                <p
-                  style={{
-                    fontFamily: 'Barlow, sans-serif',
-                    fontSize: '14px',
-                    color: '#555555',
-                    lineHeight: 1.6,
-                  }}
-                >
+                <p style={{ fontFamily: 'Barlow, sans-serif', fontSize: '15px', color: '#AAAAAA', lineHeight: 1.6 }}>
                   Partner and funder logos will appear here. Interested in supporting our work?{' '}
-                  <a
-                    href="/connect"
-                    style={{ color: '#D4A017', textDecoration: 'none' }}
-                  >
+                  <a href="/connect" style={{ color: '#D4A017', textDecoration: 'none' }}>
                     Get in touch.
                   </a>
                 </p>
