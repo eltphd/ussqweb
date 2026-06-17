@@ -5,7 +5,9 @@ import Navigation from '@/components/Navigation';
 import AnimateOnScroll from '@/components/AnimateOnScroll';
 import Footer from '@/components/Footer';
 
-function Eyebrow({ text, color = '#B5142A' }: { text: string; color?: string }) {
+const ERA_BLUE = '#1554B5';
+
+function Eyebrow({ text, color = ERA_BLUE }: { text: string; color?: string }) {
   return (
     <div
       style={{
@@ -27,7 +29,7 @@ const timelineRows = [
   {
     phase: 'NOW',
     period: '2025–26',
-    body: 'Pilot network active. US-Squared anchor site operating. Atlas Academy Cohort 4 forming. BASEops workforce pilot underway. ERA member directory in development.',
+    body: 'Pilot network active. US-Squared anchor site operating. Atlas Academy Cohort 4 forming. BASEops workforce pilot underway.',
   },
   {
     phase: 'NEAR',
@@ -77,7 +79,7 @@ export default function AtlasERAPage() {
             padding: '100px 0 80px',
             position: 'relative',
             overflow: 'hidden',
-            borderTop: '4px solid #B5142A',
+            borderTop: `4px solid ${ERA_BLUE}`,
           }}
         >
           <div
@@ -89,7 +91,7 @@ export default function AtlasERAPage() {
               transform: 'translateY(-50%)',
               fontFamily: 'Bebas Neue, sans-serif',
               fontSize: '28vw',
-              color: 'rgba(181,20,42,0.03)',
+              color: 'rgba(21,84,181,0.04)',
               lineHeight: 1,
               pointerEvents: 'none',
               userSelect: 'none',
@@ -115,14 +117,14 @@ export default function AtlasERAPage() {
               >
                 The network already exists.
                 <br />
-                <span style={{ color: '#B5142A' }}>It just hasn&apos;t been connected yet.</span>
+                <span style={{ color: ERA_BLUE }}>It just hasn&apos;t been connected yet.</span>
               </h1>
               <p
                 style={{
                   fontFamily: 'Barlow, sans-serif',
                   fontWeight: 300,
                   fontSize: '18px',
-                  color: '#888888',
+                  color: '#AAAAAA',
                   maxWidth: '640px',
                   lineHeight: 1.7,
                   marginBottom: '40px',
@@ -142,8 +144,8 @@ export default function AtlasERAPage() {
                     fontSize: '12px',
                     letterSpacing: '0.15em',
                     textTransform: 'uppercase',
-                    backgroundColor: '#B5142A',
-                    color: '#0E0E0E',
+                    backgroundColor: ERA_BLUE,
+                    color: '#F4F1EC',
                     padding: '14px 28px',
                     textDecoration: 'none',
                     display: 'inline-block',
@@ -160,7 +162,7 @@ export default function AtlasERAPage() {
                     letterSpacing: '0.15em',
                     textTransform: 'uppercase',
                     border: '2px solid #2A2A2A',
-                    color: '#888888',
+                    color: '#AAAAAA',
                     padding: '14px 28px',
                     textDecoration: 'none',
                     display: 'inline-block',
@@ -177,7 +179,7 @@ export default function AtlasERAPage() {
         <section style={{ backgroundColor: '#F4F1EC', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
-              <Eyebrow text="The Problem" color="#B5142A" />
+              <Eyebrow text="The Problem" color={ERA_BLUE} />
               <h2
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
@@ -192,7 +194,7 @@ export default function AtlasERAPage() {
               </h2>
             </AnimateOnScroll>
             <AnimateOnScroll delay={0.1}>
-              <div style={{ height: '3px', backgroundColor: '#B5142A', marginBottom: '32px', maxWidth: '200px' }} />
+              <div style={{ height: '3px', backgroundColor: ERA_BLUE, marginBottom: '32px', maxWidth: '200px' }} />
               <p
                 style={{
                   fontFamily: 'Barlow, sans-serif',
@@ -200,6 +202,7 @@ export default function AtlasERAPage() {
                   color: '#0E0E0E',
                   lineHeight: 1.8,
                   maxWidth: '800px',
+                  marginBottom: '56px',
                 }}
               >
                 It was always supposed to be a relationship — between a learner and the world, between a young person
@@ -212,6 +215,118 @@ export default function AtlasERAPage() {
                 something better have already been at work.
               </p>
             </AnimateOnScroll>
+
+            {/* ── The Worldskool Pipeline ─────────────────────────────── */}
+            <div id="pipeline">
+              <AnimateOnScroll delay={0.05}>
+                <Eyebrow text="The Worldskool Pipeline" color={ERA_BLUE} />
+                <p
+                  style={{
+                    fontFamily: 'Barlow, sans-serif',
+                    fontWeight: 300,
+                    fontSize: '16px',
+                    color: '#444444',
+                    maxWidth: '600px',
+                    lineHeight: 1.6,
+                    marginBottom: '40px',
+                  }}
+                >
+                  These are not separate programs. They are one arc — learn who you are, create from that knowing,
+                  build economic power from what you create.
+                </p>
+              </AnimateOnScroll>
+
+              <AnimateOnScroll delay={0.1}>
+                <div
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+                    gap: '2px',
+                  }}
+                >
+                  {[
+                    {
+                      label: 'LEARN',
+                      program: 'Atlas Academy',
+                      href: '/atlas',
+                      body: 'Worldskool + BASE Framework curriculum for learners ages 14–21. Designed for neurodivergent, culturally complex, and mobile learners.',
+                    },
+                    {
+                      label: 'CREATE',
+                      program: 'Altered Earth Press',
+                      href: '/earth',
+                      body: 'Publishing, expression, and storytelling. What you learn becomes what you make, and what you make is your contribution.',
+                    },
+                    {
+                      label: 'WORK',
+                      program: 'BASEops',
+                      href: '/baseops',
+                      body: 'Workforce development network connecting business owners, community members, justice-involved individuals, and adolescents 14+ to economic opportunity.',
+                    },
+                  ].map((step) => (
+                    <div
+                      key={step.label}
+                      style={{
+                        backgroundColor: '#0E0E0E',
+                        borderTop: `4px solid ${ERA_BLUE}`,
+                        padding: '32px 28px',
+                        position: 'relative',
+                      }}
+                    >
+                      <div
+                        style={{
+                          fontFamily: 'Barlow Condensed, sans-serif',
+                          fontWeight: 900,
+                          fontSize: '10px',
+                          letterSpacing: '0.2em',
+                          textTransform: 'uppercase',
+                          color: ERA_BLUE,
+                          marginBottom: '8px',
+                        }}
+                      >
+                        {step.label}
+                      </div>
+                      <h3
+                        style={{
+                          fontFamily: 'Bebas Neue, sans-serif',
+                          fontSize: '32px',
+                          color: '#F4F1EC',
+                          letterSpacing: '0.03em',
+                          marginBottom: '16px',
+                        }}
+                      >
+                        {step.program}
+                      </h3>
+                      <p
+                        style={{
+                          fontFamily: 'Barlow, sans-serif',
+                          fontSize: '14px',
+                          color: '#AAAAAA',
+                          lineHeight: 1.7,
+                          marginBottom: '20px',
+                        }}
+                      >
+                        {step.body}
+                      </p>
+                      <Link
+                        href={step.href}
+                        style={{
+                          fontFamily: 'Barlow Condensed, sans-serif',
+                          fontWeight: 900,
+                          fontSize: '10px',
+                          letterSpacing: '0.15em',
+                          textTransform: 'uppercase',
+                          color: ERA_BLUE,
+                          textDecoration: 'none',
+                        }}
+                      >
+                        Learn More →
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              </AnimateOnScroll>
+            </div>
           </div>
         </section>
 
@@ -242,7 +357,7 @@ export default function AtlasERAPage() {
                   fontSize: '13px',
                   letterSpacing: '0.12em',
                   textTransform: 'uppercase',
-                  color: '#B5142A',
+                  color: ERA_BLUE,
                   marginBottom: '24px',
                 }}
               >
@@ -253,7 +368,6 @@ export default function AtlasERAPage() {
                   display: 'flex',
                   flexDirection: 'column',
                   gap: '2px',
-                  marginBottom: '64px',
                   maxWidth: '800px',
                 }}
               >
@@ -266,7 +380,7 @@ export default function AtlasERAPage() {
                   <div
                     key={i}
                     style={{
-                      borderLeft: '3px solid #B5142A',
+                      borderLeft: `3px solid ${ERA_BLUE}`,
                       paddingLeft: '20px',
                       paddingTop: '12px',
                       paddingBottom: '12px',
@@ -278,7 +392,7 @@ export default function AtlasERAPage() {
                       style={{
                         fontFamily: 'Barlow, sans-serif',
                         fontSize: '16px',
-                        color: '#888888',
+                        color: '#C0C0C0',
                         lineHeight: 1.6,
                       }}
                     >
@@ -288,129 +402,14 @@ export default function AtlasERAPage() {
                 ))}
               </div>
             </AnimateOnScroll>
-
-            {/* ── Pipeline ──────────────────────────────────────────────── */}
-            <div id="pipeline">
-              <AnimateOnScroll delay={0.05}>
-                <Eyebrow text="The Worldskool Pipeline" />
-                <p
-                  style={{
-                    fontFamily: 'Barlow, sans-serif',
-                    fontWeight: 300,
-                    fontSize: '16px',
-                    color: '#555555',
-                    maxWidth: '600px',
-                    lineHeight: 1.6,
-                    marginBottom: '40px',
-                  }}
-                >
-                  These are not separate programs. They are one arc — learn who you are, create from that knowing,
-                  build economic power from what you create.
-                </p>
-              </AnimateOnScroll>
-
-              <AnimateOnScroll delay={0.1}>
-                <div
-                  style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-                    gap: '2px',
-                  }}
-                >
-                  {[
-                    {
-                      label: 'LEARN',
-                      program: 'Atlas Academy',
-                      href: '/atlas',
-                      arrow: '→',
-                      body: 'Worldskool + BASE Framework curriculum for learners ages 14–21. Designed for neurodivergent, culturally complex, and mobile learners.',
-                    },
-                    {
-                      label: 'CREATE',
-                      program: 'Altered Earth Press',
-                      href: '/earth',
-                      arrow: '→',
-                      body: 'Publishing, expression, and storytelling. What you learn becomes what you make, and what you make is your contribution.',
-                    },
-                    {
-                      label: 'WORK',
-                      program: 'BASEops',
-                      href: '/baseops',
-                      arrow: null,
-                      body: 'Workforce development network connecting business owners, community members, justice-involved individuals, and adolescents 14+ to economic opportunity.',
-                    },
-                  ].map((step) => (
-                    <div
-                      key={step.label}
-                      style={{
-                        backgroundColor: '#1A1A1A',
-                        borderTop: '4px solid #B5142A',
-                        padding: '32px 28px',
-                        position: 'relative',
-                      }}
-                    >
-                      <div
-                        style={{
-                          fontFamily: 'Barlow Condensed, sans-serif',
-                          fontWeight: 900,
-                          fontSize: '10px',
-                          letterSpacing: '0.2em',
-                          textTransform: 'uppercase',
-                          color: '#B5142A',
-                          marginBottom: '8px',
-                        }}
-                      >
-                        {step.label}
-                      </div>
-                      <h3
-                        style={{
-                          fontFamily: 'Bebas Neue, sans-serif',
-                          fontSize: '32px',
-                          color: '#F4F1EC',
-                          letterSpacing: '0.03em',
-                          marginBottom: '16px',
-                        }}
-                      >
-                        {step.program}
-                      </h3>
-                      <p
-                        style={{
-                          fontFamily: 'Barlow, sans-serif',
-                          fontSize: '14px',
-                          color: '#888888',
-                          lineHeight: 1.7,
-                          marginBottom: '20px',
-                        }}
-                      >
-                        {step.body}
-                      </p>
-                      <Link
-                        href={step.href}
-                        style={{
-                          fontFamily: 'Barlow Condensed, sans-serif',
-                          fontWeight: 900,
-                          fontSize: '10px',
-                          letterSpacing: '0.15em',
-                          textTransform: 'uppercase',
-                          color: '#B5142A',
-                          textDecoration: 'none',
-                        }}
-                      >
-                        Learn More →
-                      </Link>
-                    </div>
-                  ))}
-                </div>
-              </AnimateOnScroll>
-            </div>
           </div>
         </section>
 
-        {/* ── Section 6: The Long Arc ────────────────────────────────────── */}
+        {/* ── Section 4: The Long Arc ────────────────────────────────────── */}
         <section style={{ backgroundColor: '#F4F1EC', padding: '80px 0' }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
-              <Eyebrow text="The Long Arc" color="#B5142A" />
+              <Eyebrow text="The Long Arc" color={ERA_BLUE} />
               <h2
                 style={{
                   fontFamily: 'Bebas Neue, sans-serif',
@@ -448,7 +447,7 @@ export default function AtlasERAPage() {
                   <div
                     style={{
                       backgroundColor: '#0E0E0E',
-                      borderLeft: '6px solid #B5142A',
+                      borderLeft: `6px solid ${ERA_BLUE}`,
                       padding: '28px 32px',
                       display: 'grid',
                       gridTemplateColumns: '120px 1fr',
@@ -461,7 +460,7 @@ export default function AtlasERAPage() {
                         style={{
                           fontFamily: 'Bebas Neue, sans-serif',
                           fontSize: '28px',
-                          color: '#B5142A',
+                          color: ERA_BLUE,
                           letterSpacing: '0.05em',
                           lineHeight: 1,
                           marginBottom: '4px',
@@ -475,7 +474,7 @@ export default function AtlasERAPage() {
                           fontWeight: 600,
                           fontSize: '11px',
                           letterSpacing: '0.12em',
-                          color: '#555555',
+                          color: '#888888',
                           textTransform: 'uppercase',
                         }}
                       >
@@ -486,7 +485,7 @@ export default function AtlasERAPage() {
                       style={{
                         fontFamily: 'Barlow, sans-serif',
                         fontSize: '15px',
-                        color: '#888888',
+                        color: '#C0C0C0',
                         lineHeight: 1.7,
                       }}
                     >
@@ -499,8 +498,116 @@ export default function AtlasERAPage() {
           </div>
         </section>
 
-        {/* ── Section 7: Join the Network CTA ───────────────────────────── */}
-        <section style={{ backgroundColor: '#0E0E0E', padding: '80px 0', borderTop: '4px solid #B5142A' }}>
+        {/* ── Section 5: ERA Member Resource ───────────────────────────── */}
+        <section style={{ backgroundColor: '#FFFFFF', padding: '80px 0' }}>
+          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
+            <AnimateOnScroll>
+              <div
+                style={{
+                  borderTop: `4px solid ${ERA_BLUE}`,
+                  paddingTop: '32px',
+                  maxWidth: '720px',
+                }}
+              >
+                <div
+                  style={{
+                    fontFamily: 'Barlow Condensed, sans-serif',
+                    fontWeight: 900,
+                    fontSize: '10px',
+                    letterSpacing: '0.25em',
+                    textTransform: 'uppercase',
+                    color: ERA_BLUE,
+                    marginBottom: '16px',
+                  }}
+                >
+                  ERA MEMBER RESOURCE&nbsp;&nbsp;·&nbsp;&nbsp;FREE DOWNLOAD
+                </div>
+
+                <h2
+                  style={{
+                    fontFamily: 'Bebas Neue, sans-serif',
+                    fontSize: 'clamp(36px, 5vw, 64px)',
+                    color: '#0E0E0E',
+                    letterSpacing: '0.02em',
+                    lineHeight: 0.95,
+                    marginBottom: '12px',
+                  }}
+                >
+                  The Job Math Conversation
+                </h2>
+
+                <p
+                  style={{
+                    fontFamily: 'Barlow Condensed, sans-serif',
+                    fontWeight: 600,
+                    fontSize: '18px',
+                    letterSpacing: '0.06em',
+                    textTransform: 'uppercase',
+                    color: '#444444',
+                    marginBottom: '20px',
+                  }}
+                >
+                  How to Help Your Teen Work Smarter This Summer
+                </p>
+
+                <p
+                  style={{
+                    fontFamily: 'Barlow, sans-serif',
+                    fontWeight: 300,
+                    fontSize: '16px',
+                    color: '#1A1A1A',
+                    lineHeight: 1.7,
+                    marginBottom: '32px',
+                    maxWidth: '600px',
+                  }}
+                >
+                  Research-backed guidance for trusted adults. This 9-slide deck gives you the data, the scripts, and
+                  the strategy to help a teen make a smarter first-job decision — without pressure or directive framing.
+                  Includes conversation starters, what to avoid, and how to find opportunities in your city.{' '}
+                  <strong style={{ fontWeight: 500 }}>Built for any caregiver. Works anywhere in the U.S.</strong>
+                </p>
+
+                <a
+                  href="/downloads/SparentScience_LifeguardDeck.pptx"
+                  download
+                  aria-label="Download the free Job Math Conversation guide for caregivers and educators — 9-slide PowerPoint"
+                  style={{
+                    fontFamily: 'Barlow Condensed, sans-serif',
+                    fontWeight: 900,
+                    fontSize: '14px',
+                    letterSpacing: '0.15em',
+                    textTransform: 'uppercase',
+                    backgroundColor: ERA_BLUE,
+                    color: '#FFFFFF',
+                    padding: '16px 36px',
+                    textDecoration: 'none',
+                    display: 'inline-block',
+                    marginBottom: '20px',
+                  }}
+                >
+                  Download the Free Guide&nbsp;&nbsp;→
+                </a>
+
+                <div
+                  style={{
+                    fontFamily: 'Barlow Condensed, sans-serif',
+                    fontWeight: 600,
+                    fontSize: '10px',
+                    letterSpacing: '0.15em',
+                    textTransform: 'uppercase',
+                    color: '#888888',
+                    marginTop: '8px',
+                  }}
+                >
+                  Financial Literacy&nbsp;&nbsp;·&nbsp;&nbsp;Parent &amp; Caregiver Tools&nbsp;&nbsp;·&nbsp;&nbsp;Research-Backed&nbsp;&nbsp;·&nbsp;&nbsp;Free Download
+                </div>
+              </div>
+            </AnimateOnScroll>
+          </div>
+        </section>
+
+        {/* ── Section 6: Join the Network CTA ───────────────────────────── */}
+        <section style={{ backgroundColor: '#0E0E0E', padding: '80px 0', borderTop: `4px solid ${ERA_BLUE}` }}>
           <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
             <AnimateOnScroll>
               <Eyebrow text="Join the Network" />
@@ -521,16 +628,16 @@ export default function AtlasERAPage() {
                   fontFamily: 'Barlow, sans-serif',
                   fontWeight: 300,
                   fontSize: '18px',
-                  color: '#888888',
+                  color: '#C0C0C0',
                   maxWidth: '680px',
                   lineHeight: 1.7,
                   marginBottom: '48px',
                 }}
               >
                 If you are doing this work — if you are building something outside the walls, connecting learners to
-                their own brilliance, designing education that refuses to confine — we want to find you. The ERA member
-                directory opens in 2026. In the meantime, we are actively scouting. If you are an educator, mentor,
-                program director, worldschooling family, or community organization doing this kind of work, reach out.
+                their own brilliance, designing education that refuses to confine — we want to find you. We are
+                actively scouting. If you are an educator, mentor, program director, worldschooling family, or
+                community organization doing this kind of work, reach out.
               </p>
             </AnimateOnScroll>
 
@@ -539,7 +646,7 @@ export default function AtlasERAPage() {
                 display: 'grid',
                 gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
                 gap: '2px',
-                marginBottom: '32px',
+                marginBottom: '48px',
               }}
             >
               {ctaCards.map((card, i) => (
@@ -547,7 +654,7 @@ export default function AtlasERAPage() {
                   <div
                     style={{
                       backgroundColor: '#1A1A1A',
-                      borderTop: '4px solid #B5142A',
+                      borderTop: `4px solid ${ERA_BLUE}`,
                       padding: '32px 28px',
                       display: 'flex',
                       flexDirection: 'column',
@@ -569,47 +676,36 @@ export default function AtlasERAPage() {
                       style={{
                         fontFamily: 'Barlow, sans-serif',
                         fontSize: '14px',
-                        color: '#888888',
+                        color: '#C0C0C0',
                         lineHeight: 1.7,
                         flex: 1,
                       }}
                     >
                       {card.body}
                     </p>
-                    <Link
-                      href="/connect"
-                      style={{
-                        fontFamily: 'Barlow Condensed, sans-serif',
-                        fontWeight: 900,
-                        fontSize: '11px',
-                        letterSpacing: '0.15em',
-                        textTransform: 'uppercase',
-                        color: '#B5142A',
-                        textDecoration: 'none',
-                        alignSelf: 'flex-start',
-                      }}
-                    >
-                      Express Interest →
-                    </Link>
                   </div>
                 </AnimateOnScroll>
               ))}
             </div>
 
             <AnimateOnScroll delay={0.2}>
-              <p
+              <a
+                href="mailto:executive@us-squared.com"
                 style={{
                   fontFamily: 'Barlow Condensed, sans-serif',
-                  fontWeight: 600,
-                  fontSize: '11px',
-                  letterSpacing: '0.12em',
+                  fontWeight: 900,
+                  fontSize: '13px',
+                  letterSpacing: '0.15em',
                   textTransform: 'uppercase',
-                  color: '#555555',
-                  textAlign: 'center',
+                  backgroundColor: ERA_BLUE,
+                  color: '#F4F1EC',
+                  padding: '16px 40px',
+                  textDecoration: 'none',
+                  display: 'inline-block',
                 }}
               >
-                ERA Member Directory — Coming 2026
-              </p>
+                Express Interest →
+              </a>
             </AnimateOnScroll>
           </div>
         </section>

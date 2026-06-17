@@ -2,20 +2,28 @@
 
 import { useState, useEffect } from 'react';
 import { useScroll } from 'framer-motion';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
 const navLinks = [
   { label: 'ERA Network', href: '/atlas-era' },
   { label: 'Feelings Unplugged', href: '/feelings-unplugged' },
-  { label: 'Sparent Science', href: '/sparent' },
   { label: 'Research', href: '/research' },
   { label: 'About', href: '/about' },
 ];
+
+const PAGE_ACCENT: Record<string, string> = {
+  '/atlas-era': '#1554B5',
+  '/feelings-unplugged': '#D4A017',
+  '/sparent': '#3AB8F0',
+};
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const { scrollY } = useScroll();
+  const pathname = usePathname();
+  const accentColor = PAGE_ACCENT[pathname] ?? '#D4A017';
 
   useEffect(() => {
     return scrollY.on('change', (v) => setScrolled(v > 80));
@@ -104,15 +112,15 @@ export default function Navigation() {
                 letterSpacing: '0.15em',
                 textTransform: 'uppercase',
                 color: '#F4F1EC',
-                backgroundColor: '#D4A017',
+                backgroundColor: accentColor,
                 textDecoration: 'none',
                 padding: '8px 16px',
                 borderRadius: 0,
                 display: 'inline-block',
                 transition: 'background-color 0.2s ease',
               }}
-              onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = '#e03000'; }}
-              onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = '#D4A017'; }}
+              onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.opacity = '0.85'; }}
+              onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.opacity = '1'; }}
             >
               Join the Network
             </Link>
@@ -211,7 +219,7 @@ export default function Navigation() {
                 fontFamily: 'Bebas Neue, sans-serif',
                 fontSize: '32px',
                 color: '#F4F1EC',
-                backgroundColor: '#D4A017',
+                backgroundColor: accentColor,
                 textDecoration: 'none',
                 padding: '12px 24px',
                 display: 'inline-block',

@@ -349,7 +349,7 @@ export default function FeelingsUnpluggedPage() {
                   fontFamily: 'Barlow, sans-serif',
                   fontWeight: 300,
                   fontSize: '16px',
-                  color: '#888888',
+                  color: '#C0C0C0',
                   maxWidth: '560px',
                   lineHeight: 1.7,
                   marginBottom: '48px',
@@ -362,80 +362,6 @@ export default function FeelingsUnpluggedPage() {
             </AnimateOnScroll>
 
             <AnimateOnScroll delay={0.1}>
-              <div
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-                  gap: '2px',
-                  marginBottom: '48px',
-                }}
-              >
-                {[
-                  {
-                    label: 'Peer-Reviewed Foundation',
-                    title: 'Latent Transition Analysis',
-                    body: 'Tartt, E. L., Nylund-Gibson, K., et al. (in press). Latent Transition Analysis of adolescent racial discrimination and mental health outcomes. Psychological Methods.',
-                  },
-                  {
-                    label: 'Doctoral Research',
-                    title: 'Unraveling Hopelessness',
-                    body: 'Tartt, E. L. (2023). Unraveling Hopelessness: A latent class analysis of mental health profiles among Black adolescents. University of California, Santa Barbara.',
-                  },
-                  {
-                    label: 'BASE Framework',
-                    title: 'Brilliance · Authenticity · Self-Expression · Empowerment',
-                    body: 'A justice-centered developmental framework derived from dissertation research and community practice — the counter-architecture to every system that told a young person their brilliance was a problem.',
-                  },
-                ].map((item, i) => (
-                  <div
-                    key={i}
-                    style={{
-                      backgroundColor: '#1A1A1A',
-                      borderTop: '4px solid #D4A017',
-                      padding: '32px 28px',
-                    }}
-                  >
-                    <div
-                      style={{
-                        fontFamily: 'Barlow Condensed, sans-serif',
-                        fontWeight: 900,
-                        fontSize: '10px',
-                        letterSpacing: '0.2em',
-                        textTransform: 'uppercase',
-                        color: '#D4A017',
-                        marginBottom: '12px',
-                      }}
-                    >
-                      {item.label}
-                    </div>
-                    <div
-                      style={{
-                        fontFamily: 'Bebas Neue, sans-serif',
-                        fontSize: '24px',
-                        color: '#F4F1EC',
-                        letterSpacing: '0.03em',
-                        marginBottom: '12px',
-                        lineHeight: 1.1,
-                      }}
-                    >
-                      {item.title}
-                    </div>
-                    <p
-                      style={{
-                        fontFamily: 'Barlow, sans-serif',
-                        fontSize: '13px',
-                        color: '#888888',
-                        lineHeight: 1.6,
-                      }}
-                    >
-                      {item.body}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </AnimateOnScroll>
-
-            <AnimateOnScroll delay={0.15}>
               <Link
                 href="/research"
                 style={{
