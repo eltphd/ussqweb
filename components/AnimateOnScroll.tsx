@@ -1,7 +1,6 @@
 'use client';
 
-import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { useInViewOnce, useReducedMotion } from '@/lib/motion';
 
 interface AnimateOnScrollProps {
   children: React.ReactNode;
@@ -9,19 +8,20 @@ interface AnimateOnScrollProps {
   className?: string;
 }
 
+/**
+ * A short fade-and-lift as content enters the viewport. Content is visible in
+ * the server markup and stays visible with JavaScript off or reduced motion;
+ * the hidden state is only applied on the client, once the observer is live.
+ */
 export default function AnimateOnScroll({ children, delay = 0, className }: AnimateOnScrollProps) {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: '-60px 0px' });
-
+  const { ref, inView, pending } = useInViewOnce<HTMLDivElement>();
+  const reduceMotion = useReducedMotion();
+  const cls = ['reveal', !reduceMotion && pending ? 'reveal-pending' : '', !reduceMotion && inView ? 'reveal-in' : '', className ?? '']
+    .filter(Boolean)
+    .join(' ');
   return (
-    <motion.div
-      ref={ref}
-      className={className}
-      initial={{ opacity: 0, y: 24 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
-      transition={{ duration: 0.5, ease: 'easeOut', delay }}
-    >
+    <div ref={ref} className={cls} style={delay ? { transitionDelay: `${Math.min(delay, 0.2)}s` } : undefined}>
       {children}
-    </motion.div>
+    </div>
   );
 }

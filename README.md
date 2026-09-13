@@ -1,12 +1,12 @@
 # US-Squared Research Institute — Website
 
-Public website for **US-Squared Research Institute** (us-squared.org), implementing the **Signal Fire Brand System v1.0**.
+Public website for **US-Squared Research Institute** (us-squared.org), built on the ecosystem **Illuminated Field Journal** design system (US-Squared pair: Meridian ground `#131A2B`, Brass signal `#A8874F`).
 
 **EIN 92-3221304 · 501(c)(3) Nonprofit**
 
 ## Stack
 
-- **Next.js 15** (App Router, static export)
+- **Next.js 16** (App Router)
 - **Tailwind CSS v4**
 - **Framer Motion** (scroll animations, load sequences)
 - **Deployed via Vercel**
@@ -26,11 +26,25 @@ Public website for **US-Squared Research Institute** (us-squared.org), implement
 
 ## Brand System
 
-Signal Fire Brand System v1.0. Fonts via Google Fonts (free, OFL):
-- **Bebas Neue** — Display/Headlines
-- **Barlow Condensed** — Labels, eyebrows, sub-heads
-- **IBM Plex Sans** — Body copy, UI
-- **IBM Plex Mono** — Data, stats, HEX codes
+Illuminated Field Journal — the ecosystem chassis shared with Atlas Academy.
+Golden Vanguard and Signal Fire are retired; none of their colors or typefaces
+may appear in this repo (`grep -rnE "D4A017|Bebas|Barlow" app components` must
+return nothing).
+
+- `app/tokens.css` is a byte-identical copy of the canonical file in
+  `eltphd/atlas-academy` at `brand/tokens.css`. Do not edit it here; update the
+  canonical file, bump its version, and re-copy.
+- `app/globals.css` holds every class the pages use. Pages use classes and CSS
+  variables only — no raw hex, no inline font families.
+- Fonts (Newsreader, Archivo, IBM Plex Mono) are self-hosted through
+  `next/font` in `app/layout.tsx` with `font-display: swap`.
+- `<html data-venture="ussq">` sets the institute pair. Sub-brand routes wrap
+  their page in `<Venture venture="atlas|fu|press|sparent">` to carry their own
+  ground/signal while the chassis holds.
+- Contrast for every pairing is checked by `node scripts/contrast.mjs`
+  (WCAG 2.1 AA); run it after any token change.
+- No green/amber/red status ramps. Health or trend uses `<Meter>` (single-hue
+  signal gradient) with an arrow or label for direction.
 
 ## Development
 

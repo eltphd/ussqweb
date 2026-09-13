@@ -1,466 +1,153 @@
-'use client';
-
-import { useState } from 'react';
 import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import AnimateOnScroll from '@/components/AnimateOnScroll';
+import StatCounter from '@/components/StatCounter';
+import BaseopsSignup from '@/components/BaseopsSignup';
 import Footer from '@/components/Footer';
+import { Section, Eyebrow, Coord, Button, Card } from '@/components/ui';
 
-function Eyebrow({ text, color = '#9B82C4' }: { text: string; color?: string }) {
-  return (
-    <div
-      style={{
-        fontFamily: 'Barlow Condensed, sans-serif',
-        fontWeight: 900,
-        fontSize: '13px',
-        letterSpacing: '0.25em',
-        textTransform: 'uppercase',
-        color,
-        marginBottom: '16px',
-      }}
-    >
-      {text}
-    </div>
-  );
-}
+const modules = [
+  {
+    num: '01',
+    title: 'Grant Systems',
+    body: 'Grant tracking spreadsheets, narrative templates, budget justification formats, reporting calendars, and funder relationship CRM built for small-to-mid-size nonprofits.',
+  },
+  {
+    num: '02',
+    title: 'Impact Measurement',
+    body: 'Logic model templates, pre/post survey tools, data collection workflows, and dashboard frameworks for communicating your work to funders, boards, and your community.',
+  },
+];
+
+const audiences = ['Community-Based Organizations', 'Small-to-Mid Nonprofits', 'Fiscal Sponsor Projects', 'Early-Stage Orgs'];
 
 export default function BASEopsPage() {
-  const [email, setEmail] = useState('');
-  const [submitted, setSubmitted] = useState(false);
-
   return (
     <>
       <Navigation />
       <main>
-        {/* Hero */}
-        <section
-          style={{
-            backgroundColor: '#0E0E0E',
-            borderTop: '4px solid #9B82C4',
-            minHeight: '100svh',
-            display: 'flex',
-            alignItems: 'center',
-            padding: '100px 0 80px',
-            position: 'relative',
-            overflow: 'hidden',
-          }}
-        >
-          <div
-            aria-hidden="true"
-            style={{
-              position: 'absolute',
-              right: '-4vw',
-              top: '8vh',
-              fontFamily: 'Bebas Neue, sans-serif',
-              fontSize: '32vw',
-              color: 'rgba(155,130,196,0.03)',
-              lineHeight: 1,
-              pointerEvents: 'none',
-              userSelect: 'none',
-            }}
-          >
+        {/* ── Hero ───────────────────────────────────────────────────── */}
+        <section className="hero hero-short band-ground" id="top">
+          <div className="contours" aria-hidden="true" />
+          <div className="hero-mark" aria-hidden="true">
             B
           </div>
-          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px', width: '100%' }}>
-            <AnimateOnScroll>
-              <Eyebrow text="A US-Squared System · 01" />
-              <h1
-                style={{
-                  fontFamily: 'Bebas Neue, sans-serif',
-                  fontSize: 'clamp(72px, 10vw, 120px)',
-                  color: '#9B82C4',
-                  lineHeight: 0.9,
-                  letterSpacing: '0.02em',
-                  marginBottom: '20px',
-                }}
-              >
-                BASEOPS
-              </h1>
-              <p
-                style={{
-                  fontFamily: 'Barlow, sans-serif',
-                  fontWeight: 300,
-                  fontSize: '24px',
-                  color: '#F4F1EC',
-                  marginBottom: '32px',
-                  maxWidth: '640px',
-                }}
-              >
-                The scaffold beneath every mission.
-              </p>
-              <p
-                style={{
-                  fontFamily: 'Barlow, sans-serif',
-                  fontSize: '16px',
-                  color: '#C0C0C0',
-                  maxWidth: '600px',
-                  lineHeight: 1.7,
-                  marginBottom: '16px',
-                }}
-              >
-                BASEops is the workforce development network of the worldskool ecosystem. We connect business owners,
-                community members, justice-involved individuals, and young people ages 14+ to skill-building pathways
-                and economic opportunity. BASEops is where brilliance meets livelihood — the bridge between who you
-                are and what you can build.
-              </p>
-              <p
-                style={{
-                  fontFamily: 'Barlow, sans-serif',
-                  fontSize: '16px',
-                  color: '#C0C0C0',
-                  maxWidth: '600px',
-                  lineHeight: 1.7,
-                  marginBottom: '40px',
-                }}
-              >
-                The Learn arm:{' '}
-                <a
-                  href="/atlas"
-                  style={{ color: '#9B82C4', textDecoration: 'none' }}
-                >
-                  Atlas Academy →
-                </a>
-              </p>
-              <div
-                style={{
-                  backgroundColor: '#1A1A1A',
-                  borderLeft: '4px solid #9B82C4',
-                  padding: '16px 24px',
-                  display: 'inline-block',
-                }}
-              >
-                <span
-                  style={{
-                    fontFamily: 'Bebas Neue, sans-serif',
-                    fontSize: '40px',
-                    color: '#9B82C4',
-                    marginRight: '12px',
-                  }}
-                >
-                  40+
-                </span>
-                <span
-                  style={{
-                    fontFamily: 'Barlow Condensed, sans-serif',
-                    fontWeight: 600,
-                    fontSize: '11px',
-                    letterSpacing: '0.15em',
-                    textTransform: 'uppercase',
-                    color: '#C0C0C0',
-                  }}
-                >
-                  Orgs using BASEops toolkits
-                </span>
-              </div>
-            </AnimateOnScroll>
-          </div>
-        </section>
-
-        {/* Section 2: Modules */}
-        <section style={{ backgroundColor: '#0E0E0E', padding: '80px 0' }}>
-          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
-            <AnimateOnScroll>
-              <h2
-                style={{
-                  fontFamily: 'Bebas Neue, sans-serif',
-                  fontSize: '48px',
-                  color: '#F4F1EC',
-                  letterSpacing: '0.03em',
-                  marginBottom: '40px',
-                }}
-              >
-                The Modules
-              </h2>
-            </AnimateOnScroll>
-
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-                gap: '2px',
-              }}
-            >
-              {[
-                {
-                  num: '01',
-                  title: 'Grant Systems',
-                  body: 'Grant tracking spreadsheets, narrative templates, budget justification formats, reporting calendars, and funder relationship CRM built for small-to-mid-size nonprofits.',
-                },
-                {
-                  num: '02',
-                  title: 'Impact Measurement',
-                  body: 'Logic model templates, pre/post survey tools, data collection workflows, and dashboard frameworks for communicating your work to funders, boards, and your community.',
-                },
-              ].map((mod) => (
-                <AnimateOnScroll key={mod.num} delay={parseInt(mod.num) * 0.05}>
-                  <div
-                    style={{
-                      backgroundColor: '#1A1A1A',
-                      borderTop: '4px solid #9B82C4',
-                      padding: '32px 28px',
-                    }}
-                  >
-                    <div
-                      style={{
-                        fontFamily: 'Barlow Condensed, sans-serif',
-                        fontWeight: 900,
-                        fontSize: '13px',
-                        letterSpacing: '0.2em',
-                        textTransform: 'uppercase',
-                        color: '#9B82C4',
-                        marginBottom: '16px',
-                      }}
-                    >
-                      Module {mod.num}
-                    </div>
-                    <h3
-                      style={{
-                        fontFamily: 'Bebas Neue, sans-serif',
-                        fontSize: '32px',
-                        color: '#F4F1EC',
-                        letterSpacing: '0.03em',
-                        marginBottom: '16px',
-                      }}
-                    >
-                      {mod.title}
-                    </h3>
-                    <p
-                      style={{
-                        fontFamily: 'Barlow, sans-serif',
-                        fontSize: '14px',
-                        color: '#C0C0C0',
-                        lineHeight: 1.7,
-                        marginBottom: '20px',
-                      }}
-                    >
-                      {mod.body}
-                    </p>
-                    <a
-                      href="#get-access"
-                      style={{
-                        fontFamily: 'Barlow Condensed, sans-serif',
-                        fontWeight: 900,
-                        fontSize: '13px',
-                        letterSpacing: '0.15em',
-                        textTransform: 'uppercase',
-                        color: '#9B82C4',
-                        textDecoration: 'none',
-                      }}
-                    >
-                      Download →
-                    </a>
-                  </div>
-                </AnimateOnScroll>
-              ))}
+          <div className="container" style={{ position: 'relative' }}>
+            <Eyebrow>A US-Squared System · 01</Eyebrow>
+            <h1 className="display-1" style={{ maxWidth: '12ch', marginBottom: 28 }}>
+              BASEops
+            </h1>
+            <hr className="rule" style={{ maxWidth: 120, marginBottom: 28 }} />
+            <p className="lede measure" style={{ marginBottom: 24 }}>
+              The scaffold beneath every mission.
+            </p>
+            <p className="body measure" style={{ marginBottom: 16 }}>
+              BASEops is the workforce development network of the worldskool ecosystem. We connect business owners,
+              community members, justice-involved individuals, and young people ages 14+ to skill-building pathways
+              and economic opportunity. BASEops is where brilliance meets livelihood — the bridge between who you are
+              and what you can build.
+            </p>
+            <p className="body measure" style={{ marginBottom: 36 }}>
+              The Learn arm:{' '}
+              <Link href="/atlas" className="btn-link">
+                Atlas Academy →
+              </Link>
+            </p>
+            <div className="cluster" style={{ gap: 14 }}>
+              <Button href="#get-access">Get the playbook</Button>
+              <Button href="#modules" variant="ghost">
+                See the modules
+              </Button>
+            </div>
+            <div className="grid-stats-3 hairline-top" style={{ marginTop: 48, paddingTop: 32 }}>
+              <StatCounter value="40+" label="Orgs using BASEops toolkits" />
+            </div>
+            <div style={{ marginTop: 48 }}>
+              <Coord />
             </div>
           </div>
         </section>
 
-        {/* Section 3: Who It's For */}
-        <section style={{ backgroundColor: '#F4F1EC', padding: '80px 0' }}>
-          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
-            <AnimateOnScroll>
-              <Eyebrow text="Built For" color="#0E0E0E" />
-              <h2
-                style={{
-                  fontFamily: 'Bebas Neue, sans-serif',
-                  fontSize: '64px',
-                  color: '#0E0E0E',
-                  letterSpacing: '0.02em',
-                  marginBottom: '40px',
-                  lineHeight: 0.95,
-                }}
-              >
-                WHO IT&apos;S FOR
-              </h2>
-            </AnimateOnScroll>
+        {/* ── Modules ────────────────────────────────────────────────── */}
+        <Section id="modules" band="raised">
+          <AnimateOnScroll>
+            <Eyebrow>Toolkits</Eyebrow>
+            <h2 className="display-2" style={{ marginBottom: 40 }}>
+              The <em>Modules</em>
+            </h2>
+          </AnimateOnScroll>
 
-            <AnimateOnScroll delay={0.1}>
-              <div
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-                  gap: '2px',
-                  marginBottom: '48px',
-                }}
-              >
-                {[
-                  'Community-Based Organizations',
-                  'Small-to-Mid Nonprofits',
-                  'Fiscal Sponsor Projects',
-                  'Early-Stage Orgs',
-                ].map((org) => (
-                  <div
-                    key={org}
-                    style={{
-                      backgroundColor: '#0E0E0E',
-                      borderTop: '4px solid #9B82C4',
-                      padding: '20px 18px',
-                      fontFamily: 'Bebas Neue, sans-serif',
-                      fontSize: '20px',
-                      color: '#F4F1EC',
-                      letterSpacing: '0.03em',
-                    }}
-                  >
+          <div className="grid-2">
+            {modules.map((mod, i) => (
+              <AnimateOnScroll key={mod.num} delay={0.05 * (i + 1)}>
+                <Card>
+                  <span className="kicker" style={{ display: 'block', marginBottom: 14 }}>
+                    Module {mod.num}
+                  </span>
+                  <h3 className="display-3" style={{ marginBottom: 14 }}>
+                    {mod.title}
+                  </h3>
+                  <p className="small muted" style={{ marginBottom: 22 }}>
+                    {mod.body}
+                  </p>
+                  <Button href="#get-access" variant="link">
+                    Download →
+                  </Button>
+                </Card>
+              </AnimateOnScroll>
+            ))}
+          </div>
+        </Section>
+
+        {/* ── Who it's for ───────────────────────────────────────────── */}
+        <Section id="who-its-for" band="paper">
+          <AnimateOnScroll>
+            <Eyebrow>Built For</Eyebrow>
+            <h2 className="display-2" style={{ marginBottom: 40 }}>
+              Who it&apos;s <em>for</em>
+            </h2>
+          </AnimateOnScroll>
+
+          <AnimateOnScroll delay={0.1}>
+            <div className="grid-4" style={{ marginBottom: 48 }}>
+              {audiences.map((org) => (
+                <Card key={org} plain>
+                  <span className="display-3" style={{ display: 'block' }}>
                     {org}
-                  </div>
-                ))}
-              </div>
-            </AnimateOnScroll>
+                  </span>
+                </Card>
+              ))}
+            </div>
+          </AnimateOnScroll>
 
-            {/* Testimonial */}
-            <AnimateOnScroll delay={0.15}>
-              <blockquote
-                style={{
-                  borderLeft: '3px solid #9B82C4',
-                  paddingLeft: '24px',
-                  maxWidth: '640px',
-                }}
-              >
-                <p
-                  style={{
-                    fontFamily: 'Barlow, sans-serif',
-                    fontStyle: 'italic',
-                    fontSize: '20px',
-                    color: '#0E0E0E',
-                    lineHeight: 1.6,
-                    marginBottom: '12px',
-                  }}
-                >
-                  &ldquo;BASEops transformed how we manage grants. We finally have systems that match the scale of our
-                  ambitions.&rdquo;
-                </p>
-                <cite
-                  style={{
-                    fontFamily: 'Barlow Condensed, sans-serif',
-                    fontStyle: 'normal',
-                    fontWeight: 600,
-                    fontSize: '11px',
-                    letterSpacing: '0.15em',
-                    textTransform: 'uppercase',
-                    color: '#C0C0C0',
-                  }}
-                >
-                  — [Placeholder Name, Org]
-                </cite>
-              </blockquote>
-            </AnimateOnScroll>
-          </div>
-        </section>
+          <AnimateOnScroll delay={0.15}>
+            <blockquote className="pull measure">
+              &ldquo;BASEops transformed how we manage grants. We finally have systems that match the scale of our
+              ambitions.&rdquo;
+              <cite>Ahmere</cite>
+            </blockquote>
+          </AnimateOnScroll>
+        </Section>
 
-        {/* Section 4: Get Access */}
-        <section id="get-access" style={{ backgroundColor: '#0E0E0E', padding: '80px 0' }}>
-          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
-            <AnimateOnScroll>
-              <Eyebrow text="Free Access" />
-              <h2
-                style={{
-                  fontFamily: 'Bebas Neue, sans-serif',
-                  fontSize: '64px',
-                  color: '#F4F1EC',
-                  letterSpacing: '0.02em',
-                  marginBottom: '16px',
-                  lineHeight: 0.95,
-                }}
-              >
-                GET THE PLAYBOOK
-              </h2>
-              <p
-                style={{
-                  fontFamily: 'Barlow, sans-serif',
-                  fontWeight: 300,
-                  fontSize: '18px',
-                  color: '#C0C0C0',
-                  maxWidth: '520px',
-                  lineHeight: 1.6,
-                  marginBottom: '36px',
-                }}
-              >
-                Download the free BASEops playbook. Zero cost. Built for lean community organizations.
-              </p>
+        {/* ── Get access ─────────────────────────────────────────────── */}
+        <Section id="get-access" band="ground">
+          <AnimateOnScroll>
+            <Eyebrow>Free Access</Eyebrow>
+            <h2 className="display-2" style={{ marginBottom: 16 }}>
+              Get the <em>playbook</em>
+            </h2>
+            <p className="lede measure-narrow" style={{ marginBottom: 36 }}>
+              Download the free BASEops playbook. Zero cost. Built for lean community organizations.
+            </p>
+            <BaseopsSignup />
+          </AnimateOnScroll>
 
-              {submitted ? (
-                <div
-                  style={{
-                    fontFamily: 'Barlow, sans-serif',
-                    fontSize: '16px',
-                    color: '#9B82C4',
-                    padding: '20px 24px',
-                    border: '1px solid #9B82C4',
-                    display: 'inline-block',
-                  }}
-                >
-                  Thank you! Check your inbox for the BASEops playbook.
-                </div>
-              ) : (
-                <form
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    setSubmitted(true);
-                  }}
-                  style={{ display: 'flex', gap: '0', maxWidth: '480px' }}
-                >
-                  <input
-                    type="email"
-                    placeholder="your@email.com"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    style={{
-                      flex: 1,
-                      padding: '14px 16px',
-                      border: '2px solid #2A2A2A',
-                      borderRight: 'none',
-                      backgroundColor: '#1A1A1A',
-                      color: '#F4F1EC',
-                      fontFamily: 'Barlow, sans-serif',
-                      fontSize: '14px',
-                      outline: 'none',
-                    }}
-                  />
-                  <button
-                    type="submit"
-                    style={{
-                      fontFamily: 'Barlow Condensed, sans-serif',
-                      fontWeight: 900,
-                      fontSize: '11px',
-                      letterSpacing: '0.15em',
-                      textTransform: 'uppercase',
-                      backgroundColor: '#9B82C4',
-                      color: '#0E0E0E',
-                      padding: '14px 24px',
-                      border: 'none',
-                      cursor: 'pointer',
-                      flexShrink: 0,
-                    }}
-                  >
-                    Download Free →
-                  </button>
-                </form>
-              )}
-            </AnimateOnScroll>
-          </div>
-        </section>
-
-        {/* Back link */}
-        <section style={{ backgroundColor: '#0E0E0E', padding: '0 0 48px' }}>
-          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
-            <Link
-              href="/"
-              style={{
-                fontFamily: 'Barlow Condensed, sans-serif',
-                fontWeight: 600,
-                fontSize: '11px',
-                letterSpacing: '0.15em',
-                textTransform: 'uppercase',
-                color: '#AAAAAA',
-                textDecoration: 'none',
-              }}
-            >
+          <div className="mt-8">
+            <Link href="/" className="btn btn-link">
               ← Back to US Squared
             </Link>
           </div>
-        </section>
+        </Section>
 
         <Footer />
       </main>

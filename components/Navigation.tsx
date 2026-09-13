@@ -1,246 +1,163 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useScroll } from 'framer-motion';
-import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const navLinks = [
-  { label: 'ERA Network', href: '/atlas-era' },
+  { label: 'Atlas ERA', href: '/atlas-era' },
+  { label: 'Atlas Academy', href: '/atlas' },
   { label: 'Feelings Unplugged', href: '/feelings-unplugged' },
   { label: 'Research', href: '/research' },
   { label: 'About', href: '/about' },
 ];
 
-const PAGE_ACCENT: Record<string, string> = {
-  '/atlas-era': '#1554B5',
-  '/feelings-unplugged': '#D4A017',
-  '/sparent': '#3AB8F0',
-};
-
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const { scrollY } = useScroll();
   const pathname = usePathname();
-  const accentColor = PAGE_ACCENT[pathname] ?? '#D4A017';
 
   useEffect(() => {
-    return scrollY.on('change', (v) => setScrolled(v > 80));
-  }, [scrollY]);
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    const frame = requestAnimationFrame(onScroll);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener('scroll', onScroll);
+    };
+  }, []);
 
   useEffect(() => {
-    if (menuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
+    return () => {
       document.body.style.overflow = '';
-    }
-    return () => { document.body.style.overflow = ''; };
+    };
   }, [menuOpen]);
 
   return (
     <>
-      <nav
+      <header
         style={{
           position: 'fixed',
           top: 0,
           left: 0,
           right: 0,
           zIndex: 100,
-          backgroundColor: scrolled ? '#0E0E0E' : 'transparent',
-          borderBottom: scrolled ? '3px solid #D4A017' : '3px solid transparent',
-          transition: 'background-color 0.3s ease, border-color 0.3s ease',
+          backgroundColor: scrolled || menuOpen ? 'var(--ground)' : 'transparent',
+          borderBottom: `1px solid ${scrolled ? 'var(--brass-600)' : 'transparent'}`,
+          color: 'var(--on-ground)',
+          transition: 'background-color var(--motion-base) ease, border-color var(--motion-base) ease',
         }}
       >
         <div
-          style={{
-            maxWidth: '1400px',
-            margin: '0 auto',
-            padding: '0 24px',
-            height: '64px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-          }}
+          className="container"
+          style={{ height: 68, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 24 }}
         >
-          {/* Logo */}
-          <Link
-            href="/"
-            style={{
-              fontFamily: 'Bebas Neue, sans-serif',
-              fontSize: '22px',
-              color: '#F4F1EC',
-              textDecoration: 'none',
-              letterSpacing: '0.05em',
-              flexShrink: 0,
-            }}
-          >
-            US² | Atlas ERA
+          <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'baseline', gap: 12, flexShrink: 0 }}>
+            <span className="mark">US²</span>
+            <span
+              style={{
+                fontFamily: 'var(--font-display)',
+                fontWeight: 400,
+                fontSize: 19,
+                letterSpacing: '-0.005em',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              US-Squared Research Institute
+            </span>
           </Link>
 
-          {/* Desktop Nav */}
-          <div
-            className="hidden md:flex"
-            style={{ alignItems: 'center', gap: '28px' }}
-          >
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                style={{
-                  fontFamily: 'Barlow Condensed, sans-serif',
-                  fontWeight: 600,
-                  fontSize: '11px',
-                  letterSpacing: '0.15em',
-                  textTransform: 'uppercase',
-                  color: '#A8A8A8',
-                  textDecoration: 'none',
-                  transition: 'color 0.2s ease',
-                }}
-                onMouseEnter={(e) => { (e.target as HTMLElement).style.color = '#F4F1EC'; }}
-                onMouseLeave={(e) => { (e.target as HTMLElement).style.color = '#A8A8A8'; }}
-              >
-                {link.label}
-              </Link>
-            ))}
-            <Link
-              href="/connect"
-              style={{
-                fontFamily: 'Barlow Condensed, sans-serif',
-                fontWeight: 900,
-                fontSize: '11px',
-                letterSpacing: '0.15em',
-                textTransform: 'uppercase',
-                color: '#F4F1EC',
-                backgroundColor: accentColor,
-                textDecoration: 'none',
-                padding: '8px 16px',
-                borderRadius: 0,
-                display: 'inline-block',
-                transition: 'background-color 0.2s ease',
-              }}
-              onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.opacity = '0.85'; }}
-              onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.opacity = '1'; }}
-            >
-              Join the Network
+          <nav className="nav-desktop" aria-label="Primary" style={{ display: 'flex', alignItems: 'center', gap: 26 }}>
+            {navLinks.map((link) => {
+              const active = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  aria-current={active ? 'page' : undefined}
+                  className="kicker"
+                  style={{
+                    textDecoration: 'none',
+                    color: active ? 'var(--on-ground)' : 'var(--on-ground-muted)',
+                    borderBottom: `1px solid ${active ? 'var(--brass-600)' : 'transparent'}`,
+                    paddingBottom: 4,
+                    transition: 'color var(--motion-fast) ease',
+                  }}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
+            <Link href="/connect" className="btn btn-primary" style={{ minHeight: 40, padding: '8px 16px' }}>
+              Connect
             </Link>
-          </div>
+          </nav>
 
-          {/* Mobile Hamburger */}
           <button
-            className="flex md:hidden"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
+            className="menu-toggle"
+            onClick={() => setMenuOpen((v) => !v)}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
             style={{
               background: 'none',
-              border: 'none',
+              border: '1px solid var(--line)',
+              borderRadius: 'var(--radius)',
               cursor: 'pointer',
-              padding: '8px',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '5px',
+              padding: '8px 12px',
+              alignItems: 'center',
+              gap: 10,
             }}
           >
-            <span
-              style={{
-                display: 'block',
-                width: '24px',
-                height: '2px',
-                backgroundColor: '#F4F1EC',
-                transition: 'transform 0.2s ease, opacity 0.2s ease',
-                transform: menuOpen ? 'translateY(7px) rotate(45deg)' : 'none',
-              }}
-            />
-            <span
-              style={{
-                display: 'block',
-                width: '24px',
-                height: '2px',
-                backgroundColor: '#F4F1EC',
-                transition: 'opacity 0.2s ease',
-                opacity: menuOpen ? 0 : 1,
-              }}
-            />
-            <span
-              style={{
-                display: 'block',
-                width: '24px',
-                height: '2px',
-                backgroundColor: '#F4F1EC',
-                transition: 'transform 0.2s ease, opacity 0.2s ease',
-                transform: menuOpen ? 'translateY(-7px) rotate(-45deg)' : 'none',
-              }}
-            />
+            <span className="kicker" style={{ color: 'var(--on-ground)' }}>{menuOpen ? 'Close' : 'Menu'}</span>
           </button>
         </div>
-      </nav>
+      </header>
 
-      {/* Mobile Full-Screen Menu */}
       {menuOpen && (
         <div
+          id="mobile-menu"
           style={{
             position: 'fixed',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundColor: '#0E0E0E',
+            inset: 0,
             zIndex: 99,
+            backgroundColor: 'var(--ground)',
+            color: 'var(--on-ground)',
             display: 'flex',
             flexDirection: 'column',
-            alignItems: 'flex-start',
-            justifyContent: 'center',
-            padding: '80px 32px 48px',
+            padding: '96px 24px 40px',
           }}
         >
-          <nav style={{ display: 'flex', flexDirection: 'column', gap: '24px', width: '100%' }}>
-            {navLinks.map((link) => (
+          <nav aria-label="Mobile" style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
+            {navLinks.map((link, i) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
                 style={{
-                  fontFamily: 'Bebas Neue, sans-serif',
-                  fontSize: '32px',
-                  color: '#F4F1EC',
+                  fontFamily: 'var(--font-display)',
+                  fontWeight: 380,
+                  fontSize: 32,
+                  lineHeight: 1.1,
                   textDecoration: 'none',
-                  letterSpacing: '0.05em',
-                  borderBottom: '1px solid #1A1A1A',
-                  paddingBottom: '20px',
+                  padding: '18px 0',
+                  borderBottom: '1px solid var(--line)',
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'baseline',
                 }}
               >
-                {link.label}
+                <span>{link.label}</span>
+                <span className="row-num">{String(i + 1).padStart(2, '0')}</span>
               </Link>
             ))}
-            <Link
-              href="/connect"
-              onClick={() => setMenuOpen(false)}
-              style={{
-                fontFamily: 'Bebas Neue, sans-serif',
-                fontSize: '32px',
-                color: '#F4F1EC',
-                backgroundColor: accentColor,
-                textDecoration: 'none',
-                padding: '12px 24px',
-                display: 'inline-block',
-                marginTop: '8px',
-                letterSpacing: '0.05em',
-              }}
-            >
-              Join the Network
+            <Link href="/connect" onClick={() => setMenuOpen(false)} className="btn btn-primary mt-4">
+              Connect
             </Link>
           </nav>
-          <div
-            style={{
-              marginTop: 'auto',
-              fontFamily: 'Barlow Condensed, sans-serif',
-              fontSize: '10px',
-              color: '#555555',
-              letterSpacing: '0.15em',
-              textTransform: 'uppercase',
-            }}
-          >
-            EIN 92-3221304 · 501(c)(3) Nonprofit
+          <div className="coord" style={{ marginTop: 'auto' }}>
+            EIN 92-3221304 · 501(c)(3)
           </div>
         </div>
       )}

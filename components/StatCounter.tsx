@@ -1,7 +1,7 @@
 'use client';
 
-import { useRef, useEffect, useState } from 'react';
-import { useInView } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { useInViewOnce, useReducedMotion } from '@/lib/motion';
 
 interface StatCounterProps {
   value: string;
@@ -11,66 +11,54 @@ interface StatCounterProps {
 function parseValue(value: string): { numeric: number; suffix: string } {
   const match = value.match(/^([\d,]+)(.*)$/);
   if (!match) return { numeric: 0, suffix: value };
-  const numeric = parseInt(match[1].replace(/,/g, ''), 10);
-  const suffix = match[2] || '';
-  return { numeric, suffix };
+  return { numeric: parseInt(match[1].replace(/,/g, ''), 10), suffix: match[2] || '' };
 }
 
-function formatNumber(n: number): string {
-  return n.toLocaleString('en-US');
-}
+const formatNumber = (n: number) => n.toLocaleString('en-US');
 
+/**
+ * Renders the final value in the server markup, so the figure is correct with
+ * JavaScript off, before hydration, and for crawlers. The count-up runs only
+ * once the element is in view and only when motion is allowed, and always
+ * lands on the exact final value.
+ */
 export default function StatCounter({ value, label }: StatCounterProps) {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: '-40px 0px' });
-  const [displayValue, setDisplayValue] = useState(0);
+  const { ref, inView } = useInViewOnce<HTMLDivElement>('-40px 0px');
+  const reduceMotion = useReducedMotion();
   const { numeric, suffix } = parseValue(value);
+  const [displayValue, setDisplayValue] = useState(numeric);
 
   useEffect(() => {
-    if (!isInView) return;
-    const duration = 1200;
-    const start = performance.now();
-
+    if (!inView || reduceMotion || numeric === 0) return;
+    const duration = 900;
+    let start = 0;
+    let frame = 0;
     const tick = (now: number) => {
-      const elapsed = now - start;
-      const progress = Math.min(elapsed / duration, 1);
-      // easeOut cubic
+      if (!start) start = now;
+      const progress = Math.min((now - start) / duration, 1);
       const eased = 1 - Math.pow(1 - progress, 3);
-      setDisplayValue(Math.round(eased * numeric));
-      if (progress < 1) {
-        requestAnimationFrame(tick);
-      }
+      setDisplayValue(progress >= 1 ? numeric : Math.round(eased * numeric));
+      if (progress < 1) frame = requestAnimationFrame(tick);
     };
-
-    requestAnimationFrame(tick);
-  }, [isInView, numeric]);
+    frame = requestAnimationFrame(tick);
+    const settle = window.setTimeout(() => setDisplayValue(numeric), duration + 50);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.clearTimeout(settle);
+      setDisplayValue(numeric);
+    };
+  }, [inView, numeric, reduceMotion]);
 
   return (
-    <div ref={ref} style={{ textAlign: 'center' }}>
-      <div
-        style={{
-          fontFamily: 'Bebas Neue, sans-serif',
-          fontSize: 'clamp(40px, 6vw, 72px)',
-          color: '#D4A017',
-          lineHeight: 1,
-          letterSpacing: '0.02em',
-        }}
-      >
-        {formatNumber(displayValue)}{suffix}
+    <div ref={ref} className="stat">
+      <div className="stat-value">
+        <span aria-hidden="true">
+          {formatNumber(displayValue)}
+          {suffix}
+        </span>
+        <span className="sr-only">{value}</span>
       </div>
-      <div
-        style={{
-          fontFamily: 'Barlow Condensed, sans-serif',
-          fontWeight: 600,
-          fontSize: '13px',
-          letterSpacing: '0.15em',
-          textTransform: 'uppercase',
-          color: '#555555',
-          marginTop: '8px',
-        }}
-      >
-        {label}
-      </div>
+      <div className="stat-label">{label}</div>
     </div>
   );
 }
