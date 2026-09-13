@@ -87,6 +87,7 @@ img, svg { display: block; max-width: 100%; }
 }
 .band-ground, .band-raised, .venture, body { --line: color-mix(in srgb, var(--on-ground) 18%, transparent); }
 .band-paper, .band-bone { --line: var(--travertine-300); }
+.band-ink { --line: color-mix(in srgb, var(--ivory-100) 18%, transparent); }
 
 .container { max-width: var(--container); margin: 0 auto; padding: 0 var(--gutter); width: 100%; }
 .measure { max-width: 62ch; }
