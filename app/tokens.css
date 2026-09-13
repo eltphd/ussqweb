@@ -1,0 +1,78 @@
+/*
+ * Illuminated Field Journal — ecosystem design tokens
+ * Version: 1.0.0 (2026-09-11)
+ * Canonical copy: eltphd/atlas-academy  brand/tokens.css
+ * Mirrors: eltphd/ussqweb  app/tokens.css  (byte-identical; copy, never import cross-origin)
+ *
+ * The chassis (neutrals, type, materials) is constant on every property.
+ * Only --ground and --signal change per venture, set with data-venture on <html>
+ * (or on a page wrapper for a sub-brand route).
+ *
+ * Rules that ride with these values:
+ *  - Signal colors are never used for body text.
+ *  - Signal on dark ground only; --ink-900 on light ground only.
+ *  - Brass appears only as hairlines, numerals, seals.
+ *  - No green/amber/red status ramps. Health and trend use a single-hue
+ *    gradient from --signal, low to full saturation, with direction given
+ *    by an arrow or label, never by hue shift.
+ *  - prefers-reduced-motion honored everywhere, no exceptions.
+ */
+
+:root {
+  --ivory-100: #F6F1E7;
+  --bone-200: #EFE7D8;
+  --travertine-300: #E5DBC8;
+  --ink-900: #1C211D;
+  --brass-600: #A8874F;
+
+  --font-display: "Newsreader", Georgia, serif;
+  --font-body: "Archivo", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --radius: 2px;
+  --hairline: 1px solid var(--travertine-300);
+  --motion-fast: 180ms;
+  --motion-base: 280ms;
+}
+
+[data-venture="ussq"]    { --ground: #131A2B; --signal: #A8874F; }
+[data-venture="atlas"]   { --ground: #0D1A14; --signal: #E8C876; }
+[data-venture="ma"]      { --ground: #F6F1E7; --signal: #3D5A6C; }
+[data-venture="fu"]      { --ground: #211A33; --signal: #E3A7B8; }
+[data-venture="press"]   { --ground: #F6F1E7; --signal: #8A6A4A; }
+[data-venture="sparent"] { --ground: #EFE7D8; --signal: #2F6A6A; }
+
+/*
+ * Derived per-venture tokens. These exist so a component can be written once
+ * and hold the contrast rules on both dark and light grounds:
+ *   --on-ground        text color on the venture ground (ivory on dark, ink on light)
+ *   --on-ground-muted  secondary text on the venture ground (AA against --ground)
+ *   --ground-2         raised surface on the venture ground
+ *   --kicker           eyebrow / label color on the ground (signal on dark, muted ink on light)
+ *   --btn-bg / --btn-fg primary button (signal + ink on dark; ink + ivory on light)
+ */
+[data-venture="ussq"],
+[data-venture="atlas"],
+[data-venture="fu"] {
+  --on-ground: var(--ivory-100);
+  --on-ground-muted: #A9A498;
+  --kicker: var(--signal);
+  --btn-bg: var(--signal);
+  --btn-fg: var(--ink-900);
+}
+[data-venture="ussq"]  { --ground-2: #1B2338; }
+[data-venture="atlas"] { --ground-2: #14241B; }
+[data-venture="fu"]    { --ground-2: #2B2342; }
+
+[data-venture="ma"],
+[data-venture="press"],
+[data-venture="sparent"] {
+  --on-ground: var(--ink-900);
+  --on-ground-muted: #5B655F;
+  --kicker: #5B655F;
+  --btn-bg: var(--ink-900);
+  --btn-fg: var(--ivory-100);
+}
+[data-venture="ma"]      { --ground-2: var(--bone-200); }
+[data-venture="press"]   { --ground-2: var(--bone-200); }
+[data-venture="sparent"] { --ground-2: var(--ivory-100); }

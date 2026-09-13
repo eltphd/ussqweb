@@ -1,25 +1,51 @@
 import type { Metadata } from "next";
+import { Archivo, IBM_Plex_Mono, Newsreader } from "next/font/google";
 import "./globals.css";
+
+// Fonts are self-hosted by next/font at build time: no render-blocking
+// third-party font request, font-display: swap on every face.
+const newsreader = Newsreader({
+  subsets: ["latin"],
+  weight: "variable",
+  style: ["normal", "italic"],
+  axes: ["opsz"],
+  display: "swap",
+  variable: "--font-newsreader",
+});
+const archivo = Archivo({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
+  variable: "--font-archivo",
+});
+const plexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  display: "swap",
+  variable: "--font-plex-mono",
+});
 
 export const metadata: Metadata = {
   title: "US-Squared Research Institute — Protecting Adolescent Brilliance",
   description:
-    "Justice-centered programs and systems for youth, families, and the communities that hold them. A US-Squared Research Institute initiative. EIN 92-3221304.",
+    "Justice-centered research, programs, and systems for youth, families, and the communities that hold them. US-Squared Research Institute is a 501(c)(3). EIN 92-3221304.",
   keywords: [
     "US-Squared",
     "USSQ",
+    "US-Squared Research Institute",
     "adolescent",
     "youth programs",
     "nonprofit",
     "justice-centered",
-    "BASEops",
+    "Atlas ERA",
     "Atlas Academy",
+    "Feelings Unplugged",
     "Altered Earth Press",
     "Sparent Science",
   ],
   openGraph: {
     title: "US-Squared Research Institute",
-    description: "Protecting adolescent brilliance through justice-centered programs and systems.",
+    description: "Protecting adolescent brilliance through justice-centered research, programs, and systems.",
     url: "https://us-squared.org",
     siteName: "US-Squared Research Institute",
     locale: "en_US",
@@ -34,8 +60,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full">
-      <body className="min-h-full bg-[#0E0E0E] text-[#F4F1EC]">{children}</body>
+    <html
+      lang="en"
+      data-venture="ussq"
+      className={`h-full ${newsreader.variable} ${archivo.variable} ${plexMono.variable}`}
+    >
+      <body className="min-h-full">{children}</body>
     </html>
   );
 }

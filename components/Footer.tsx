@@ -1,165 +1,71 @@
 import Link from 'next/link';
 
+const footerLinks = [
+  { label: 'Research', href: '/research' },
+  { label: 'About', href: '/about' },
+  { label: 'Atlas ERA', href: '/atlas-era' },
+  { label: 'Atlas Academy', href: '/atlas' },
+  { label: 'Altered Earth Press', href: '/earth' },
+  { label: 'Sparent Science', href: '/#sparent' },
+  { label: 'Feelings Unplugged', href: '/feelings-unplugged' },
+  { label: 'Connect', href: '/connect' },
+];
+
 export default function Footer() {
   return (
-    <footer style={{ backgroundColor: '#0E0E0E', borderTop: '3px solid #D4A017' }}>
-      <div
-        style={{
-          maxWidth: '1400px',
-          margin: '0 auto',
-          padding: '48px 24px 32px',
-        }}
-      >
-        {/* Top row */}
+    <footer className="band-ground" style={{ borderTop: '1px solid var(--brass-600)' }}>
+      <div className="container" style={{ padding: '56px 24px 32px' }}>
         <div
           style={{
             display: 'flex',
             flexWrap: 'wrap',
-            gap: '32px',
+            gap: 32,
             justifyContent: 'space-between',
             alignItems: 'flex-start',
-            marginBottom: '40px',
+            marginBottom: 40,
           }}
         >
-          {/* Logo */}
-          <Link
-            href="/"
-            style={{
-              fontFamily: 'Bebas Neue, sans-serif',
-              fontSize: '22px',
-              color: '#F4F1EC',
-              textDecoration: 'none',
-              letterSpacing: '0.05em',
-            }}
-          >
-            US² | Atlas ERA
-          </Link>
+          <div className="stack" style={{ gap: 10 }}>
+            <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'baseline', gap: 12 }}>
+              <span className="mono" style={{ fontSize: 13, letterSpacing: '0.12em', color: 'var(--brass-600)' }}>
+                US²
+              </span>
+              <span style={{ fontFamily: 'var(--font-display)', fontWeight: 400, fontSize: 20 }}>
+                US-Squared Research Institute
+              </span>
+            </Link>
+            <span className="coord">39.9612° N · 82.9988° W · Columbus, Ohio</span>
+          </div>
 
-          {/* Nav links */}
-          <nav
-            style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              gap: '20px',
-              alignItems: 'center',
-            }}
-          >
-            {[
-              { label: 'Research', href: '/research' },
-              { label: 'About', href: '/about' },
-              { label: 'Atlas Academy', href: '/atlas' },
-              { label: 'Atlas ERA', href: '/atlas-era' },
-              { label: 'Altered Earth Press', href: '/earth' },
-              { label: 'Sparent Science', href: '/sparent' },
-              { label: 'Feelings Unplugged', href: '/feelings-unplugged' },
-            ].map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                style={{
-                  fontFamily: 'Barlow Condensed, sans-serif',
-                  fontWeight: 600,
-                  fontSize: '11px',
-                  letterSpacing: '0.15em',
-                  textTransform: 'uppercase',
-                  color: '#555555',
-                  textDecoration: 'none',
-                }}
-              >
+          <nav aria-label="Footer" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, auto)', columnGap: 32, rowGap: 12 }}>
+            {footerLinks.map((link) => (
+              <Link key={link.href} href={link.href} className="kicker" style={{ textDecoration: 'none', color: 'var(--on-ground-muted)' }}>
                 {link.label}
               </Link>
             ))}
           </nav>
-
-          {/* Social */}
-          {/* TODO: Replace href="#" with real URLs once owner supplies them — see Part 3 Assets 3 (Instagram) and 4 (LinkedIn) */}
-          <div style={{ display: 'flex', gap: '16px' }}>
-            <a
-              href="#" /* TODO: Replace with Instagram profile URL — Asset 3 */
-              style={{
-                fontFamily: 'Barlow Condensed, sans-serif',
-                fontWeight: 600,
-                fontSize: '11px',
-                letterSpacing: '0.15em',
-                textTransform: 'uppercase',
-                color: '#555555',
-                textDecoration: 'none',
-              }}
-            >
-              Instagram
-            </a>
-            <a
-              href="#" /* TODO: Replace with LinkedIn profile URL — Asset 4 */
-              style={{
-                fontFamily: 'Barlow Condensed, sans-serif',
-                fontWeight: 600,
-                fontSize: '11px',
-                letterSpacing: '0.15em',
-                textTransform: 'uppercase',
-                color: '#555555',
-                textDecoration: 'none',
-              }}
-            >
-              LinkedIn
-            </a>
-          </div>
         </div>
 
-        {/* Divider */}
-        <div style={{ height: '1px', backgroundColor: '#1A1A1A', marginBottom: '24px' }} />
+        <hr className="hairline" style={{ marginBottom: 24 }} />
 
-        {/* Atlas ERA tagline */}
-        <div
-          style={{
-            fontFamily: 'Barlow Condensed, sans-serif',
-            fontWeight: 600,
-            fontSize: '11px',
-            letterSpacing: '0.12em',
-            textTransform: 'uppercase',
-            color: '#555555',
-            marginBottom: '16px',
-          }}
-        >
+        {/* Entity attribution is held as-is pending Erica's confirmation (brief §5.3). */}
+        <div className="kicker" style={{ color: 'var(--on-ground-muted)', marginBottom: 16, lineHeight: 1.8 }}>
           Atlas ERA — The Education Research Association
           <br />
           A US-Squared Research Institute Initiative
         </div>
 
-        {/* Legal */}
-        <div
-          style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            gap: '16px',
-            justifyContent: 'space-between',
-            alignItems: 'flex-start',
-          }}
-        >
-          <p
-            style={{
-              fontFamily: 'Barlow, sans-serif',
-              fontSize: '12px',
-              color: '#555555',
-              lineHeight: 1.6,
-              maxWidth: '560px',
-            }}
-          >
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 16, justifyContent: 'space-between', alignItems: 'flex-start' }}>
+          <p className="small muted" style={{ maxWidth: 560 }}>
             US-Squared Research Institute is a 501(c)(3) nonprofit. EIN 92-3221304. All contributions are
             tax-deductible to the extent allowed by law.
           </p>
-          <p
-            style={{
-              fontFamily: 'Barlow Condensed, sans-serif',
-              fontWeight: 600,
-              fontSize: '11px',
-              letterSpacing: '0.1em',
-              color: '#555555',
-              textAlign: 'right',
-            }}
-          >
+          <p className="mono small muted" style={{ textAlign: 'right', lineHeight: 1.8 }}>
             Columbus, Ohio
             <br />
-            executive@us-squared.org
+            <a href="mailto:executive@us-squared.org" style={{ textDecoration: 'none' }}>
+              executive@us-squared.org
+            </a>
           </p>
         </div>
       </div>

@@ -1,29 +1,60 @@
-'use client';
-
-import Link from 'next/link';
+import type { ReactNode } from 'react';
 import Navigation from '@/components/Navigation';
 import AnimateOnScroll from '@/components/AnimateOnScroll';
 import StatCounter from '@/components/StatCounter';
 import Footer from '@/components/Footer';
+import { Section, Eyebrow, Coord, Button, Card } from '@/components/ui';
 
-function Eyebrow({ text, color = '#D4A017' }: { text: string; color?: string }) {
-  return (
-    <div
-      style={{
-        fontFamily: 'Barlow Condensed, sans-serif',
-        fontWeight: 900,
-        fontSize: '13px',
-        letterSpacing: '0.25em',
-        textTransform: 'uppercase',
-        color,
-        marginBottom: '16px',
-      }}
-    >
-      {text}
-    </div>
-  );
-}
+// ─── Publications ────────────────────────────────────────────────────────────
+const publications: {
+  type: string;
+  title: string;
+  citation: ReactNode;
+  notes: string;
+  link: string | null;
+}[] = [
+  {
+    type: 'Journal Article · 2023',
+    title: 'Ten Frequently Asked Questions About Latent Transition Analysis',
+    citation: (
+      <>
+        Nylund-Gibson, K., Garber, A. C., Carter, D. B., Chan, M., Arch, D. A. N., Simon, O., Whaling, K., Tartt,
+        E., &amp; Lawrie, S. I. (2023). Ten frequently asked questions about latent transition analysis.{' '}
+        <i>Psychological Methods, 28</i>(2), 284–300.{' '}
+        <a href="https://doi.org/10.1037/met0000486" target="_blank" rel="noopener noreferrer" className="mono">
+          https://doi.org/10.1037/met0000486
+        </a>
+      </>
+    ),
+    notes:
+      'Foundational methodological reference for latent transition analysis — the statistical approach underlying research on adolescent mental health profiles and trajectory shifts.',
+    link: 'https://doi.org/10.1037/met0000486',
+  },
+  {
+    type: 'Doctoral Dissertation · 2023',
+    title: 'Unraveling Hopelessness: A Latent Class Analysis of Black Adolescent Student Experiences',
+    citation: (
+      <>
+        Tartt, E. L. (2023). <i>Unraveling hopelessness: A latent class analysis of Black adolescent student experiences</i>{' '}
+        [Doctoral dissertation, University of California, Santa Barbara]. eScholarship.
+      </>
+    ),
+    notes:
+      'Using CDC 2021 ABES data, identified three classes of Black adolescents by exposure to racial discrimination, each with distinct patterns of school experience, hopelessness, and mental health — challenging deficit-based narratives and informing the BASE Framework.',
+    link: null,
+  },
+  {
+    type: 'Book / Practice Publication · 2026',
+    title: 'Feelings Unplugged: A Guided Journal for Understanding Your Emotions',
+    citation:
+      'Tartt, E. L. (2026). Feelings Unplugged. US-Squared Research Institute. Available via IngramSpark and direct from the author.',
+    notes:
+      'A BASE Framework companion publication translating peer-reviewed research on adolescent emotional suppression into an accessible guide for youth and the adults who support them.',
+    link: '/feelings-unplugged',
+  },
+];
 
+// ─── The BASE Framework ──────────────────────────────────────────────────────
 const baseFramework = [
   {
     letter: 'B',
@@ -56,385 +87,137 @@ export default function ResearchPage() {
     <>
       <Navigation />
       <main>
-        {/* Hero */}
-        <section
-          style={{
-            backgroundColor: '#0E0E0E',
-            minHeight: '80svh',
-            display: 'flex',
-            alignItems: 'center',
-            padding: '100px 0 80px',
-            position: 'relative',
-            overflow: 'hidden',
-          }}
-        >
-          <div
-            aria-hidden="true"
-            style={{
-              position: 'absolute',
-              right: '-4vw',
-              top: '50%',
-              transform: 'translateY(-50%)',
-              fontFamily: 'Bebas Neue, sans-serif',
-              fontSize: '32vw',
-              color: 'rgba(212,160,23,0.04)',
-              lineHeight: 1,
-              pointerEvents: 'none',
-              userSelect: 'none',
-              letterSpacing: '-0.05em',
-            }}
-          >
+        {/* ── Hero ───────────────────────────────────────────────────── */}
+        <section className="hero hero-short band-ground">
+          <div className="contours" aria-hidden="true" />
+          <div className="hero-mark" aria-hidden="true">
             7K+
           </div>
-
-          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px', width: '100%' }}>
-            <AnimateOnScroll>
-              <Eyebrow text="Research & Impact" />
-              <h1
-                style={{
-                  fontFamily: 'Bebas Neue, sans-serif',
-                  fontSize: 'clamp(56px, 8vw, 96px)',
-                  color: '#F4F1EC',
-                  lineHeight: 0.9,
-                  letterSpacing: '0.02em',
-                  whiteSpace: 'pre-line',
-                  marginBottom: '24px',
-                }}
-              >
-                {`THE DATA BEHIND\nTHE WORK.`}
-              </h1>
-              <p
-                style={{
-                  fontFamily: 'Barlow, sans-serif',
-                  fontWeight: 300,
-                  fontSize: '18px',
-                  color: '#C0C0C0',
-                  maxWidth: '580px',
-                  lineHeight: 1.7,
-                }}
-              >
-                US-Squared programs are built on peer-reviewed research, longitudinal data, and the lived experiences of
-                the 7,000+ young people whose stories shaped our framework.
-              </p>
-            </AnimateOnScroll>
-          </div>
-        </section>
-
-        {/* Section 2: Impact Stats */}
-        <section style={{ backgroundColor: '#0E0E0E', padding: '64px 0', borderTop: '1px solid #1A1A1A' }}>
-          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
-            <AnimateOnScroll>
-              <div
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-                  gap: '48px',
-                }}
-              >
-                <StatCounter value="7,000+" label="Youth Studied in Peer-Reviewed Research" />
-                <StatCounter value="4+" label="Program Domains" />
-                <StatCounter value="20+" label="Years in Education" />
-                <StatCounter value="3+" label="Peer-Reviewed Studies" />
-              </div>
-            </AnimateOnScroll>
-          </div>
-        </section>
-
-        {/* Section 3: Publications */}
-        <section style={{ backgroundColor: '#0E0E0E', padding: '80px 0', borderTop: '1px solid #1A1A1A' }}>
-          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
-            <AnimateOnScroll>
-              <Eyebrow text="Publications" />
-              <h2
-                style={{
-                  fontFamily: 'Bebas Neue, sans-serif',
-                  fontSize: '48px',
-                  color: '#F4F1EC',
-                  letterSpacing: '0.02em',
-                  marginBottom: '40px',
-                }}
-              >
-                PEER-REVIEWED WORK
-              </h2>
-            </AnimateOnScroll>
-
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
-              {[
-                {
-                  type: 'Journal Article · 2023',
-                  title: 'Ten Frequently Asked Questions About Latent Transition Analysis',
-                  citation:
-                    'Nylund-Gibson, K., Garber, A. C., Carter, D. B., Chan, M., Arch, D. A., Simon, O., ... & Lawrie, S. I. (2023). Ten frequently asked questions about latent transition analysis. Psychological Methods, 28(2), 284.',
-                  notes:
-                    'Foundational methodological reference for latent transition analysis — the statistical approach underlying research on adolescent mental health profiles and trajectory shifts.',
-                  link: null,
-                },
-                {
-                  type: 'Doctoral Dissertation · 2023',
-                  title: 'Unraveling Hopelessness: A Latent Class Analysis of Mental Health Profiles Among Black Adolescents',
-                  citation:
-                    'Tartt, E. L. (2023). Unraveling Hopelessness: A latent class analysis of mental health profiles among Black adolescents. University of California, Santa Barbara. GPA: 3.98.',
-                  notes:
-                    'Identified four distinct mental health profiles among Black youth, challenging deficit-based narratives and informing the BASE framework.',
-                  link: null,
-                },
-                {
-                  type: 'Book / Practice Publication · 2026',
-                  title: 'Feelings Unplugged: A Guided Journal for Understanding Your Emotions',
-                  citation:
-                    'Tartt, E. L. (2026). Feelings Unplugged. US-Squared Research Institute. Available via IngramSpark and direct from the author.',
-                  notes:
-                    'A BASE Framework companion publication translating peer-reviewed research on adolescent emotional suppression into an accessible guide for youth and the adults who support them.',
-                  link: '/feelings-unplugged',
-                },
-              ].map((pub, i) => (
-                <AnimateOnScroll key={i} delay={i * 0.05}>
-                  <div
-                    style={{
-                      backgroundColor: '#1A1A1A',
-                      borderTop: '4px solid #D4A017',
-                      padding: '32px 28px',
-                    }}
-                  >
-                    <div
-                      style={{
-                        fontFamily: 'Barlow Condensed, sans-serif',
-                        fontWeight: 900,
-                        fontSize: '13px',
-                        letterSpacing: '0.2em',
-                        textTransform: 'uppercase',
-                        color: '#D4A017',
-                        marginBottom: '12px',
-                      }}
-                    >
-                      {pub.type}
-                    </div>
-                    <h3
-                      style={{
-                        fontFamily: 'Bebas Neue, sans-serif',
-                        fontSize: '28px',
-                        color: '#F4F1EC',
-                        letterSpacing: '0.03em',
-                        marginBottom: '12px',
-                        lineHeight: 1.1,
-                      }}
-                    >
-                      {pub.title}
-                    </h3>
-                    <p
-                      style={{
-                        fontFamily: 'Barlow, sans-serif',
-                        fontStyle: 'italic',
-                        fontSize: '13px',
-                        color: '#555555',
-                        lineHeight: 1.5,
-                        marginBottom: '12px',
-                        paddingLeft: '2px',
-                        overflow: 'visible',
-                      }}
-                    >
-                      {pub.citation}
-                    </p>
-                    <p
-                      style={{
-                        fontFamily: 'Barlow, sans-serif',
-                        fontSize: '14px',
-                        color: '#C0C0C0',
-                        lineHeight: 1.6,
-                        marginBottom: pub.link ? '16px' : '0',
-                      }}
-                    >
-                      {pub.notes}
-                    </p>
-                    {pub.link && (
-                      <Link
-                        href={pub.link}
-                        style={{
-                          fontFamily: 'Barlow Condensed, sans-serif',
-                          fontWeight: 900,
-                          fontSize: '13px',
-                          letterSpacing: '0.15em',
-                          textTransform: 'uppercase',
-                          color: '#D4A017',
-                          textDecoration: 'none',
-                        }}
-                      >
-                        Learn More →
-                      </Link>
-                    )}
-                  </div>
-                </AnimateOnScroll>
-              ))}
+          <div className="container" style={{ position: 'relative' }}>
+            <Eyebrow>Research &amp; Impact</Eyebrow>
+            <h1 className="display-1" style={{ maxWidth: '12ch', marginBottom: 28 }}>
+              The data behind <em>the work.</em>
+            </h1>
+            <hr className="rule" style={{ maxWidth: 120, marginBottom: 28 }} />
+            <p className="lede measure" style={{ marginBottom: 36 }}>
+              US-Squared programs are built on peer-reviewed research, longitudinal data, and the lived experiences of
+              the 7,000+ young people whose stories shaped our framework.
+            </p>
+            <div className="cluster" style={{ gap: 14 }}>
+              <Button href="#publications">Read the publications</Button>
+              <Button href="#base" variant="ghost">
+                The BASE Framework
+              </Button>
+            </div>
+            <div style={{ marginTop: 56 }}>
+              <Coord />
             </div>
           </div>
         </section>
 
-        {/* Section 3: BASE Framework */}
-        <section style={{ backgroundColor: '#F4F1EC', padding: '80px 0' }}>
-          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
-            <AnimateOnScroll>
-              <Eyebrow text="The Framework" color="#D4A017" />
-              <h2
-                style={{
-                  fontFamily: 'Bebas Neue, sans-serif',
-                  fontSize: '64px',
-                  color: '#0E0E0E',
-                  letterSpacing: '0.02em',
-                  marginBottom: '12px',
-                  lineHeight: 0.95,
-                }}
-              >
-                THE BASE FRAMEWORK
-              </h2>
-              <p
-                style={{
-                  fontFamily: 'Barlow, sans-serif',
-                  fontWeight: 300,
-                  fontSize: '16px',
-                  color: '#444444',
-                  maxWidth: '560px',
-                  lineHeight: 1.6,
-                  marginBottom: '48px',
-                }}
-              >
-                Four principles derived from dissertation research and 20+ years of educational practice. BASE
-                is the conceptual spine running through every US-Squared program.
-              </p>
-            </AnimateOnScroll>
-
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
-              {baseFramework.map((item, i) => (
-                <AnimateOnScroll key={item.letter} delay={i * 0.06}>
-                  <div
-                    className="base-item-layout"
-                    style={{
-                      position: 'relative',
-                      backgroundColor: '#0E0E0E',
-                      borderLeft: '6px solid #D4A017',
-                      padding: '32px 28px 32px 40px',
-                      overflow: 'hidden',
-                    }}
-                  >
-                    <div
-                      aria-hidden="true"
-                      style={{
-                        fontFamily: 'Bebas Neue, sans-serif',
-                        fontSize: '120px',
-                        color: '#D4A017',
-                        opacity: 0.08,
-                        lineHeight: 1,
-                        flexShrink: 0,
-                        userSelect: 'none',
-                        width: '80px',
-                        textAlign: 'center',
-                      }}
-                    >
-                      {item.letter}
-                    </div>
-                    <div>
-                      <div
-                        style={{
-                          fontFamily: 'Bebas Neue, sans-serif',
-                          fontSize: '36px',
-                          color: '#F4F1EC',
-                          letterSpacing: '0.05em',
-                          marginBottom: '10px',
-                        }}
-                      >
-                        {item.word}
-                      </div>
-                      <p
-                        style={{
-                          fontFamily: 'Barlow, sans-serif',
-                          fontSize: '15px',
-                          color: '#C0C0C0',
-                          lineHeight: 1.7,
-                          maxWidth: '600px',
-                        }}
-                      >
-                        {item.body}
-                      </p>
-                    </div>
-                  </div>
-                </AnimateOnScroll>
-              ))}
+        {/* ── Impact stats ───────────────────────────────────────────── */}
+        <Section band="ground" tight>
+          <AnimateOnScroll>
+            <div className="grid-4 hairline-top" style={{ paddingTop: 40 }}>
+              <StatCounter value="7,000+" label="Youth Studied in Peer-Reviewed Research" />
+              <StatCounter value="5" label="Institute properties" />
+              <StatCounter value="20+" label="Years in Education" />
+              <StatCounter value="3+" label="Peer-Reviewed Studies" />
             </div>
-          </div>
-        </section>
+          </AnimateOnScroll>
+        </Section>
 
-        {/* Section 5: Download CTA */}
-        <section style={{ backgroundColor: '#F4F1EC', padding: '80px 0' }}>
-          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 24px' }}>
-            <AnimateOnScroll>
-              <Eyebrow text="Impact Brief" color="#D4A017" />
-              <h2
-                style={{
-                  fontFamily: 'Bebas Neue, sans-serif',
-                  fontSize: '64px',
-                  color: '#0E0E0E',
-                  letterSpacing: '0.02em',
-                  marginBottom: '16px',
-                  lineHeight: 0.95,
-                }}
-              >
-                DOWNLOAD THE BRIEF
-              </h2>
-              <p
-                style={{
-                  fontFamily: 'Barlow, sans-serif',
-                  fontWeight: 300,
-                  fontSize: '18px',
-                  color: '#444444',
-                  maxWidth: '520px',
-                  lineHeight: 1.6,
-                  marginBottom: '32px',
-                }}
-              >
-                One-page summary of our research, outcomes, and program data. Ideal for funders, partners, and program
-                evaluators.
-              </p>
-              <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-                {/* TODO: Enable Download Impact Brief once PDF asset is ready — see Part 3 Asset list */}
-                <span
-                  aria-disabled="true"
-                  style={{
-                    fontFamily: 'Barlow Condensed, sans-serif',
-                    fontWeight: 900,
-                    fontSize: '12px',
-                    letterSpacing: '0.15em',
-                    textTransform: 'uppercase',
-                    backgroundColor: '#555555',
-                    color: '#C0C0C0',
-                    padding: '14px 28px',
-                    display: 'inline-block',
-                    cursor: 'not-allowed',
-                    userSelect: 'none',
-                  }}
-                >
-                  Coming Soon
-                </span>
-                <Link
-                  href="/connect"
-                  style={{
-                    fontFamily: 'Barlow Condensed, sans-serif',
-                    fontWeight: 900,
-                    fontSize: '12px',
-                    letterSpacing: '0.15em',
-                    textTransform: 'uppercase',
-                    border: '2px solid #0E0E0E',
-                    color: '#0E0E0E',
-                    padding: '14px 28px',
-                    textDecoration: 'none',
-                    display: 'inline-block',
-                    backgroundColor: 'transparent',
-                  }}
-                >
-                  Contact for Partnership
-                </Link>
-              </div>
-            </AnimateOnScroll>
+        {/* ── Publications ───────────────────────────────────────────── */}
+        <Section id="publications" band="paper">
+          <AnimateOnScroll>
+            <Eyebrow>Publications</Eyebrow>
+            <h2 className="display-2" style={{ marginBottom: 48 }}>
+              Peer-reviewed <em>work.</em>
+            </h2>
+          </AnimateOnScroll>
+
+          <div className="grid-3">
+            {publications.map((pub, i) => (
+              <AnimateOnScroll key={pub.title} delay={i * 0.05}>
+                <Card>
+                  <span className="kicker" style={{ display: 'block', marginBottom: 12 }}>
+                    {pub.type}
+                  </span>
+                  <h3 className="display-3" style={{ marginBottom: 14 }}>
+                    {pub.title}
+                  </h3>
+                  <p className="small muted" style={{ marginBottom: 14 }}>
+                    {pub.citation}
+                  </p>
+                  <p className="body small" style={{ marginBottom: pub.link ? 20 : 0 }}>
+                    {pub.notes}
+                  </p>
+                  {pub.link && (
+                    <Button href={pub.link} variant="link">
+                      Learn More →
+                    </Button>
+                  )}
+                </Card>
+              </AnimateOnScroll>
+            ))}
           </div>
-        </section>
+        </Section>
+
+        {/* ── The BASE Framework ─────────────────────────────────────── */}
+        <Section id="base" band="ground">
+          <AnimateOnScroll>
+            <Eyebrow>The Framework</Eyebrow>
+            <h2 className="display-2" style={{ marginBottom: 16 }}>
+              The BASE <em>Framework.</em>
+            </h2>
+            <p className="lede measure-narrow" style={{ marginBottom: 48 }}>
+              Four principles derived from dissertation research and 20+ years of educational practice. BASE is the
+              conceptual spine running through every US-Squared program.
+            </p>
+          </AnimateOnScroll>
+
+          <div className="grid-2">
+            {baseFramework.map((item, i) => (
+              <AnimateOnScroll key={item.letter} delay={i * 0.06}>
+                <Card plain>
+                  <span className="display-1" aria-hidden="true" style={{ display: 'block', marginBottom: 16 }}>
+                    {item.letter}
+                  </span>
+                  <hr className="rule" style={{ maxWidth: 80, marginBottom: 20 }} />
+                  <h3 className="display-3" style={{ marginBottom: 12 }}>
+                    {item.word}
+                  </h3>
+                  <p className="body muted" style={{ maxWidth: '48ch' }}>
+                    {item.body}
+                  </p>
+                </Card>
+              </AnimateOnScroll>
+            ))}
+          </div>
+        </Section>
+
+        {/* ── Impact brief ───────────────────────────────────────────── */}
+        <Section id="brief" band="bone">
+          <AnimateOnScroll>
+            <Eyebrow>Impact Brief</Eyebrow>
+            <h2 className="display-2" style={{ marginBottom: 20 }}>
+              Download <em>the brief.</em>
+            </h2>
+            <p className="lede measure-narrow" style={{ marginBottom: 32 }}>
+              One-page summary of our research, outcomes, and program data. Ideal for funders, partners, and program
+              evaluators.
+            </p>
+            <div className="cluster" style={{ gap: 14 }}>
+              {/* TODO: Enable Download Impact Brief once PDF asset is ready — see Part 3 Asset list */}
+              <Button type="button" disabled aria-disabled="true" style={{ cursor: 'not-allowed', opacity: 0.6 }}>
+                Coming Soon
+              </Button>
+              <Button href="/connect" variant="ghost">
+                Contact for Partnership
+              </Button>
+            </div>
+          </AnimateOnScroll>
+        </Section>
 
         <Footer />
       </main>
