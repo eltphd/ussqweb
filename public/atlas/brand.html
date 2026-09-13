@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atlas Academy — Brand Book</title>
+<meta name="description" content="The Atlas Academy brand system: the Illuminated Field Journal. Story, voice, palette, typography, seal, imagery, and stakeholder messaging.">
+<link rel="stylesheet" href="/atlas/fonts.css">
+<style>
+  :root{
+    --forest-900:#0d1a14; --ivory-100:#f6f1e7; --bone-200:#efe7d8; --trav-300:#e5dbc8;
+    --ink-900:#1c211d; --brass-600:#a8874f; --brass-700:#8a6d3b; --firefly-400:#e8c876; --dusk-600:#3d5a6c;
+    --serif:'Newsreader',Georgia,serif; --sans:'Archivo',sans-serif; --mono:'IBM Plex Mono',monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:var(--sans);font-weight:340;background:var(--ivory-100);color:var(--ink-900);line-height:1.65;font-size:16.5px}
+  ::selection{background:var(--firefly-400);color:var(--forest-900)}
+  h1,h2,h3{font-family:var(--serif);font-weight:420;letter-spacing:-.01em}
+  .mono{font-family:var(--mono);letter-spacing:.16em;text-transform:uppercase}
+  .wrap{max-width:980px;margin:0 auto;padding:0 24px}
+  section{padding:80px 0;border-top:1px solid var(--trav-300)}
+  .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass-700);margin-bottom:16px}
+  h2{font-size:clamp(26px,3.6vw,38px);margin-bottom:18px}
+  .lede{font-size:18px;font-weight:320;max-width:64ch}
+  a{color:var(--brass-700)}
+  .cover{background:var(--forest-900);color:var(--ivory-100);padding:130px 0 100px;border:none}
+  .cover .kicker{color:var(--firefly-400)}
+  .cover h1{font-size:clamp(36px,6vw,64px);line-height:1.08;max-width:16ch}
+  .cover p{margin-top:24px;max-width:56ch;color:rgba(246,241,231,.82)}
+  .grid{display:grid;gap:18px;margin-top:44px}
+  .g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+  @media(max-width:800px){.g2,.g3,.g4{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.g2,.g3,.g4{grid-template-columns:1fr}}
+  .swatch{border:1px solid var(--trav-300)}
+  .swatch .chip{height:96px}
+  .swatch .meta{padding:12px 14px;font-size:12.5px;background:#fff9;line-height:1.5}
+  .swatch .meta b{display:block;font-weight:560}
+  .swatch .meta code{font-family:var(--mono);font-size:11px;color:var(--brass-700)}
+  .card{border:1px solid var(--trav-300);padding:28px;background:#fffdf8}
+  .card h3{font-size:19px;margin-bottom:10px}
+  .card p,.card li{font-size:14.5px}
+  table{width:100%;border-collapse:collapse;margin-top:40px;font-size:14.5px}
+  th{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--brass-700);text-align:left;padding:12px 14px;border-bottom:2px solid var(--brass-600)}
+  td{padding:14px;border-bottom:1px solid var(--trav-300);vertical-align:top}
+  td:first-child{font-weight:560;white-space:nowrap}
+  .voice-ex{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:36px}
+  @media(max-width:700px){.voice-ex{grid-template-columns:1fr}}
+  .yes,.no{padding:24px 26px;font-size:15px}
+  .yes{background:var(--bone-200);border-left:3px solid var(--brass-600)}
+  .no{background:#f3ece2;border-left:3px solid #b6584a;color:#5a4640}
+  .yes .mono,.no .mono{font-size:10.5px;display:block;margin-bottom:10px}
+  .yes .mono{color:var(--brass-700)}.no .mono{color:#b6584a}
+  .type-demo{border:1px solid var(--trav-300);padding:36px;margin-top:14px;background:#fffdf8}
+  ul.plain{list-style:none}
+  ul.plain li{padding:10px 0;border-top:1px solid var(--trav-300);font-size:15px}
+  .backlink{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;text-decoration:none}
+  footer{background:var(--forest-900);color:rgba(246,241,231,.6);padding:50px 0;font-size:13px;text-align:center}
+  footer a{color:var(--firefly-400);text-decoration:none}
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="wrap">
+    <div class="kicker">Atlas Academy · Brand Book · V1 · MMXXVI</div>
+    <h1>The Illuminated Field Journal</h1>
+    <p>A beautifully made field journal owned by someone interesting — university-press restraint on natural materials, lit at night by fireflies. Expensive <em>and</em> warm; rigorous <em>and</em> free. One direction, held everywhere from the marketing page to the credential seal.</p>
+    <p style="margin-top:30px"><a class="backlink" style="color:var(--firefly-400)" href="/atlas">← The Invitation (landing page)</a></p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">01 · The Story</div>
+    <h2>The Embargo on Brilliance</h2>
+    <p class="lede">The world places an embargo on young people's brilliance — it demands they wait, sit still, and be measured by rooms they never chose. Atlas Academy lifts the embargo. Brilliance isn't created here; it's <b>recognized and credentialed</b>. Every brand decision serves that frame: we speak to what students already are, never what we'll turn them into.</p>
+    <div class="grid g4" style="margin-top:36px">
+      <div class="card"><h3>Brilliance</h3><p>The raw material. Already present; our job is recognition.</p></div>
+      <div class="card"><h3>Authenticity</h3><p>Real work, real places, real evidence. No simulations of learning.</p></div>
+      <div class="card"><h3>Self-Expression</h3><p>The portfolio is the student's voice made durable.</p></div>
+      <div class="card"><h3>Empowerment</h3><p>Credentials are power. We put paper behind the person.</p></div>
+    </div>
+    <p style="margin-top:26px;font-size:14px;color:#6a6f6a">The BASE spine may structure content but never appears as a jargon wall. The <b>firefly</b> is the sanctioned metaphor family — light carried and signaled between people, points of light on a dark map. Used in motion and micro-moments; never captioned, never explained on the surface.</p>
+  </div>
+</section>
+
+<section style="background:var(--bone-200)">
+  <div class="wrap">
+    <div class="kicker">02 · Name &amp; Architecture</div>
+    <h2>Atlas Academy</h2>
+    <p class="lede"><b>Atlas</b> is the map and the one who carries the world. <b>Academy</b> is the word that travels: "high school" is a U.S. frame, but academies exist in every education tradition — from Athens to Accra to Singapore — and carry institutional seriousness in all of them. A global student body deserves a globally legible name. Transcripts still state plainly that this is a college-preparatory secondary program. Say the full name; never "AA."</p>
+    <table>
+      <tr><th>Level</th><th>Name</th><th>Use</th></tr>
+      <tr><td>Institution</td><td>Atlas Academy</td><td>The school of record. Wordmark, seal, transcripts, legal surfaces.</td></tr>
+      <tr><td>Program</td><td>The Season</td><td>The 12-week Costa Rica term; cohorts choose their six weeks.</td></tr>
+      <tr><td>Product surface</td><td>The Invitation / The Atlas Space</td><td>Marketing page / student-parent app (Phase 2).</td></tr>
+      <tr><td>Institution of record</td><td>A program of US-Squared Research Institute</td><td>Atlas Academy is a program of the institute, a 501(c)(3) (EIN 92-3221304). Legal, funder, and investor contexts, and the footer of family-facing surfaces. Never above the footer on family-facing pages.</td></tr>
+    </table>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">03 · Voice</div>
+    <h2>Warm, precise, visionary-but-grounded.</h2>
+    <p class="lede">One voice, two registers: we speak <b>to</b> teens (respect, agency, zero condescension) and <b>alongside</b> parents (peace of mind, evidence, safety). Poetic only where it earns it. No platitudes, no hype-speak, no "unlock your potential" filler.</p>
+    <div class="voice-ex">
+      <div class="yes"><span class="mono">Say — teen register</span>"Everything you make here counts. Start with what you did today."</div>
+      <div class="yes"><span class="mono">Say — parent register</span>"The risk stays with us, where it belongs. Deposits are refundable until the season is confirmed."</div>
+      <div class="no"><span class="mono">Never</span>"Unlock your child's limitless potential with our transformative global learning journey!"</div>
+      <div class="no"><span class="mono">Never</span>Scarcity theater ("Only 2 spots left!!"), guilt copy, or any claim of being "accredited" as a current status.</div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--forest-900);color:var(--ivory-100)">
+  <div class="wrap">
+    <div class="kicker" style="color:var(--firefly-400)">04 · Palette &amp; Materials</div>
+    <h2>Luxury is matte and mineral, never gloss.</h2>
+    <p class="lede" style="color:rgba(246,241,231,.82)">Natural materials carry the money: linen, handmade paper, honed travertine, botanical shadow-play. Brass appears only as hairlines, numerals, and seals. Firefly gold is reserved for night surfaces and CTAs. Every gold-on-cream pairing is contrast-checked — WCAG 2.1 AA minimum.</p>
+    <div class="grid g4">
+      <div class="swatch"><div class="chip" style="background:#0d1a14"></div><div class="meta"><b>Forest 900</b><code>#0D1A14</code>Night surface, the signature ground</div></div>
+      <div class="swatch"><div class="chip" style="background:#f6f1e7"></div><div class="meta"><b>Ivory 100</b><code>#F6F1E7</code>Page ground, handmade-paper warmth</div></div>
+      <div class="swatch"><div class="chip" style="background:#efe7d8"></div><div class="meta"><b>Bone 200</b><code>#EFE7D8</code>Raised sections, alternate rhythm</div></div>
+      <div class="swatch"><div class="chip" style="background:#e5dbc8"></div><div class="meta"><b>Travertine 300</b><code>#E5DBC8</code>Stone texture, hairline borders</div></div>
+      <div class="swatch"><div class="chip" style="background:#1c211d"></div><div class="meta"><b>Ink 900</b><code>#1C211D</code>Text on light — always near-black</div></div>
+      <div class="swatch"><div class="chip" style="background:#a8874f"></div><div class="meta"><b>Brass 600</b><code>#A8874F</code>Hairlines, seals, numerals — sparingly</div></div>
+      <div class="swatch"><div class="chip" style="background:#e8c876"></div><div class="meta"><b>Firefly 400</b><code>#E8C876</code>The light itself — CTAs, night accents</div></div>
+      <div class="swatch"><div class="chip" style="background:#3d5a6c"></div><div class="meta"><b>Dusk 600</b><code>#3D5A6C</code>Pacific-at-dusk — links, quiet cool notes</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">05 · Typography</div>
+    <h2>Transcript-worthy type.</h2>
+    <div class="type-demo">
+      <div class="mono" style="font-size:10.5px;color:var(--brass-700);margin-bottom:14px">Display · Newsreader (opsz, 300–700)</div>
+      <p style="font-family:var(--serif);font-size:clamp(26px,4vw,40px);line-height:1.15">The brilliance is already there. We put it on paper.</p>
+    </div>
+    <div class="grid g2" style="margin-top:18px">
+      <div class="type-demo" style="margin-top:0">
+        <div class="mono" style="font-size:10.5px;color:var(--brass-700);margin-bottom:14px">UI &amp; Body · Archivo (300–700)</div>
+        <p style="font-size:15px">A clean contemporary grotesque carries body copy, buttons, and app UI. Quietly modern, never techy. Black on light grounds, always.</p>
+      </div>
+      <div class="type-demo" style="margin-top:0">
+        <div class="mono" style="font-size:10.5px;color:var(--brass-700);margin-bottom:14px">Numerals &amp; Wayfinding · IBM Plex Mono</div>
+        <p style="font-family:var(--mono);font-size:13.5px;letter-spacing:.1em;line-height:2">9.6425° N · 84.0117° W<br>$3,800 / SIX WEEKS · 24 PLACES<br>CREDIT · CONFERRED · MMXXVI</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--bone-200)">
+  <div class="wrap">
+    <div class="kicker">06 · The Seal &amp; Cartographic System</div>
+    <h2>Atlas is a map-name. Earn it.</h2>
+    <div class="grid g2" style="align-items:center">
+      <div>
+        <p class="lede" style="font-size:16.5px">The <b>seal</b> — a brass compass rose ringed by the name and motto — appears only at credential moments: transcripts, credit conferral, formal invitations. Embossed or foil-suggesting, always restrained. The connective graphic tissue everywhere else is <b>cartographic</b>: contour lines, coordinates, hairline compass points, and the firefly constellation of project sites.</p>
+        <ul class="plain" style="margin-top:22px">
+          <li><b>Motion:</b> slow, physical, expensive. Under 300ms perceived effort; firefly particles only in hero/night moments; <code style="font-family:var(--mono);font-size:12px">prefers-reduced-motion</code> always honored.</li>
+          <li><b>Imagery:</b> real fieldwork at golden and blue hour — people mid-verb. Until season photography exists, conceptual duotone SVG vignettes in Forest/Firefly/Dusk stand in.</li>
+        </ul>
+      </div>
+      <div style="display:flex;justify-content:center">
+        <svg viewBox="0 0 340 340" width="270" role="img" aria-label="The Atlas Academy seal">
+          <circle cx="170" cy="170" r="160" fill="none" stroke="#a8874f" stroke-width="2"/>
+          <circle cx="170" cy="170" r="146" fill="none" stroke="#a8874f" stroke-width=".8"/>
+          <circle cx="170" cy="170" r="104" fill="none" stroke="#a8874f" stroke-width=".8"/>
+          <defs><path id="a1" d="M170,170 m-125,0 a125,125 0 1,1 250,0"/><path id="a2" d="M170,170 m-125,0 a125,125 0 1,0 250,0"/></defs>
+          <text font-family="IBM Plex Mono,monospace" font-size="15" letter-spacing="6" fill="#8a6d3b"><textPath href="#a1" startOffset="50%" text-anchor="middle">ATLAS ACADEMY · MMXXVI</textPath></text>
+          <text font-family="IBM Plex Mono,monospace" font-size="10.5" letter-spacing="3.5" fill="#8a6d3b"><textPath href="#a2" startOffset="50%" text-anchor="middle">THE WORLD IS THE CAMPUS</textPath></text>
+          <g stroke="#8a6d3b" fill="#8a6d3b">
+            <path d="M170,80 L182,158 L170,170 L158,158 Z" fill="#a8874f"/>
+            <path d="M170,260 L182,182 L170,170 L158,182 Z" fill="none" stroke-width="1.2"/>
+            <path d="M80,170 L158,158 L170,170 L158,182 Z" fill="none" stroke-width="1.2"/>
+            <path d="M260,170 L182,158 L170,170 L182,182 Z" fill="#a8874f"/>
+          </g>
+          <circle cx="170" cy="170" r="7" fill="#e8c876" stroke="#8a6d3b"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">07 · One Brand, Four Stakeholders</div>
+    <h2>The two-register test, extended.</h2>
+    <p class="lede">Every surface must pass: would a 16-year-old feel owned by it? Would a parent trust it? Would an accreditor respect it? Would an investor fund it?</p>
+    <table>
+      <tr><th>Stakeholder</th><th>They need to feel</th><th>Lead message</th><th>Proof points</th></tr>
+      <tr><td>Teens (14–18)</td><td>Respected, seen, among peers</td><td>"Everything you make here counts."</td><td>Real projects, real cohort, a portfolio that is theirs</td></tr>
+      <tr><td>Guardians</td><td>Relief, safety, certainty</td><td>"The world is the campus. The transcript is real."</td><td>PhD oversight, refundable deposit, transparent credentialing, safeguarding policy</td></tr>
+      <tr><td>Educators</td><td>Professional respect</td><td>"Your judgment is the credential."</td><td>Human-in-the-loop by design, rationale-first review, standards-aligned rubrics</td></tr>
+      <tr><td>Investors</td><td>Rigor + flywheel</td><td>"Programs → data → products → revenue."</td><td>Customer-funded ladder, Transcript Engine training data, compliance moat</td></tr>
+    </table>
+  </div>
+</section>
+
+<section style="background:var(--forest-900);color:var(--ivory-100)">
+  <div class="wrap">
+    <div class="kicker" style="color:var(--firefly-400)">08 · The Do-Not List</div>
+    <h2>Held without exception.</h2>
+    <ul class="plain" style="max-width:70ch">
+      <li style="border-color:rgba(232,200,118,.25)">No leaf-and-globe sustainability clichés — sustainability is texture and truth, never iconography.</li>
+      <li style="border-color:rgba(232,200,118,.25)">No generic edtech illustration packs, no glassmorphism.</li>
+      <li style="border-color:rgba(232,200,118,.25)">No dark patterns: fake scarcity timers, guilt copy.</li>
+      <li style="border-color:rgba(232,200,118,.25)">No gamified XP bars, streaks, scores, or like-counts as status.</li>
+      <li style="border-color:rgba(232,200,118,.25)">No cold-luxury gloss and no playful-startup neon — hold the tension.</li>
+      <li style="border-color:rgba(232,200,118,.25)">No "accredited" as a status claim anywhere, in any asset, until Cognia accreditation is granted.</li>
+      <li style="border-color:rgba(232,200,118,.25)">No stock classrooms, drone villa porn, or posed diversity grids. People mid-verb only.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>ATLAS ACADEMY · Brand Book V1 · <a href="/atlas">The Invitation</a> · <a href="/atlas/brochure.html">Brochure</a> · <a href="/atlas/deck.html">Investor Deck</a></p>
+    <p style="margin-top:10px">A program of US-Squared Research Institute, a 501(c)(3).</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atlas Academy — The World Is the Campus. The Transcript Is Real.</title>
+<meta name="description" content="Atlas Academy turns your teen's life abroad into a college-ready transcript — with educator oversight, a real peer cohort, strategic educational planning, and UN SDG fieldwork. Invitation only. 24 places per season.">
+<meta property="og:title" content="Atlas Academy — A Worldschool With a Real Transcript">
+<meta property="og:description" content="Transcripts. Oversight. Peers. Planning. UN SDG fieldwork. The prestige worldschool for families educating across borders — invitation only, 24 places per season.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://us-squared.org/atlas">
+<link rel="canonical" href="https://us-squared.org/atlas">
+<link rel="stylesheet" href="/atlas/fonts.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "Atlas Academy",
+  "description": "An invitation-only worldschool issuing college-ready transcripts through educator-reviewed portfolio assessment, with UN SDG fieldwork and a global peer cohort.",
+  "parentOrganization": {"@type": "Organization", "name": "US-Squared Research Institute", "url": "https://us-squared.org"},
+  "founder": {"@type": "Person", "name": "Dr. Erica L. Tartt, PhD"}
+}
+</script>
+<style>
+  :root{
+    --forest-900:#0d1a14; --ivory-100:#f6f1e7; --bone-200:#efe7d8; --trav-300:#e5dbc8;
+    --ink-900:#1c211d; --brass-600:#a8874f; --brass-700:#8a6d3b; --firefly-400:#e8c876;
+    --dusk-600:#3d5a6c;
+    --serif:'Newsreader',Georgia,serif; --sans:'Archivo',Helvetica,Arial,sans-serif; --mono:'IBM Plex Mono',monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto} *,*::before,*::after{animation:none!important;transition:none!important}}
+  body{font-family:var(--sans);font-weight:340;color:var(--ink-900);background:var(--ivory-100);line-height:1.65;font-size:17px}
+  ::selection{background:var(--firefly-400);color:var(--forest-900)}
+  h1,h2,h3,.serif{font-family:var(--serif);font-weight:420;letter-spacing:-.01em}
+  .mono{font-family:var(--mono);font-weight:400;letter-spacing:.14em;text-transform:uppercase}
+  a{color:inherit}
+  img,svg{max-width:100%;display:block}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass-700);margin-bottom:18px}
+  .dark .kicker{color:var(--firefly-400)}
+  section{padding:96px 0}
+  .rule{width:56px;height:1px;background:var(--brass-600);margin:26px 0}
+
+  /* ---- nav ---- */
+  nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;
+    padding:18px 28px;background:linear-gradient(rgba(13,26,20,.86),rgba(13,26,20,.72),transparent);backdrop-filter:blur(6px)}
+  .wordmark{font-family:var(--serif);font-size:21px;color:var(--ivory-100);text-decoration:none;letter-spacing:.02em}
+  .wordmark b{font-weight:560;color:var(--firefly-400)}
+  .navlinks{display:flex;gap:26px;align-items:center}
+  .navlinks a{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(246,241,231,.82);text-decoration:none}
+  .navlinks a:hover{color:var(--firefly-400)}
+  @media(max-width:760px){.navlinks a.hide-m{display:none}}
+
+  /* ---- hero ---- */
+  header{position:relative;min-height:100svh;display:flex;align-items:center;background:var(--forest-900);color:var(--ivory-100);overflow:hidden}
+  .contours{position:absolute;inset:0;opacity:.14;pointer-events:none}
+  .fireflies{position:absolute;inset:0;pointer-events:none}
+  .ff{position:absolute;width:4px;height:4px;border-radius:50%;background:var(--firefly-400);
+    box-shadow:0 0 10px 3px rgba(232,200,118,.55);animation:drift 9s ease-in-out infinite alternate,glow 3.4s ease-in-out infinite}
+  @keyframes glow{0%,100%{opacity:.15}50%{opacity:.95}}
+  @keyframes drift{from{transform:translate(0,0)}to{transform:translate(26px,-34px)}}
+  .hero-inner{position:relative;z-index:2;padding:150px 0 110px}
+  .hero-coord{font-family:var(--mono);font-size:12px;letter-spacing:.2em;color:var(--firefly-400);margin-bottom:26px}
+  h1{font-size:clamp(38px,6vw,68px);line-height:1.08;font-weight:380;max-width:15ch}
+  h1 em{font-style:italic;color:var(--firefly-400)}
+  .hero-sub{font-size:clamp(17px,2vw,21px);font-weight:320;color:rgba(246,241,231,.85);max-width:56ch;margin:30px 0 40px}
+  .cta-row{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+  .btn{display:inline-block;font-family:var(--mono);font-size:13px;letter-spacing:.16em;text-transform:uppercase;
+    text-decoration:none;padding:17px 30px;border:1px solid var(--brass-600);transition:all .25s}
+  .btn-solid{background:var(--firefly-400);color:var(--forest-900);border-color:var(--firefly-400)}
+  .btn-solid:hover{background:var(--ivory-100);border-color:var(--ivory-100)}
+  .btn-ghost{color:var(--ivory-100)}
+  .btn-ghost:hover{border-color:var(--firefly-400);color:var(--firefly-400)}
+  .trust{margin-top:34px;font-size:13.5px;color:rgba(246,241,231,.62);font-weight:320}
+  .trust b{color:rgba(246,241,231,.9);font-weight:500}
+
+  /* ---- sticky bar ---- */
+  .sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:49;display:flex;justify-content:center;gap:12px;
+    padding:12px 16px;background:rgba(13,26,20,.94);backdrop-filter:blur(8px);border-top:1px solid rgba(168,135,79,.35);
+    transform:translateY(110%);transition:transform .4s}
+  .sticky-cta.on{transform:translateY(0)}
+  .sticky-cta .btn{padding:12px 22px;font-size:11.5px}
+
+  /* ---- light sections ---- */
+  .light{background:var(--ivory-100)}
+  .bone{background:var(--bone-200)}
+  .dark{background:var(--forest-900);color:var(--ivory-100)}
+  h2{font-size:clamp(28px,4vw,42px);line-height:1.15;max-width:22ch;margin-bottom:22px}
+  .lede{font-size:19px;font-weight:320;max-width:62ch}
+  .dark .lede{color:rgba(246,241,231,.85)}
+
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  @media(max-width:820px){.cols{grid-template-columns:1fr}}
+
+  /* pillars */
+  .pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1px;background:var(--trav-300);border:1px solid var(--trav-300);margin-top:56px}
+  .pillar{background:var(--ivory-100);padding:34px 26px}
+  .pillar .num{font-family:var(--mono);font-size:12px;color:var(--brass-700);letter-spacing:.2em}
+  .pillar h3{font-size:21px;margin:14px 0 10px}
+  .pillar p{font-size:14.5px;color:#4a4f4a;font-weight:340}
+
+  /* experience vignettes */
+  .vignettes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:54px}
+  .vig{background:var(--forest-900);position:relative}
+  .vig svg{width:100%;height:auto}
+  .vig figcaption{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--brass-700);padding:14px 4px 0}
+
+  /* process */
+  .steps{counter-reset:s;display:grid;gap:0;margin-top:48px;border-left:1px solid var(--brass-600)}
+  .step{padding:26px 0 26px 38px;position:relative}
+  .step::before{counter-increment:s;content:counter(s,upper-roman);position:absolute;left:-1px;top:30px;transform:translateX(-50%);
+    background:var(--ivory-100);font-family:var(--mono);font-size:12px;color:var(--brass-700);padding:4px 2px;letter-spacing:.08em}
+  .dark .step::before{background:var(--forest-900);color:var(--firefly-400)}
+  .step h3{font-size:22px;margin-bottom:8px}
+  .step p{max-width:58ch;font-weight:320}
+  .dark .step p{color:rgba(246,241,231,.8)}
+
+  /* tiers */
+  .tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px;margin-top:52px}
+  .tier{border:1px solid var(--trav-300);padding:36px 30px;background:var(--ivory-100)}
+  .tier.feature{border-color:var(--brass-600);background:var(--bone-200)}
+  .tier .mono{font-size:11px;color:var(--brass-700)}
+  .tier .price{font-family:var(--serif);font-size:40px;margin:16px 0 4px}
+  .tier .per{font-size:13px;color:#6a6f6a;margin-bottom:20px}
+  .tier ul{list-style:none;font-size:14.5px}
+  .tier li{padding:9px 0;border-top:1px solid var(--trav-300);font-weight:340}
+
+  /* director */
+  .director-card{display:grid;grid-template-columns:280px 1fr;gap:56px;align-items:center}
+  @media(max-width:760px){.director-card{grid-template-columns:1fr}}
+  blockquote{font-family:var(--serif);font-style:italic;font-size:clamp(21px,2.6vw,27px);line-height:1.45;font-weight:360;max-width:30ch}
+  cite{display:block;font-family:var(--mono);font-style:normal;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--brass-700);margin-top:24px}
+  .dark cite{color:var(--firefly-400)}
+
+  footer{background:var(--forest-900);color:rgba(246,241,231,.6);padding:70px 0 120px;font-size:13.5px}
+  footer .wrap{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-start}
+  footer a{color:rgba(246,241,231,.8);text-decoration:none}
+  footer a:hover{color:var(--firefly-400)}
+  .foot-links{display:flex;flex-direction:column;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+  .legal{max-width:60ch;font-size:12.5px;line-height:1.7;color:rgba(246,241,231,.45)}
+</style>
+</head>
+<body>
+
+<nav aria-label="Primary">
+  <a class="wordmark" href="#top">ATLAS <b>ACADEMY</b></a>
+  <div class="navlinks">
+    <a class="hide-m" href="/" title="US-Squared Research Institute">US-Squared</a>
+    <a class="hide-m" href="#gap">The Gap</a>
+    <a class="hide-m" href="#experience">The Experience</a>
+    <a class="hide-m" href="#credential">The Credential</a>
+    <a class="hide-m" href="#investment">Investment</a>
+    <a href="#invitation">Request an Invitation</a>
+  </div>
+</nav>
+
+<header id="top">
+  <svg class="contours" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g fill="none" stroke="#e8c876" stroke-width="1">
+      <path d="M-50,700 C300,620 500,760 820,660 S1250,540 1500,610"/>
+      <path d="M-50,640 C280,560 520,690 840,590 S1260,470 1500,540"/>
+      <path d="M-50,580 C260,505 540,620 860,520 S1270,410 1500,470"/>
+      <path d="M-50,520 C240,455 560,550 880,455 S1280,350 1500,400"/>
+      <path d="M-50,460 C220,405 580,480 900,395 S1290,295 1500,335"/>
+      <circle cx="1120" cy="255" r="60"/><circle cx="1120" cy="255" r="38"/><circle cx="1120" cy="255" r="16"/>
+      <path d="M1120,175 v160 M1040,255 h160" stroke-width=".6"/>
+    </g>
+  </svg>
+  <div class="fireflies" aria-hidden="true">
+    <span class="ff" style="top:22%;left:14%;animation-delay:0s,-1s"></span>
+    <span class="ff" style="top:34%;left:72%;animation-delay:-2s,-.4s"></span>
+    <span class="ff" style="top:58%;left:38%;animation-delay:-4s,-2.1s"></span>
+    <span class="ff" style="top:70%;left:82%;animation-delay:-1.4s,-3s"></span>
+    <span class="ff" style="top:18%;left:52%;animation-delay:-3.2s,-1.6s"></span>
+    <span class="ff" style="top:78%;left:22%;animation-delay:-5s,-.8s"></span>
+    <span class="ff" style="top:44%;left:90%;animation-delay:-2.6s,-2.7s"></span>
+  </div>
+  <div class="wrap hero-inner">
+    <div class="hero-coord">9.6425° N · 84.0117° W — A WORLDSCHOOL, WITH THE PAPER TO PROVE IT</div>
+    <h1>The world is the campus. <em>The transcript is real.</em></h1>
+    <p class="hero-sub">Atlas Academy turns your teen's life abroad into a college-ready transcript — with credentialed-educator oversight, a true peer cohort, strategic four-year planning, and UN&nbsp;SDG fieldwork in real communities. Built by an educational researcher. Invitation only.</p>
+    <div class="cta-row">
+      <a class="btn btn-solid" href="#invitation">Request an Invitation</a>
+      <a class="btn btn-ghost" href="#invitation">Book a Discovery Call</a>
+    </div>
+    <p class="trust">Led by <b>Dr. Erica L. Tartt, PhD</b> · Limited to <b>24 students</b> per season · $500 fully-refundable deposit</p>
+  </div>
+</header>
+
+<section class="light" id="gap">
+  <div class="wrap">
+    <div class="kicker">The Transcript Gap</div>
+    <h2>You gave your teen the world. Admissions offices want it on paper.</h2>
+    <div class="rule"></div>
+    <div class="cols">
+      <p class="lede">Your family chose a bigger classroom — three continents, four languages, real work in real places. But when a university asks for a transcript, the richest education a teenager can have suddenly looks like a gap. You've been assembling it alone: no registrar, no counselor, no one to tell you what counts. Atlas Academy exists to close that distance — brilliance is already there; our job is to recognize it and put it on paper.</p>
+      <div>
+        <p style="font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--brass-700);margin-bottom:16px">What families carry alone</p>
+        <ul style="list-style:none;font-size:15.5px">
+          <li style="padding:12px 0;border-top:1px solid var(--trav-300)">Translating lived experience into credits and course titles</li>
+          <li style="padding:12px 0;border-top:1px solid var(--trav-300)">Proving rigor without a school behind them</li>
+          <li style="padding:12px 0;border-top:1px solid var(--trav-300)">A teen who is thriving everywhere — except among peers</li>
+          <li style="padding:12px 0;border-top:1px solid var(--trav-300);border-bottom:1px solid var(--trav-300)">A four-year plan that survives a life of movement</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bone">
+  <div class="wrap">
+    <div class="kicker">The Atlas Commitments</div>
+    <h2>Five things a worldschool owes your family.</h2>
+    <div class="pillars">
+      <div class="pillar"><div class="num">01</div><h3>Transcripts</h3><p>Portfolio-assessed, standards-aligned, college-ready. Real course titles, real credits, a registrar's discipline.</p></div>
+      <div class="pillar"><div class="num">02</div><h3>Oversight</h3><p>Credentialed educators review every credit. A PhD-led academic spine behind your family's freedom.</p></div>
+      <div class="pillar"><div class="num">03</div><h3>Peers</h3><p>A real cohort — 24 students, side by side in the field. The connection worldschooling teens are missing.</p></div>
+      <div class="pillar"><div class="num">04</div><h3>Planning</h3><p>Strategic educational planning: a four-year map from where your teen is to where they're going.</p></div>
+      <div class="pillar"><div class="num">05</div><h3>Purpose</h3><p>UN SDG capstone projects with community partners — learning that leaves the place better than it found it.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="experience">
+  <div class="wrap">
+    <div class="kicker">The Experience</div>
+    <h2>Six weeks that count. In every sense.</h2>
+    <p class="lede">A 4-day-per-week academic hub in Costa Rica. Mornings in seminar, afternoons in the field on an SDG capstone with local partners — turtle-nest surveys, regenerative agriculture, community documentation. Evenings belong to the cohort. Everything you make here counts.</p>
+    <div class="vignettes">
+      <figure class="vig">
+        <svg viewBox="0 0 400 300" role="img" aria-label="Conceptual illustration: hands planting a seedling at golden hour">
+          <rect width="400" height="300" fill="#0d1a14"/>
+          <circle cx="200" cy="235" r="150" fill="#a8874f" opacity=".25"/>
+          <circle cx="200" cy="235" r="100" fill="#e8c876" opacity=".3"/>
+          <path d="M0,240 Q100,225 200,238 T400,232 V300 H0 Z" fill="#1c211d"/>
+          <path d="M185,238 C180,200 195,185 200,160 C205,185 220,200 215,238" fill="none" stroke="#e8c876" stroke-width="3" stroke-linecap="round"/>
+          <path d="M200,185 C185,175 178,158 180,145 C196,150 202,165 200,185 M200,170 C215,162 222,146 220,133 C204,138 198,152 200,170" fill="#e8c876" opacity=".9"/>
+          <path d="M120,262 C140,250 165,246 185,250 M280,262 C260,250 235,246 215,250" stroke="#a8874f" stroke-width="7" stroke-linecap="round" fill="none" opacity=".8"/>
+          <g fill="#e8c876"><circle cx="90" cy="120" r="2.4" opacity=".9"/><circle cx="320" cy="90" r="2" opacity=".7"/><circle cx="280" cy="160" r="1.6" opacity=".5"/></g>
+        </svg>
+        <figcaption>Fieldwork · regenerative agriculture · golden hour</figcaption>
+      </figure>
+      <figure class="vig">
+        <svg viewBox="0 0 400 300" role="img" aria-label="Conceptual illustration: turtle-nest survey by headlamp at blue hour">
+          <rect width="400" height="300" fill="#101d26"/>
+          <path d="M0,210 Q120,196 240,208 T400,204 V300 H0 Z" fill="#3d5a6c" opacity=".5"/>
+          <path d="M0,235 Q140,222 280,232 T400,228 V300 H0 Z" fill="#0d1a14"/>
+          <path d="M150,140 L235,205 L150,225 Z" fill="#e8c876" opacity=".22"/>
+          <circle cx="148" cy="138" r="7" fill="#e8c876"/>
+          <path d="M138,150 C130,165 132,185 142,196 L120,205 C112,190 114,165 124,150 Z" fill="#efe7d8" opacity=".85"/>
+          <ellipse cx="255" cy="212" rx="34" ry="16" fill="#efe7d8" opacity=".8"/>
+          <path d="M255,196 a34,16 0 0 1 0,32 M240,199 v26 M270,199 v26 M228,206 h54" stroke="#101d26" stroke-width="1.6" fill="none" opacity=".7"/>
+          <path d="M289,212 c8,-4 14,-2 18,2 c-4,4 -12,5 -18,2 Z" fill="#efe7d8" opacity=".8"/>
+          <g fill="#e8c876"><circle cx="60" cy="60" r="1.8"/><circle cx="110" cy="40" r="1.4" opacity=".7"/><circle cx="330" cy="55" r="2" opacity=".8"/><circle cx="370" cy="120" r="1.4" opacity=".6"/></g>
+        </svg>
+        <figcaption>SDG 14 · turtle-nest survey · blue hour</figcaption>
+      </figure>
+      <figure class="vig">
+        <svg viewBox="0 0 400 300" role="img" aria-label="Conceptual illustration: a season of project sites glowing as a constellation on a map of Costa Rica">
+          <rect width="400" height="300" fill="#0d1a14"/>
+          <g fill="none" stroke="#3d5a6c" stroke-width="1" opacity=".7">
+            <path d="M60,250 C55,205 80,175 105,150 C90,120 110,80 150,62 C185,45 230,55 262,80 C300,108 330,150 338,196 C342,225 330,252 300,262 C250,278 110,282 60,250 Z"/>
+            <path d="M85,240 C82,205 100,180 120,160 C108,132 125,100 158,86" opacity=".5"/>
+          </g>
+          <g stroke="#e8c876" stroke-width=".8" opacity=".55">
+            <path d="M140,120 L210,95 L268,140 L230,205 L155,215 Z" fill="none"/>
+          </g>
+          <g fill="#e8c876">
+            <circle cx="140" cy="120" r="4"/><circle cx="210" cy="95" r="5"/><circle cx="268" cy="140" r="4"/>
+            <circle cx="230" cy="205" r="5"/><circle cx="155" cy="215" r="4"/>
+          </g>
+          <g fill="none" stroke="#e8c876" opacity=".35"><circle cx="210" cy="95" r="11"/><circle cx="230" cy="205" r="11"/></g>
+          <text x="286" y="248" font-family="IBM Plex Mono,monospace" font-size="10" fill="#a8874f" letter-spacing="2">ONE SEASON</text>
+        </svg>
+        <figcaption>The Atlas Map · a season becomes a constellation</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="light">
+  <div class="wrap">
+    <div class="kicker">Flexibility</div>
+    <h2>Education that bends to your travel schedule.</h2>
+    <div class="rule"></div>
+    <p class="lede">Each season runs twelve weeks; your family chooses its six. Two overlapping cohorts, capped at 24 students in total, ages 14–18. Arrive from anywhere, leave for anywhere — the credential travels with you, and the Atlas peer community continues online between seasons.</p>
+    <p class="mono" style="font-size:12px;color:var(--brass-700);margin-top:34px">12-week season · choose your 6 · 4 hub days per week · cohort continues online</p>
+  </div>
+</section>
+
+<section class="bone" id="credential">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="kicker">The Credential</div>
+        <h2>From lived experience to conferred credit.</h2>
+        <p class="lede">No algorithm issues a transcript here, and no checkbox does either. Every credit is a human judgment, made by a qualified educator, on evidence your teen actually produced.</p>
+        <div class="steps">
+          <div class="step"><h3>Portfolio</h3><p>Students capture real artifacts — field journals, data, film, essays, built things — as they work.</p></div>
+          <div class="step"><h3>Expert review</h3><p>Credentialed educators assess each portfolio against standards-aligned rubrics and record their rationale.</p></div>
+          <div class="step"><h3>Transcript</h3><p>Validated learning is conferred as formal credit and issued on a college-ready transcript — formatted for accreditation-portfolio acceptance, with Cognia accreditation being actively pursued.</p></div>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:center">
+        <svg viewBox="0 0 340 340" width="300" role="img" aria-label="The Atlas Academy seal: a compass rose ringed by the school name and motto">
+          <circle cx="170" cy="170" r="160" fill="none" stroke="#a8874f" stroke-width="2"/>
+          <circle cx="170" cy="170" r="146" fill="none" stroke="#a8874f" stroke-width=".8"/>
+          <circle cx="170" cy="170" r="104" fill="none" stroke="#a8874f" stroke-width=".8"/>
+          <defs><path id="arcT" d="M170,170 m-125,0 a125,125 0 1,1 250,0"/><path id="arcB" d="M170,170 m-125,0 a125,125 0 1,0 250,0"/></defs>
+          <text font-family="IBM Plex Mono,monospace" font-size="15" letter-spacing="6" fill="#8a6d3b">
+            <textPath href="#arcT" startOffset="50%" text-anchor="middle">ATLAS ACADEMY · MMXXVI</textPath>
+          </text>
+          <text font-family="IBM Plex Mono,monospace" font-size="10.5" letter-spacing="3.5" fill="#8a6d3b">
+            <textPath href="#arcB" startOffset="50%" text-anchor="middle">THE WORLD IS THE CAMPUS</textPath>
+          </text>
+          <g stroke="#8a6d3b" fill="#8a6d3b">
+            <path d="M170,80 L182,158 L170,170 L158,158 Z" fill="#a8874f"/>
+            <path d="M170,260 L182,182 L170,170 L158,182 Z" fill="none" stroke-width="1.2"/>
+            <path d="M80,170 L158,158 L170,170 L158,182 Z" fill="none" stroke-width="1.2"/>
+            <path d="M260,170 L182,158 L170,170 L182,182 Z" fill="#a8874f"/>
+          </g>
+          <circle cx="170" cy="170" r="7" fill="#e8c876" stroke="#8a6d3b"/>
+          <g fill="#a8874f"><circle cx="170" cy="52" r="2.4"/><circle cx="170" cy="288" r="2.4"/><circle cx="52" cy="170" r="2.4"/><circle cx="288" cy="170" r="2.4"/></g>
+        </svg>
+      </div>
+    </div>
+    <p style="font-size:13px;color:#6a6f6a;margin-top:44px;max-width:72ch">Transcripts are issued under transparent umbrella-school and portfolio-assessment conventions. Atlas Academy is pursuing accreditation through Cognia; families receive a plain-language explanation of exactly what the credential is at every stage.</p>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap director-card">
+    <figure style="margin:0">
+      <div style="border:1px solid var(--brass-600);padding:10px;background:#122219">
+        <img src="/atlas/director.jpg" alt="Dr. Erica L. Tartt, PhD — Founder and Director of Atlas Academy" style="width:100%;aspect-ratio:1/1;object-fit:cover" loading="lazy">
+      </div>
+      <figcaption class="mono" style="font-size:10px;color:var(--brass-600);letter-spacing:.22em;text-align:center;margin-top:12px">THE DIRECTOR</figcaption>
+    </figure>
+    <div>
+      <div class="kicker">The Director</div>
+      <blockquote>The world places an embargo on young people's brilliance. We don't create that brilliance — we lift the embargo, recognize what's already there, and put it on paper.
+        <cite>Dr. Erica L. Tartt, PhD — Founder &amp; Director</cite>
+      </blockquote>
+      <p style="margin-top:26px;max-width:56ch;color:rgba(246,241,231,.8);font-weight:320">An educational researcher, published author, and evaluator who has spent a career measuring what institutions miss. Atlas Academy is that career pointed at one question: what if a teenager's real life were treated as the serious academic evidence it is?</p>
+    </div>
+  </div>
+</section>
+
+<section class="light" id="investment">
+  <div class="wrap">
+    <div class="kicker">Investment</div>
+    <h2>A prospectus, not a price list.</h2>
+    <p class="lede">Tuition covers the academic hub, SDG capstone, educator assessment, transcript processing, and strategic planning. Families arrange their own travel and lodging — you are already experts at that part.</p>
+    <div class="tiers">
+      <div class="tier">
+        <div class="mono">Standard · Six Weeks</div>
+        <div class="price">$3,800</div>
+        <div class="per">per student, per 6-week term</div>
+        <ul>
+          <li>4-day/week academic hub</li>
+          <li>UN SDG capstone project</li>
+          <li>Portfolio assessment &amp; transcript</li>
+          <li>Cohort of 24, ages 14–18</li>
+        </ul>
+      </div>
+      <div class="tier feature">
+        <div class="mono">Premium · Six Weeks</div>
+        <div class="price">$6,800</div>
+        <div class="per">per student, per 6-week term</div>
+        <ul>
+          <li>Everything in Standard</li>
+          <li>1:1 admissions advising</li>
+          <li>Four-year strategic education plan</li>
+          <li>Priority seasonal re-invitation</li>
+        </ul>
+      </div>
+      <div class="tier">
+        <div class="mono">Full Season · Twelve Weeks</div>
+        <div class="price">$6,800<span style="font-size:16px;font-family:var(--sans)"> / $11,500</span></div>
+        <div class="per">Standard / Premium, full 12-week season</div>
+        <ul>
+          <li>Both cohorts, full season arc</li>
+          <li>Deepest capstone scope</li>
+          <li>Full-year transcript coverage</li>
+          <li>Premium adds advising &amp; planning</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="invitation" style="text-align:center">
+  <div class="wrap" style="max-width:760px">
+    <div class="kicker" style="text-align:center">The Invitation</div>
+    <h2 style="margin-left:auto;margin-right:auto">Reserve a place with nothing at risk.</h2>
+    <p class="lede" style="margin:0 auto 14px">Atlas Academy is application-only — 24 places per season, reviewed personally by Dr. Tartt. A <b style="font-weight:560;color:var(--firefly-400)">$500 deposit</b> holds your teen's place and is <b style="font-weight:560;color:var(--firefly-400)">fully refundable</b>, for any reason, until enrollment is confirmed. If the season doesn't reach its greenlight of ten committed families, every deposit is returned. No pressure, no fine print.</p>
+    <div class="cta-row" style="justify-content:center;margin-top:38px">
+      <a class="btn btn-solid" href="mailto:erica@measurementally.com?subject=Atlas%20High%20%E2%80%94%20Request%20an%20Invitation&body=Parent%20name%3A%0AStudent%20name%20%2B%20age%3A%0ACurrent%20schooling%20approach%3A%0ATarget%20season%20window%3A%0ABiggest%20frustration%20with%20credentialing%20while%20traveling%3A%0AHow%20you%20heard%20about%20us%3A">Request an Invitation</a>
+      <a class="btn btn-ghost" href="mailto:erica@measurementally.com?subject=Atlas%20High%20%E2%80%94%20Discovery%20Call%20Request">Book a Discovery Call</a>
+    </div>
+    <p class="trust" style="text-align:center">A 20-minute video call with the founder — questions answered, zero obligation. Invitations are reviewed personally; you'll hear back within 3 business days.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="wordmark" href="#top" style="font-size:24px">ATLAS <b>ACADEMY</b></a>
+      <p style="margin-top:14px;max-width:34ch">A worldschool with transcripts, oversight, peers, planning, and purpose.</p>
+    </div>
+    <div class="foot-links">
+      <a href="/atlas/brand.html">Brand Book</a>
+      <a href="/atlas/brochure.html">Family Brochure</a>
+      <a href="/atlas/deck.html">Investor Deck</a>
+      <a href="/">US-Squared Research Institute</a>
+      <a href="mailto:erica@measurementally.com">erica@measurementally.com</a>
+    </div>
+    <p class="legal">Atlas Academy issues transcripts under transparent umbrella-school and portfolio-assessment conventions and is pursuing accreditation through Cognia. Nothing on this page is a claim of current accreditation status. Deposits are fully refundable until enrollment confirmation. © MMXXVI Atlas Academy · A program of US-Squared Research Institute, a 501(c)(3) (EIN 92-3221304).</p>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="stickyBar">
+  <a class="btn btn-solid" href="#invitation">Request an Invitation</a>
+  <a class="btn btn-ghost" href="#invitation">Book a Discovery Call</a>
+</div>
+
+<script>
+  const bar=document.getElementById('stickyBar'),hero=document.querySelector('header'),close=document.getElementById('invitation');
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{
+    if(e.target===hero) bar.classList.toggle('on',!e.isIntersecting&&!closeVisible);
+    if(e.target===close){closeVisible=e.isIntersecting;bar.classList.toggle('on',!e.isIntersecting&&heroGone);}
+    if(e.target===hero) heroGone=!e.isIntersecting;
+  })},{threshold:.08});
+  let closeVisible=false,heroGone=false;
+  io.observe(hero);io.observe(close);
+</script>
+</body>
+</html>

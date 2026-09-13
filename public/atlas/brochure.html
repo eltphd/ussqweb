@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atlas Academy — Family Brochure</title>
+<meta name="description" content="The Atlas Academy family brochure: a print-ready prospectus for worldschooling families. Use your browser's Print to PDF for a paper-ready copy.">
+<link rel="stylesheet" href="/atlas/fonts.css">
+<style>
+  :root{
+    --forest-900:#0d1a14; --ivory-100:#f6f1e7; --bone-200:#efe7d8; --trav-300:#e5dbc8;
+    --ink-900:#1c211d; --brass-600:#a8874f; --brass-700:#8a6d3b; --firefly-400:#e8c876; --dusk-600:#3d5a6c;
+    --serif:'Newsreader',Georgia,serif; --sans:'Archivo',sans-serif; --mono:'IBM Plex Mono',monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#d8d2c4;font-family:var(--sans);font-weight:340;color:var(--ink-900);line-height:1.6;font-size:14px}
+  h1,h2,h3{font-family:var(--serif);font-weight:420;letter-spacing:-.01em}
+  .mono{font-family:var(--mono);letter-spacing:.18em;text-transform:uppercase}
+  .page{width:210mm;min-height:296mm;margin:22px auto;background:var(--ivory-100);box-shadow:0 8px 30px rgba(0,0,0,.18);
+    padding:22mm 20mm;position:relative;overflow:hidden;display:flex;flex-direction:column}
+  @media(max-width:860px){.page{width:100%;min-height:auto;padding:34px 26px}}
+  @media print{
+    body{background:#fff}
+    .page{margin:0;box-shadow:none;page-break-after:always;width:auto;min-height:275mm}
+    .no-print{display:none}
+  }
+  .toolbar{max-width:210mm;margin:22px auto 0;display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+  .toolbar a,.toolbar button{color:var(--brass-700);background:none;border:1px solid var(--brass-600);padding:9px 16px;cursor:pointer;text-decoration:none;font:inherit;letter-spacing:inherit;text-transform:inherit}
+  .kicker{font-family:var(--mono);font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--brass-700);margin-bottom:12px}
+  .pagenum{position:absolute;bottom:10mm;right:20mm;font-family:var(--mono);font-size:9px;letter-spacing:.2em;color:var(--brass-700)}
+  .foot-line{position:absolute;bottom:10mm;left:20mm;font-family:var(--mono);font-size:9px;letter-spacing:.2em;color:#9a9484}
+
+  /* cover */
+  .cover{background:var(--forest-900);color:var(--ivory-100);justify-content:space-between}
+  .cover .kicker{color:var(--firefly-400)}
+  .cover h1{font-size:52px;line-height:1.06;max-width:14ch;font-weight:380}
+  .cover h1 em{font-style:italic;color:var(--firefly-400)}
+  .cover .contour{position:absolute;inset:0;opacity:.14}
+  .cover .content{position:relative;z-index:1}
+
+  h2{font-size:30px;margin-bottom:14px;max-width:24ch}
+  .lede{font-size:15.5px;font-weight:320;max-width:66ch;margin-bottom:22px}
+  .rule{width:44px;height:1px;background:var(--brass-600);margin:18px 0 22px}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  @media(max-width:700px){.two{grid-template-columns:1fr}}
+  .pillar-row{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--trav-300);border:1px solid var(--trav-300);margin-top:18px}
+  @media(max-width:700px){.pillar-row{grid-template-columns:1fr}}
+  .pill{background:var(--ivory-100);padding:16px 13px}
+  .pill .num{font-family:var(--mono);font-size:9.5px;color:var(--brass-700);letter-spacing:.2em}
+  .pill h3{font-size:15px;margin:8px 0 6px}
+  .pill p{font-size:11.5px;color:#4a4f4a}
+  .steps{border-left:1px solid var(--brass-600);margin:18px 0}
+  .step{padding:12px 0 12px 24px;position:relative}
+  .step::before{content:'';position:absolute;left:-4px;top:22px;width:7px;height:7px;border-radius:50%;background:var(--brass-600)}
+  .step h3{font-size:16.5px}
+  .step p{font-size:13px;max-width:60ch}
+  .tier-t{width:100%;border-collapse:collapse;font-size:13px;margin-top:10px}
+  .tier-t th{font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--brass-700);text-align:left;padding:10px 12px;border-bottom:2px solid var(--brass-600)}
+  .tier-t td{padding:11px 12px;border-bottom:1px solid var(--trav-300);vertical-align:top}
+  .price{font-family:var(--serif);font-size:22px}
+  blockquote{font-family:var(--serif);font-style:italic;font-size:19px;line-height:1.5;max-width:38ch;margin:16px 0}
+  cite{font-family:var(--mono);font-style:normal;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--brass-700)}
+  .faq h3{font-size:15.5px;margin:16px 0 4px}
+  .faq p{font-size:12.5px;color:#3d423d;max-width:70ch}
+  .back{background:var(--forest-900);color:var(--ivory-100);align-items:center;justify-content:center;text-align:center}
+  .back .mono{color:var(--firefly-400)}
+</style>
+</head>
+<body>
+
+<div class="toolbar no-print">
+  <a href="/atlas">← Atlas Academy</a>
+  <span>Family Brochure · A4 · 6 pages</span>
+  <button onclick="window.print()">Print / Save as PDF</button>
+</div>
+
+<!-- PAGE 1 · COVER -->
+<div class="page cover">
+  <svg class="contour" viewBox="0 0 800 1100" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g fill="none" stroke="#e8c876" stroke-width="1">
+      <path d="M-20,900 C200,830 380,930 600,840 S820,760 850,800"/>
+      <path d="M-20,830 C190,760 400,860 620,770 S830,690 850,730"/>
+      <path d="M-20,760 C180,695 420,790 640,700 S840,620 850,660"/>
+      <circle cx="620" cy="230" r="70"/><circle cx="620" cy="230" r="44"/><circle cx="620" cy="230" r="18"/>
+      <path d="M620,140 v180 M530,230 h180" stroke-width=".6"/>
+    </g>
+    <g fill="#e8c876"><circle cx="160" cy="300" r="3"/><circle cx="300" cy="180" r="2.2"/><circle cx="520" cy="420" r="2.6"/><circle cx="240" cy="520" r="2"/></g>
+  </svg>
+  <div class="content">
+    <div class="kicker">A Worldschool · Invitation Only · Ages 14–18</div>
+    <div style="font-family:var(--serif);font-size:26px;margin-bottom:60px">ATLAS <b style="color:var(--firefly-400);font-weight:560">ACADEMY</b></div>
+  </div>
+  <div class="content">
+    <h1>The world is the campus. <em>The transcript is real.</em></h1>
+    <p style="margin-top:22px;max-width:52ch;color:rgba(246,241,231,.82);font-size:15px">A family prospectus — for parents who gave their teenager the world and now want it recognized on paper.</p>
+  </div>
+  <div class="content mono" style="font-size:9.5px;color:rgba(246,241,231,.55)">9.6425° N · 84.0117° W · COSTA RICA · MMXXVI</div>
+</div>
+
+<!-- PAGE 2 · THE GAP + COMMITMENTS -->
+<div class="page">
+  <div class="kicker">The Transcript Gap</div>
+  <h2>You gave your teen the world. Admissions offices want it on paper.</h2>
+  <div class="rule"></div>
+  <p class="lede">Your family chose a bigger classroom — continents, languages, real work in real places. But when a university asks for a transcript, the richest education a teenager can have suddenly looks like a gap. You have been the registrar, the counselor, and the curriculum office, alone. Atlas Academy closes that distance: the brilliance is already there. We recognize it and put it on paper.</p>
+  <div class="kicker" style="margin-top:14px">The Atlas Commitments</div>
+  <h2 style="font-size:24px">Five things a worldschool owes your family</h2>
+  <div class="pillar-row">
+    <div class="pill"><div class="num">01</div><h3>Transcripts</h3><p>Portfolio-assessed, standards-aligned, college-ready — a registrar's discipline.</p></div>
+    <div class="pill"><div class="num">02</div><h3>Oversight</h3><p>Credentialed educators review every credit; a PhD-led academic spine.</p></div>
+    <div class="pill"><div class="num">03</div><h3>Peers</h3><p>A true cohort of 24 — the connection worldschooling teens are missing.</p></div>
+    <div class="pill"><div class="num">04</div><h3>Planning</h3><p>A strategic four-year map from where your teen is to where they're going.</p></div>
+    <div class="pill"><div class="num">05</div><h3>Purpose</h3><p>UN SDG capstones with community partners — learning that gives back.</p></div>
+  </div>
+  <p style="font-size:12.5px;color:#6a6f6a;margin-top:auto;padding-top:18px">Atlas Academy is application-only. Each season is limited to 24 students, reviewed personally by the founder.</p>
+  <div class="foot-line">ATLAS ACADEMY · FAMILY PROSPECTUS</div><div class="pagenum">02</div>
+</div>
+
+<!-- PAGE 3 · THE EXPERIENCE -->
+<div class="page">
+  <div class="kicker">The Experience</div>
+  <h2>Six weeks that count. In every sense.</h2>
+  <div class="rule"></div>
+  <div class="two">
+    <div>
+      <p class="lede" style="font-size:14px">A 4-day-per-week academic hub in Costa Rica. Mornings in seminar; afternoons in the field on a UN SDG capstone with local partners — turtle-nest surveys, regenerative agriculture, community documentation. Evenings belong to the cohort: shared meals, shared projects, the friendships a moving childhood rarely gets to keep.</p>
+      <p class="lede" style="font-size:14px">Each season runs twelve weeks; your family chooses its six. Arrive from anywhere, leave for anywhere — the credential travels with you, and the peer community continues online between seasons.</p>
+      <p class="mono" style="font-size:10px;color:var(--brass-700)">12-week season · choose your 6 · 4 hub days / week · 24 students · ages 14–18</p>
+    </div>
+    <div>
+      <svg viewBox="0 0 400 300" role="img" aria-label="Conceptual illustration: turtle-nest survey by headlamp at blue hour" style="width:100%">
+        <rect width="400" height="300" fill="#101d26"/>
+        <path d="M0,210 Q120,196 240,208 T400,204 V300 H0 Z" fill="#3d5a6c" opacity=".5"/>
+        <path d="M0,235 Q140,222 280,232 T400,228 V300 H0 Z" fill="#0d1a14"/>
+        <path d="M150,140 L235,205 L150,225 Z" fill="#e8c876" opacity=".22"/>
+        <circle cx="148" cy="138" r="7" fill="#e8c876"/>
+        <path d="M138,150 C130,165 132,185 142,196 L120,205 C112,190 114,165 124,150 Z" fill="#efe7d8" opacity=".85"/>
+        <ellipse cx="255" cy="212" rx="34" ry="16" fill="#efe7d8" opacity=".8"/>
+        <path d="M255,196 a34,16 0 0 1 0,32 M240,199 v26 M270,199 v26 M228,206 h54" stroke="#101d26" stroke-width="1.6" fill="none" opacity=".7"/>
+        <g fill="#e8c876"><circle cx="60" cy="60" r="1.8"/><circle cx="110" cy="40" r="1.4"/><circle cx="330" cy="55" r="2"/></g>
+      </svg>
+      <p class="mono" style="font-size:9px;color:var(--brass-700);margin-top:8px">SDG 14 · Turtle-nest survey · blue hour</p>
+      <svg viewBox="0 0 400 220" role="img" aria-label="Conceptual illustration: seedling in cupped hands at golden hour" style="width:100%;margin-top:16px">
+        <rect width="400" height="220" fill="#0d1a14"/>
+        <circle cx="200" cy="180" r="120" fill="#a8874f" opacity=".25"/>
+        <circle cx="200" cy="180" r="80" fill="#e8c876" opacity=".3"/>
+        <path d="M0,185 Q100,172 200,183 T400,178 V220 H0 Z" fill="#1c211d"/>
+        <path d="M185,183 C180,150 195,138 200,115 C205,138 220,150 215,183" fill="none" stroke="#e8c876" stroke-width="3" stroke-linecap="round"/>
+        <path d="M200,140 C185,130 178,115 180,103 C196,108 202,122 200,140 M200,127 C215,119 222,104 220,92 C204,97 198,110 200,127" fill="#e8c876" opacity=".9"/>
+        <g fill="#e8c876"><circle cx="90" cy="80" r="2"/><circle cx="320" cy="60" r="1.8"/></g>
+      </svg>
+      <p class="mono" style="font-size:9px;color:var(--brass-700);margin-top:8px">SDG 15 · Regenerative agriculture · golden hour</p>
+    </div>
+  </div>
+  <div class="foot-line">ATLAS ACADEMY · FAMILY PROSPECTUS</div><div class="pagenum">03</div>
+</div>
+
+<!-- PAGE 4 · THE CREDENTIAL -->
+<div class="page">
+  <div class="kicker">The Credential</div>
+  <h2>From lived experience to conferred credit.</h2>
+  <div class="rule"></div>
+  <div class="two">
+    <div>
+      <p class="lede" style="font-size:14px">No algorithm issues a transcript at Atlas Academy, and no checkbox does either. Every credit is a human judgment, made by a qualified educator, on evidence your teen actually produced.</p>
+      <div class="steps">
+        <div class="step"><h3>I · Portfolio</h3><p>Students capture real artifacts — field journals, data, film, essays, built things — as they work.</p></div>
+        <div class="step"><h3>II · Expert review</h3><p>Credentialed educators assess each portfolio against standards-aligned rubrics and record a written rationale.</p></div>
+        <div class="step"><h3>III · Transcript</h3><p>Validated learning is conferred as formal credit on a college-ready transcript, formatted for accreditation-portfolio acceptance.</p></div>
+      </div>
+      <p style="font-size:11.5px;color:#6a6f6a">Transcripts are issued under transparent umbrella-school and portfolio-assessment conventions. Atlas Academy is pursuing accreditation through Cognia; families receive a plain-language explanation of exactly what the credential is at every stage.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;justify-content:center">
+      <svg viewBox="0 0 340 340" width="230" role="img" aria-label="The Atlas Academy seal">
+        <circle cx="170" cy="170" r="160" fill="none" stroke="#a8874f" stroke-width="2"/>
+        <circle cx="170" cy="170" r="146" fill="none" stroke="#a8874f" stroke-width=".8"/>
+        <circle cx="170" cy="170" r="104" fill="none" stroke="#a8874f" stroke-width=".8"/>
+        <defs><path id="b1" d="M170,170 m-125,0 a125,125 0 1,1 250,0"/><path id="b2" d="M170,170 m-125,0 a125,125 0 1,0 250,0"/></defs>
+        <text font-family="IBM Plex Mono,monospace" font-size="15" letter-spacing="6" fill="#8a6d3b"><textPath href="#b1" startOffset="50%" text-anchor="middle">ATLAS ACADEMY · MMXXVI</textPath></text>
+        <text font-family="IBM Plex Mono,monospace" font-size="10.5" letter-spacing="3.5" fill="#8a6d3b"><textPath href="#b2" startOffset="50%" text-anchor="middle">THE WORLD IS THE CAMPUS</textPath></text>
+        <g stroke="#8a6d3b" fill="#8a6d3b">
+          <path d="M170,80 L182,158 L170,170 L158,158 Z" fill="#a8874f"/>
+          <path d="M170,260 L182,182 L170,170 L158,182 Z" fill="none" stroke-width="1.2"/>
+          <path d="M80,170 L158,158 L170,170 L158,182 Z" fill="none" stroke-width="1.2"/>
+          <path d="M260,170 L182,158 L170,170 L182,182 Z" fill="#a8874f"/>
+        </g>
+        <circle cx="170" cy="170" r="7" fill="#e8c876" stroke="#8a6d3b"/>
+      </svg>
+      <img src="/atlas/director.jpg" alt="Dr. Erica L. Tartt, PhD — Founder and Director" style="width:110px;height:110px;object-fit:cover;border-radius:50%;border:2px solid var(--brass-600);margin-top:18px">
+      <blockquote style="text-align:center">"The brilliance is already there. We put it on paper."<br><cite style="display:block;margin-top:10px">Dr. Erica L. Tartt, PhD · Founder &amp; Director</cite></blockquote>
+    </div>
+  </div>
+  <div class="foot-line">ATLAS ACADEMY · FAMILY PROSPECTUS</div><div class="pagenum">04</div>
+</div>
+
+<!-- PAGE 5 · INVESTMENT + FAQ -->
+<div class="page">
+  <div class="kicker">Investment</div>
+  <h2>A prospectus, not a price list.</h2>
+  <div class="rule"></div>
+  <table class="tier-t">
+    <tr><th>Tier</th><th>Term</th><th>Tuition</th><th>Includes</th></tr>
+    <tr><td><b>Standard</b></td><td>Six weeks</td><td class="price">$3,800</td><td>Academic hub · SDG capstone · portfolio assessment &amp; transcript · cohort of 24</td></tr>
+    <tr><td><b>Premium</b></td><td>Six weeks</td><td class="price">$6,800</td><td>Standard, plus 1:1 admissions advising and a four-year strategic education plan</td></tr>
+    <tr><td><b>Full Season</b></td><td>Twelve weeks</td><td class="price">$6,800 / $11,500</td><td>Both cohorts, deepest capstone scope; Premium adds advising &amp; planning</td></tr>
+  </table>
+  <p style="font-size:12px;color:#6a6f6a;margin:10px 0 20px">Families arrange their own travel and lodging — you are already experts at that part. Tuition covers everything academic.</p>
+  <div class="faq">
+    <div class="kicker">Questions families ask</div>
+    <h3>Is the deposit really refundable?</h3>
+    <p>Yes — $500, fully refundable for any reason until enrollment is confirmed. If a season doesn't reach its greenlight of ten committed families, every deposit is returned automatically. The risk stays with us, where it belongs.</p>
+    <h3>Who reviews my teen's work?</h3>
+    <p>Credentialed educators, under the direction of Dr. Erica L. Tartt, PhD — an educational researcher and evaluator. Every credit carries a human sign-off and a written rationale.</p>
+    <h3>What about safety and data?</h3>
+    <p>A safeguarding and disclosure-response policy governs all youth-facing operations. Family data is handled consent-first and FERPA-aligned; nothing is shared or used without explicit written permission, and opting out never affects services.</p>
+    <h3>We're mid-journey — does the schedule bend?</h3>
+    <p>That's the design. Twelve-week seasons, your choice of six; the credential and the peer community travel with you.</p>
+  </div>
+  <div class="foot-line">ATLAS ACADEMY · FAMILY PROSPECTUS</div><div class="pagenum">05</div>
+</div>
+
+<!-- PAGE 6 · BACK COVER -->
+<div class="page back">
+  <div>
+    <div class="mono" style="font-size:10px;margin-bottom:26px">The Invitation</div>
+    <h2 style="font-size:34px;max-width:20ch;margin:0 auto 18px">Reserve a place with nothing at risk.</h2>
+    <p style="max-width:48ch;margin:0 auto;color:rgba(246,241,231,.82);font-size:14.5px">Request an invitation or book a 20-minute discovery call with the founder. Invitations are reviewed personally; you'll hear back within three business days.</p>
+    <p class="mono" style="font-size:11px;margin-top:34px;letter-spacing:.22em">erica@measurementally.com</p>
+    <svg viewBox="0 0 340 120" width="240" style="margin:40px auto 0" aria-hidden="true">
+      <g fill="none" stroke="#a8874f" stroke-width="1"><path d="M0,90 C80,70 160,95 240,75 S330,55 340,65"/><path d="M0,70 C80,52 170,74 250,56 S332,38 340,46"/></g>
+      <g fill="#e8c876"><circle cx="70" cy="40" r="2.6"/><circle cx="150" cy="25" r="2"/><circle cx="230" cy="38" r="2.4"/><circle cx="290" cy="20" r="1.8"/></g>
+    </svg>
+    <p class="mono" style="font-size:9px;color:rgba(246,241,231,.45);margin-top:40px">ATLAS ACADEMY · A PROGRAM OF US-SQUARED RESEARCH INSTITUTE · MMXXVI</p>
+  </div>
+</div>
+
+</body>
+</html>
