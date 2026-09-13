@@ -124,7 +124,7 @@ export default function BASEopsPage() {
             <blockquote className="pull measure">
               &ldquo;BASEops transformed how we manage grants. We finally have systems that match the scale of our
               ambitions.&rdquo;
-              <cite>— [Placeholder Name, Org]</cite>
+              <cite>Ahmere</cite>
             </blockquote>
           </AnimateOnScroll>
         </Section>

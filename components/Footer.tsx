@@ -46,11 +46,11 @@ export default function Footer() {
 
         <hr className="hairline" style={{ marginBottom: 24 }} />
 
-        {/* Entity attribution is held as-is pending Erica's confirmation (brief §5.3). */}
+        {/* Entity attribution (brief §5.3, confirmed Sept 13): the institute is the 501(c)(3); every property is a program of it. */}
         <div className="kicker" style={{ color: 'var(--on-ground-muted)', marginBottom: 16, lineHeight: 1.8 }}>
-          Atlas ERA — The Education Research Association
+          Atlas ERA — The Education Research Association · Atlas Academy · Altered Earth Press · Sparent Science
           <br />
-          A US-Squared Research Institute Initiative
+          Programs of US-Squared Research Institute
         </div>
 
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 16, justifyContent: 'space-between', alignItems: 'flex-start' }}>

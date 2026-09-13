@@ -24,6 +24,7 @@ export default function AtlasTestimonials({ testimonials }: { testimonials: Test
         </blockquote>
       </div>
 
+      {testimonials.length > 1 && (
       <div className="cluster" role="group" aria-label="Choose a testimonial" style={{ gap: 8 }}>
         {testimonials.map((t, i) => (
           <Button
@@ -38,6 +39,7 @@ export default function AtlasTestimonials({ testimonials }: { testimonials: Test
           </Button>
         ))}
       </div>
+      )}
     </div>
   );
 }

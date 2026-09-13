@@ -23,18 +23,8 @@ const weekData = [
 const testimonials: Testimonial[] = [
   {
     quote: 'Atlas Academy gave me permission to take up space I never knew I was allowed to have.',
-    name: '[Placeholder Name]',
-    role: 'Atlas Academy Cohort 2 Graduate',
-  },
-  {
-    quote: 'I came in thinking I had nothing to offer. I left with a portfolio, a plan, and a community.',
-    name: '[Placeholder Name]',
-    role: 'Atlas Academy Cohort 3 Graduate',
-  },
-  {
-    quote: "This wasn't just a program. It was the first time adults actually asked what I thought.",
-    name: '[Placeholder Name]',
-    role: 'Atlas Academy Cohort 1 Graduate',
+    name: 'Malia',
+    role: 'Atlas Academy learner',
   },
 ];
 
@@ -56,10 +46,10 @@ export default function AtlasPage() {
           <div className="container" style={{ position: 'relative' }}>
             {/* Atlas ERA repositioning notice */}
             <p className="small muted hairline-bottom measure" style={{ paddingBottom: 20, marginBottom: 40 }}>
-              Atlas Academy is a curriculum artifact and legacy program of{' '}
-              <strong style={{ color: 'var(--on-ground)' }}>Atlas ERA — The Education Research Association</strong>. The
-              broader Atlas ERA network is now the organizational home for our field-building, credentialing, and
-              community connection work.{' '}
+              Atlas Academy is a program of{' '}
+              <strong style={{ color: 'var(--on-ground)' }}>US-Squared Research Institute</strong>, a 501(c)(3). Its
+              field-building, credentialing, and community connection work continues through Atlas ERA — The Education
+              Research Association, the institute&apos;s network.{' '}
               <Link href="/atlas-era" className="btn-link">
                 Learn more about Atlas ERA →
               </Link>
@@ -172,7 +162,7 @@ export default function AtlasPage() {
                 ))}
               </div>
               <p className="small muted">
-                A US-Squared Research Institute Resource&nbsp;&nbsp;·&nbsp;&nbsp;Atlas Academy&nbsp;&nbsp;·&nbsp;&nbsp;us-squared.org
+                A US-Squared Research Institute Program&nbsp;&nbsp;·&nbsp;&nbsp;Atlas Academy&nbsp;&nbsp;·&nbsp;&nbsp;us-squared.org
               </p>
             </div>
           </AnimateOnScroll>
