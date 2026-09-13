@@ -10,6 +10,7 @@
 
 :root {
   --font-display: var(--font-newsreader), "Newsreader", Georgia, serif;
+  --font-display-italic: var(--font-newsreader-italic), "Newsreader", Georgia, serif;
   --font-body: var(--font-archivo), "Archivo", system-ui, sans-serif;
   --font-mono: var(--font-plex-mono), "IBM Plex Mono", ui-monospace, monospace;
   --container: 1280px;
@@ -86,6 +87,10 @@ img, svg { display: block; max-width: 100%; }
   --btn-fg: var(--ink-900);
 }
 .band-ground, .band-raised, .venture, body { --line: color-mix(in srgb, var(--on-ground) 18%, transparent); }
+/* Brass used as small text (numerals, the US² mark): the hairline brass fails 4.5:1 on light grounds, so a darker brass steps in there. */
+body, .venture, .band-ink { --brass-text: var(--brass-600); }
+.band-paper, .band-bone, [data-venture="ma"], [data-venture="press"], [data-venture="sparent"] { --brass-text: #7A6236; }
+[data-venture="ma"] .band-ink, [data-venture="press"] .band-ink, [data-venture="sparent"] .band-ink { --brass-text: var(--brass-600); }
 .band-paper, .band-bone { --line: var(--travertine-300); }
 .band-ink { --line: color-mix(in srgb, var(--ivory-100) 18%, transparent); }
 
@@ -106,6 +111,7 @@ img, svg { display: block; max-width: 100%; }
 .display-3 { font-size: clamp(26px, 3vw, 36px); line-height: 1.1; }
 .h-lede    { font-size: clamp(22px, 2.4vw, 30px); line-height: 1.25; }
 .display-1 em, .display-2 em, .display-3 em, .h-lede em, .pull em {
+  font-family: var(--font-display-italic);
   font-style: italic;
   font-weight: 400;
   color: var(--signal);
@@ -135,6 +141,9 @@ img, svg { display: block; max-width: 100%; }
 }
 .eyebrow { display: block; margin-bottom: 18px; }
 .mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+.mark { font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.12em; color: var(--brass-text); }
+.menu-toggle { display: none; }
+@media (max-width: 767px) { .menu-toggle { display: inline-flex; } .nav-desktop { display: none !important; } }
 .numeral {
   font-family: var(--font-mono);
   font-weight: 400;
@@ -188,7 +197,7 @@ img, svg { display: block; max-width: 100%; }
   border-radius: 50%;
   font-family: var(--font-mono);
   font-size: 11px;
-  color: var(--brass-600);
+  color: var(--brass-text);
 }
 
 .contours {
@@ -270,7 +279,7 @@ img, svg { display: block; max-width: 100%; }
   transition: padding-left var(--motion-base) ease, background-color var(--motion-fast) ease;
 }
 .row:hover { padding-left: 8px; }
-.row-num { font-family: var(--font-mono); font-size: 12px; color: var(--brass-600); letter-spacing: 0.1em; }
+.row-num { font-family: var(--font-mono); font-size: 12px; color: var(--brass-text); letter-spacing: 0.1em; }
 .row-title { font-family: var(--font-display); font-weight: 380; font-size: clamp(24px, 3vw, 36px); line-height: 1.1; }
 .row-desc { font-size: 14px; color: var(--on-ground-muted); max-width: 60ch; margin-top: 8px; }
 .row-aside { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--on-ground-muted); text-align: right; }
@@ -352,6 +361,12 @@ img, svg { display: block; max-width: 100%; }
   .form-subscribe { flex-direction: column; }
   .hero { padding: 104px 0 64px; }
 }
+
+/* ── Reveal (client-only; markup is visible by default) ────────────────── */
+.reveal { transition: opacity var(--motion-base) ease, transform var(--motion-base) ease; }
+.reveal-pending { opacity: 0; transform: translateY(10px); }
+.reveal-in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .reveal-pending { opacity: 1; transform: none; } }
 
 /* ── Utilities ─────────────────────────────────────────────────────────── */
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }

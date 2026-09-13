@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Archivo, IBM_Plex_Mono, Newsreader } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 // Fonts are self-hosted by next/font at build time: no render-blocking
@@ -7,14 +8,24 @@ import "./globals.css";
 const newsreader = Newsreader({
   subsets: ["latin"],
   weight: "variable",
-  style: ["normal", "italic"],
+  style: "normal",
   axes: ["opsz"],
   display: "swap",
   variable: "--font-newsreader",
 });
+// The italic face serves the one italic phrase per headline, so it is not
+// preloaded: the roman face and body font reach the first paint sooner.
+const newsreaderItalic = localFont({
+  src: "./fonts/newsreader-italic.woff2",
+  style: "italic",
+  weight: "200 800",
+  display: "swap",
+  preload: false,
+  variable: "--font-newsreader-italic",
+});
 const archivo = Archivo({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["300", "400", "500"],
   display: "swap",
   variable: "--font-archivo",
 });
@@ -63,7 +74,7 @@ export default function RootLayout({
     <html
       lang="en"
       data-venture="ussq"
-      className={`h-full ${newsreader.variable} ${archivo.variable} ${plexMono.variable}`}
+      className={`h-full ${newsreader.variable} ${newsreaderItalic.variable} ${archivo.variable} ${plexMono.variable}`}
     >
       <body className="min-h-full">{children}</body>
     </html>

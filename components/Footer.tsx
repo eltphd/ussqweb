@@ -27,9 +27,7 @@ export default function Footer() {
         >
           <div className="stack" style={{ gap: 10 }}>
             <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'baseline', gap: 12 }}>
-              <span className="mono" style={{ fontSize: 13, letterSpacing: '0.12em', color: 'var(--brass-600)' }}>
-                US²
-              </span>
+              <span className="mark">US²</span>
               <span style={{ fontFamily: 'var(--font-display)', fontWeight: 400, fontSize: 20 }}>
                 US-Squared Research Institute
               </span>

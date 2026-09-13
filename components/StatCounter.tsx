@@ -1,7 +1,7 @@
 'use client';
 
-import { useRef, useEffect, useState } from 'react';
-import { useInView, useReducedMotion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { useInViewOnce, useReducedMotion } from '@/lib/motion';
 
 interface StatCounterProps {
   value: string;
@@ -19,40 +19,46 @@ const formatNumber = (n: number) => n.toLocaleString('en-US');
 /**
  * Renders the final value in the server markup, so the figure is correct with
  * JavaScript off, before hydration, and for crawlers. The count-up runs only
- * once the element is in view and only when motion is allowed.
+ * once the element is in view and only when motion is allowed, and always
+ * lands on the exact final value.
  */
 export default function StatCounter({ value, label }: StatCounterProps) {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: '-40px 0px' });
+  const { ref, inView } = useInViewOnce<HTMLDivElement>('-40px 0px');
   const reduceMotion = useReducedMotion();
   const { numeric, suffix } = parseValue(value);
   const [displayValue, setDisplayValue] = useState(numeric);
 
   useEffect(() => {
-    if (!isInView || reduceMotion) return;
+    if (!inView || reduceMotion || numeric === 0) return;
     const duration = 900;
-    const start = performance.now();
+    let start = 0;
     let frame = 0;
     const tick = (now: number) => {
+      if (!start) start = now;
       const progress = Math.min((now - start) / duration, 1);
       const eased = 1 - Math.pow(1 - progress, 3);
-      setDisplayValue(Math.round(eased * numeric));
+      setDisplayValue(progress >= 1 ? numeric : Math.round(eased * numeric));
       if (progress < 1) frame = requestAnimationFrame(tick);
     };
-    setDisplayValue(0);
     frame = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(frame);
-  }, [isInView, numeric, reduceMotion]);
+    const settle = window.setTimeout(() => setDisplayValue(numeric), duration + 50);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.clearTimeout(settle);
+      setDisplayValue(numeric);
+    };
+  }, [inView, numeric, reduceMotion]);
 
   return (
     <div ref={ref} className="stat">
-      <div className="stat-value" aria-label={`${value} ${label}`}>
+      <div className="stat-value">
         <span aria-hidden="true">
           {formatNumber(displayValue)}
           {suffix}
         </span>
+        <span className="sr-only">{value}</span>
       </div>
-      <div className="stat-label" aria-hidden="true">{label}</div>
+      <div className="stat-label">{label}</div>
     </div>
   );
 }

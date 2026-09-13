@@ -28,6 +28,10 @@ for (const [v, { ground, signal }] of Object.entries(ventures)) {
   row('muted ink on ivory band', '#5B655F', root['ivory-100'], 4.5);
   row('muted ink on bone band', '#5B655F', root['bone-200'], 4.5);
   row('signal as focus ring on ground (non-text 3:1)', signal, ground, 3);
+  row('brass-text (#7A6236) numerals on ivory band', '#7A6236', root['ivory-100'], 4.5);
+  row('brass-text (#7A6236) numerals on bone band', '#7A6236', root['bone-200'], 4.5);
+  if (!isDark) row('brass-text on light venture ground', '#7A6236', ground, 4.5);
+  if (isDark) row('brass-600 numerals on dark ground', root['brass-600'], ground, 4.5);
 }
 console.log(`\n${fail === 0 ? 'ALL PASS' : fail + ' FAILURES'}`);
 process.exit(fail ? 1 : 0);

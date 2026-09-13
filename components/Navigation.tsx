@@ -19,9 +19,12 @@ export default function Navigation() {
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
-    onScroll();
+    const frame = requestAnimationFrame(onScroll);
     window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener('scroll', onScroll);
+    };
   }, []);
 
   useEffect(() => {
@@ -30,10 +33,6 @@ export default function Navigation() {
       document.body.style.overflow = '';
     };
   }, [menuOpen]);
-
-  useEffect(() => {
-    setMenuOpen(false);
-  }, [pathname]);
 
   return (
     <>
@@ -55,9 +54,7 @@ export default function Navigation() {
           style={{ height: 68, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 24 }}
         >
           <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'baseline', gap: 12, flexShrink: 0 }}>
-            <span className="mono" style={{ fontSize: 13, letterSpacing: '0.12em', color: 'var(--brass-600)' }}>
-              US²
-            </span>
+            <span className="mark">US²</span>
             <span
               style={{
                 fontFamily: 'var(--font-display)',
@@ -71,7 +68,7 @@ export default function Navigation() {
             </span>
           </Link>
 
-          <nav className="hidden md:flex" aria-label="Primary" style={{ alignItems: 'center', gap: 26 }}>
+          <nav className="nav-desktop" aria-label="Primary" style={{ display: 'flex', alignItems: 'center', gap: 26 }}>
             {navLinks.map((link) => {
               const active = pathname === link.href;
               return (
@@ -98,7 +95,7 @@ export default function Navigation() {
           </nav>
 
           <button
-            className="md:hidden"
+            className="menu-toggle"
             onClick={() => setMenuOpen((v) => !v)}
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
@@ -109,7 +106,6 @@ export default function Navigation() {
               borderRadius: 'var(--radius)',
               cursor: 'pointer',
               padding: '8px 12px',
-              display: 'inline-flex',
               alignItems: 'center',
               gap: 10,
             }}
