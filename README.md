@@ -19,7 +19,7 @@ Public website for **US-Squared Research Institute** (us-squared.org), built on 
 | `/baseops` | BASEops — operations system |
 | `/atlas` | Atlas Academy — the full Atlas site, served as static HTML from `public/atlas/` (landing, `brand.html`, `brochure.html`, `deck.html`). Source of record: `eltphd/atlas-academy` `brand/site/`; copy changes here verbatim. |
 | `/earth` | Altered.Earth — land-based retreat |
-| `/sparent` | Sparent Science — newsletter for trusted adults |
+| `/sparent` | Sparent Science journal: issues (`/sparent/[slug]`), topic shelves (`/sparent/topic/[topic]`), signup. Content lives in `content/sparent/issues.ts`; signups post to `/api/sparent/subscribe` and land in Supabase `sparent_subscribers` (grant_intelligence). |
 | `/research` | Research & Impact |
 | `/about` | About the organization |
 | `/connect` | Contact, partnerships, donate |
