@@ -17,7 +17,7 @@ Public website for **US-Squared Research Institute** (us-squared.org), built on 
 |---|---|
 | `/` | Home — master brand hub + all program sections |
 | `/baseops` | BASEops — operations system |
-| `/atlas` | Atlas Academy — youth learning pathway |
+| `/atlas` | Atlas Academy — the full Atlas site, served as static HTML from `public/atlas/` (landing, `brand.html`, `brochure.html`, `deck.html`). Source of record: `eltphd/atlas-academy` `brand/site/`; copy changes here verbatim. |
 | `/earth` | Altered.Earth — land-based retreat |
 | `/sparent` | Sparent Science — newsletter for trusted adults |
 | `/research` | Research & Impact |

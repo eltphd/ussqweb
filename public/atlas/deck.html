@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atlas Academy — Investor Deck</title>
+<meta name="description" content="Atlas Academy investor pitch deck: the transcript gap, the bottom-up AI flywheel, unit economics, and the customer-funded revenue ladder.">
+<link rel="stylesheet" href="/atlas/fonts.css">
+<style>
+  :root{
+    --forest-900:#0d1a14; --ivory-100:#f6f1e7; --bone-200:#efe7d8; --trav-300:#e5dbc8;
+    --ink-900:#1c211d; --brass-600:#a8874f; --brass-700:#8a6d3b; --firefly-400:#e8c876; --dusk-600:#3d5a6c;
+    --serif:'Newsreader',Georgia,serif; --sans:'Archivo',sans-serif; --mono:'IBM Plex Mono',monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#0a140f;font-family:var(--sans);font-weight:340;color:var(--ink-900)}
+  h1,h2,h3{font-family:var(--serif);font-weight:420;letter-spacing:-.01em}
+  .mono{font-family:var(--mono);letter-spacing:.18em;text-transform:uppercase}
+  .slide{max-width:1180px;aspect-ratio:16/9;margin:26px auto;background:var(--ivory-100);position:relative;overflow:hidden;
+    padding:56px 64px;display:flex;flex-direction:column;box-shadow:0 10px 40px rgba(0,0,0,.4)}
+  @media(max-width:900px){.slide{aspect-ratio:auto;min-height:70vh;padding:36px 28px;margin:16px 10px}}
+  .slide.dark{background:var(--forest-900);color:var(--ivory-100)}
+  .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--brass-700);margin-bottom:16px}
+  .dark .kicker{color:var(--firefly-400)}
+  .snum{position:absolute;bottom:26px;right:34px;font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:var(--brass-700)}
+  .sfoot{position:absolute;bottom:26px;left:64px;font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:#a39d8d}
+  @media(max-width:900px){.sfoot{left:28px}}
+  h2{font-size:clamp(26px,3.4vw,40px);line-height:1.12;margin-bottom:18px;max-width:24ch}
+  .lede{font-size:clamp(15px,1.5vw,18.5px);font-weight:320;max-width:64ch}
+  .dark .lede{color:rgba(246,241,231,.85)}
+  .grow{flex:1;display:flex;flex-direction:column;justify-content:center}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;flex:1}
+  @media(max-width:900px){.cols{grid-template-columns:1fr}}
+  .stat-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-top:34px}
+  .stat{border-top:2px solid var(--brass-600);padding-top:14px}
+  .stat .n{font-family:var(--serif);font-size:clamp(26px,3vw,40px)}
+  .stat .l{font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--brass-700);margin-top:6px}
+  .dark .stat .l{color:var(--firefly-400)}
+  table{width:100%;border-collapse:collapse;font-size:clamp(12px,1.25vw,15px);margin-top:22px}
+  th{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--brass-700);text-align:left;padding:10px 12px;border-bottom:2px solid var(--brass-600)}
+  td{padding:11px 12px;border-bottom:1px solid var(--trav-300)}
+  .dark td{border-color:rgba(232,200,118,.2)}
+  .ladder{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:30px;align-items:end}
+  @media(max-width:900px){.ladder{grid-template-columns:1fr;align-items:stretch}}
+  .rung{background:var(--bone-200);border-top:2px solid var(--brass-600);padding:16px 14px}
+  .rung .mono{font-size:9px;color:var(--brass-700);display:block;margin-bottom:8px}
+  .rung p{font-size:12px;line-height:1.5}
+  .rung:nth-child(1){min-height:110px}.rung:nth-child(2){min-height:135px}.rung:nth-child(3){min-height:160px}.rung:nth-child(4){min-height:185px}.rung:nth-child(5){min-height:210px}
+  ul.tick{list-style:none;font-size:clamp(13px,1.35vw,16px)}
+  ul.tick li{padding:10px 0 10px 26px;border-bottom:1px solid var(--trav-300);position:relative;font-weight:340}
+  ul.tick li::before{content:'·';position:absolute;left:4px;color:var(--brass-600);font-size:26px;line-height:1}
+  .dark ul.tick li{border-color:rgba(232,200,118,.18)}
+  .dark ul.tick li::before{color:var(--firefly-400)}
+  .toolbar{max-width:1180px;margin:22px auto 0;display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#8a9a90;padding:0 10px}
+  .toolbar a{color:var(--firefly-400);text-decoration:none}
+  @media print{body{background:#fff}.slide{box-shadow:none;margin:0;page-break-after:always;max-width:none}.toolbar{display:none}}
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <a href="/atlas">← Atlas Academy</a>
+  <span>Investor Deck · 12 slides · Print for PDF</span>
+  <a href="/atlas/brand.html">Brand Book →</a>
+</div>
+
+<!-- 1 · TITLE -->
+<div class="slide dark">
+  <div class="grow">
+    <div class="kicker">Atlas Academy · A Program of US-Squared Research Institute · MMXXVI</div>
+    <h2 style="font-size:clamp(34px,4.6vw,58px);max-width:18ch">The world is the campus. The transcript is real.</h2>
+    <p class="lede" style="margin-top:14px">An invitation-only worldschool for the fastest-growing cohort in education nobody is serving properly — and the training ground for the Transcript Engine.</p>
+    <p class="mono" style="font-size:11px;color:rgba(246,241,231,.55);margin-top:44px">Dr. Erica L. Tartt, PhD · Founder &amp; Director · erica@measurementally.com</p>
+  </div>
+  <svg style="position:absolute;right:-40px;bottom:-40px;width:380px;opacity:.16" viewBox="0 0 340 340" aria-hidden="true">
+    <circle cx="170" cy="170" r="160" fill="none" stroke="#e8c876" stroke-width="2"/>
+    <circle cx="170" cy="170" r="104" fill="none" stroke="#e8c876" stroke-width=".8"/>
+    <path d="M170,80 L182,158 L170,170 L158,158 Z M260,170 L182,158 L170,170 L182,182 Z" fill="#e8c876"/>
+  </svg>
+  <div class="snum" style="color:var(--firefly-400)">01</div>
+</div>
+
+<!-- 2 · PROBLEM -->
+<div class="slide">
+  <div class="kicker">The Problem</div>
+  <h2>The transcript gap.</h2>
+  <div class="grow">
+    <p class="lede">Worldschooling and homeschooling families of teenagers cannot easily translate experiential learning into the standardized transcripts university admissions require. The families most able to give their children extraordinary educations are the least served at the moment it must become paper.</p>
+    <div class="stat-row">
+      <div class="stat"><div class="n">DIY</div><div class="l">Most HNW worldschoolers self-manage, no counselor, no registrar</div></div>
+      <div class="stat"><div class="n">14–18</div><div class="l">The ages where "unschooled" starts costing admissions options</div></div>
+      <div class="stat"><div class="n">2 fears</div><div class="l">Credential anxiety + teens without a peer cohort</div></div>
+    </div>
+  </div>
+  <div class="sfoot">ATLAS ACADEMY · INVESTOR DECK</div><div class="snum">02</div>
+</div>
+
+<!-- 3 · SOLUTION -->
+<div class="slide">
+  <div class="kicker">The Solution</div>
+  <h2>A worldschool with a registrar's spine.</h2>
+  <div class="grow">
+    <p class="lede">Atlas Academy operates as an umbrella-school provider: student portfolios are assessed against standards-aligned rubrics by qualified educators, and validated learning is issued as formal transcript credit — wrapped in the five things families can't build alone.</p>
+    <div class="stat-row">
+      <div class="stat"><div class="n">01</div><div class="l">College-ready transcripts</div></div>
+      <div class="stat"><div class="n">02</div><div class="l">Credentialed-educator oversight</div></div>
+      <div class="stat"><div class="n">03</div><div class="l">A true peer cohort of 24</div></div>
+      <div class="stat"><div class="n">04</div><div class="l">Strategic 4-year planning</div></div>
+      <div class="stat"><div class="n">05</div><div class="l">UN SDG community fieldwork</div></div>
+    </div>
+  </div>
+  <div class="sfoot">ATLAS ACADEMY · INVESTOR DECK</div><div class="snum">03</div>
+</div>
+
+<!-- 4 · PRODUCT -->
+<div class="slide dark">
+  <div class="kicker">The Product</div>
+  <h2>The Season — the Costa Rica lab.</h2>
+  <div class="cols">
+    <div>
+      <ul class="tick">
+        <li>12-week season · two overlapping 6-week cohorts · 24 seats</li>
+        <li>4-day/week academic hub; afternoons on SDG capstones with local NGO partners</li>
+        <li>Families fund their own travel and housing — Atlas sells the academics</li>
+        <li>Premium tier adds 1:1 admissions advising and four-year planning</li>
+        <li>Phase 2: the Atlas Space — portfolio, credential journey, map, and parent companion app</li>
+      </ul>
+    </div>
+    <svg viewBox="0 0 400 300" aria-label="Season sites as a firefly constellation over Costa Rica">
+      <g fill="none" stroke="#3d5a6c" stroke-width="1" opacity=".8">
+        <path d="M60,250 C55,205 80,175 105,150 C90,120 110,80 150,62 C185,45 230,55 262,80 C300,108 330,150 338,196 C342,225 330,252 300,262 C250,278 110,282 60,250 Z"/>
+      </g>
+      <g stroke="#e8c876" stroke-width=".8" opacity=".55"><path d="M140,120 L210,95 L268,140 L230,205 L155,215 Z" fill="none"/></g>
+      <g fill="#e8c876"><circle cx="140" cy="120" r="4"/><circle cx="210" cy="95" r="5"/><circle cx="268" cy="140" r="4"/><circle cx="230" cy="205" r="5"/><circle cx="155" cy="215" r="4"/></g>
+      <text x="285" y="250" font-family="IBM Plex Mono,monospace" font-size="10" fill="#a8874f" letter-spacing="2">ONE SEASON</text>
+    </svg>
+  </div>
+  <div class="sfoot" style="color:rgba(246,241,231,.4)">ATLAS ACADEMY · INVESTOR DECK</div><div class="snum" style="color:var(--firefly-400)">04</div>
+</div>
+
+<!-- 5 · WHY NOW / MARKET -->
+<div class="slide">
+  <div class="kicker">The Market</div>
+  <h2>Location-independent wealth is educating its own children.</h2>
+  <div class="grow">
+    <p class="lede">Remote-work wealth created a durable class of globally mobile families. Worldschooling communities, co-living education villages, and family-travel networks are compounding — while the credentialing layer remains a cottage industry of Facebook advice. The buyer is high-net-worth, self-directed, and currently unserved between "expensive boarding school" and "DIY homeschool paperwork."</p>
+    <div class="stat-row">
+      <div class="stat"><div class="n">$3.8–11.5K</div><div class="l">Tuition band per student per season</div></div>
+      <div class="stat"><div class="n">B2C→B2B2C</div><div class="l">Direct families first; worldschool hubs &amp; networks as channels</div></div>
+      <div class="stat"><div class="n">Global</div><div class="l">Season model is location-portable beyond Costa Rica</div></div>
+    </div>
+  </div>
+  <div class="sfoot">ATLAS ACADEMY · INVESTOR DECK</div><div class="snum">05</div>
+</div>
+
+<!-- 6 · FLYWHEEL -->
+<div class="slide dark">
+  <div class="kicker">The Thesis</div>
+  <h2>Bottom-up AI: the season is also the dataset.</h2>
+  <div class="cols">
+    <p class="lede">Most education AI is trained top-down on generic internet text. Atlas inverts it: every manual credit-mapping decision made by a qualified educator during a season becomes a labeled training example for the <b style="color:var(--firefly-400);font-weight:500">Transcript Engine</b> — under explicit consent and data-use agreements. The AI recommends; educators decide; every transcript carries human sign-off. That design is also what accreditors require.</p>
+    <svg viewBox="0 0 400 300" aria-label="Flywheel: programs to data to products to revenue and back">
+      <g fill="none" stroke="#a8874f" stroke-width="1.2">
+        <path d="M200,60 A95,95 0 0 1 295,155" marker-end="url(#arr)"/>
+        <path d="M295,165 A95,95 0 0 1 200,250" marker-end="url(#arr)"/>
+        <path d="M190,250 A95,95 0 0 1 105,160" marker-end="url(#arr)"/>
+        <path d="M105,150 A95,95 0 0 1 195,60" marker-end="url(#arr)"/>
+      </g>
+      <defs><marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#e8c876"/></marker></defs>
+      <g font-family="IBM Plex Mono,monospace" font-size="11" fill="#e8c876" text-anchor="middle" letter-spacing="2">
+        <text x="200" y="45">PROGRAMS</text><text x="330" y="163">DATA</text>
+        <text x="200" y="278">PRODUCTS</text><text x="66" y="163">REVENUE</text>
+      </g>
+      <circle cx="200" cy="158" r="4" fill="#e8c876"/>
+    </svg>
+  </div>
+  <div class="sfoot" style="color:rgba(246,241,231,.4)">ATLAS ACADEMY · INVESTOR DECK</div><div class="snum" style="color:var(--firefly-400)">06</div>
+</div>
+
+<!-- 7 · BUSINESS MODEL -->
+<div class="slide">
+  <div class="kicker">Unit Economics · Phase 1</div>
+  <h2>One season, fully loaded.</h2>
+  <table>
+    <tr><th>Scenario</th><th>Mix (24 seats)</th><th>Gross revenue</th><th>Net operating profit</th></tr>
+    <tr><td>Floor</td><td>24 Standard</td><td>$91,200</td><td>$28,200</td></tr>
+    <tr><td><b>Target</b></td><td><b>16 Standard / 8 Premium</b></td><td><b>$115,200</b></td><td><b>$52,200</b></td></tr>
+    <tr><td>Ceiling</td><td>24 Premium</td><td>$163,200</td><td>$100,200</td></tr>
+  </table>
+  <p style="font-size:14px;color:#4a4f4a;margin-top:18px;max-width:70ch">Fully-loaded overhead of <b>$63,000</b> includes venue, NGO fees, insurance, marketing, staff travel — and founder compensation. Even the floor scenario covers all overhead. Season profit funds the technology build; no property purchase, no outside capital required to start.</p>
+  <div class="sfoot">ATLAS ACADEMY · INVESTOR DECK</div><div class="snum">07</div>
+</div>
+
+<!-- 8 · REVENUE LADDER -->
+<div class="slide">
+  <div class="kicker">Go-to-Market</div>
+  <h2>The revenue ladder — sequence is the strategy.</h2>
+  <div class="ladder">
+    <div class="rung"><span class="mono">Stage 1 · Demand</span><p>Invitation-only page → discovery calls → $500 refundable deposits. Target 12–24.</p></div>
+    <div class="rung"><span class="mono">Stage 2 · Ground</span><p>Deposit-funded Costa Rica scouting: venue LOIs, NGO MOUs, budgets.</p></div>
+    <div class="rung"><span class="mono">Stage 3 · Conversion</span><p>Greenlight at 10+ committed students; deposits convert to tuition.</p></div>
+    <div class="rung"><span class="mono">Stage 4 · Season</span><p>Run the season, pay salaries, bank profit, collect assessment evidence.</p></div>
+    <div class="rung"><span class="mono">Stage 5 · Scale</span><p>Profit + grants fund the AI build; Cognia application follows the season.</p></div>
+  </div>
+  <p class="mono" style="font-size:10px;color:var(--brass-700);margin-top:22px">No venue contract, hire, or travel until demand is proven. The metric that matters is deposits, not decks.</p>
+  <div class="sfoot">ATLAS ACADEMY · INVESTOR DECK</div><div class="snum">08</div>
+</div>
+
+<!-- 9 · MOAT -->
+<div class="slide dark">
+  <div class="kicker">The Moat</div>
+  <h2>Compliance and consent as strategy.</h2>
+  <div class="grow">
+    <ul class="tick" style="max-width:74ch">
+      <li><b>Consent-first data architecture</b> — no student data trains anything without explicit written consent; opting out never degrades service.</li>
+      <li><b>De-identification before training</b> — FERPA-aligned handling; COPPA posture for any under-13 data.</li>
+      <li><b>Human-in-the-loop by construction</b> — AI recommends, credentialed educators decide, every transcript carries human sign-off.</li>
+      <li><b>Truth in credentialing</b> — no "accredited" claims until Cognia grants it; transparent umbrella-school conventions until then.</li>
+      <li><b>Safeguarding in force</b> — existing disclosure-response policy, vetted local staff, international liability coverage.</li>
+    </ul>
+    <p class="lede" style="margin-top:22px;font-size:15px">This is what lets a data-driven education company survive contact with accreditors, regulators — and parents.</p>
+  </div>
+  <div class="sfoot" style="color:rgba(246,241,231,.4)">ATLAS ACADEMY · INVESTOR DECK</div><div class="snum" style="color:var(--firefly-400)">09</div>
+</div>
+
+<!-- 10 · TRACTION / ASSETS -->
+<div class="slide">
+  <div class="kicker">What Already Exists</div>
+  <h2>This is not a plan. The assets are built.</h2>
+  <table>
+    <tr><th>Asset</th><th>Status</th></tr>
+    <tr><td>MAGI V1 grant-intelligence tool + GET$ writing tool</td><td>Built</td></tr>
+    <tr><td>Live consulting practice (NAMI Franklin County, ArkBuilders)</td><td>Revenue now — $96–120K/yr modeled</td></tr>
+    <tr><td>Proven grant workflow (SAMHSA, OneOhio, state)</td><td>Live submissions managed</td></tr>
+    <tr><td>Safeguarding &amp; Disclosure Response Policy</td><td>In force</td></tr>
+    <tr><td>Financial models ($500K pathway, CR relocation, season P&amp;L)</td><td>Built, market-verified</td></tr>
+    <tr><td>Founder: PhD educational researcher, published, active provider</td><td>Full-time on this</td></tr>
+  </table>
+  <div class="sfoot">ATLAS ACADEMY · INVESTOR DECK</div><div class="snum">10</div>
+</div>
+
+<!-- 11 · ECOSYSTEM -->
+<div class="slide">
+  <div class="kicker">Ecosystem · Year 1</div>
+  <h2>One engine, several revenue streams.</h2>
+  <table>
+    <tr><th>Venture</th><th>Conservative</th><th>Baseline</th></tr>
+    <tr><td>Atlas Academy (hub path)</td><td>$175,000</td><td>$281,680</td></tr>
+    <tr><td>Measurement Ally consulting</td><td>$96,000</td><td>$120,000</td></tr>
+    <tr><td>Feelings Unplugged (live product)</td><td>$8,000</td><td>$20,000</td></tr>
+    <tr><td>GET$ SaaS + small foundation grants</td><td>$0</td><td>$18,500</td></tr>
+    <tr><td><b>Total</b></td><td><b>$279,000</b></td><td><b>$440,180</b></td></tr>
+  </table>
+  <p style="font-size:14px;color:#4a4f4a;margin-top:16px;max-width:66ch">Customer-funded first; grants accelerate but do not carry. Phase 1 economics do not depend on the permanent-hub Phase 2.</p>
+  <div class="sfoot">ATLAS ACADEMY · INVESTOR DECK</div><div class="snum">11</div>
+</div>
+
+<!-- 12 · ASK -->
+<div class="slide dark">
+  <div class="grow">
+    <div class="kicker">The Ask</div>
+    <h2 style="max-width:22ch">Judge us on deposits banked, MOUs signed, and season revenue — in that order.</h2>
+    <ul class="tick" style="max-width:70ch;margin-top:10px">
+      <li>Pressure-test the pitch; help design an oversubscribed Stage 1 launch</li>
+      <li>Introductions: worldschooling network operators and HNW family communities</li>
+      <li>Post-traction: education-savvy angels for the Transcript Engine build</li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:18px;margin-top:40px">
+      <img src="/atlas/director.jpg" alt="Dr. Erica L. Tartt, PhD" style="width:76px;height:76px;object-fit:cover;border-radius:50%;border:2px solid var(--brass-600)">
+      <p class="mono" style="font-size:11px;color:var(--firefly-400)">Dr. Erica L. Tartt, PhD · erica@measurementally.com · Atlas Academy · A program of US-Squared Research Institute</p>
+    </div>
+  </div>
+  <div class="snum" style="color:var(--firefly-400)">12</div>
+</div>
+
+</body>
+</html>
