@@ -47,7 +47,7 @@ const domains = [
     descriptor: 'Tools for the adults who hold young people',
     body:
       'Research-backed tools for the educators, mentors, caregivers, and coaches who surround young people. A monthly newsletter and podcast with Dr. Erica L. Tartt, PhD.',
-    href: '/#sparent',
+    href: '/sparent',
   },
 ];
 
@@ -174,13 +174,18 @@ export default function HomePage() {
                   ))}
                 </div>
                 <SparentSignup />
+                <p className="small" style={{ marginTop: 18 }}>
+                  <Link href="/sparent" className="btn-link" style={{ color: 'var(--ink-900)' }}>
+                    Read the journal →
+                  </Link>
+                </p>
               </AnimateOnScroll>
             </div>
 
             <AnimateOnScroll delay={0.1}>
               <Card>
                 <span className="kicker" style={{ display: 'block', marginBottom: 18 }}>
-                  Vol. 03 · Issue 12
+                  Coming next · Vol. 03 · Issue 12
                 </span>
                 <h3 className="display-3" style={{ marginBottom: 14 }}>
                   When Your Teenager Won&apos;t Talk

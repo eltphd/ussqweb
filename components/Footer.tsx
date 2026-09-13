@@ -6,7 +6,7 @@ const footerLinks = [
   { label: 'Atlas ERA', href: '/atlas-era' },
   { label: 'Atlas Academy', href: '/atlas' },
   { label: 'Altered Earth Press', href: '/earth' },
-  { label: 'Sparent Science', href: '/#sparent' },
+  { label: 'Sparent Science', href: '/sparent' },
   { label: 'Feelings Unplugged', href: '/feelings-unplugged' },
   { label: 'Connect', href: '/connect' },
 ];
