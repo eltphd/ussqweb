@@ -41,17 +41,11 @@ export default function BASEopsPage() {
             <p className="lede measure" style={{ marginBottom: 24 }}>
               The scaffold beneath every mission.
             </p>
-            <p className="body measure" style={{ marginBottom: 16 }}>
+            <p className="body measure" style={{ marginBottom: 36 }}>
               BASEops is the workforce development network of the worldskool ecosystem. We connect business owners,
               community members, justice-involved individuals, and young people ages 14+ to skill-building pathways
               and economic opportunity. BASEops is where brilliance meets livelihood — the bridge between who you are
               and what you can build.
-            </p>
-            <p className="body measure" style={{ marginBottom: 36 }}>
-              The Learn arm:{' '}
-              <Link href="/atlas" className="btn-link">
-                Atlas Academy →
-              </Link>
             </p>
             <div className="cluster" style={{ gap: 14 }}>
               <Button href="#get-access">Get the playbook</Button>

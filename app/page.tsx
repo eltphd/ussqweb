@@ -27,14 +27,6 @@ const domains = [
   },
   {
     num: '03',
-    name: 'Atlas Academy',
-    descriptor: 'A worldschool for adolescent learners',
-    body:
-      'The institute’s learning property: cohort-based, BASE-aligned programming for adolescents whose brilliance the conventional classroom was never designed to see.',
-    href: '/atlas',
-  },
-  {
-    num: '04',
     name: 'Altered Earth Press',
     descriptor: 'Publishing community-centered stories',
     body:
@@ -42,7 +34,7 @@ const domains = [
     href: '/earth',
   },
   {
-    num: '05',
+    num: '04',
     name: 'Sparent Science',
     descriptor: 'Tools for the adults who hold young people',
     body:
@@ -73,7 +65,7 @@ export default function HomePage() {
             <p className="lede measure" style={{ marginBottom: 36 }}>
               US-Squared Research Institute is a justice-centered research institute. We study, fund, and credential
               the brilliance already happening in communities the traditional system cannot see — through Atlas ERA,
-              Atlas Academy, Altered Earth Press, Sparent Science, and Feelings Unplugged.
+              Altered Earth Press, Sparent Science, and Feelings Unplugged.
             </p>
             <div className="cluster" style={{ gap: 14 }}>
               <Button href="#domains">Explore the work</Button>
@@ -123,7 +115,7 @@ export default function HomePage() {
           <AnimateOnScroll>
             <Eyebrow>The Institute</Eyebrow>
             <h2 className="display-2" style={{ marginBottom: 16 }}>
-              Five properties. <em>One institute.</em>
+              Four properties. <em>One institute.</em>
             </h2>
             <p className="lede measure-narrow" style={{ marginBottom: 48 }}>
               Each property connects practitioners, funds their work, and credentials the brilliance already happening

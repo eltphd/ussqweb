@@ -49,7 +49,6 @@ export const metadata: Metadata = {
     "nonprofit",
     "justice-centered",
     "Atlas ERA",
-    "Atlas Academy",
     "Feelings Unplugged",
     "Altered Earth Press",
     "Sparent Science",
