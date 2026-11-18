@@ -7,7 +7,7 @@ import { Section, Eyebrow, Coord, Button, Card } from '@/components/ui';
 
 const ctaTiles = [
   { label: 'Partner With Us', sub: 'Funders, fiscal sponsors, program partners', href: '#contact-form' },
-  { label: 'Apply to a Program', sub: 'Atlas Academy, Altered Earth Press', href: '/atlas' },
+  { label: 'Apply to a Program', sub: 'Altered Earth Press', href: '/earth' },
   { label: 'Support Our Work', sub: 'Donations, grants, in-kind', href: '#access-fund' },
   { label: 'Contact Us', sub: 'General inquiries, media, speaking', href: '#contact-form' },
 ];

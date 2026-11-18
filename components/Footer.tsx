@@ -4,7 +4,6 @@ const footerLinks = [
   { label: 'Research', href: '/research' },
   { label: 'About', href: '/about' },
   { label: 'Atlas ERA', href: '/atlas-era' },
-  { label: 'Atlas Academy', href: '/atlas' },
   { label: 'Altered Earth Press', href: '/earth' },
   { label: 'Sparent Science', href: '/sparent' },
   { label: 'Feelings Unplugged', href: '/feelings-unplugged' },
@@ -48,7 +47,7 @@ export default function Footer() {
 
         {/* Entity attribution (brief §5.3, confirmed Sept 13): the institute is the 501(c)(3); every property is a program of it. */}
         <div className="kicker" style={{ color: 'var(--on-ground-muted)', marginBottom: 16, lineHeight: 1.8 }}>
-          Atlas ERA — The Education Research Association · Atlas Academy · Altered Earth Press · Sparent Science
+          Atlas ERA — The Education Research Association · Altered Earth Press · Sparent Science
           <br />
           Programs of US-Squared Research Institute
         </div>

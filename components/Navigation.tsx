@@ -6,7 +6,6 @@ import { usePathname } from 'next/navigation';
 
 const navLinks = [
   { label: 'Atlas ERA', href: '/atlas-era' },
-  { label: 'Atlas Academy', href: '/atlas' },
   { label: 'Sparent Science', href: '/sparent' },
   { label: 'Feelings Unplugged', href: '/feelings-unplugged' },
   { label: 'Research', href: '/research' },
