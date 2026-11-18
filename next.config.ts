@@ -1,11 +1,15 @@
 import type { NextConfig } from "next";
 
+// Atlas is a Measurement Ally, Inc. initiative with its own site.
+// Temporary (307) until the Atlas site has its final domain; then update the
+// address and switch `permanent` to true.
+const ATLAS_SITE = "https://atlas-site-green.vercel.app";
+
 const nextConfig: NextConfig = {
-  async rewrites() {
+  async redirects() {
     return [
-      // Atlas Academy is a static site folded into this deployment (public/atlas).
-      // /atlas serves its landing page; the sub-pages are reached by file name.
-      { source: "/atlas", destination: "/atlas/index.html" },
+      { source: "/atlas", destination: ATLAS_SITE, permanent: false },
+      { source: "/atlas/:path*", destination: ATLAS_SITE, permanent: false },
     ];
   },
 };
