@@ -7,20 +7,13 @@ import { Section, Eyebrow, Coord, Button, Card } from '@/components/ui';
 const pipelineSteps = [
   {
     num: '01',
-    label: 'Learn',
-    program: 'Atlas Academy',
-    href: '/atlas',
-    body: 'Worldskool + BASE Framework curriculum for learners ages 14–21. Designed for neurodivergent, culturally complex, and mobile learners.',
-  },
-  {
-    num: '02',
     label: 'Create',
     program: 'Altered Earth Press',
     href: '/earth',
     body: 'Publishing, expression, and storytelling. What you learn becomes what you make, and what you make is your contribution.',
   },
   {
-    num: '03',
+    num: '02',
     label: 'Work',
     program: 'BASEops',
     href: '/baseops',
@@ -40,7 +33,7 @@ const timelineRows = [
     phase: 'Now',
     period: '2025–26',
     status: 'Active',
-    body: 'Pilot network active. US-Squared anchor site operating. Atlas Academy Cohort 4 forming. BASEops workforce pilot underway.',
+    body: 'Pilot network active. US-Squared anchor site operating. BASEops workforce pilot underway.',
   },
   {
     phase: 'Near',
@@ -140,8 +133,8 @@ export default function AtlasERAPage() {
             <AnimateOnScroll delay={0.05}>
               <Eyebrow>The Worldskool Pipeline</Eyebrow>
               <p className="lede measure-narrow" style={{ marginBottom: 40 }}>
-                These are not separate programs. They are one arc — learn who you are, create from that knowing, build
-                economic power from what you create.
+                These are not separate programs. They are one arc — create from who you are, then build economic power
+                from what you create.
               </p>
             </AnimateOnScroll>
 
